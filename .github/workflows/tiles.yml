@@ -1,4 +1,4 @@
-# Quarterly: cut our six countries out of the latest Protomaps planet build and
+# Quarterly: cut our countries (tiles/region.geojson) out of the latest Protomaps planet build and
 # publish them as one .pmtiles file the site's map reads with range requests.
 # Self-hosted tiles: no tile provider account, no per-view fees, and allowed for
 # commercial use (OpenStreetMap data, ODbL; Protomaps basemap, BSD/ODbL).
@@ -10,8 +10,8 @@ on:
   workflow_dispatch:
     inputs:
       maxzoom:
-        description: "Highest zoom level to include (15 = full detail)"
-        default: "15"
+        description: "Highest zoom level (14 is ~4x smaller than 15; vector tiles overzoom smoothly)"
+        default: "14"
 
 concurrency:
   group: tiles
@@ -25,7 +25,7 @@ env:
   # go-pmtiles publishes no checksum file, so the binary is pinned by hash
   # (matches GitHub's asset digest). Update both together when upgrading.
   PMTILES_SHA256: "3ed7dbf4ec2e6dfe5e25b6f70d1ffc932729f93c86db353bf514dd71010a312f"
-  MAXZOOM: ${{ github.event.inputs.maxzoom || '15' }}
+  MAXZOOM: ${{ github.event.inputs.maxzoom || '14' }}
 
 jobs:
   extract:
@@ -43,7 +43,12 @@ jobs:
           tar -xzf "$file" pmtiles && sudo mv pmtiles /usr/local/bin/
           pmtiles version
 
-      - name: Extract the six countries from the latest planet build
+      - name: Free disk space (the Europe extract is large)
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL
+          df -h .
+
+      - name: Extract our countries from the latest planet build
         run: |
           set -euo pipefail
           KEY=$(curl -fsSL https://build-metadata.protomaps.dev/builds.json | jq -r '.[-1].key')

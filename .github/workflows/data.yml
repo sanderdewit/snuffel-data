@@ -1,15 +1,16 @@
-# Monthly: rebuild the places dataset and the chain-ownership data from scratch
-# and publish both to Azure Storage, where the site reads them.
+# Monthly: rebuild the places dataset and the chain-ownership data for every
+# country in tools/countries.json and publish both to Azure Storage.
 #
-#   1. per country: Geofabrik extract -> osmium filter/export -> tools/build-places.js add
-#   2. assemble the 0.25-degree cells + manifest
-#   3. scan clinic websites for chain ownership (uses the vet list from step 1)
-#   4. rebuild chains.json from the official lists + confirmed scan results
-#   5. upload: cells first, then chains.json, then the manifest (so the live
-#      manifest never points at cells that aren't there yet)
+#   plan     -> which countries (all, or the ones given when started by hand)
+#   country  -> one parallel job per country: Geofabrik extract -> osmium ->
+#               tools/build-places.js add -> website scan; results as artifacts
+#   publish  -> official chain lists, chains.json, the 0.25-degree cells and the
+#               manifest; uploaded cells first, manifest last
 #
-# Secrets/variables: AZURE_STORAGE_ACCOUNT (variable), AZURE_STORAGE_SAS (secret,
-# write access to the data container; see README "Credentials").
+# If any country fails, nothing is published (the live data stays as it was):
+# use "Re-run failed jobs" and publish continues with the finished ones.
+#
+# Secrets/variables: AZURE_STORAGE_ACCOUNT (variable), AZURE_STORAGE_SAS (secret).
 name: data
 
 on:
@@ -18,8 +19,8 @@ on:
   workflow_dispatch:
     inputs:
       countries:
-        description: "Countries to build (space separated)"
-        default: "nl be fr de pl cz"
+        description: "Country codes, space separated, or 'all'"
+        default: "all"
       scan:
         description: "Scan clinic websites for chain ownership"
         type: boolean
@@ -32,71 +33,116 @@ concurrency:
 permissions:
   contents: read
 
-env:
-  COUNTRIES: ${{ github.event.inputs.countries || 'nl be fr de pl cz' }}
-  SCAN: ${{ github.event_name == 'schedule' || github.event.inputs.scan == 'true' }}
-
 jobs:
-  build:
+  plan:
     runs-on: ubuntu-latest
-    timeout-minutes: 330
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
     steps:
       - uses: actions/checkout@v7
+      - id: plan
+        env:
+          WANT: ${{ github.event.inputs.countries || 'all' }}
+        run: |
+          node -e '
+            const all = require("./tools/countries.json").countries;
+            const want = (process.env.WANT || "all").trim().toLowerCase().split(/\s+/);
+            const list = want.includes("all") ? all : all.filter(c => want.includes(c.cc));
+            if (!list.length) { console.error("no matching countries"); process.exit(1); }
+            console.log("matrix=" + JSON.stringify(list.map(c => ({ cc: c.cc, name: c.name, geofabrik: c.geofabrik }))));
+          ' >> "$GITHUB_OUTPUT"
 
+  country:
+    needs: plan
+    name: ${{ matrix.cc }} ${{ matrix.name }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        include: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    env:
+      CC: ${{ matrix.cc }}
+      SCAN: ${{ github.event_name == 'schedule' || github.event.inputs.scan == 'true' }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Install osmium
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq osmium-tool
+
+      - name: Extract places
+        run: |
+          set -euo pipefail
+          mkdir -p work
+          curl -fsSL --retry 5 --retry-delay 20 -o work/x.osm.pbf "https://download.geofabrik.de/${{ matrix.geofabrik }}-latest.osm.pbf"
+          ls -lh work/x.osm.pbf
+          osmium tags-filter work/x.osm.pbf $(node tools/build-places.js filter) -o work/x.filtered.pbf --overwrite
+          rm work/x.osm.pbf
+          osmium export work/x.filtered.pbf -f geojsonseq -a type,id -o work/x.geojsonseq --overwrite
+          node tools/build-places.js add "$CC" work/x.geojsonseq | tee -a $GITHUB_STEP_SUMMARY
+          rm -rf work
+
+      - name: Scan clinic websites
+        if: env.SCAN == 'true'
+        run: node tools/scan-websites.js "$CC" || echo "::warning::website scan for $CC failed - previous findings are kept"
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: country-${{ matrix.cc }}
+          path: |
+            dist/stage/${{ matrix.cc }}.json
+            tools/.cache/osm-vets-${{ matrix.cc }}.json
+            tools/scan-${{ matrix.cc }}.json
+          if-no-files-found: warn
+          retention-days: 14
+          include-hidden-files: true
+
+  publish:
+    needs: country
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
         with:
           node-version: 22
 
+      - uses: actions/download-artifact@v7
+        with:
+          pattern: country-*
+          merge-multiple: true
+
       - name: Tests
         run: |
+          node tests/classify.test.js
           node tests/places.test.js
           node tests/chains.test.js
           node tests/scan.test.js
-
-      - name: Install osmium
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq osmium-tool
-
-      - name: Extract places per country
-        run: |
-          declare -A GEOFABRIK=(
-            [nl]=netherlands [be]=belgium [fr]=france [de]=germany [pl]=poland [cz]=czech-republic
-          )
-          FILTER=$(node tools/build-places.js filter)
-          mkdir -p work
-          for cc in $COUNTRIES; do
-            name=${GEOFABRIK[$cc]}
-            echo "::group::$cc ($name)"
-            curl -fsSL --retry 3 -o work/$cc.osm.pbf "https://download.geofabrik.de/europe/$name-latest.osm.pbf"
-            ls -lh work/$cc.osm.pbf
-            osmium tags-filter work/$cc.osm.pbf $FILTER -o work/$cc.filtered.pbf --overwrite
-            rm work/$cc.osm.pbf                       # free disk before the next country
-            osmium export work/$cc.filtered.pbf -f geojsonseq -a type,id -o work/$cc.geojsonseq --overwrite
-            node tools/build-places.js add $cc work/$cc.geojsonseq
-            rm work/$cc.filtered.pbf work/$cc.geojsonseq
-            echo "::endgroup::"
-          done
-          node tools/build-places.js assemble | tee -a $GITHUB_STEP_SUMMARY
-
-      - name: Scan clinic websites
-        if: env.SCAN == 'true'
-        run: |
-          for cc in $COUNTRIES; do
-            echo "::group::scan $cc"
-            node tools/scan-websites.js $cc || echo "::warning::website scan for $cc failed"
-            echo "::endgroup::"
-          done
 
       - name: Build chain reference data
         env:
           ACCOUNT: ${{ vars.AZURE_STORAGE_ACCOUNT }}
         run: |
+          mkdir -p dist
           # the live file: findings for countries not scanned this run are carried over
           curl -fsSL -o dist/previous-chains.json "https://$ACCOUNT.blob.core.windows.net/data/chains.json" || rm -f dist/previous-chains.json
           node tools/build-chains.js
+
+      - name: Assemble places
+        run: node tools/build-places.js assemble | tee -a $GITHUB_STEP_SUMMARY
+
+      - name: Detection report
+        run: |
           {
-            echo '### Chain detection'
+            echo '### Chain detection by country'
             echo '```'
-            for cc in $COUNTRIES; do node tools/evaluate-chains.js $cc | head -5; echo; done
+            for f in tools/.cache/osm-vets-*.json; do
+              cc=$(basename "$f" .json | sed 's/osm-vets-//')
+              node tools/evaluate-chains.js "$cc" | head -5; echo
+            done
             echo '```'
           } >> $GITHUB_STEP_SUMMARY
 

@@ -20,6 +20,7 @@ jobs:
         run: for f in lib/*.js tools/*.js tests/*.js; do node --check "$f"; done
       - name: Tests
         run: |
+          node tests/classify.test.js
           node tests/places.test.js
           node tests/chains.test.js
           node tests/scan.test.js

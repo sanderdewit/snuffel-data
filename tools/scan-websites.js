@@ -54,7 +54,10 @@ const LEGAL = new RegExp(GROUP + "[^<>]{0,40}?\\b(gmbh|b\\.?v\\.?|n\\.?v\\.?|sas
 const MENTION = new RegExp(GROUP, "i");
 const LEGAL_LINK = /href="([^"]*(?:impressum|imprint|mentions-l[eé]gales|mentions_legales|colofon|disclaimer|o-nas|kontakt)[^"]*)"/i;
 
-const ISO = { nl: "NL", be: "BE", fr: "FR", de: "DE", pl: "PL", cz: "CZ" };
+// Every country the data workflow builds (tools/countries.json) can be scanned.
+// In the workflow the vet list comes from tools/build-places.js; the Overpass
+// query below is only the fallback for local runs.
+const ISO = Object.fromEntries(require("./countries.json").countries.map((c) => [c.cc, c.cc.toUpperCase()]));
 // [south, west, north, east] - only used when a country-wide query times out.
 const BBOX = {
   nl: [50.7, 3.3, 53.6, 7.3], be: [49.4, 2.5, 51.6, 6.5], fr: [41.3, -5.2, 51.2, 9.6],
@@ -164,6 +167,7 @@ async function osmVets() {
   } catch (e) {
     // Big countries (DE, FR) can 504 as one query: retry as a grid of bbox tiles.
     // Tiles overlap the borders a little; neighbours' vets are harmless extras.
+    if (!BBOX[COUNTRY]) throw e;   // no tile grid for this country: run build-places first
     console.log(`  country-wide query failed (${e.message}); retrying in tiles`);
     const [s, w, n, ea] = BBOX[COUNTRY], rows = 3, cols = 3, seen = new Map();
     for (let i = 0; i < rows; i++) for (let j = 0; j < cols; j++) {
