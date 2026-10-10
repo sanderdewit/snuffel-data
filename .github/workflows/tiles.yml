@@ -51,7 +51,8 @@ jobs:
           pmtiles extract "https://build.protomaps.com/$KEY" snuffel.pmtiles \
             --region=tiles/region.geojson --maxzoom="$MAXZOOM" --download-threads=8
           ls -lh snuffel.pmtiles | tee -a $GITHUB_STEP_SUMMARY
-          pmtiles show snuffel.pmtiles | head -20
+          pmtiles show snuffel.pmtiles > tiles-info.txt   # not piped into head: SIGPIPE would fail the step under pipefail
+          head -20 tiles-info.txt
 
       - name: Publish to Azure Storage
         env:
