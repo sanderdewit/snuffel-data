@@ -109,7 +109,10 @@ function assemble() {
   for (const { el, cc } of best.values()) {
     const key = Math.floor(el.lat / CELL) + "_" + Math.floor(el.lon / CELL);
     if (!cells.has(key)) cells.set(key, []);
-    cells.get(key).push(el);
+    // Country, for the opening-hours time zone (lib/hours.js tzFor). The place's
+    // own addr:country beats the extract it came from: extracts overlap at borders.
+    const own = String(el.tags["addr:country"] || "").toLowerCase();
+    cells.get(key).push({ ...el, cc: /^[a-z]{2}$/.test(own) ? own : cc });
     countries[cc] = (countries[cc] || 0) + 1;
   }
   const dir = path.join(PLACES, version);

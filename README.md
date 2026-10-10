@@ -75,6 +75,13 @@ Kivet, Univet, Animalia, Medivet) are matched by website domain only.
 **Something wrong?** Open an issue with the clinic and a source; corrections go
 into `tools/chain-overrides.json` and are live after the next data run.
 
+## Shared core
+
+`lib/` (chain detection, category rules, opening hours) and `i18n/` (29 language
+packs) are the single source for the website and the
+[Snuffel app](https://github.com/sanderdewit/snuffel-app). Both keep identical
+copies; their CI fails when a copy differs from this repository.
+
 ## Map tiles
 
 `tools/tiles-region.js` builds the outline of the six countries

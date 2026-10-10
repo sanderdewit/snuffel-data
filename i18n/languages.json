@@ -1,0 +1,38 @@
+{
+  "_help": "UI languages in menu order (native names). Each code needs web/i18n/<code>.json with the same keys as en.json. 'aliases' maps browser languages without their own pack to the closest one we have.",
+  "languages": [
+    { "code": "ca", "name": "Català" },
+    { "code": "cs", "name": "Čeština" },
+    { "code": "da", "name": "Dansk" },
+    { "code": "de", "name": "Deutsch" },
+    { "code": "et", "name": "Eesti" },
+    { "code": "en", "name": "English" },
+    { "code": "es", "name": "Español" },
+    { "code": "fr", "name": "Français" },
+    { "code": "hr", "name": "Hrvatski" },
+    { "code": "is", "name": "Íslenska" },
+    { "code": "it", "name": "Italiano" },
+    { "code": "lv", "name": "Latviešu" },
+    { "code": "lt", "name": "Lietuvių" },
+    { "code": "hu", "name": "Magyar" },
+    { "code": "nl", "name": "Nederlands" },
+    { "code": "nb", "name": "Norsk" },
+    { "code": "pl", "name": "Polski" },
+    { "code": "pt", "name": "Português" },
+    { "code": "ro", "name": "Română" },
+    { "code": "sq", "name": "Shqip" },
+    { "code": "sk", "name": "Slovenčina" },
+    { "code": "sl", "name": "Slovenščina" },
+    { "code": "sr", "name": "Srpski" },
+    { "code": "fi", "name": "Suomi" },
+    { "code": "sv", "name": "Svenska" },
+    { "code": "el", "name": "Ελληνικά" },
+    { "code": "bg", "name": "Български" },
+    { "code": "mk", "name": "Македонски" },
+    { "code": "uk", "name": "Українська" }
+  ],
+  "aliases": {
+    "no": "nb", "nn": "nb", "bs": "hr", "sh": "hr", "cnr": "sr", "lb": "de", "rm": "de",
+    "ga": "en", "mt": "en", "cy": "en", "gd": "en", "eu": "es", "gl": "es", "fo": "da", "kl": "da", "se": "nb"
+  }
+}
