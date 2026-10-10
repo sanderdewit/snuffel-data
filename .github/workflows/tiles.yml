@@ -22,6 +22,9 @@ permissions:
 
 env:
   PMTILES_VERSION: "1.31.2"
+  # go-pmtiles publishes no checksum file, so the binary is pinned by hash
+  # (matches GitHub's asset digest). Update both together when upgrading.
+  PMTILES_SHA256: "3ed7dbf4ec2e6dfe5e25b6f70d1ffc932729f93c86db353bf514dd71010a312f"
   MAXZOOM: ${{ github.event.inputs.maxzoom || '15' }}
 
 jobs:
@@ -31,14 +34,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install the pmtiles CLI (checksum verified)
+      - name: Install the pmtiles CLI (hash pinned)
         run: |
           set -euo pipefail
-          base="https://github.com/protomaps/go-pmtiles/releases/download/v${PMTILES_VERSION}"
           file="go-pmtiles_${PMTILES_VERSION}_Linux_x86_64.tar.gz"
-          curl -fsSL -o "$file" "$base/$file"
-          curl -fsSL -o checksums.txt "$base/checksums.txt"
-          grep " $file\$" checksums.txt | sha256sum -c -
+          curl -fsSL -o "$file" "https://github.com/protomaps/go-pmtiles/releases/download/v${PMTILES_VERSION}/$file"
+          echo "${PMTILES_SHA256}  $file" | sha256sum -c -
           tar -xzf "$file" pmtiles && sudo mv pmtiles /usr/local/bin/
           pmtiles version
 
