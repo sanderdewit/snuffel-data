@@ -27,8 +27,11 @@ Acquired practices usually keep their own name, so a name tells you little.
 [`lib/chains.js`](lib/chains.js) combines evidence, strongest first:
 
 1. **Manual review** — [`tools/chain-overrides.json`](tools/chain-overrides.json)
-2. **The groups' own clinic lists** — AniCura (NL, BE, DE, FR, PL) clinic pages,
-   matched on phone number; Evidensia Belgium's practice list, matched on website
+2. **The groups' own clinic lists** — every clinic page of AniCura (13 countries),
+   VetPartners, Medivet, CVS, Linnaeus, Vets for Pets, Sevetys, Mon Véto, Univet,
+   Argos, Kivet, Tierarzt Plus Partner, Vetopia (AT), VetTrust, Animalia and
+   Ca' Zampa, matched on phone number and on the clinic's own website where the
+   group links it; Evidensia Belgium's practice list, matched on website
 3. **The clinic's own website** — it redirects to a group domain, names the group
    as legal entity or in its copyright line, says it is *part of* a group, or links
    to the group's own terms / privacy pages ([`tools/scan-websites.js`](tools/scan-websites.js))

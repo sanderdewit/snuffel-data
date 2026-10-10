@@ -4,7 +4,8 @@
 #   plan     -> which countries (all, or the ones given when started by hand)
 #   country  -> one parallel job per country: Geofabrik extract -> osmium ->
 #               tools/build-places.js add -> website scan; results as artifacts
-#   publish  -> official chain lists, chains.json, the 0.25-degree cells and the
+#   official -> the chain groups' own clinic lists (parallel to the countries)
+#   publish  -> chains.json, the 0.25-degree cells and the
 #               manifest; uploaded cells first, manifest last
 #
 # If any country fails, nothing is published (the live data stays as it was):
@@ -100,8 +101,27 @@ jobs:
           retention-days: 14
           include-hidden-files: true
 
+  official:
+    # The groups' own clinic lists. Slow on purpose (robots.txt crawl delays),
+    # so it runs alongside the country jobs instead of inside publish.
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Crawl the groups' clinic lists
+        run: node tools/build-chains.js crawl | tee -a $GITHUB_STEP_SUMMARY
+      - uses: actions/upload-artifact@v7
+        with:
+          name: official-clinics
+          path: tools/.cache/official-clinics.json
+          retention-days: 14
+          include-hidden-files: true
+
   publish:
-    needs: country
+    needs: [country, official]
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
@@ -114,6 +134,10 @@ jobs:
         with:
           pattern: country-*
           merge-multiple: true
+      - uses: actions/download-artifact@v7
+        with:
+          name: official-clinics
+          path: tools/.cache
 
       - name: Tests
         run: |
@@ -129,7 +153,7 @@ jobs:
           mkdir -p dist
           # the live file: findings for countries not scanned this run are carried over
           curl -fsSL -o dist/previous-chains.json "https://$ACCOUNT.blob.core.windows.net/data/chains.json" || rm -f dist/previous-chains.json
-          node tools/build-chains.js
+          node tools/build-chains.js build
 
       - name: Assemble places
         run: node tools/build-places.js assemble | tee -a $GITHUB_STEP_SUMMARY
