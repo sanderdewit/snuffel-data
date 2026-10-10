@@ -1,0 +1,81 @@
+# 🐾 snuffel-data
+
+Open data pipeline behind [Snuffel](https://wonderful-island-0c49a0103.7.azurestaticapps.net),
+a directory that helps dog owners in 🇳🇱 🇧🇪 🇫🇷 🇩🇪 🇵🇱 🇨🇿 find **independent** vets, groomers,
+shops, trainers, dog hotels and dog play areas.
+
+This repository collects and publishes the data; the site itself lives elsewhere.
+Everything runs on GitHub Actions and writes static files to Azure Storage:
+
+| Workflow | When | Output |
+|---|---|---|
+| [`data`](.github/workflows/data.yml) | monthly (3rd), or manually | `places/manifest.json` + 0.25° cells, `chains.json` |
+| [`tiles`](.github/workflows/tiles.yml) | quarterly, or manually | `tiles/snuffel.pmtiles` (Protomaps basemap) |
+| [`test`](.github/workflows/test.yml) | every push / PR | unit tests |
+
+## Places
+
+`tools/build-places.js` reads [Geofabrik](https://download.geofabrik.de/) country
+extracts (filtered with `osmium`) and keeps every vet, animal hospital, pet shop,
+groomer, boarding kennel, dog trainer, shelter, dog park and off-leash area, plus
+parks whose name marks them as a dog field (hondenweide, Hundewiese, caniparc,
+wybieg dla psów, psí louka). Classification rules: [`lib/classify.js`](lib/classify.js).
+
+## Independent or chain-owned?
+
+Acquired practices usually keep their own name, so a name tells you little.
+[`lib/chains.js`](lib/chains.js) combines evidence, strongest first:
+
+1. **Manual review** — [`tools/chain-overrides.json`](tools/chain-overrides.json)
+2. **The groups' own clinic lists** — AniCura (NL, BE, DE, FR, PL) clinic pages,
+   matched on phone number; Evidensia Belgium's practice list, matched on website
+3. **The clinic's own website** — it redirects to a group domain, names the group
+   as legal entity or in its copyright line, says it is *part of* a group, or links
+   to the group's own terms / privacy pages ([`tools/scan-websites.js`](tools/scan-websites.js))
+4. **OpenStreetMap tags** — name / brand / operator, or a `brand:wikidata` chain tag
+
+Merely **mentioning** a group is never enough: independent clinics routinely send
+out-of-hours emergencies to a chain hospital. Those cases are kept for human
+review only. [`tests/scan.test.js`](tests/scan.test.js) pins real examples.
+
+Crawling is polite: `robots.txt` is honoured (evidensia.de and evidensia.pl are
+therefore not crawled), one request per site at a time, ~1 request/s for the
+groups' own sites.
+
+**Something wrong?** Open an issue with the clinic and a source; corrections go
+into `tools/chain-overrides.json` and are live after the next data run.
+
+## Map tiles
+
+`tools/tiles-region.js` builds the outline of the six countries
+([Natural Earth](https://www.naturalearthdata.com/), public domain);
+the `tiles` workflow cuts that region out of the latest
+[Protomaps](https://protomaps.com) planet build with `pmtiles extract`.
+
+## Running locally
+
+```bash
+node tests/places.test.js && node tests/chains.test.js && node tests/scan.test.js
+node tools/build-chains.js                 # official lists -> dist/chains.json
+node tools/scan-websites.js nl             # needs tools/.cache/osm-vets-nl.json (from build-places add, or Overpass)
+node tools/evaluate-chains.js nl           # what is flagged, and by which signal
+```
+
+## Credentials
+
+The `data` and `tiles` workflows need:
+
+- variable `AZURE_STORAGE_ACCOUNT` — the storage account name
+- secret `AZURE_STORAGE_SAS` — an account SAS for Blob, write/list/delete, HTTPS
+  only. **It expires after one year**; renew it before then (see the site repo).
+
+Workflows run only on schedule or manual dispatch, never on pull requests from
+forks, so secrets are not exposed.
+
+## Licence
+
+- Places and derived data: © OpenStreetMap contributors, available under the
+  [Open Database License (ODbL) 1.0](https://www.openstreetmap.org/copyright).
+- Basemap: [Protomaps](https://protomaps.com) (BSD 3-Clause / ODbL).
+- Country outlines: Natural Earth (public domain).
+- Code: © Sander de Wit, all rights reserved unless stated otherwise.

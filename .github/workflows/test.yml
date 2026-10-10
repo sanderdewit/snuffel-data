@@ -1,0 +1,25 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Syntax
+        run: for f in lib/*.js tools/*.js tests/*.js; do node --check "$f"; done
+      - name: Tests
+        run: |
+          node tests/places.test.js
+          node tests/chains.test.js
+          node tests/scan.test.js

@@ -1,0 +1,10 @@
+# build output (published to Azure Storage, not committed)
+dist/
+work/
+tools/.cache/
+
+# review material: names clinics, kept as private workflow artifacts instead
+tools/scan-*.json
+tools/chains.report.json
+
+node_modules/

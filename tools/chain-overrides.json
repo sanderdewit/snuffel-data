@@ -1,0 +1,4 @@
+{
+  "_help": "Manual corrections, applied on top of every other signal. Key = OSM element id: n<id> (node), w<id> (way), r<id> (relation). Value = { \"chain\": \"AniCura\" | \"Evidensia\" | null, \"why\": \"source / date\" }. null marks a clinic as verified independent. Re-run tools/build-chains.js after editing.",
+  "overrides": {}
+}

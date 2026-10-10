@@ -1,0 +1,137 @@
+# Monthly: rebuild the places dataset and the chain-ownership data from scratch
+# and publish both to Azure Storage, where the site reads them.
+#
+#   1. per country: Geofabrik extract -> osmium filter/export -> tools/build-places.js add
+#   2. assemble the 0.25-degree cells + manifest
+#   3. scan clinic websites for chain ownership (uses the vet list from step 1)
+#   4. rebuild chains.json from the official lists + confirmed scan results
+#   5. upload: cells first, then chains.json, then the manifest (so the live
+#      manifest never points at cells that aren't there yet)
+#
+# Secrets/variables: AZURE_STORAGE_ACCOUNT (variable), AZURE_STORAGE_SAS (secret,
+# write access to the data container; see README "Credentials").
+name: data
+
+on:
+  schedule:
+    - cron: "17 2 3 * *"          # 02:17 UTC on the 3rd of every month
+  workflow_dispatch:
+    inputs:
+      countries:
+        description: "Countries to build (space separated)"
+        default: "nl be fr de pl cz"
+      scan:
+        description: "Scan clinic websites for chain ownership"
+        type: boolean
+        default: true
+
+concurrency:
+  group: data
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  COUNTRIES: ${{ github.event.inputs.countries || 'nl be fr de pl cz' }}
+  SCAN: ${{ github.event_name == 'schedule' || github.event.inputs.scan == 'true' }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Tests
+        run: |
+          node tests/places.test.js
+          node tests/chains.test.js
+          node tests/scan.test.js
+
+      - name: Install osmium
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq osmium-tool
+
+      - name: Extract places per country
+        run: |
+          declare -A GEOFABRIK=(
+            [nl]=netherlands [be]=belgium [fr]=france [de]=germany [pl]=poland [cz]=czech-republic
+          )
+          FILTER=$(node tools/build-places.js filter)
+          mkdir -p work
+          for cc in $COUNTRIES; do
+            name=${GEOFABRIK[$cc]}
+            echo "::group::$cc ($name)"
+            curl -fsSL --retry 3 -o work/$cc.osm.pbf "https://download.geofabrik.de/europe/$name-latest.osm.pbf"
+            ls -lh work/$cc.osm.pbf
+            osmium tags-filter work/$cc.osm.pbf $FILTER -o work/$cc.filtered.pbf --overwrite
+            rm work/$cc.osm.pbf                       # free disk before the next country
+            osmium export work/$cc.filtered.pbf -f geojsonseq -a type,id -o work/$cc.geojsonseq --overwrite
+            node tools/build-places.js add $cc work/$cc.geojsonseq
+            rm work/$cc.filtered.pbf work/$cc.geojsonseq
+            echo "::endgroup::"
+          done
+          node tools/build-places.js assemble | tee -a $GITHUB_STEP_SUMMARY
+
+      - name: Scan clinic websites
+        if: env.SCAN == 'true'
+        run: |
+          for cc in $COUNTRIES; do
+            echo "::group::scan $cc"
+            node tools/scan-websites.js $cc || echo "::warning::website scan for $cc failed"
+            echo "::endgroup::"
+          done
+
+      - name: Build chain reference data
+        env:
+          ACCOUNT: ${{ vars.AZURE_STORAGE_ACCOUNT }}
+        run: |
+          # the live file: findings for countries not scanned this run are carried over
+          curl -fsSL -o dist/previous-chains.json "https://$ACCOUNT.blob.core.windows.net/data/chains.json" || rm -f dist/previous-chains.json
+          node tools/build-chains.js
+          {
+            echo '### Chain detection'
+            echo '```'
+            for cc in $COUNTRIES; do node tools/evaluate-chains.js $cc | head -5; echo; done
+            echo '```'
+          } >> $GITHUB_STEP_SUMMARY
+
+      - name: Keep the review material (not published)
+        uses: actions/upload-artifact@v4
+        with:
+          name: review-${{ github.run_id }}
+          path: |
+            tools/scan-*.json
+            tools/chains.report.json
+          retention-days: 90
+
+      - name: Publish to Azure Storage
+        env:
+          ACCOUNT: ${{ vars.AZURE_STORAGE_ACCOUNT }}
+          SAS: ${{ secrets.AZURE_STORAGE_SAS }}
+        run: |
+          set -euo pipefail
+          VERSION=$(node -p "require('./dist/places/manifest.json').version")
+          up() { az storage blob upload-batch --account-name "$ACCOUNT" --sas-token "$SAS" --only-show-errors "$@"; }
+          # 1. cells: immutable, cache for a year
+          up -d data -s dist --pattern "places/$VERSION/*" --overwrite \
+             --content-type application/json --content-cache-control "public, max-age=31536000, immutable"
+          # 2. chain data, 3. manifest last: always fetched fresh
+          up -d data -s dist --pattern "chains.json" --overwrite \
+             --content-type application/json --content-cache-control "no-cache"
+          up -d data -s dist --pattern "places/manifest.json" --overwrite \
+             --content-type application/json --content-cache-control "no-cache"
+          # keep the current and the previous version, delete older ones
+          az storage blob list --account-name "$ACCOUNT" --sas-token "$SAS" -c data --prefix places/ \
+             --query "[].name" -o tsv --only-show-errors \
+            | sed -n 's#^places/\([0-9-]\{10\}\)/.*#\1#p' | sort -u | head -n -2 \
+            | while read old; do
+                az storage blob delete-batch --account-name "$ACCOUNT" --sas-token "$SAS" -s data \
+                   --pattern "places/$old/*" --only-show-errors
+                echo "deleted old version $old"
+              done
+          echo "published places $VERSION" >> $GITHUB_STEP_SUMMARY

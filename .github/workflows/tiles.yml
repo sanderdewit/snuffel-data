@@ -1,0 +1,63 @@
+# Quarterly: cut our six countries out of the latest Protomaps planet build and
+# publish them as one .pmtiles file the site's map reads with range requests.
+# Self-hosted tiles: no tile provider account, no per-view fees, and allowed for
+# commercial use (OpenStreetMap data, ODbL; Protomaps basemap, BSD/ODbL).
+name: tiles
+
+on:
+  schedule:
+    - cron: "41 3 7 1,4,7,10 *"   # 03:41 UTC on the 7th of Jan/Apr/Jul/Oct
+  workflow_dispatch:
+    inputs:
+      maxzoom:
+        description: "Highest zoom level to include (15 = full detail)"
+        default: "15"
+
+concurrency:
+  group: tiles
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  PMTILES_VERSION: "1.31.2"
+  MAXZOOM: ${{ github.event.inputs.maxzoom || '15' }}
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install the pmtiles CLI (checksum verified)
+        run: |
+          set -euo pipefail
+          base="https://github.com/protomaps/go-pmtiles/releases/download/v${PMTILES_VERSION}"
+          file="go-pmtiles_${PMTILES_VERSION}_Linux_x86_64.tar.gz"
+          curl -fsSL -o "$file" "$base/$file"
+          curl -fsSL -o checksums.txt "$base/checksums.txt"
+          grep " $file\$" checksums.txt | sha256sum -c -
+          tar -xzf "$file" pmtiles && sudo mv pmtiles /usr/local/bin/
+          pmtiles version
+
+      - name: Extract the six countries from the latest planet build
+        run: |
+          set -euo pipefail
+          KEY=$(curl -fsSL https://build-metadata.protomaps.dev/builds.json | jq -r '.[-1].key')
+          echo "source build: $KEY" | tee -a $GITHUB_STEP_SUMMARY
+          pmtiles extract "https://build.protomaps.com/$KEY" snuffel.pmtiles \
+            --region=tiles/region.geojson --maxzoom="$MAXZOOM" --download-threads=8
+          ls -lh snuffel.pmtiles | tee -a $GITHUB_STEP_SUMMARY
+          pmtiles show snuffel.pmtiles | head -20
+
+      - name: Publish to Azure Storage
+        env:
+          ACCOUNT: ${{ vars.AZURE_STORAGE_ACCOUNT }}
+          SAS: ${{ secrets.AZURE_STORAGE_SAS }}
+        run: |
+          az storage blob upload --account-name "$ACCOUNT" --sas-token "$SAS" --only-show-errors \
+            -c tiles -n snuffel.pmtiles -f snuffel.pmtiles --overwrite \
+            --content-type application/vnd.pmtiles --content-cache-control "public, max-age=86400"
+          echo "published tiles/snuffel.pmtiles" >> $GITHUB_STEP_SUMMARY
