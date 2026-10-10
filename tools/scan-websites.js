@@ -23,7 +23,7 @@
 "use strict";
 const fs = require("fs");
 const path = require("path");
-const { hostOf, groupForHost, allValues } = require("../lib/chains.js");
+const { hostOf, groupForHost, allValues, SCAN_NAMES } = require("../lib/chains.js");
 
 const COUNTRY = (process.argv[2] || "nl").toLowerCase();
 const UA = "Mozilla/5.0 (compatible; SnuffelBot/1.0; dog-services directory, chain ownership check)";
@@ -35,7 +35,7 @@ const MAX_BYTES = 1500000;
 const OUT = path.join(__dirname, `scan-${COUNTRY}.json`);
 const CACHE = path.join(__dirname, ".cache", `osm-vets-${COUNTRY}.json`);
 
-const GROUP = "(anicura|ivc\\s*evidensia|evidensia|caressa)";
+const GROUP = "(" + SCAN_NAMES.map((n) => n.re).join("|") + ")";
 // The group must follow the phrase within 3 words ("onderdeel van de AniCura
 // familie", "fait partie du réseau Evidensia"). A loose gap misreads sentences like
 // "aangesloten bij de wachtgroep van Mechelen en werkt samen met Anicura" -
@@ -43,14 +43,29 @@ const GROUP = "(anicura|ivc\\s*evidensia|evidensia|caressa)";
 const MEMBERSHIP = new RegExp(
   "(onderdeel van|deel van|maakt deel uit van|aangesloten bij|part of|member of|belongs to|" +
   "teil (?:von|der|des)|geh[öo]rt zu|mitglied (?:der|von)|ein unternehmen der|" +
-  "fait partie|membre d[ue]|nale[żz]y do|cz[eę][śs][cć]i[aą]?|sou[čc][áa]st[íi]|pat[řr][íi] do)" +
+  "fait partie|membre d[ue]|nale[żz]y do|cz[eę][śs][cć]i[aą]?|sou[čc][áa]st[íi]|pat[řr][íi] do|" +
+  "fa parte d[ei]l?l?[ao]?|forma parte de|faz parte d[oa]s?|en del av|del af|del av|tilh[øo]rer|osa)" +
   "(?:\\s+[^\\s<>.,;:]+){0,3}?\\s+" + GROUP, "i");
 // Clinics owned by a group link to the GROUP's own terms / privacy pages.
 // Independents only ever link to a group's hospital pages (referrals).
-const GROUP_LEGAL_LINK = /href="https?:\/\/(?:www\.)?((?:ivc)?evidensia|anicura|caressa)\.[a-z.]+\/[^"]*(algemene-voorwaarden|voorwaarden|privacy|avg|tcg|conditions-generales|mentions-legales|terms|datenschutz|impressum|agb|regulamin|polityka-prywatnosci|ochrana-osobnich-udaju)[^"]*"/i;
+const LEGAL_PATH = /(algemene-voorwaarden|voorwaarden|privacy|avg|tcg|conditions-generales|mentions-legales|terms|datenschutz|impressum|agb|regulamin|polityka-prywatnosci|ochrana-osobnich-udaju|cookie|aviso-legal|note-legali|integritet|personvern)/i;
+function groupLinks(html) {
+  let any = null;
+  for (const m of html.matchAll(/href="(https?:\/\/[^"]+)"/gi)) {
+    const host = hostOf(m[1]);
+    const group = host && groupForHost(host);
+    if (!group) continue;
+    const link = { href: m[1], group };
+    let pathname = "";
+    try { pathname = new URL(m[1].replace(/&amp;/g, "&")).pathname; } catch (e) { /* malformed href */ }
+    if (LEGAL_PATH.test(pathname)) return { legal: link, any: link };
+    any = any || link;
+  }
+  return { legal: null, any };
+}
 const FAMILY = new RegExp(GROUP + "[\\s-]*(familie|family|gruppe|groep|group|netwerk|network|r[ée]seau|grupa|skupina)", "i");
 const COPYRIGHT = new RegExp("(©|&copy;|copyright)[^<>]{0,80}?" + GROUP, "i");
-const LEGAL = new RegExp(GROUP + "[^<>]{0,40}?\\b(gmbh|b\\.?v\\.?|n\\.?v\\.?|sas|sarl|s\\.a\\.?|sp\\.? z o\\.?o\\.?|s\\.r\\.o\\.?|ab)\\b", "i");
+const LEGAL = new RegExp(GROUP + "[^<>]{0,40}?\\b(gmbh|b\\.?v\\.?|n\\.?v\\.?|sas|sarl|selas|s\\.a\\.?|sp\\.? z o\\.?o\\.?|s\\.r\\.o\\.?|ab|ag|oy|a\\/s|ltd|limited|s\\.?r\\.?l|s\\.l\\.u?|s\\.?p\\.?a)\\b", "i");
 const MENTION = new RegExp(GROUP, "i");
 const LEGAL_LINK = /href="([^"]*(?:impressum|imprint|mentions-l[eé]gales|mentions_legales|colofon|disclaimer|o-nas|kontakt)[^"]*)"/i;
 
@@ -77,8 +92,8 @@ async function overpassQuery(q, attempts) {
 }
 
 function normGroup(s) {
-  s = s.toLowerCase();
-  return s.indexOf("anicura") > -1 ? "AniCura" : "Evidensia";   // caressa = Evidensia
+  const n = SCAN_NAMES.find((x) => new RegExp(x.re, "i").test(s));
+  return n ? n.group : null;
 }
 
 async function fetchText(url) {
@@ -115,15 +130,15 @@ function analyse(html) {
     const m = text.match(re);
     if (m) return { verdict: "confirmed", group: normGroup(m[0].match(MENTION)[0]), evidence: kind + ': "' + m[0].trim().slice(0, 140) + '"' };
   }
-  const legalLink = html.match(GROUP_LEGAL_LINK);
-  if (legalLink) {
-    return { verdict: "confirmed", group: normGroup(legalLink[1]), evidence: "links to the group's own legal page: " + legalLink[0].slice(6, 100) };
+  const links = groupLinks(html);
+  if (links.legal) {
+    return { verdict: "confirmed", group: links.legal.group, evidence: "links to the group's own legal page: " + links.legal.href.slice(0, 100) };
   }
-  const link = html.match(/href="https?:\/\/(?:www\.)?((?:ivc)?evidensia|anicura|caressa)\.[a-z.]+[^"]*"/i);
+  const link = links.any;
   const mention = text.match(new RegExp("[^.]{0,60}" + GROUP + "[^.]{0,60}", "i"));
   if (link || mention) {
-    const g = normGroup((link && link[1]) || mention[1]);
-    return { verdict: "possible", group: g, evidence: link ? "links to " + link[0].slice(6, 90) : 'mentions: "' + mention[0].trim().slice(0, 140) + '"' };
+    const g = link ? link.group : normGroup(mention[1]);
+    return { verdict: "possible", group: g, evidence: link ? "links to " + link.href.slice(0, 90) : 'mentions: "' + mention[0].trim().slice(0, 140) + '"' };
   }
   return { verdict: "none" };
 }

@@ -54,6 +54,23 @@ test("name / brand / operator tags", () => {
   assert.deepStrictEqual(detect({ name: "Pets Place", brand: "Pets Place", "brand:wikidata": "Q1" }, null), { group: "Pets Place", via: "osm" });
 });
 
+test("other European groups by name and domain", () => {
+  assert.deepStrictEqual(detect({ name: "Vets4Pets Leeds" }, null), { group: "Pets at Home Vet Group", via: "osm" });
+  assert.deepStrictEqual(detect({ name: "Clinique Vétérinaire Argos Rennes" }, null), { group: "Argos Vétérinaire", via: "osm" });
+  assert.deepStrictEqual(detect({ name: "Ca' Zampa Milano" }, null), { group: "Ca' Zampa", via: "osm" });
+  assert.deepStrictEqual(detect({ website: "https://www.medivetgroup.com/vet-practices/x/" }, null), { group: "Medivet", via: "website" });
+  assert.deepStrictEqual(detect({ website: "https://www.vetpartnersdeutschland.de/" }, null), { group: "VetPartners", via: "website" });
+  assert.deepStrictEqual(detect({ website: "https://vetgruppen.dk/aarhus/" }, null), { group: "Vetopia", via: "website" });
+});
+
+test("generic words that collide with group names stay independent", () => {
+  assert.strictEqual(detect({ name: "Dierenkliniek Linnaeusstraat" }, null), null);
+  assert.strictEqual(detect({ name: "Eläinlääkäri Kivet" }, null), null);
+  assert.strictEqual(detect({ name: "Clinica Veterinaria Animalia" }, null), null);
+  assert.strictEqual(detect({ name: "Argos Pet Shop" }, null), null);
+  assert.strictEqual(detect({ website: "https://notunivet.fr" }, null), null);
+});
+
 test("manual overrides win, including 'verified independent'", () => {
   assert.deepStrictEqual(detect({ name: "AniCura Foo" }, ref, "n1"), { group: "Evidensia", via: "manual" });
   assert.deepStrictEqual(detect({ name: "AniCura Foo" }, ref, "n2"), { group: null, via: "manual" });

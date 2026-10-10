@@ -42,6 +42,33 @@ Crawling is polite: `robots.txt` is honoured (evidensia.de and evidensia.pl are
 therefore not crawled), one request per site at a time, ~1 request/s for the
 groups' own sites.
 
+### Groups we recognise (ownership as researched October 2026)
+
+| Group | Owner | Main countries |
+|---|---|---|
+| AniCura | Mars, Inc. | most of Europe |
+| IVC Evidensia (incl. Caressa) | EQT (private equity) | most of Europe |
+| Linnaeus | Mars, Inc. | UK |
+| VetPartners (DierenDokters, Swissvet, Vetersalud…) | BC Partners (PE) | UK, ES, FR, IT, NL, IE, DE, PT, CH |
+| Medivet | CVC Capital Partners (PE) | UK, DE, ES |
+| CVS Group | listed (LSE) | UK |
+| Pets at Home Vet Group (Vets for Pets, Companion Care) | Pets at Home plc (listed) | UK |
+| Sevetys | Eurazeo (PE) with vet partners | FR |
+| Mon Véto | vet-owned majority, Ardian (PE) minority | FR, BE |
+| Univet | InfraVia (PE) | FR, BE |
+| Argos Vétérinaire | G Square (PE) | FR |
+| UNAVETS | Oaktree Capital (PE) | ES, PT |
+| Kivet / Clinicanimal | Iskaypet (pet retail) | ES, PT |
+| Tierarzt Plus Partner | Inflexion (PE) | DE |
+| Vetopia (VetGruppen, Empet, Svenska Veterinärgruppen, Helvetiera, Veterinaria, Vireä) | Axcel (PE) with employees | DK, NO, SE, CH, AT, FI, DE, UK |
+| VetTrust | Porterhouse Group (family office) | CH |
+| Gruppo Animalia | Charme Capital (PE) | IT |
+| Ca' Zampa / BluVet | Nextalia (PE; disputed) | IT |
+| LuxVet | INVL Baltic Sea Growth Fund (PE) | PL |
+
+Group names that are also ordinary words or street names (Linnaeus, Argos,
+Kivet, Univet, Animalia, Medivet) are matched by website domain only.
+
 **Something wrong?** Open an issue with the clinic and a source; corrections go
 into `tools/chain-overrides.json` and are live after the next data run.
 

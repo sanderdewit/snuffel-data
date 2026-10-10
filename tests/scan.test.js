@@ -26,6 +26,12 @@ test("French membership", "<p>Notre clinique fait partie du réseau Evidensia.</
 test("links to the group's terms page", '<a href="https://evidensia.be/algemene-voorwaarden/">Voorwaarden</a>', "confirmed", "Evidensia");
 test("links to the group's French T&Cs", '<a href="https://evidensia.be/fr/tcg/">CG</a>', "confirmed", "Evidensia");
 
+test("UK member footer", "<footer>Proud member of the VetPartners family</footer>", "confirmed", "VetPartners");
+test("UK trading-name line", "<p>Bay Vets is a trading name of Linnaeus Veterinary Limited</p>", "confirmed", "Linnaeus");
+test("Italian membership", "<p>La clinica fa parte del Gruppo Animalia.</p>", "confirmed", "Gruppo Animalia");
+test("Swedish membership", "<p>Vi är en del av Svenska Veterinärgruppen.</p>", "confirmed", "Vetopia");
+test("links to a new group's privacy page", '<a href="https://www.vetpartners.co.uk/privacy-policy/">Privacy</a>', "confirmed", "VetPartners");
+
 // Independents that merely cooperate / refer -> never confirmed
 test("on-call rota + cooperation (was a false positive)",
   "<p>Wij zijn aangesloten bij de wachtgroep van Mechelen en werkt daarnaast ook samen met Anicura</p>", "possible");
