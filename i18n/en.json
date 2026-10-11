@@ -40,6 +40,7 @@
   "onlyChainsHidden": "All nearby options here are chain-owned. Turn off “Independents only” to see them.",
   "openNow": "Open now",
   "closedNow": "Closed",
+  "hoursUnknown": "Opening hours unknown",
   "open247": "Open 24/7",
   "emergencyBtn": "Emergency",
   "emergencyBanner": "Emergency mode — vets & animal hospitals open now, nearest first. Always call ahead before travelling.",

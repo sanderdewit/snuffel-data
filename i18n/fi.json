@@ -40,6 +40,7 @@
   "onlyChainsHidden": "Kaikki lähellä olevat vaihtoehdot ovat ketjujen omistamia. Poista ”Vain itsenäiset” käytöstä, niin näet ne.",
   "openNow": "Auki nyt",
   "closedNow": "Suljettu",
+  "hoursUnknown": "Aukioloajat tuntemattomat",
   "open247": "Auki 24/7",
   "emergencyBtn": "Päivystys",
   "emergencyBanner": "Päivystystila — nyt auki olevat eläinlääkärit ja eläinsairaalat, lähimmät ensin. Soita aina ennen kuin lähdet.",

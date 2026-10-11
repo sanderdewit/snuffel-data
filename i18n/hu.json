@@ -40,6 +40,7 @@
   "onlyChainsHidden": "A közeli helyek mind láncokhoz tartoznak. Kapcsold ki a „Csak függetlenek” szűrőt, hogy lásd őket.",
   "openNow": "Most nyitva",
   "closedNow": "Zárva",
+  "hoursUnknown": "Nyitvatartás ismeretlen",
   "open247": "Nyitva 0–24",
   "emergencyBtn": "Vészhelyzet",
   "emergencyBanner": "Vészhelyzet mód — most nyitva tartó állatorvosok és állatkórházak, a legközelebbiek elöl. Indulás előtt mindig telefonálj.",
