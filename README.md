@@ -75,6 +75,29 @@ Kivet, Univet, Animalia, Medivet) are matched by website domain only.
 **Something wrong?** Open an issue with the clinic and a source; corrections go
 into `tools/chain-overrides.json` and are live after the next data run.
 
+## Opening hours from the clinics' own websites
+
+About a third of the vets in OpenStreetMap have no `opening_hours`, so an
+emergency search can't tell "closed" from "unknown". For vets **without** hours
+that do have a website, [`tools/scan-hours.js`](tools/scan-hours.js) reads up to
+three pages of that site (robots.txt honoured) and takes:
+
+1. **structured data** (schema.org `openingHoursSpecification` / `openingHours`)
+   when the site has it;
+2. otherwise the text around "openingstijden", "spreekuur", weekday names… goes to
+   a small Azure OpenAI model that answers in OSM `opening_hours` syntax or null;
+3. **emergency information**: 24/7 emergency care at the clinic itself, or an
+   out-of-hours line to the on-call vet.
+
+Every answer must pass a strict grammar check (only plain weekday/time rules)
+or it is dropped. Unchanged pages reuse last month's answer, so the AI only sees
+changes. The results are published as `hours.json` and added to the places as
+separate `snuffel:opening_hours` / `snuffel:emergency` fields: OpenStreetMap's own
+hours always win, and the site and app label these as "according to their own
+website". Nothing is written to OpenStreetMap automatically; each place links to
+the OSM editor so people can correct the source. Countries: the
+`HOURS_COUNTRIES` variable (default `nl`).
+
 ## Shared core
 
 `lib/` (chain detection, category rules, opening hours) and `i18n/` (29 language
@@ -96,6 +119,7 @@ node tests/places.test.js && node tests/chains.test.js && node tests/scan.test.j
 node tools/build-chains.js                 # official lists -> dist/chains.json
 node tools/scan-websites.js nl             # needs tools/.cache/osm-vets-nl.json (from build-places add, or Overpass)
 node tools/evaluate-chains.js nl           # what is flagged, and by which signal
+node tools/scan-hours.js nl                # opening hours from clinic websites -> tools/hours-nl.json
 ```
 
 ## Credentials
@@ -105,6 +129,9 @@ The `data` and `tiles` workflows need:
 - variable `AZURE_STORAGE_ACCOUNT` — the storage account name
 - secret `AZURE_STORAGE_SAS` — an account SAS for Blob, write/list/delete, HTTPS
   only. **It expires after one year**; renew it before then (see the site repo).
+- secrets `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_KEY` and variable
+  `AZURE_OPENAI_DEPLOYMENT` — for the opening-hours step (without them only
+  structured data is used)
 
 Workflows run only on schedule or manual dispatch, never on pull requests from
 forks, so secrets are not exposed.

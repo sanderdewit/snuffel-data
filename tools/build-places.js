@@ -105,8 +105,21 @@ function assemble() {
       if (!prev || Object.keys(el.tags).length > Object.keys(prev.el.tags).length) best.set(el.id, { el, cc });
     }
   }
+  // Opening hours / emergency info from the clinics' own websites (tools/scan-hours.js),
+  // as separate "snuffel:" fields: OSM's own opening_hours always wins.
+  const hoursFile = path.join(DIST, "hours.json");
+  const web = fs.existsSync(hoursFile) ? JSON.parse(fs.readFileSync(hoursFile, "utf8")).places || {} : {};
+  let withWebHours = 0;
   const seen = new Set(best.keys()), cells = new Map(), countries = {};
   for (const { el, cc } of best.values()) {
+    const w = web[el.id];
+    if (w) {
+      const extra = {};
+      if (w.opening_hours && !el.tags.opening_hours) { extra["snuffel:opening_hours"] = w.opening_hours; withWebHours++; }
+      if (w.emergency) extra["snuffel:emergency"] = w.emergency;
+      if (w.emergency && w.emergency_phone) extra["snuffel:emergency_phone"] = w.emergency_phone;
+      if (Object.keys(extra).length) el.tags = { ...el.tags, ...extra, "snuffel:checked": w.checked };
+    }
     const key = Math.floor(el.lat / CELL) + "_" + Math.floor(el.lon / CELL);
     if (!cells.has(key)) cells.set(key, []);
     // Country, for the opening-hours time zone (lib/hours.js tzFor). The place's
@@ -132,6 +145,7 @@ function assemble() {
   fs.writeFileSync(path.join(PLACES, "manifest.json"), JSON.stringify(manifest));
   console.log(`assembled ${seen.size} places in ${cells.size} cells (${(bytes / 1e6).toFixed(1)} MB) -> dist/places/${version}/`);
   console.log(JSON.stringify(countries));
+  console.log(`opening hours from clinic websites: ${withWebHours} places`);
 }
 
 module.exports = { OSMIUM_FILTER, centre };

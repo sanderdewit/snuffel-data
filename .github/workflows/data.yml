@@ -90,6 +90,20 @@ jobs:
         if: env.SCAN == 'true'
         run: node tools/scan-websites.js "$CC" || echo "::warning::website scan for $CC failed - previous findings are kept"
 
+      # Opening hours from the clinics' own websites, for the countries in the
+      # HOURS_COUNTRIES variable (default: nl). Unchanged pages reuse last
+      # month's answer (published hours.json), so the AI only sees changes.
+      - name: Opening hours from clinic websites
+        if: env.SCAN == 'true' && contains(format(' {0} ', vars.HOURS_COUNTRIES || 'nl'), format(' {0} ', matrix.cc))
+        env:
+          AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
+          AZURE_OPENAI_KEY: ${{ secrets.AZURE_OPENAI_KEY }}
+          AZURE_OPENAI_DEPLOYMENT: ${{ vars.AZURE_OPENAI_DEPLOYMENT }}
+        run: |
+          mkdir -p dist
+          curl -fsSL -o dist/previous-hours.json "https://snuffel.app/data/hours.json" || rm -f dist/previous-hours.json
+          node tools/scan-hours.js "$CC" | tee -a $GITHUB_STEP_SUMMARY || echo "::warning::opening-hours scan for $CC failed - previous findings are kept"
+
       - uses: actions/upload-artifact@v7
         with:
           name: country-${{ matrix.cc }}
@@ -97,6 +111,7 @@ jobs:
             dist/stage/${{ matrix.cc }}.json
             tools/.cache/osm-vets-${{ matrix.cc }}.json
             tools/scan-${{ matrix.cc }}.json
+            tools/hours-${{ matrix.cc }}.json
           if-no-files-found: warn
           retention-days: 14
           include-hidden-files: true
@@ -145,6 +160,7 @@ jobs:
           node tests/places.test.js
           node tests/chains.test.js
           node tests/scan.test.js
+          node tests/hours-scan.test.js
 
       - name: Build chain reference data
         env:
@@ -155,6 +171,12 @@ jobs:
           # Read through snuffel.app: the storage account only accepts Azure Front Door.
           curl -fsSL -o dist/previous-chains.json "https://snuffel.app/data/chains.json" || rm -f dist/previous-chains.json
           node tools/build-chains.js build
+
+      - name: Opening hours from clinic websites
+        run: |
+          # countries not scanned this run keep last month's findings
+          curl -fsSL -o dist/previous-hours.json "https://snuffel.app/data/hours.json" || rm -f dist/previous-hours.json
+          node tools/scan-hours.js merge | tee -a $GITHUB_STEP_SUMMARY
 
       - name: Assemble places
         run: node tools/build-places.js assemble | tee -a $GITHUB_STEP_SUMMARY
@@ -193,6 +215,8 @@ jobs:
              --content-type application/json --content-cache-control "public, max-age=31536000, immutable"
           # 2. chain data, 3. manifest last: always fetched fresh
           up -d data -s dist --pattern "chains.json" --overwrite \
+             --content-type application/json --content-cache-control "no-cache"
+          up -d data -s dist --pattern "hours.json" --overwrite \
              --content-type application/json --content-cache-control "no-cache"
           up -d data -s dist --pattern "places/manifest.json" --overwrite \
              --content-type application/json --content-cache-control "no-cache"

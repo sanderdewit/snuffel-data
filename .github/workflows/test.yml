@@ -24,5 +24,6 @@ jobs:
           node tests/places.test.js
           node tests/chains.test.js
           node tests/scan.test.js
+          node tests/hours-scan.test.js
           node tests/hours.test.js
           node tests/i18n.test.js

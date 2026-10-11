@@ -5,6 +5,7 @@ tools/.cache/
 
 # review material: names clinics, kept as private workflow artifacts instead
 tools/scan-*.json
+tools/hours-*.json
 tools/chains.report.json
 
 node_modules/
