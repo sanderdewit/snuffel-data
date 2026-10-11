@@ -151,8 +151,9 @@ jobs:
           ACCOUNT: ${{ vars.AZURE_STORAGE_ACCOUNT }}
         run: |
           mkdir -p dist
-          # the live file: findings for countries not scanned this run are carried over
-          curl -fsSL -o dist/previous-chains.json "https://$ACCOUNT.blob.core.windows.net/data/chains.json" || rm -f dist/previous-chains.json
+          # the live file: findings for countries not scanned this run are carried over.
+          # Read through snuffel.app: the storage account only accepts Azure Front Door.
+          curl -fsSL -o dist/previous-chains.json "https://snuffel.app/data/chains.json" || rm -f dist/previous-chains.json
           node tools/build-chains.js build
 
       - name: Assemble places
