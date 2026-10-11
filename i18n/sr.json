@@ -46,6 +46,7 @@
   "emergencyBtn": "Hitno",
   "emergencyBanner": "Hitni režim — veterinari i veterinarske bolnice koji su sada otvoreni, najbliži prvi. Uvek pozovi pre polaska.",
   "emergencyNone": "U blizini nismo pronašli dežurnog veterinara koji je sigurno otvoren — ipak prikazujemo najbliže. Uvek prvo pozovi.",
+  "emergencyUnknownHeading": "Радно време непознато – можда је затворено, прво позовите",
   "emergencyRadiusNote": "Zatvoreni veterinari su sakriveni. Pretraga je proširena na {km} km da bismo pronašli otvorene.",
   "aiLauncher": "AI pomoć: zdravlje i ponašanje",
   "aiTitle": "AI asistent za zdravlje i ponašanje",

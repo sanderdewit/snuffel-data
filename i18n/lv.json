@@ -46,6 +46,7 @@
   "emergencyBtn": "Neatliekamā palīdzība",
   "emergencyBanner": "Neatliekamās palīdzības režīms — tagad atvērtās veterinārās klīnikas un dzīvnieku slimnīcas, tuvākās vispirms. Pirms brauc, vienmēr piezvani.",
   "emergencyNone": "Tuvumā neatradām noteikti atvērtu veterinārārstu — rādām tuvākos. Vienmēr vispirms piezvani.",
+  "emergencyUnknownHeading": "Darba laiks nav zināms – var būt slēgts, vispirms zvaniet",
   "emergencyRadiusNote": "Slēgtās klīnikas ir paslēptas. Meklēšanu paplašinājām līdz {km} km, lai atrastu atvērtas vietas.",
   "aiLauncher": "MI palīdzība: veselība un uzvedība",
   "aiTitle": "MI asistents: veselība un uzvedība",

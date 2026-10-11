@@ -46,6 +46,7 @@
   "emergencyBtn": "Urgență",
   "emergencyBanner": "Mod urgență — cabinete veterinare și spitale veterinare deschise acum, cele mai apropiate primele. Sună întotdeauna înainte să pleci.",
   "emergencyNone": "Nu am găsit în apropiere o urgență veterinară sigur deschisă — îți arătăm totuși cele mai apropiate. Sună întotdeauna înainte.",
+  "emergencyUnknownHeading": "Program necunoscut – poate fi închis, sunați întâi",
   "emergencyRadiusNote": "Cabinetele închise sunt ascunse. Am extins căutarea la {km} km ca să găsim opțiuni deschise.",
   "aiLauncher": "Ajutor AI: sănătate și comportament",
   "aiTitle": "Asistent AI: sănătate și comportament",

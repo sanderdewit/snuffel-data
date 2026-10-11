@@ -45,6 +45,7 @@
   "emergencyBtn": "Akut",
   "emergencyBanner": "Akuttilstand — dyrlæger og dyrehospitaler, der har åbent nu, nærmeste først. Ring altid, før du tager afsted.",
   "emergencyNone": "Vi fandt ingen akut dyrlæge i nærheden, der med sikkerhed har åbent — viser de nærmeste alligevel. Ring altid først.",
+  "emergencyUnknownHeading": "Åbningstider ukendt – kan være lukket, ring først",
   "emergencyRadiusNote": "Lukkede dyrlæger er skjult. Søgningen er udvidet til {km} km for at finde åbne steder.",
   "aiLauncher": "AI-hjælp: sundhed og adfærd",
   "aiTitle": "AI-assistent til sundhed og adfærd",

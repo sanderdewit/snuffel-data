@@ -45,6 +45,7 @@
   "emergencyBtn": "Emergency",
   "emergencyBanner": "Emergency mode — vets & animal hospitals open now, nearest first. Always call ahead before travelling.",
   "emergencyNone": "No clearly-open emergency vet found nearby — showing the nearest anyway. Always call first.",
+  "emergencyUnknownHeading": "Opening hours unknown – may be closed, call first",
   "emergencyRadiusNote": "Closed vets are hidden. Search widened to {km} km to find open options.",
   "aiLauncher": "AI help: health & behaviour",
   "aiTitle": "AI assistant: health & behaviour",

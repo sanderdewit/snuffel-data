@@ -46,6 +46,7 @@
   "emergencyBtn": "Urgence",
   "emergencyBanner": "Mode urgence — vétérinaires et hôpitaux ouverts maintenant, du plus proche au plus loin. Appelez toujours avant de vous déplacer.",
   "emergencyNone": "Aucun vétérinaire d'urgence clairement ouvert à proximité — voici les plus proches. Appelez toujours avant.",
+  "emergencyUnknownHeading": "Horaires inconnus – peut-être fermé, appelez d’abord",
   "emergencyRadiusNote": "Les vétérinaires fermés sont masqués. Recherche étendue à {km} km pour trouver des options ouvertes.",
   "aiLauncher": "Aide IA : santé et comportement",
   "aiTitle": "Assistant IA : santé & comportement",

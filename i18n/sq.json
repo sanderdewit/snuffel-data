@@ -45,6 +45,7 @@
   "emergencyBtn": "Urgjencë",
   "emergencyBanner": "Modaliteti i urgjencës — veterinerë dhe spitale veterinare të hapura tani, më të afërtit të parët. Telefono gjithmonë para se të nisesh.",
   "emergencyNone": "Nuk u gjet afër asnjë veteriner urgjence qartësisht i hapur — po shfaqim gjithsesi më të afërtit. Telefono gjithmonë më parë.",
+  "emergencyUnknownHeading": "Orari i panjohur – mund të jetë mbyllur, telefononi më parë",
   "emergencyRadiusNote": "Veterinerët e mbyllur janë fshehur. Kërkimi u zgjerua në {km} km për të gjetur opsione të hapura.",
   "aiLauncher": "Ndihmë AI: shëndet e sjellje",
   "aiTitle": "Asistent AI për shëndetin dhe sjelljen",

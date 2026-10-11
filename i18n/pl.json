@@ -47,6 +47,7 @@
   "emergencyBtn": "Nagły przypadek",
   "emergencyBanner": "Tryb awaryjny — weterynarze i kliniki otwarte teraz, najbliższe pierwsze. Zawsze zadzwoń przed wyjazdem.",
   "emergencyNone": "Nie znaleziono w pobliżu jednoznacznie otwartego weterynarza — pokazujemy najbliższe. Zawsze najpierw zadzwoń.",
+  "emergencyUnknownHeading": "Godziny otwarcia nieznane – może być zamknięte, najpierw zadzwoń",
   "emergencyRadiusNote": "Zamknięte gabinety są ukryte. Obszar wyszukiwania powiększono do {km} km, aby znaleźć otwarte opcje.",
   "aiLauncher": "Pomoc AI: zdrowie i zachowanie",
   "aiTitle": "Asystent AI: zdrowie i zachowanie",

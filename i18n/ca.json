@@ -46,6 +46,7 @@
   "emergencyBtn": "Urgències",
   "emergencyBanner": "Mode urgències: veterinaris i hospitals veterinaris oberts ara, del més proper al més llunyà. Truca sempre abans d'anar-hi.",
   "emergencyNone": "No hem trobat cap urgència veterinària clarament oberta a prop; et mostrem les més properes. Truca sempre abans.",
+  "emergencyUnknownHeading": "Horari desconegut – pot estar tancat, truca abans",
   "emergencyRadiusNote": "Els veterinaris tancats estan amagats. Hem ampliat la cerca a {km} km per trobar opcions obertes.",
   "aiLauncher": "Ajuda IA: salut i conducta",
   "aiTitle": "Assistent IA de salut i comportament",

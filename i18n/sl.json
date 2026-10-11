@@ -47,6 +47,7 @@
   "emergencyBtn": "Nujno",
   "emergencyBanner": "Nujni način — veterinarji in veterinarske bolnišnice, ki so zdaj odprti, najbližji najprej. Pred odhodom vedno pokličite.",
   "emergencyNone": "V bližini nismo našli zagotovo odprte dežurne veterinarske službe — prikazujemo najbližje. Vedno najprej pokličite.",
+  "emergencyUnknownHeading": "Delovni čas ni znan – morda je zaprto, najprej pokličite",
   "emergencyRadiusNote": "Zaprte ambulante so skrite. Iskanje smo razširili na {km} km, da najdemo odprte možnosti.",
   "aiLauncher": "Pomoč UI: zdravje in vedenje",
   "aiTitle": "Pomočnik UI za zdravje in vedenje",

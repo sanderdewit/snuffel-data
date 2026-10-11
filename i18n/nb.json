@@ -45,6 +45,7 @@
   "emergencyBtn": "Akutt",
   "emergencyBanner": "Akuttmodus — veterinærer og dyresykehus som har åpent nå, nærmeste først. Ring alltid før du drar.",
   "emergencyNone": "Fant ingen akuttveterinær i nærheten som helt sikkert har åpent — viser de nærmeste likevel. Ring alltid først.",
+  "emergencyUnknownHeading": "Åpningstider ukjent – kan være stengt, ring først",
   "emergencyRadiusNote": "Stengte veterinærer er skjult. Søket er utvidet til {km} km for å finne åpne alternativer.",
   "aiLauncher": "AI-hjelp: helse og atferd",
   "aiTitle": "AI-assistent for helse og atferd",

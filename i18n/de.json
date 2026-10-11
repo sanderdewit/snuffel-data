@@ -45,6 +45,7 @@
   "emergencyBtn": "Notfall",
   "emergencyBanner": "Notfallmodus — jetzt geöffnete Tierärzte und Tierkliniken, die nächsten zuerst. Rufe immer vorher an.",
   "emergencyNone": "Kein eindeutig geöffneter Notdienst in der Nähe gefunden — wir zeigen die nächstgelegenen. Rufe immer zuerst an.",
+  "emergencyUnknownHeading": "Öffnungszeiten unbekannt – evtl. geschlossen, erst anrufen",
   "emergencyRadiusNote": "Geschlossene Praxen sind ausgeblendet. Suche auf {km} km erweitert, um geöffnete Optionen zu finden.",
   "aiLauncher": "KI-Hilfe: Gesundheit & Verhalten",
   "aiTitle": "KI-Hilfe: Gesundheit & Verhalten",

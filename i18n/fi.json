@@ -45,6 +45,7 @@
   "emergencyBtn": "Päivystys",
   "emergencyBanner": "Päivystystila — nyt auki olevat eläinlääkärit ja eläinsairaalat, lähimmät ensin. Soita aina ennen kuin lähdet.",
   "emergencyNone": "Läheltä ei löytynyt varmasti auki olevaa päivystävää eläinlääkäriä — näytetään silti lähimmät. Soita aina ensin.",
+  "emergencyUnknownHeading": "Aukioloajat tuntemattomat – voi olla suljettu, soita ensin",
   "emergencyRadiusNote": "Suljetut eläinlääkärit on piilotettu. Hakualuetta laajennettiin {km} kilometriin, jotta löytyisi auki olevia paikkoja.",
   "aiLauncher": "Tekoälyapu: terveys ja käytös",
   "aiTitle": "Tekoälyavustaja: terveys ja käytös",

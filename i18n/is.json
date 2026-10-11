@@ -45,6 +45,7 @@
   "emergencyBtn": "Neyðartilvik",
   "emergencyBanner": "Neyðarhamur — dýralæknar og dýraspítalar sem eru opnir núna, þeir næstu fyrst. Hringdu alltaf áður en þú leggur af stað.",
   "emergencyNone": "Enginn dýralæknir á bráðavakt fannst í nágrenninu sem er örugglega opinn — við sýnum þá næstu samt. Hringdu alltaf fyrst.",
+  "emergencyUnknownHeading": "Opnunartími óþekktur – gæti verið lokað, hringdu fyrst",
   "emergencyRadiusNote": "Lokaðir dýralæknar eru faldir. Leitin var víkkuð í {km} km til að finna opna staði.",
   "aiLauncher": "Gervigreind: heilsa og hegðun",
   "aiTitle": "Gervigreindarráðgjafi um heilsu og hegðun",
