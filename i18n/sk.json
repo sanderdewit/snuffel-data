@@ -47,7 +47,7 @@
   "emergencyBanner": "Pohotovostný režim — veterinári a veterinárne nemocnice otvorené práve teraz, najbližšie ako prvé. Pred cestou vždy najprv zavolajte.",
   "emergencyNone": "V okolí sme nenašli jednoznačne otvorenú veterinárnu pohotovosť — zobrazujeme najbližšie. Vždy najprv zavolajte.",
   "emergencyRadiusNote": "Zatvorené ambulancie sú skryté. Hľadanie sme rozšírili na {km} km, aby sme našli otvorené možnosti.",
-  "aiLauncher": "AI veterinár a správanie",
+  "aiLauncher": "AI pomoc: zdravie a správanie",
   "aiTitle": "AI pomocník: zdravie a správanie",
   "aiIntro": "Dobrý deň! Opýtajte sa ma na zdravie alebo správanie svojho psa — príznaky, štekanie, úzkosť, ťahanie na vôdzke, výcvik šteniatka — v akomkoľvek jazyku. Pomôžem vám posúdiť, aké je to naliehavé a čo skúsiť najskôr.",
   "urgency_emergency": "Naliehavé — ihneď k veterinárovi",

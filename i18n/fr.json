@@ -46,7 +46,7 @@
   "emergencyBanner": "Mode urgence — vétérinaires et hôpitaux ouverts maintenant, du plus proche au plus loin. Appelez toujours avant de vous déplacer.",
   "emergencyNone": "Aucun vétérinaire d'urgence clairement ouvert à proximité — voici les plus proches. Appelez toujours avant.",
   "emergencyRadiusNote": "Les vétérinaires fermés sont masqués. Recherche étendue à {km} km pour trouver des options ouvertes.",
-  "aiLauncher": "IA véto & comportement",
+  "aiLauncher": "Aide IA : santé et comportement",
   "aiTitle": "Assistant IA : santé & comportement",
   "aiIntro": "Bonjour ! Posez-moi vos questions sur la santé ou le comportement de votre chien — symptômes, aboiements, anxiété, tirage en laisse, éducation du chiot — dans n'importe quelle langue. Je vous aide à évaluer l'urgence et ce qu'il faut essayer en premier.",
   "urgency_emergency": "Urgent — consultez un vétérinaire maintenant",

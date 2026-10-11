@@ -47,7 +47,7 @@
   "emergencyNone": "Nu am găsit în apropiere o urgență veterinară sigur deschisă — îți arătăm totuși cele mai apropiate. Sună întotdeauna înainte.",
   "emergencyRadiusNote": "Cabinetele închise sunt ascunse. Am extins căutarea la {km} km ca să găsim opțiuni deschise.",
   "aiLauncher": "Ajutor AI: sănătate și comportament",
-  "aiTitle": "Asistent AI veterinar și comportamental",
+  "aiTitle": "Asistent AI: sănătate și comportament",
   "aiIntro": "Bună! Întreabă-mă despre sănătatea sau comportamentul câinelui tău — simptome, lătrat, anxietate, trasul de lesă, educarea cățelului — în orice limbă. Te ajut să vezi cât de urgent e și ce poți încerca mai întâi.",
   "urgency_emergency": "Urgent — mergi acum la veterinar",
   "urgency_vet_soon": "Mergi curând la veterinar",

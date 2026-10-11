@@ -45,7 +45,7 @@
   "emergencyBanner": "Spoedmodus — dierenartsen en -ziekenhuizen die nu open zijn, dichtstbij eerst. Bel altijd eerst voordat je gaat.",
   "emergencyNone": "Geen duidelijk geopende spoeddierenarts in de buurt — we tonen de dichtstbijzijnde. Bel altijd eerst.",
   "emergencyRadiusNote": "Gesloten dierenartsen zijn verborgen. Zoekgebied vergroot naar {km} km om geopende opties te vinden.",
-  "aiLauncher": "AI-dierenarts & gedragshulp",
+  "aiLauncher": "AI-hulp: gezondheid & gedrag",
   "aiTitle": "AI-hulp: gezondheid & gedrag",
   "aiIntro": "Hoi! Vraag me alles over de gezondheid of het gedrag van je hond — klachten, blaffen, angst, trekken aan de lijn, puppytraining — in elke taal. Ik help je inschatten hoe dringend het is en wat je eerst kunt proberen.",
   "urgency_emergency": "Spoed — nu naar de dierenarts",

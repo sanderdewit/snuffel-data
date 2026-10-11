@@ -45,7 +45,7 @@
   "emergencyBanner": "Notfallmodus — jetzt geöffnete Tierärzte und Tierkliniken, die nächsten zuerst. Rufe immer vorher an.",
   "emergencyNone": "Kein eindeutig geöffneter Notdienst in der Nähe gefunden — wir zeigen die nächstgelegenen. Rufe immer zuerst an.",
   "emergencyRadiusNote": "Geschlossene Praxen sind ausgeblendet. Suche auf {km} km erweitert, um geöffnete Optionen zu finden.",
-  "aiLauncher": "KI-Tierarzt & Verhalten",
+  "aiLauncher": "KI-Hilfe: Gesundheit & Verhalten",
   "aiTitle": "KI-Hilfe: Gesundheit & Verhalten",
   "aiIntro": "Hallo! Frag mich zu Gesundheit oder Verhalten deines Hundes — Symptome, Bellen, Angst, Ziehen an der Leine, Welpentraining — in jeder Sprache. Ich helfe dir einzuschätzen, wie dringend es ist und was du zuerst ausprobieren kannst.",
   "urgency_emergency": "Dringend — jetzt zum Tierarzt",

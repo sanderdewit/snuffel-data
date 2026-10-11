@@ -47,7 +47,7 @@
   "emergencyBanner": "Režim pohotovosti — veterináři a kliniky otevřené nyní, nejbližší první. Vždy nejprve zavolejte.",
   "emergencyNone": "V okolí nebyl nalezen jednoznačně otevřený pohotovostní veterinář — zobrazujeme nejbližší. Vždy nejprve zavolejte.",
   "emergencyRadiusNote": "Zavřené ordinace jsou skryté. Hledání rozšířeno na {km} km, aby se našly otevřené možnosti.",
-  "aiLauncher": "AI veterinář a chování",
+  "aiLauncher": "AI pomoc: zdraví a chování",
   "aiTitle": "AI pomocník: zdraví a chování",
   "aiIntro": "Dobrý den! Zeptejte se mě na zdraví nebo chování svého psa — příznaky, štěkání, úzkost, tahání na vodítku, výcvik štěněte — v jakémkoli jazyce. Pomohu posoudit naléhavost a co zkusit nejdřív.",
   "urgency_emergency": "Naléhavé — ihned k veterináři",
