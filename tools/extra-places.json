@@ -45,6 +45,58 @@
       }
     },
     {
+      "id": "x-nl-dierenartsenpost-zwolle",
+      "cc": "nl",
+      "lat": 52.526620,
+      "lon": 6.128950,
+      "source": "https://www.anicura.nl/klinieken/overijssel/zwolle/dierenartsenpost/",
+      "checked": "2026-10-12",
+      "tags": {
+        "amenity": "veterinary",
+        "name": "Dierenartsenpost Zwolle (spoed buiten kantooruren)",
+        "brand": "AniCura",
+        "addr:street": "Schrevenweg",
+        "addr:housenumber": "13-15",
+        "addr:postcode": "8024HB",
+        "addr:city": "Zwolle",
+        "phone": "+31 38 303 5333",
+        "website": "https://www.anicura.nl/klinieken/overijssel/zwolle/dierenartsenpost/",
+        "opening_hours": "Mo-Fr 00:00-08:00,18:00-24:00; Sa,Su 00:00-24:00"
+      }
+    },
+    {
+      "patch": "n2713193107",
+      "source": "https://www.anicura.nl/klinieken/zuid-holland/haaglanden/",
+      "checked": "2026-10-12",
+      "tags": {
+        "website": "https://www.anicura.nl/klinieken/zuid-holland/haaglanden/",
+        "opening_hours": "24/7",
+        "snuffel:emergency": "24/7"
+      }
+    },
+    {
+      "patch": "n2747091142",
+      "source": "https://www.anicura.nl/klinieken/zuid-holland/verwijscentrum-dordrecht/",
+      "checked": "2026-10-12",
+      "tags": {
+        "website": "https://www.anicura.nl/klinieken/zuid-holland/verwijscentrum-dordrecht/",
+        "opening_hours": "24/7",
+        "snuffel:emergency": "24/7"
+      }
+    },
+    {
+      "patch": "n2841723873",
+      "source": "https://www.anicura.nl/klinieken/noord-brabant/tilburg/",
+      "checked": "2026-10-12",
+      "tags": { "snuffel:emergency": "24/7" }
+    },
+    {
+      "patch": "n8610403622",
+      "source": "https://www.anicura.nl/klinieken/overijssel/oldenzaal/",
+      "checked": "2026-10-12",
+      "tags": { "snuffel:emergency": "24/7" }
+    },
+    {
       "patch": "n12532917002",
       "source": "https://evidensiadierenziekenhuis.nl/dierenziekenhuizen/barendrecht/",
       "checked": "2026-10-12",
