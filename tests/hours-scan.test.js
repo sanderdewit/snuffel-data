@@ -79,6 +79,35 @@ test("robots.txt: longest rule wins, Allow wins a tie", () => {
   assert.ok(!allowedPath({ disallow: ["/*?"], allow: [] }, "/page?x=1"));
   assert.ok(allowedPath({ disallow: [], allow: [] }, "/"));
 });
+test("robots.txt: wildcards and the $ anchor", () => {
+  const q = { disallow: ["/*?"], allow: [] };
+  assert.ok(!allowedPath(q, "/page?x=1"));
+  assert.ok(!allowedPath(q, "/?"));
+  assert.ok(allowedPath(q, "/page"));
+  const open = { disallow: ["/private"], allow: ["/private/open$"] };
+  assert.ok(allowedPath(open, "/private/open"));
+  assert.ok(!allowedPath(open, "/private/open/more"));
+  assert.ok(!allowedPath(open, "/private/x"));
+  const root = { disallow: ["/"], allow: [] };
+  assert.ok(!allowedPath(root, "/"));
+  assert.ok(!allowedPath(root, "/anything"));
+  assert.ok(!allowedPath({ disallow: ["/*.pdf$"], allow: [] }, "/files/a.pdf"));
+  assert.ok(allowedPath({ disallow: ["/*.pdf$"], allow: [] }, "/files/a.pdf.html"));
+  assert.ok(!allowedPath({ disallow: ["/a**b"], allow: [] }, "/a-x-b"));        // runs of * collapse
+  assert.ok(allowedPath({ disallow: ["/abc$"], allow: [] }, "/ab"));
+  assert.ok(!allowedPath({ disallow: ["/a*c$"], allow: [] }, "/abcbc"));
+  assert.ok(allowedPath({ disallow: ["/a*bc*bc$"], allow: [] }, "/abc"));     // pieces must not overlap
+});
+test("robots.txt: hostile rules can't hang the scan", () => {
+  const evil = "/*a*a*a*a*a*a*a*a*a*a*a*a*a*a*a*a$";
+  const start = Date.now();
+  for (let i = 0; i < 100; i++) allowedPath({ disallow: [evil], allow: [] }, "/" + "a".repeat(30));
+  allowedPath({ disallow: ["/" + "*a".repeat(5000) + "$"], allow: [] }, "/" + "a".repeat(10000));
+  assert.ok(Date.now() - start < 100, `took ${Date.now() - start} ms`);
+  assert.ok(!allowedPath({ disallow: [evil], allow: [] }, "/" + "a".repeat(30)));
+  assert.ok(allowedPath({ disallow: [evil], allow: [] }, "/" + "a".repeat(30) + "b"));
+  assert.ok(allowedPath({ disallow: ["/" + "x".repeat(600)], allow: [] }, "/" + "x".repeat(700)));   // over-long rule ignored
+});
 
 test("'24/7 emergency' on a practice with office hours is an on-call line", () => {
   assert.strictEqual(settle({ emergency: "24/7", hospital: true, opening_hours: "Mo-Fr 08:00-18:00" }).emergency, "on_call");

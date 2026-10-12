@@ -31,8 +31,12 @@ jobs:
   extract:
     runs-on: ubuntu-latest
     timeout-minutes: 240
+    environment: publish        # main only; its OIDC identity may write the storage containers
+    permissions:
+      contents: read
+      id-token: write           # GitHub OIDC sign-in to Azure, no stored key
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Install the pmtiles CLI (hash pinned)
         run: |
@@ -59,12 +63,18 @@ jobs:
           pmtiles show snuffel.pmtiles > tiles-info.txt   # not piped into head: SIGPIPE would fail the step under pipefail
           head -20 tiles-info.txt
 
+      - name: Sign in to Azure (OIDC)
+        uses: azure/login@a641126d1b8aa4d1fa005f4f92df94a3a4c4c906 # v3.1.0
+        with:
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+
       - name: Publish to Azure Storage
         env:
           ACCOUNT: ${{ vars.AZURE_STORAGE_ACCOUNT }}
-          SAS: ${{ secrets.AZURE_STORAGE_SAS }}
         run: |
-          az storage blob upload --account-name "$ACCOUNT" --sas-token "$SAS" --only-show-errors \
+          az storage blob upload --account-name "$ACCOUNT" --auth-mode login --only-show-errors \
             -c tiles -n snuffel.pmtiles -f snuffel.pmtiles --overwrite \
             --content-type application/vnd.pmtiles --content-cache-control "public, max-age=86400"
           echo "published tiles/snuffel.pmtiles" >> $GITHUB_STEP_SUMMARY

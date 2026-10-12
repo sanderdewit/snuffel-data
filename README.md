@@ -127,8 +127,11 @@ node tools/scan-hours.js nl                # opening hours from clinic websites 
 The `data` and `tiles` workflows need:
 
 - variable `AZURE_STORAGE_ACCOUNT` — the storage account name
-- secret `AZURE_STORAGE_SAS` — an account SAS for Blob, write/list/delete, HTTPS
-  only. **It expires after one year**; renew it before then (see the site repo).
+- variables `AZURE_CLIENT_ID`, `AZURE_TENANT_ID`, `AZURE_SUBSCRIPTION_ID` — the
+  Entra app "snuffel-data-publish". Workflows sign in with GitHub OIDC (no stored
+  key or SAS): its federated credential only trusts this repo's `publish`
+  environment (main branch only), and its only role is Storage Blob Data
+  Contributor on the `data` and `tiles` containers.
 - secrets `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_KEY` and variable
   `AZURE_OPENAI_DEPLOYMENT` — for the opening-hours step (without them only
   structured data is used)

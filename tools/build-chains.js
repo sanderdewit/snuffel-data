@@ -24,8 +24,9 @@
 "use strict";
 const fs = require("fs");
 const path = require("path");
+const { ruleMatches, robotsBody } = require("./robots-match.js");
 
-const UA = "Mozilla/5.0 (compatible; SnuffelBot/1.0; dog-services directory, chain ownership check)";
+const UA ="Mozilla/5.0 (compatible; SnuffelBot/1.0; dog-services directory, chain ownership check)";
 const DELAY_MS = 1000;
 const TIMEOUT_MS = 30000;
 const OUT = path.join(__dirname, "..", "dist", "chains.json");
@@ -105,7 +106,7 @@ async function robotsFor(origin) {
   let txt = "";
   try { txt = await get(origin + "/robots.txt"); } catch (e) { /* none: all allowed */ }
   let applies = false;
-  for (const raw of txt.split(/\r?\n/)) {
+  for (const raw of robotsBody(txt).split(/\r?\n/)) {
     const line = raw.replace(/#.*/, "").trim();
     const m = line.match(/^([a-z-]+)\s*:\s*(.*)$/i);
     if (!m) continue;
@@ -117,16 +118,13 @@ async function robotsFor(origin) {
   robotsCache.set(origin, rules);
   return rules;
 }
-// Disallow rules are path prefixes with optional * wildcards and a $ end anchor.
-function robotsRule(rule) {
-  const anchored = rule.endsWith("$");
-  const body = (anchored ? rule.slice(0, -1) : rule).split("*")
-    .map((s) => s.replace(/[.+?^${}()|[\]\\]/g, "\\$&")).join(".*");
-  return new RegExp("^" + body + (anchored ? "$" : ""));
+// Disallow rules are path prefixes with optional * wildcards and a $ end anchor
+// (tools/robots-match.js: no RegExp, so a hostile rule can't hang the crawl).
+function robotsAllowed(rules, pathname) {
+  return !rules.disallow.some((rule) => ruleMatches(rule, pathname));
 }
 async function allowedByRobots(origin, pathname) {
-  const rules = await robotsFor(origin);
-  return !rules.disallow.some((rule) => robotsRule(rule).test(pathname));
+  return robotsAllowed(await robotsFor(origin), pathname);
 }
 
 // Same phone key / host normalisation the app uses to match OSM vets.
@@ -247,7 +245,8 @@ async function evidensiaBelgium(log) {
   return out;
 }
 
-(async () => {
+module.exports = { robotsAllowed };
+if (require.main === module) (async () => {
   const mode = process.argv[2] || "all";   // crawl | build | all
   let log = [], clinics = [];
   if (mode === "crawl" || mode === "all" || (mode === "build" && !fs.existsSync(CRAWL_CACHE))) {

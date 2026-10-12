@@ -80,5 +80,22 @@ test("plain independents stay independent", () => {
   assert.strictEqual(detect({ name: "Dierenartsenpraktijk De Linde", phone: "020 555 1234", website: "delinde.nl" }, ref), null);
 });
 
+const { robotsAllowed } = require("../tools/build-chains.js");
+test("crawler robots.txt: Disallow prefixes with * and $", () => {
+  const rules = { disallow: ["/admin", "/*?", "/*.pdf$"] };
+  assert.ok(!robotsAllowed(rules, "/admin/x"));
+  assert.ok(!robotsAllowed(rules, "/search?q=1"));
+  assert.ok(!robotsAllowed(rules, "/a.pdf"));
+  assert.ok(robotsAllowed(rules, "/a.pdf.html"));
+  assert.ok(robotsAllowed(rules, "/klinieken/x/"));
+  assert.ok(!robotsAllowed({ disallow: ["/"] }, "/sitemap.xml"));
+  assert.ok(robotsAllowed({ disallow: [] }, "/"));
+});
+test("crawler robots.txt: a hostile rule finishes quickly", () => {
+  const start = Date.now();
+  assert.ok(robotsAllowed({ disallow: ["/*a*a*a*a*a*a*a*a*a*a*a*a*a*a*a*a$"] }, "/" + "a".repeat(30) + "b"));
+  assert.ok(Date.now() - start < 100, `took ${Date.now() - start} ms`);
+});
+
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);

@@ -3,7 +3,8 @@ dist/
 work/
 tools/.cache/
 
-# review material: names clinics, kept as private workflow artifacts instead
+# review material: names clinics. Not committed; uploaded as workflow artifacts,
+# which any signed-in GitHub user can download for a public repo.
 tools/scan-*.json
 tools/hours-*.json
 tools/chains.report.json

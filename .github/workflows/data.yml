@@ -11,7 +11,11 @@
 # If any country fails, nothing is published (the live data stays as it was):
 # use "Re-run failed jobs" and publish continues with the finished ones.
 #
-# Secrets/variables: AZURE_STORAGE_ACCOUNT (variable), AZURE_STORAGE_SAS (secret).
+# Publishing signs in to Azure with GitHub OIDC (no stored storage key): the
+# publish job runs in the "publish" environment (main branch only), whose
+# federated identity may only write the data and tiles containers.
+# Variables: AZURE_STORAGE_ACCOUNT, AZURE_CLIENT_ID, AZURE_TENANT_ID,
+# AZURE_SUBSCRIPTION_ID, AZURE_OPENAI_DEPLOYMENT. Secrets: AZURE_OPENAI_ENDPOINT, AZURE_OPENAI_KEY.
 name: data
 
 on:
@@ -40,7 +44,7 @@ jobs:
     outputs:
       matrix: ${{ steps.plan.outputs.matrix }}
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - id: plan
         env:
           WANT: ${{ github.event.inputs.countries || 'all' }}
@@ -67,8 +71,8 @@ jobs:
       CC: ${{ matrix.cc }}
       SCAN: ${{ github.event_name == 'schedule' || github.event.inputs.scan == 'true' }}
     steps:
-      - uses: actions/checkout@v7
-      - uses: actions/setup-node@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: 22
       - name: Install osmium
@@ -104,7 +108,7 @@ jobs:
           curl -fsSL -o dist/previous-hours.json "https://snuffel.app/data/hours.json" || rm -f dist/previous-hours.json
           node tools/scan-hours.js "$CC" | tee -a $GITHUB_STEP_SUMMARY || echo "::warning::opening-hours scan for $CC failed - previous findings are kept"
 
-      - uses: actions/upload-artifact@v7
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: country-${{ matrix.cc }}
           path: |
@@ -122,13 +126,13 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 240
     steps:
-      - uses: actions/checkout@v7
-      - uses: actions/setup-node@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: 22
       - name: Crawl the groups' clinic lists
         run: node tools/build-chains.js crawl | tee -a $GITHUB_STEP_SUMMARY
-      - uses: actions/upload-artifact@v7
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: official-clinics
           path: tools/.cache/official-clinics.json
@@ -139,17 +143,21 @@ jobs:
     needs: [country, official]
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    environment: publish        # main only; its OIDC identity may write the storage containers
+    permissions:
+      contents: read
+      id-token: write           # GitHub OIDC sign-in to Azure, no stored key
     steps:
-      - uses: actions/checkout@v7
-      - uses: actions/setup-node@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: 22
 
-      - uses: actions/download-artifact@v7
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
         with:
           pattern: country-*
           merge-multiple: true
-      - uses: actions/download-artifact@v7
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
         with:
           name: official-clinics
           path: tools/.cache
@@ -194,7 +202,7 @@ jobs:
           } >> $GITHUB_STEP_SUMMARY
 
       - name: Keep the review material (not published)
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: review-${{ github.run_id }}
           path: |
@@ -202,14 +210,20 @@ jobs:
             tools/chains.report.json
           retention-days: 90
 
+      - name: Sign in to Azure (OIDC)
+        uses: azure/login@a641126d1b8aa4d1fa005f4f92df94a3a4c4c906 # v3.1.0
+        with:
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+
       - name: Publish to Azure Storage
         env:
           ACCOUNT: ${{ vars.AZURE_STORAGE_ACCOUNT }}
-          SAS: ${{ secrets.AZURE_STORAGE_SAS }}
         run: |
           set -euo pipefail
           VERSION=$(node -p "require('./dist/places/manifest.json').version")
-          up() { az storage blob upload-batch --account-name "$ACCOUNT" --sas-token "$SAS" --only-show-errors "$@"; }
+          up() { az storage blob upload-batch --account-name "$ACCOUNT" --auth-mode login --only-show-errors "$@"; }
           # 1. cells: immutable, cache for a year
           up -d data -s dist --pattern "places/$VERSION/*" --overwrite \
              --content-type application/json --content-cache-control "public, max-age=31536000, immutable"
@@ -221,11 +235,11 @@ jobs:
           up -d data -s dist --pattern "places/manifest.json" --overwrite \
              --content-type application/json --content-cache-control "no-cache"
           # keep the current and the previous version, delete older ones
-          az storage blob list --account-name "$ACCOUNT" --sas-token "$SAS" -c data --prefix places/ \
+          az storage blob list --account-name "$ACCOUNT" --auth-mode login -c data --prefix places/ \
              --query "[].name" -o tsv --only-show-errors \
             | sed -n 's#^places/\([0-9-]\{10\}\)/.*#\1#p' | sort -u | head -n -2 \
             | while read old; do
-                az storage blob delete-batch --account-name "$ACCOUNT" --sas-token "$SAS" -s data \
+                az storage blob delete-batch --account-name "$ACCOUNT" --auth-mode login -s data \
                    --pattern "places/$old/*" --only-show-errors
                 echo "deleted old version $old"
               done

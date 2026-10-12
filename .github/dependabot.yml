@@ -1,0 +1,8 @@
+# Actions are pinned to commit SHAs (a moved tag can't change what runs);
+# Dependabot proposes the updates so the pins don't go stale.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

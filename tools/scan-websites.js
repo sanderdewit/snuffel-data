@@ -24,6 +24,8 @@
 const fs = require("fs");
 const path = require("path");
 const { hostOf, groupForHost, allValues, SCAN_NAMES } = require("../lib/chains.js");
+const { safeFetch, readCapped } = require("./safe-fetch.js");
+const { robotsBody } = require("./robots-match.js");
 
 const COUNTRY = (process.argv[2] || "nl").toLowerCase();
 const UA = "Mozilla/5.0 (compatible; SnuffelBot/1.0; dog-services directory, chain ownership check)";
@@ -96,13 +98,13 @@ function normGroup(s) {
   return n ? n.group : null;
 }
 
+// The URLs come from OSM: safeFetch only reaches public http(s) addresses, on every redirect hop.
 async function fetchText(url) {
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
   try {
-    const r = await fetch(url, { headers: { "User-Agent": UA, "Accept": "text/html" }, redirect: "follow", signal: ctrl.signal });
-    const buf = Buffer.from(await r.arrayBuffer());
-    return { ok: r.ok, status: r.status, finalUrl: r.url, html: buf.subarray(0, MAX_BYTES).toString("utf8") };
+    const { response: r, finalUrl } = await safeFetch(url, { headers: { "User-Agent": UA, "Accept": "text/html" }, signal: ctrl.signal });
+    return { ok: r.ok, status: r.status, finalUrl, html: await readCapped(r, MAX_BYTES) };
   } finally { clearTimeout(timer); }
 }
 
@@ -111,7 +113,7 @@ async function robotsAllows(origin) {
     const { ok, html } = await fetchText(origin + "/robots.txt");
     if (!ok) return true;
     let applies = false;
-    for (const raw of html.split(/\r?\n/)) {
+    for (const raw of robotsBody(html).split(/\r?\n/)) {
       const line = raw.replace(/#.*/, "").trim();
       const m = line.match(/^([a-z-]+)\s*:\s*(.*)$/i);
       if (!m) continue;

@@ -25,7 +25,8 @@
  *                                        in countries not scanned this run)
  *
  * Polite: robots.txt (Disallow and Crawl-delay), at most 3 pages per site, one
- * request per host at a time. Pages whose text didn't change since the previous
+ * request per host at a time, at most a minute per site. Only public http(s)
+ * addresses are fetched (tools/safe-fetch.js: the URLs come from OSM). Pages whose text didn't change since the previous
  * run (dist/previous-hours.json) reuse the earlier answer: no AI call.
  *
  * AI: AZURE_OPENAI_ENDPOINT, AZURE_OPENAI_KEY, AZURE_OPENAI_DEPLOYMENT. Without
@@ -37,10 +38,13 @@ const path = require("path");
 const crypto = require("crypto");
 const { evaluate } = require("../lib/hours.js");
 const { hostOf, allValues } = require("../lib/chains.js");
+const { ruleMatches, robotsBody } = require("./robots-match.js");
+const { safeFetch, readCapped } = require("./safe-fetch.js");
 
 const UA = "Mozilla/5.0 (compatible; SnuffelBot/1.0; dog-services directory, opening hours; +https://snuffel.app)";
 const CONCURRENCY = 6;
 const TIMEOUT_MS = 15000;
+const SITE_BUDGET_MS = 60000;   // one site, all its pages and robots.txt; a slow site can't stall a worker
 const MAX_BYTES = 1500000;
 const MAX_PAGES = 3;
 const MAX_AI_CHARS = 5000;
@@ -49,27 +53,29 @@ const ROOT = path.join(__dirname, "..");
 const DIST = path.join(ROOT, "dist");
 
 // ---- fetching -----------------------------------------------------------------
-async function fetchText(url) {
+// `deadline` (ms timestamp) is the site's time budget; each request also has its own timeout.
+async function fetchText(url, deadline) {
+  const left = Math.min(TIMEOUT_MS, (deadline || Infinity) - Date.now());
+  if (left <= 0) throw Object.assign(new Error("site time budget used up"), { name: "AbortError" });
   const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
+  const timer = setTimeout(() => ctrl.abort(), left);
   try {
-    const r = await fetch(url, { headers: { "User-Agent": UA, "Accept": "text/html" }, redirect: "follow", signal: ctrl.signal });
+    const { response: r, finalUrl } = await safeFetch(url, { headers: { "User-Agent": UA, "Accept": "text/html" }, signal: ctrl.signal });
     const type = r.headers.get("content-type") || "";
-    const buf = Buffer.from(await r.arrayBuffer());
-    return { ok: r.ok && /html|text\/plain|^$/i.test(type), status: r.status, finalUrl: r.url, html: buf.subarray(0, MAX_BYTES).toString("utf8") };
+    return { ok: r.ok && /html|text\/plain|^$/i.test(type), status: r.status, finalUrl, html: await readCapped(r, MAX_BYTES) };
   } finally { clearTimeout(timer); }
 }
 
 // robots.txt for the "*" group (and ours): Disallow / Allow prefixes with * and $, Crawl-delay.
 const robotsCache = new Map();
-async function robots(origin) {
+async function robots(origin, deadline) {
   if (robotsCache.has(origin)) return robotsCache.get(origin);
   const rules = { allow: [], disallow: [], delay: 0 };
   try {
-    const r = await fetchText(origin + "/robots.txt");
+    const r = await fetchText(origin + "/robots.txt", deadline);
     if (r.status < 400) {
       let applies = false, lastWasAgent = false;
-      for (const raw of r.html.split(/\r?\n/)) {
+      for (const raw of robotsBody(r.html).split(/\r?\n/)) {
         const line = raw.replace(/#.*/, "").trim();
         const m = line.match(/^([a-z-]+)\s*:\s*(.*)$/i);
         if (!m) continue;
@@ -91,16 +97,11 @@ async function robots(origin) {
   robotsCache.set(origin, rules);
   return rules;
 }
-function ruleRe(rule) {
-  const anchored = rule.endsWith("$");
-  const body = (anchored ? rule.slice(0, -1) : rule).split("*").map((s) => s.replace(/[.+?^${}()|[\]\\]/g, "\\$&")).join(".*");
-  return new RegExp("^" + body + (anchored ? "$" : ""));
-}
 // Longest matching rule wins; Allow wins a tie (as Google and RFC 9309 do).
 function allowedPath(rules, pathname) {
   let best = { len: -1, allow: true };
   for (const [list, allow] of [[rules.disallow, false], [rules.allow, true]]) {
-    for (const r of list) if (ruleRe(r).test(pathname) && (r.length > best.len || (r.length === best.len && allow))) best = { len: r.length, allow };
+    for (const r of list) if (ruleMatches(r, pathname) && (r.length > best.len || (r.length === best.len && allow))) best = { len: r.length, allow };
   }
   return best.allow;
 }
@@ -308,14 +309,22 @@ const ROUND_THE_CLOCK = /24\s*(?:uur|uurs|\/\s*7|h\b|stunden|heures)|dag en nach
 // ---- scanning ---------------------------------------------------------------------------
 async function scanSite(vet, url, previous) {
   const origin = new URL(url).origin;
-  const rules = await robots(origin);
+  const deadline = Date.now() + SITE_BUDGET_MS;
+  const rules = await robots(origin, deadline);
   let pages = [url], seen = 0, texts = [], structured = null;
   for (let i = 0; i < pages.length && seen < MAX_PAGES; i++) {
     const u = new URL(pages[i]);
     if (!allowedPath(rules, u.pathname + u.search)) { if (i === 0) return { status: "robots" }; continue; }
-    if (seen) await sleep(Math.max(1000, rules.delay * 1000));
+    const wait = seen ? Math.max(1000, rules.delay * 1000) : 0;
+    if (Date.now() + wait >= deadline) return { status: "timeout" };
+    if (wait) await sleep(wait);
     let page;
-    try { page = await fetchText(pages[i]); } catch (e) { if (i === 0) throw e; continue; }
+    try { page = await fetchText(pages[i], deadline); }
+    catch (e) {
+      if (i === 0) throw e;
+      if (Date.now() >= deadline) return { status: "timeout" };
+      continue;
+    }
     seen++;
     if (!page.ok) { if (i === 0) return { status: "http " + page.status }; continue; }
     structured = structured || structuredHours(page.html, vet);
