@@ -40,6 +40,7 @@
   "noResultsHint": "Experimente um raio maior ou outra morada.",
   "onlyChainsHidden": "Todas as opções próximas pertencem a cadeias. Desative “Só independentes” para as ver.",
   "widenSearch": "Procurar mais longe: {km} km",
+  "showMore": "Mostrar mais ({n})",
   "openNow": "Aberto agora",
   "closedNow": "Fechado",
   "hoursUnknown": "Horário desconhecido",

@@ -40,6 +40,7 @@
   "noResultsHint": "Prova amb un radi més gran o una altra adreça.",
   "onlyChainsHidden": "Totes les opcions properes són cadenes. Desactiva «Només independents» per veure-les.",
   "widenSearch": "Cerca més lluny: {km} km",
+  "showMore": "Mostra'n més ({n})",
   "openNow": "Obert ara",
   "closedNow": "Tancat",
   "hoursUnknown": "Horari desconegut",

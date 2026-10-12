@@ -39,6 +39,7 @@
   "noResultsHint": "Prófaðu stærri radíus eða annað heimilisfang.",
   "onlyChainsHidden": "Allir valkostir í nágrenninu eru í eigu keðja. Slökktu á „Aðeins sjálfstæðir“ til að sjá þá.",
   "widenSearch": "Leita lengra: {km} km",
+  "showMore": "Sýna fleiri ({n})",
   "openNow": "Opið núna",
   "closedNow": "Lokað",
   "hoursUnknown": "Opnunartími óþekktur",

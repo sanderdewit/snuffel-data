@@ -41,6 +41,7 @@
   "noResultsHint": "Zkuste větší okruh nebo jinou adresu.",
   "onlyChainsHidden": "Všechny možnosti zde patří sítím. Vypněte „Pouze nezávislé“, abyste je viděli.",
   "widenSearch": "Hledat dál: {km} km",
+  "showMore": "Zobrazit další ({n})",
   "openNow": "Nyní otevřeno",
   "closedNow": "Zavřeno",
   "hoursUnknown": "Otevírací doba neznámá",

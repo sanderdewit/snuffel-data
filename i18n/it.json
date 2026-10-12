@@ -40,6 +40,7 @@
   "noResultsHint": "Prova con un raggio più ampio o un altro indirizzo.",
   "onlyChainsHidden": "Qui ci sono solo attività di catene. Disattiva “Solo indipendenti” per vederle.",
   "widenSearch": "Cerca più lontano: {km} km",
+  "showMore": "Mostra altri ({n})",
   "openNow": "Aperto ora",
   "closedNow": "Chiuso",
   "hoursUnknown": "Orari sconosciuti",

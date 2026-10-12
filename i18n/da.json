@@ -39,6 +39,7 @@
   "noResultsHint": "Prøv en større radius eller en anden adresse.",
   "onlyChainsHidden": "Alle steder i nærheden her er kædeejede. Slå “Kun uafhængige” fra for at se dem.",
   "widenSearch": "Søg længere væk: {km} km",
+  "showMore": "Vis flere ({n})",
   "openNow": "Åben nu",
   "closedNow": "Lukket",
   "hoursUnknown": "Åbningstider ukendt",

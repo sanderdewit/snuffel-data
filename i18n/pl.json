@@ -41,6 +41,7 @@
   "noResultsHint": "Spróbuj większego promienia lub innego adresu.",
   "onlyChainsHidden": "Wszystkie opcje tutaj należą do sieci. Wyłącz „Tylko niezależne”, aby je zobaczyć.",
   "widenSearch": "Szukaj dalej: {km} km",
+  "showMore": "Pokaż więcej ({n})",
   "openNow": "Otwarte",
   "closedNow": "Zamknięte",
   "hoursUnknown": "Godziny otwarcia nieznane",

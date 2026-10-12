@@ -39,6 +39,7 @@
   "noResultsHint": "Prøv en større radius eller en annen adresse.",
   "onlyChainsHidden": "Alle alternativene i nærheten er kjedeeide. Slå av «Bare uavhengige» for å se dem.",
   "widenSearch": "Søk lenger unna: {km} km",
+  "showMore": "Vis flere ({n})",
   "openNow": "Åpent nå",
   "closedNow": "Stengt",
   "hoursUnknown": "Åpningstider ukjent",

@@ -40,6 +40,7 @@
   "noResultsHint": "Prueba con un radio mayor o con otra dirección.",
   "onlyChainsHidden": "Todas las opciones cercanas son cadenas. Desactiva «Solo independientes» para verlas.",
   "widenSearch": "Buscar más lejos: {km} km",
+  "showMore": "Mostrar más ({n})",
   "openNow": "Abierto ahora",
   "closedNow": "Cerrado",
   "hoursUnknown": "Horario desconocido",

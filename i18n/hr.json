@@ -40,6 +40,7 @@
   "noResultsHint": "Pokušaj s većim radijusom ili drugom adresom.",
   "onlyChainsHidden": "Sve opcije u blizini pripadaju lancima. Isključi „Samo neovisni” da ih vidiš.",
   "widenSearch": "Traži dalje: {km} km",
+  "showMore": "Prikaži više ({n})",
   "openNow": "Otvoreno",
   "closedNow": "Zatvoreno",
   "hoursUnknown": "Radno vrijeme nepoznato",
