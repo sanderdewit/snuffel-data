@@ -66,7 +66,7 @@
   "aiRateLimited": "Paljon kysymyksiä lyhyessä ajassa — odota muutama minuutti ja yritä uudelleen.",
   "aiPlaceholder": "Kuvaile oireita tai käytöstä…",
   "aiSend": "Lähetä",
-  "aiReply": "Tekoälyn oirearvio ei ole juuri nyt käytettävissä. 🐕 Jos olet huolissasi, etsi auki oleva eläinlääkäri läheltäsi Päivystys-painikkeella.",
+  "aiReply": "Tekoälyapu ei ole juuri nyt käytettävissä. 🐕 Jos olet huolissasi, etsi auki oleva eläinlääkäri läheltäsi Päivystys-painikkeella.",
   "aiError": "Valitettavasti en pystynyt vastaamaan juuri nyt. Yritä hetken päästä uudelleen.",
   "aiDisclaimer": "Vain yleistä ohjeistusta — ei korvaa eläinlääkäriä eikä käytösneuvojaa.",
   "viewList": "Lista",
