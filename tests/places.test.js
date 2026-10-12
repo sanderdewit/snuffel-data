@@ -79,6 +79,42 @@ test("vet list for the website scanner is written", () => {
   assert.strictEqual(vets[0].tags.source, "BAG");   // full tags, the scanner needs website/phone
 });
 
+// Second build: hand-checked extra places and opening hours from clinic websites.
+fs.writeFileSync(path.join(tmp, "extra.json"), JSON.stringify({ places: [
+  { id: "x-nl-er", cc: "nl", lat: 52.01, lon: 5.10, source: "https://example.nl/", checked: "2026-10-12", tags: { amenity: "veterinary", name: "Spoedkliniek", opening_hours: "24/7", "snuffel:emergency": "24/7" } },
+  { id: "x-de-er", cc: "de", lat: 52.5, lon: 13.4, source: "https://example.de/", checked: "2026-10-12", tags: { amenity: "veterinary", name: "Notfallklinik" } },
+  { id: "x-nl-moved", cc: "nl", lat: 52.2, lon: 4.9, replaces: ["n5"], source: "https://example.nl/m", checked: "2026-10-12", tags: { amenity: "animal_training", name: "Hondenschool (nieuw adres)" } },
+  { patch: "n1", source: "https://example.nl/a", checked: "2026-10-12", tags: { opening_hours: "24/7", "snuffel:emergency": "24/7", phone: "+31 99" } }
+] }));
+fs.writeFileSync(path.join(tmp, "hours.json"), JSON.stringify({ places: {
+  n1: { opening_hours: "Mo-Fr 08:00-18:00", emergency: "on_call", emergency_phone: null, checked: "2026-10-11" },
+  w2: { opening_hours: "Mo-Fr 09:00-17:00", emergency: null, emergency_phone: null, checked: "2026-10-11" }
+} }));
+execFileSync("node", [tool, "assemble"], { env: Object.assign({}, env, { SNUFFEL_EXTRA: path.join(tmp, "extra.json") }) });
+const m2 = JSON.parse(fs.readFileSync(path.join(tmp, "places", "manifest.json"), "utf8"));
+const all2 = [];
+for (const c of m2.cells) all2.push(...JSON.parse(fs.readFileSync(path.join(tmp, m2.path, c + ".json"), "utf8")));
+const byId2 = Object.fromEntries(all2.map((e) => [e.id, e]));
+test("extra places are added for countries in the build only, with their source", () => {
+  assert.ok(byId2["x-nl-er"] && !byId2["x-de-er"]);
+  assert.strictEqual(byId2["x-nl-er"].cc, "nl");
+  assert.strictEqual(byId2["x-nl-er"].tags["snuffel:source"], "https://example.nl/");
+});
+test("an outdated OSM location is replaced", () => {
+  assert.ok(byId2["x-nl-moved"] && !byId2.n5);
+});
+test("a patch adds hand-checked facts, wins over website hours, never overwrites OSM", () => {
+  assert.strictEqual(byId2.n1.tags.opening_hours, undefined);
+  assert.strictEqual(byId2.n1.tags["snuffel:opening_hours"], "24/7");
+  assert.strictEqual(byId2.n1.tags["snuffel:emergency"], "24/7");
+  assert.strictEqual(byId2.n1.tags.phone, "+31 20 1");
+  assert.strictEqual(byId2.n1.tags["snuffel:source"], "https://example.nl/a");
+});
+test("website hours are added as separate fields", () => {
+  assert.strictEqual(byId2.w2.tags["snuffel:opening_hours"], "Mo-Fr 09:00-17:00");
+  assert.strictEqual(byId2.w2.tags.opening_hours, undefined);
+});
+
 fs.rmSync(tmp, { recursive: true, force: true });
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);

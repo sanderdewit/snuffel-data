@@ -1,0 +1,59 @@
+{
+  "note": "Emergency clinics missing from (or outdated in) OpenStreetMap, checked by hand against the clinic's own website. Applied by tools/build-places.js assemble. Prefer fixing OSM itself; remove an entry here once OSM is right. New place: id/cc/lat/lon/tags (replaces: OSM ids with an outdated location). Patch: patch=<OSM id> plus tags.",
+  "places": [
+    {
+      "id": "x-nl-edz-nieuwegein",
+      "cc": "nl",
+      "lat": 52.013414,
+      "lon": 5.100458,
+      "source": "https://evidensiadierenziekenhuis.nl/dierenziekenhuizen/nieuwegein/",
+      "checked": "2026-10-12",
+      "tags": {
+        "amenity": "veterinary",
+        "name": "Evidensia Dierenziekenhuis Nieuwegein",
+        "brand": "Evidensia",
+        "addr:street": "Nijverheidsweg",
+        "addr:housenumber": "1b",
+        "addr:postcode": "3433NP",
+        "addr:city": "Nieuwegein",
+        "phone": "+31 30 202 7070",
+        "website": "https://evidensiadierenziekenhuis.nl/dierenziekenhuizen/nieuwegein/",
+        "opening_hours": "24/7",
+        "snuffel:emergency": "24/7"
+      }
+    },
+    {
+      "id": "x-nl-edz-amsterdam",
+      "cc": "nl",
+      "lat": 52.294320,
+      "lon": 4.888550,
+      "replaces": ["n2742061415"],
+      "source": "https://evidensiadierenziekenhuis.nl/dierenziekenhuizen/amsterdam/",
+      "checked": "2026-10-12",
+      "tags": {
+        "amenity": "veterinary",
+        "name": "Evidensia Dierenziekenhuis Amsterdam",
+        "brand": "Evidensia",
+        "addr:street": "De Oude Molen",
+        "addr:housenumber": "2",
+        "addr:postcode": "1184VW",
+        "addr:city": "Amstelveen",
+        "phone": "+31 20 308 0750",
+        "website": "https://evidensiadierenziekenhuis.nl/dierenziekenhuizen/amsterdam/",
+        "opening_hours": "24/7",
+        "snuffel:emergency": "24/7"
+      }
+    },
+    {
+      "patch": "n12532917002",
+      "source": "https://evidensiadierenziekenhuis.nl/dierenziekenhuizen/barendrecht/",
+      "checked": "2026-10-12",
+      "tags": {
+        "phone": "+31 85 487 7090",
+        "website": "https://evidensiadierenziekenhuis.nl/dierenziekenhuizen/barendrecht/",
+        "opening_hours": "24/7",
+        "snuffel:emergency": "24/7"
+      }
+    }
+  ]
+}

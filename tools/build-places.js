@@ -105,6 +105,38 @@ function assemble() {
       if (!prev || Object.keys(el.tags).length > Object.keys(prev.el.tags).length) best.set(el.id, { el, cc });
     }
   }
+  // Emergency clinics missing from OSM, checked by hand (tools/extra-places.json).
+  // Only for countries in this build, and never twice.
+  // (tests build into SNUFFEL_DIST and only use a file they name in SNUFFEL_EXTRA)
+  const extraFile = process.env.SNUFFEL_EXTRA || (process.env.SNUFFEL_DIST ? "" : path.join(__dirname, "extra-places.json"));
+  const stagedCc = new Set(staged.map((f) => f.slice(0, 2)));
+  let extras = 0;
+  //   new place:  { id, cc, lat, lon, tags, source, checked, replaces?: [osm id] }
+  //               "replaces" drops an OSM entry with an outdated location
+  //   patch:      { patch: <osm id>, tags, source, checked } adds "snuffel:" facts
+  //               (opening_hours becomes snuffel:opening_hours; OSM's own wins)
+  if (fs.existsSync(extraFile)) {
+    for (const x of JSON.parse(fs.readFileSync(extraFile, "utf8")).places || []) {
+      const meta = { "snuffel:source": x.source, "snuffel:checked": x.checked };
+      if (x.patch) {
+        const hit = best.get(x.patch);
+        if (!hit) continue;
+        const add = {};
+        for (const [k, v] of Object.entries(x.tags || {})) {
+          if (k === "opening_hours") { if (!hit.el.tags.opening_hours) add["snuffel:opening_hours"] = v; }
+          else if (k.startsWith("snuffel:") || !hit.el.tags[k]) add[k] = v;
+        }
+        hit.el.tags = { ...hit.el.tags, ...add, ...meta };
+        extras++;
+        continue;
+      }
+      if (!stagedCc.has(x.cc) || best.has(x.id)) continue;
+      for (const old of x.replaces || []) best.delete(old);
+      best.set(x.id, { el: { id: x.id, lat: x.lat, lon: x.lon, tags: { ...x.tags, ...meta } }, cc: x.cc });
+      extras++;
+    }
+  }
+
   // Opening hours / emergency info from the clinics' own websites (tools/scan-hours.js),
   // as separate "snuffel:" fields: OSM's own opening_hours always wins.
   const hoursFile = path.join(DIST, "hours.json");
@@ -112,7 +144,7 @@ function assemble() {
   let withWebHours = 0;
   const seen = new Set(best.keys()), cells = new Map(), countries = {};
   for (const { el, cc } of best.values()) {
-    const w = web[el.id];
+    const w = el.tags["snuffel:source"] ? null : web[el.id];   // hand-checked entries win
     if (w) {
       const extra = {};
       if (w.opening_hours && !el.tags.opening_hours) { extra["snuffel:opening_hours"] = w.opening_hours; withWebHours++; }
@@ -145,7 +177,7 @@ function assemble() {
   fs.writeFileSync(path.join(PLACES, "manifest.json"), JSON.stringify(manifest));
   console.log(`assembled ${seen.size} places in ${cells.size} cells (${(bytes / 1e6).toFixed(1)} MB) -> dist/places/${version}/`);
   console.log(JSON.stringify(countries));
-  console.log(`opening hours from clinic websites: ${withWebHours} places`);
+  console.log(`opening hours from clinic websites: ${withWebHours} places; hand-checked extra places: ${extras}`);
 }
 
 module.exports = { OSMIUM_FILTER, centre };
