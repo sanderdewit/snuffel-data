@@ -40,6 +40,7 @@
   "noResults": "V okolí nebyla nalezena žádná odpovídající místa.",
   "noResultsHint": "Zkuste větší okruh nebo jinou adresu.",
   "onlyChainsHidden": "Všechny možnosti zde patří sítím. Vypněte „Pouze nezávislé“, abyste je viděli.",
+  "widenSearch": "Hledat dál: {km} km",
   "openNow": "Nyní otevřeno",
   "closedNow": "Zavřeno",
   "hoursUnknown": "Otevírací doba neznámá",

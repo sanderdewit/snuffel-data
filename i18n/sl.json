@@ -40,6 +40,7 @@
   "noResults": "V bližini ni ustreznih lokacij.",
   "noResultsHint": "Poskusite z večjim polmerom ali drugim naslovom.",
   "onlyChainsHidden": "Vse možnosti v bližini so del verig. Izklopite »Samo neodvisni«, da jih vidite.",
+  "widenSearch": "Išči dlje: {km} km",
   "openNow": "Zdaj odprto",
   "closedNow": "Zaprto",
   "hoursUnknown": "Delovni čas ni znan",

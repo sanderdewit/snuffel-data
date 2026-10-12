@@ -38,6 +38,7 @@
   "noResults": "Inga matchande ställen hittades i närheten.",
   "noResultsHint": "Prova en större radie eller en annan adress.",
   "onlyChainsHidden": "Alla alternativ i närheten är kedjeägda. Stäng av ”Bara fristående” för att se dem.",
+  "widenSearch": "Sök längre bort: {km} km",
   "openNow": "Öppet nu",
   "closedNow": "Stängt",
   "hoursUnknown": "Öppettider okända",

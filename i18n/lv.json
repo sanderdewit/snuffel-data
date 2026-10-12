@@ -39,6 +39,7 @@
   "noResults": "Tuvumā nav atrasta neviena atbilstoša vieta.",
   "noResultsHint": "Izmēģini lielāku rādiusu vai citu adresi.",
   "onlyChainsHidden": "Visas tuvumā esošās vietas pieder tīkliem. Lai tās redzētu, izslēdz “Tikai neatkarīgie”.",
+  "widenSearch": "Meklēt tālāk: {km} km",
   "openNow": "Atvērts tagad",
   "closedNow": "Slēgts",
   "hoursUnknown": "Darba laiks nav zināms",

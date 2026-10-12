@@ -38,6 +38,7 @@
   "noResults": "Geen passende plekken in de buurt gevonden.",
   "noResultsHint": "Probeer een grotere straal of een ander adres.",
   "onlyChainsHidden": "Alle opties hier zijn van ketens. Zet “Alleen onafhankelijk” uit om ze te zien.",
+  "widenSearch": "Zoek verder: {km} km",
   "openNow": "Nu open",
   "closedNow": "Gesloten",
   "hoursUnknown": "Openingstijden onbekend",

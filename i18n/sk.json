@@ -40,6 +40,7 @@
   "noResults": "V okolí sme nenašli žiadne vhodné miesta.",
   "noResultsHint": "Skúste väčší okruh alebo inú adresu.",
   "onlyChainsHidden": "Všetky možnosti v okolí patria reťazcom. Vypnite „Iba nezávislé“, aby ste ich videli.",
+  "widenSearch": "Hľadať ďalej: {km} km",
   "openNow": "Teraz otvorené",
   "closedNow": "Zatvorené",
   "hoursUnknown": "Otváracie hodiny neznáme",

@@ -40,6 +40,7 @@
   "noResults": "Netoliese tinkamų vietų nerasta.",
   "noResultsHint": "Pabandykite didesnį spindulį arba kitą adresą.",
   "onlyChainsHidden": "Visos netoliese esančios vietos priklauso tinklams. Norėdami jas matyti, išjunkite „Tik nepriklausomi“.",
+  "widenSearch": "Ieškoti toliau: {km} km",
   "openNow": "Dabar atidaryta",
   "closedNow": "Uždaryta",
   "hoursUnknown": "Darbo laikas nežinomas",

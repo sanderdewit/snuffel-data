@@ -38,6 +38,7 @@
   "noResults": "Lähedalt ei leitud sobivaid kohti.",
   "noResultsHint": "Proovi suuremat raadiust või muud aadressi.",
   "onlyChainsHidden": "Kõik lähedal asuvad kohad kuuluvad kettidesse. Nende nägemiseks lülita „Ainult sõltumatud“ välja.",
+  "widenSearch": "Otsi kaugemalt: {km} km",
   "openNow": "Praegu avatud",
   "closedNow": "Suletud",
   "hoursUnknown": "Lahtiolekuajad teadmata",

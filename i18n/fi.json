@@ -38,6 +38,7 @@
   "noResults": "Läheltä ei löytynyt sopivia paikkoja.",
   "noResultsHint": "Kokeile suurempaa sädettä tai toista osoitetta.",
   "onlyChainsHidden": "Kaikki lähellä olevat vaihtoehdot ovat ketjujen omistamia. Poista ”Vain itsenäiset” käytöstä, niin näet ne.",
+  "widenSearch": "Hae kauempaa: {km} km",
   "openNow": "Auki nyt",
   "closedNow": "Suljettu",
   "hoursUnknown": "Aukioloajat tuntemattomat",

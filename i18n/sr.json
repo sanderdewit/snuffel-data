@@ -39,6 +39,7 @@
   "noResults": "U blizini nema odgovarajućih mesta.",
   "noResultsHint": "Probaj sa većim radijusom ili drugom adresom.",
   "onlyChainsHidden": "Sve opcije u blizini pripadaju lancima. Isključi „Samo nezavisni” da ih vidiš.",
+  "widenSearch": "Тражи даље: {km} км",
   "openNow": "Otvoreno",
   "closedNow": "Zatvoreno",
   "hoursUnknown": "Радно време непознато",

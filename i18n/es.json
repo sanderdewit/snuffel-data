@@ -39,6 +39,7 @@
   "noResults": "No hay sitios que coincidan cerca de ti.",
   "noResultsHint": "Prueba con un radio mayor o con otra dirección.",
   "onlyChainsHidden": "Todas las opciones cercanas son cadenas. Desactiva «Solo independientes» para verlas.",
+  "widenSearch": "Buscar más lejos: {km} km",
   "openNow": "Abierto ahora",
   "closedNow": "Cerrado",
   "hoursUnknown": "Horario desconocido",

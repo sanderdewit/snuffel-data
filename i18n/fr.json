@@ -39,6 +39,7 @@
   "noResults": "Aucun lieu correspondant à proximité.",
   "noResultsHint": "Essayez un rayon plus grand ou une autre adresse.",
   "onlyChainsHidden": "Toutes les options ici appartiennent à des chaînes. Désactivez « Indépendants uniquement » pour les voir.",
+  "widenSearch": "Chercher plus loin : {km} km",
   "openNow": "Ouvert",
   "closedNow": "Fermé",
   "hoursUnknown": "Horaires inconnus",

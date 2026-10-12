@@ -38,6 +38,7 @@
   "noResults": "Nem találtunk megfelelő helyet a közelben.",
   "noResultsHint": "Próbálj nagyobb sugarat vagy másik címet.",
   "onlyChainsHidden": "A közeli helyek mind láncokhoz tartoznak. Kapcsold ki a „Csak függetlenek” szűrőt, hogy lásd őket.",
+  "widenSearch": "Keresés távolabb: {km} km",
   "openNow": "Most nyitva",
   "closedNow": "Zárva",
   "hoursUnknown": "Nyitvatartás ismeretlen",

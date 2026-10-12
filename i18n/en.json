@@ -38,6 +38,7 @@
   "noResults": "No matching places found nearby.",
   "noResultsHint": "Try a larger radius or a different address.",
   "onlyChainsHidden": "All nearby options here are chain-owned. Turn off “Independents only” to see them.",
+  "widenSearch": "Search further: {km} km",
   "openNow": "Open now",
   "closedNow": "Closed",
   "hoursUnknown": "Opening hours unknown",

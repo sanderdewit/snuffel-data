@@ -38,6 +38,7 @@
   "noResults": "Fant ingen passende steder i nærheten.",
   "noResultsHint": "Prøv en større radius eller en annen adresse.",
   "onlyChainsHidden": "Alle alternativene i nærheten er kjedeeide. Slå av «Bare uavhengige» for å se dem.",
+  "widenSearch": "Søk lenger unna: {km} km",
   "openNow": "Åpent nå",
   "closedNow": "Stengt",
   "hoursUnknown": "Åpningstider ukjent",

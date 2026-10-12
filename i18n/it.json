@@ -39,6 +39,7 @@
   "noResults": "Nessun luogo corrispondente nelle vicinanze.",
   "noResultsHint": "Prova con un raggio più ampio o un altro indirizzo.",
   "onlyChainsHidden": "Qui ci sono solo attività di catene. Disattiva “Solo indipendenti” per vederle.",
+  "widenSearch": "Cerca più lontano: {km} km",
   "openNow": "Aperto ora",
   "closedNow": "Chiuso",
   "hoursUnknown": "Orari sconosciuti",

@@ -38,6 +38,7 @@
   "noResults": "Nuk u gjet asnjë vend i përshtatshëm afër.",
   "noResultsHint": "Provo një rreze më të madhe ose një adresë tjetër.",
   "onlyChainsHidden": "Të gjitha opsionet këtu u përkasin zinxhirëve. Çaktivizo „Vetëm të pavarurit” për t’i parë.",
+  "widenSearch": "Kërko më larg: {km} km",
   "openNow": "Hapur tani",
   "closedNow": "Mbyllur",
   "hoursUnknown": "Orari i panjohur",
