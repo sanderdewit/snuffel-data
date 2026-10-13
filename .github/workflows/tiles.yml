@@ -78,3 +78,15 @@ jobs:
             -c tiles -n snuffel.pmtiles -f snuffel.pmtiles --overwrite \
             --content-type application/vnd.pmtiles --content-cache-control "public, max-age=86400"
           echo "published tiles/snuffel.pmtiles" >> $GITHUB_STEP_SUMMARY
+
+      # Front Door caches byte ranges of the file for a day. After a new upload
+      # it would serve a mix of old and new ranges (an old index pointing into
+      # the new file = an empty map), so the cached ranges are purged at once.
+      # The publish identity may only purge the snuffel endpoint (custom role
+      # "Snuffel Front Door cache purger").
+      - name: Purge the Front Door cache for the tiles
+        run: |
+          az afd endpoint purge --subscription "${{ vars.AZURE_SUBSCRIPTION_ID }}" -g RG_MPA \
+            --profile-name eamp-fd-dmbqdmu72so22 --endpoint-name snuffel \
+            --domains snuffel.app www.snuffel.app --content-paths '/tiles/*' --only-show-errors
+          echo "purged the Front Door cache for /tiles/*" >> $GITHUB_STEP_SUMMARY
