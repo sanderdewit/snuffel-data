@@ -1,8 +1,9 @@
 # 🐾 snuffel-data
 
-Open data pipeline behind [Snuffel](https://wonderful-island-0c49a0103.7.azurestaticapps.net),
-a directory that helps dog owners in 🇳🇱 🇧🇪 🇫🇷 🇩🇪 🇵🇱 🇨🇿 find **independent** vets, groomers,
-shops, trainers, dog hotels and dog play areas.
+Open data pipeline behind [Snuffel](https://snuffel.app), a directory that helps
+dog owners across Europe 🇪🇺 (45 countries, see [`tools/countries.json`](tools/countries.json))
+find **independent** vets, emergency vets, groomers, shops, trainers, dog hotels and
+dog play areas.
 
 This repository collects and publishes the data; the site itself lives elsewhere.
 Everything runs on GitHub Actions and writes static files to Azure Storage:
@@ -107,7 +108,7 @@ copies; their CI fails when a copy differs from this repository.
 
 ## Map tiles
 
-`tools/tiles-region.js` builds the outline of the six countries
+`tools/tiles-region.js` builds the outline of the countries in `tools/countries.json`
 ([Natural Earth](https://www.naturalearthdata.com/), public domain);
 the `tiles` workflow cuts that region out of the latest
 [Protomaps](https://protomaps.com) planet build with `pmtiles extract`.
