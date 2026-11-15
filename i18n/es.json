@@ -108,5 +108,9 @@
   "lostLinkSearch": "Buscar perros perdidos y encontrados",
   "lostLinkChip": "Consultar un microchip",
   "lostShowHelp": "📍 Veterinarios y protectoras cerca",
-  "lostOtherNote": "En otros países: comunícalo al registro nacional de animales de compañía o al ayuntamiento. Europetnet busca números de microchip en registros de toda Europa."
+  "lostOtherNote": "En otros países: comunícalo al registro nacional de animales de compañía o al ayuntamiento. Europetnet busca números de microchip en registros de toda Europa.",
+  "lostGroupsTitle": "Grupos de búsqueda locales",
+  "lostGroupsNote": "Los llevan voluntarios y Snuffel no los revisa. Comparte una foto, dónde y cuándo; nunca pagues nada por adelantado.",
+  "lostGroupsNone": "Todavía no hay ningún grupo de búsqueda para esta zona.",
+  "lostGroupsAdd": "¿Conoces un buen grupo local? Propónlo"
 }

@@ -107,5 +107,9 @@
   "lostLinkSearch": "Elveszett és talált kutyák",
   "lostLinkChip": "Chipszám keresése",
   "lostShowHelp": "📍 Állatorvosok és menhelyek a közelben",
-  "lostOtherNote": "Más országokban: jelentsd az országos kisállat-nyilvántartásnak vagy az önkormányzatnak. Az Europetnet egész Európa nyilvántartásaiban keres chipszámokat."
+  "lostOtherNote": "Más országokban: jelentsd az országos kisállat-nyilvántartásnak vagy az önkormányzatnak. Az Europetnet egész Európa nyilvántartásaiban keres chipszámokat.",
+  "lostGroupsTitle": "Helyi keresőcsoportok",
+  "lostGroupsNote": "Önkéntesek működtetik, a Snuffel nem ellenőrzi őket. Ossz meg fotót, helyet és időpontot; soha ne fizess előre senkinek.",
+  "lostGroupsNone": "Ehhez a területhez még nincs keresőcsoport.",
+  "lostGroupsAdd": "Ismersz egy jó helyi csoportot? Ajánld"
 }

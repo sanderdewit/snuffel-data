@@ -109,5 +109,9 @@
   "lostLinkSearch": "Ieškoti dingusių ir rastų šunų",
   "lostLinkChip": "Patikrinti mikroschemą",
   "lostShowHelp": "📍 Veterinarai ir prieglaudos netoliese",
-  "lostOtherNote": "Kitose šalyse: praneškite nacionaliniam gyvūnų registrui arba savivaldybei. Europetnet ieško mikroschemų numerių registruose visoje Europoje."
+  "lostOtherNote": "Kitose šalyse: praneškite nacionaliniam gyvūnų registrui arba savivaldybei. Europetnet ieško mikroschemų numerių registruose visoje Europoje.",
+  "lostGroupsTitle": "Vietinės paieškos grupės",
+  "lostGroupsNote": "Jas tvarko savanoriai, Snuffel jų netikrina. Pasidalykite nuotrauka, vieta ir laiku; niekada niekam nemokėkite iš anksto.",
+  "lostGroupsNone": "Šiai vietovei paieškos grupės dar nėra.",
+  "lostGroupsAdd": "Žinote gerą vietinę grupę? Pasiūlykite ją"
 }

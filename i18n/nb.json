@@ -107,5 +107,9 @@
   "lostLinkSearch": "Søk i savnede og funnede hunder",
   "lostLinkChip": "Søk opp chipnummer",
   "lostShowHelp": "📍 Veterinærer og dyrehjem nær meg",
-  "lostOtherNote": "I andre land: meld fra til det nasjonale kjæledyrregisteret eller kommunen. Europetnet søker opp chipnummer i registre over hele Europa."
+  "lostOtherNote": "I andre land: meld fra til det nasjonale kjæledyrregisteret eller kommunen. Europetnet søker opp chipnummer i registre over hele Europa.",
+  "lostGroupsTitle": "Lokale letegrupper",
+  "lostGroupsNote": "Drives av frivillige og sjekkes ikke av Snuffel. Del et bilde, hvor og når; betal aldri noen på forhånd.",
+  "lostGroupsNone": "Det er ingen letegruppe for dette området ennå.",
+  "lostGroupsAdd": "Kjenner du en god lokal gruppe? Foreslå den"
 }

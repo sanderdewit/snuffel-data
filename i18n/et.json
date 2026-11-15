@@ -107,5 +107,9 @@
   "lostLinkSearch": "Otsi kadunud ja leitud koeri",
   "lostLinkChip": "Kontrolli kiibinumbrit",
   "lostShowHelp": "📍 Loomaarstid ja varjupaigad lähedal",
-  "lostOtherNote": "Teistes riikides: teata riiklikule lemmikloomaregistrile või kohalikule omavalitsusele. Europetnet otsib kiibinumbreid registritest üle Euroopa."
+  "lostOtherNote": "Teistes riikides: teata riiklikule lemmikloomaregistrile või kohalikule omavalitsusele. Europetnet otsib kiibinumbreid registritest üle Euroopa.",
+  "lostGroupsTitle": "Kohalikud otsingugrupid",
+  "lostGroupsNote": "Neid haldavad vabatahtlikud, Snuffel neid ei kontrolli. Jaga fotot, kohta ja aega; ära kunagi maksa kellelegi ette.",
+  "lostGroupsNone": "Selle piirkonna jaoks pole veel ühtegi otsingugruppi.",
+  "lostGroupsAdd": "Tead head kohalikku gruppi? Soovita seda"
 }

@@ -107,5 +107,9 @@
   "lostLinkSearch": "Vermisste & gefundene Hunde suchen",
   "lostLinkChip": "Chipnummer abfragen",
   "lostShowHelp": "📍 Tierärzte & Tierheime in der Nähe",
-  "lostOtherNote": "In anderen Ländern: Melde es beim nationalen Haustierregister oder bei der Gemeinde. Europetnet sucht Chipnummern in Registern in ganz Europa."
+  "lostOtherNote": "In anderen Ländern: Melde es beim nationalen Haustierregister oder bei der Gemeinde. Europetnet sucht Chipnummern in Registern in ganz Europa.",
+  "lostGroupsTitle": "Lokale Suchgruppen",
+  "lostGroupsNote": "Von Ehrenamtlichen geführt, nicht von Snuffel geprüft. Teile ein Foto, wo und wann; zahle nie jemandem etwas im Voraus.",
+  "lostGroupsNone": "Für diese Gegend ist noch keine Suchgruppe eingetragen.",
+  "lostGroupsAdd": "Kennst du eine gute lokale Gruppe? Schlag sie vor"
 }

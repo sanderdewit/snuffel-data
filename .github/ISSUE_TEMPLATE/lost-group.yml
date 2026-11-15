@@ -1,0 +1,36 @@
+name: Suggest a search group for lost & found dogs
+description: A local group (Facebook or other) that helps find lost dogs, shown in Snuffel's lost-dog guide
+title: "Search group: "
+labels: ["lost-group"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Snuffel lists **public** groups about lost and found animals that are **recently active** and **not commercial**.
+        The list is checked by hand before a group is added. Please don't include personal details (phone numbers, addresses).
+  - type: input
+    id: name
+    attributes:
+      label: Name of the group
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Link
+      placeholder: https://www.facebook.com/groups/...
+    validations:
+      required: true
+  - type: input
+    id: area
+    attributes:
+      label: Area it covers
+      description: Country, and the region or city if it is a local group
+      placeholder: Netherlands, province of Utrecht
+    validations:
+      required: true
+  - type: textarea
+    id: about
+    attributes:
+      label: Anything else (optional)
+      description: For example how active it is, or that you are one of its admins

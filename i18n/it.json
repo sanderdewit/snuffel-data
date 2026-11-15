@@ -108,5 +108,9 @@
   "lostLinkSearch": "Cerca cani smarriti e trovati",
   "lostLinkChip": "Verifica un microchip",
   "lostShowHelp": "📍 Veterinari e canili vicino a me",
-  "lostOtherNote": "Negli altri paesi: segnalalo al registro nazionale degli animali o al Comune. Europetnet cerca i numeri di microchip nei registri di tutta Europa."
+  "lostOtherNote": "Negli altri paesi: segnalalo al registro nazionale degli animali o al Comune. Europetnet cerca i numeri di microchip nei registri di tutta Europa.",
+  "lostGroupsTitle": "Gruppi di ricerca locali",
+  "lostGroupsNote": "Gestiti da volontari, non verificati da Snuffel. Condividi una foto, dove e quando; non pagare mai nessuno in anticipo.",
+  "lostGroupsNone": "Non c’è ancora nessun gruppo di ricerca per questa zona.",
+  "lostGroupsAdd": "Conosci un buon gruppo locale? Proponilo"
 }

@@ -108,5 +108,9 @@
   "lostLinkSearch": "Caută câini pierduți și găsiți",
   "lostLinkChip": "Verifică un număr de microcip",
   "lostShowHelp": "📍 Veterinari și adăposturi lângă mine",
-  "lostOtherNote": "În alte țări: raportează la registrul național al animalelor de companie sau la primărie. Europetnet caută numere de microcip în registre din toată Europa."
+  "lostOtherNote": "În alte țări: raportează la registrul național al animalelor de companie sau la primărie. Europetnet caută numere de microcip în registre din toată Europa.",
+  "lostGroupsTitle": "Grupuri locale de căutare",
+  "lostGroupsNote": "Conduse de voluntari, neverificate de Snuffel. Distribuie o fotografie, locul și ora; nu plăti niciodată nimic în avans.",
+  "lostGroupsNone": "Încă nu există niciun grup de căutare pentru această zonă.",
+  "lostGroupsAdd": "Știi un grup local bun? Propune-l"
 }

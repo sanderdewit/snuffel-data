@@ -1,0 +1,48 @@
+# Publishes the local search groups for lost and found dogs (lost/groups.json)
+# as snuffel.app/data/lost-groups.json whenever the list changes on main.
+# Same "publish" environment and OIDC identity as the data workflow.
+name: lost-groups
+
+on:
+  push:
+    branches: [main]
+    paths: ["lost/**", "tools/lost-groups.js"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lost-groups
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: publish        # main only; its OIDC identity may write the storage containers
+    permissions:
+      contents: read
+      id-token: write           # GitHub OIDC sign-in to Azure, no stored key
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+      - name: Check and build
+        run: |
+          node tests/lost-groups.test.js
+          node tools/lost-groups.js build | tee -a $GITHUB_STEP_SUMMARY
+      - name: Sign in to Azure (OIDC)
+        uses: azure/login@a641126d1b8aa4d1fa005f4f92df94a3a4c4c906 # v3.1.0
+        with:
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+      - name: Publish to Azure Storage
+        env:
+          ACCOUNT: ${{ vars.AZURE_STORAGE_ACCOUNT }}
+        run: |
+          az storage blob upload --account-name "$ACCOUNT" --auth-mode login --only-show-errors \
+             -c data -n lost-groups.json -f dist/lost-groups.json --overwrite \
+             --content-type application/json --content-cache-control "no-cache"

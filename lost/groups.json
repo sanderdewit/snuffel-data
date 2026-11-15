@@ -1,0 +1,4 @@
+{
+  "_help": "Local search groups for lost and found dogs, shown under the lost-dog guide on snuffel.app and in the app. Run by volunteers, not checked by Snuffel: only public groups about lost/found animals, recently active, not commercial. Fields: id (unique, lowercase-dashes), name, url (https), country (ISO 3166-1 alpha-2, as in tools/countries.json), region (optional, shown next to the name), lat/lon + radiusKm (optional: a regional group, shown near that point; without them the group covers the whole country), added and checked (YYYY-MM-DD). Validate with: node tools/lost-groups.js check",
+  "groups": []
+}

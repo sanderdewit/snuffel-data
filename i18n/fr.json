@@ -108,5 +108,9 @@
   "lostLinkSearch": "Chiens perdus et trouvés",
   "lostLinkChip": "Vérifier un numéro de puce",
   "lostShowHelp": "📍 Vétérinaires et refuges près de moi",
-  "lostOtherNote": "Dans les autres pays : signalez-le au registre national des animaux ou à la mairie. Europetnet recherche les numéros de puce dans les registres de toute l'Europe."
+  "lostOtherNote": "Dans les autres pays : signalez-le au registre national des animaux ou à la mairie. Europetnet recherche les numéros de puce dans les registres de toute l'Europe.",
+  "lostGroupsTitle": "Groupes de recherche locaux",
+  "lostGroupsNote": "Animés par des bénévoles, non vérifiés par Snuffel. Partagez une photo, le lieu et l’heure ; ne payez jamais personne d’avance.",
+  "lostGroupsNone": "Aucun groupe de recherche pour cette zone pour l’instant.",
+  "lostGroupsAdd": "Vous connaissez un bon groupe local ? Proposez-le"
 }

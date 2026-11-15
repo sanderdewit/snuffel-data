@@ -108,5 +108,9 @@
   "lostLinkSearch": "Pesquisar cães perdidos e encontrados",
   "lostLinkChip": "Consultar número de chip",
   "lostShowHelp": "📍 Veterinários e abrigos perto de mim",
-  "lostOtherNote": "Noutros países: comunique ao registo nacional de animais de companhia ou à câmara municipal. O Europetnet pesquisa números de chip em registos de toda a Europa."
+  "lostOtherNote": "Noutros países: comunique ao registo nacional de animais de companhia ou à câmara municipal. O Europetnet pesquisa números de chip em registos de toda a Europa.",
+  "lostGroupsTitle": "Grupos de busca locais",
+  "lostGroupsNote": "Geridos por voluntários, não verificados pela Snuffel. Partilhe uma foto, onde e quando; nunca pague nada adiantado.",
+  "lostGroupsNone": "Ainda não há nenhum grupo de busca para esta zona.",
+  "lostGroupsAdd": "Conhece um bom grupo local? Sugira-o"
 }

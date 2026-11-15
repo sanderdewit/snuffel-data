@@ -27,3 +27,4 @@ jobs:
           node tests/hours-scan.test.js
           node tests/hours.test.js
           node tests/i18n.test.js
+          node tests/lost-groups.test.js

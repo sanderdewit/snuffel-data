@@ -108,5 +108,9 @@
   "lostLinkSearch": "Pretraži izgubljene i pronađene pse",
   "lostLinkChip": "Proveri broj čipa",
   "lostShowHelp": "📍 Veterinari i prihvatilišta u blizini",
-  "lostOtherNote": "U drugim zemljama: prijavi nacionalnom registru kućnih ljubimaca ili opštini. Europetnet pretražuje brojeve čipova u registrima širom Evrope."
+  "lostOtherNote": "U drugim zemljama: prijavi nacionalnom registru kućnih ljubimaca ili opštini. Europetnet pretražuje brojeve čipova u registrima širom Evrope.",
+  "lostGroupsTitle": "Lokalne grupe za potragu",
+  "lostGroupsNote": "Vode ih volonteri, Snuffel ih ne proverava. Podeli fotografiju, gde i kada; nikad nikome ne plaćaj unapred.",
+  "lostGroupsNone": "Za ovo područje još nema grupe za potragu.",
+  "lostGroupsAdd": "Znaš dobru lokalnu grupu? Predloži je"
 }

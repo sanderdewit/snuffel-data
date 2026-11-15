@@ -99,6 +99,15 @@ website". Nothing is written to OpenStreetMap automatically; each place links to
 the OSM editor so people can correct the source. Countries: the
 `HOURS_COUNTRIES` variable (default `nl`).
 
+## Search groups for lost dogs
+
+[`lost/groups.json`](lost/groups.json) lists local search groups (often Facebook groups)
+that the lost-dog guide on the site and in the app shows under the official registers:
+public, recently active, not commercial, checked by hand. Suggestions come in through the
+[issue form](../../issues/new?template=lost-group.yml); `node tools/lost-groups.js check`
+validates the list, and the [`lost-groups`](.github/workflows/lost-groups.yml) workflow
+publishes it as `snuffel.app/data/lost-groups.json` on every change.
+
 ## Shared core
 
 `lib/` (chain detection, category rules, opening hours) and `i18n/` (29 language

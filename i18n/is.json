@@ -107,5 +107,9 @@
   "lostLinkSearch": "Leita að týndum og fundnum hundum",
   "lostLinkChip": "Fletta upp örmerki",
   "lostShowHelp": "📍 Dýralæknar og athvörf nálægt mér",
-  "lostOtherNote": "Í öðrum löndum: tilkynntu það til landsskrár gæludýra eða sveitarfélagsins. Europetnet flettir upp örmerkjanúmerum í skrám um alla Evrópu."
+  "lostOtherNote": "Í öðrum löndum: tilkynntu það til landsskrár gæludýra eða sveitarfélagsins. Europetnet flettir upp örmerkjanúmerum í skrám um alla Evrópu.",
+  "lostGroupsTitle": "Leitarhópar á svæðinu",
+  "lostGroupsNote": "Sjálfboðaliðar sjá um þá og Snuffel fer ekki yfir þá. Deildu mynd, stað og tíma; borgaðu aldrei neinum fyrirfram.",
+  "lostGroupsNone": "Enginn leitarhópur er enn skráður fyrir þetta svæði.",
+  "lostGroupsAdd": "Veistu um góðan hóp á svæðinu? Stingdu upp á honum"
 }

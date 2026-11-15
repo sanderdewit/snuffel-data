@@ -107,5 +107,9 @@
   "lostLinkSearch": "Zoek in vermiste en gevonden honden",
   "lostLinkChip": "Chipnummer opzoeken",
   "lostShowHelp": "📍 Dierenartsen en asielen bij mij",
-  "lostOtherNote": "In andere landen: meld het bij het nationale huisdierenregister of de gemeente. Europetnet zoekt chipnummers op in registers in heel Europa."
+  "lostOtherNote": "In andere landen: meld het bij het nationale huisdierenregister of de gemeente. Europetnet zoekt chipnummers op in registers in heel Europa.",
+  "lostGroupsTitle": "Lokale zoekgroepen",
+  "lostGroupsNote": "Gerund door vrijwilligers, niet gecontroleerd door Snuffel. Deel een foto, waar en wanneer; betaal nooit iemand vooraf.",
+  "lostGroupsNone": "Voor dit gebied staat nog geen zoekgroep.",
+  "lostGroupsAdd": "Ken je een goede zoekgroep in de buurt? Meld hem aan"
 }

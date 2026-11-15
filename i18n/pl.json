@@ -109,5 +109,9 @@
   "lostLinkSearch": "Szukaj zaginionych i znalezionych psów",
   "lostLinkChip": "Sprawdź numer chipa",
   "lostShowHelp": "📍 Weterynarze i schroniska w pobliżu",
-  "lostOtherNote": "W innych krajach: zgłoś to w krajowym rejestrze zwierząt domowych lub w urzędzie gminy. Europetnet wyszukuje numery chipów w rejestrach w całej Europie."
+  "lostOtherNote": "W innych krajach: zgłoś to w krajowym rejestrze zwierząt domowych lub w urzędzie gminy. Europetnet wyszukuje numery chipów w rejestrach w całej Europie.",
+  "lostGroupsTitle": "Lokalne grupy poszukiwawcze",
+  "lostGroupsNote": "Prowadzą je wolontariusze, Snuffel ich nie sprawdza. Udostępnij zdjęcie, miejsce i czas; nigdy nikomu nie płać z góry.",
+  "lostGroupsNone": "Dla tego obszaru nie ma jeszcze grupy poszukiwawczej.",
+  "lostGroupsAdd": "Znasz dobrą lokalną grupę? Zaproponuj ją"
 }

@@ -108,5 +108,9 @@
   "lostLinkSearch": "Meklēt pazudušus un atrastus suņus",
   "lostLinkChip": "Pārbaudīt mikroshēmu",
   "lostShowHelp": "📍 Veterinārārsti un patversmes tuvumā",
-  "lostOtherNote": "Citās valstīs: ziņo valsts mājdzīvnieku reģistram vai pašvaldībai. Europetnet meklē mikroshēmu numurus reģistros visā Eiropā."
+  "lostOtherNote": "Citās valstīs: ziņo valsts mājdzīvnieku reģistram vai pašvaldībai. Europetnet meklē mikroshēmu numurus reģistros visā Eiropā.",
+  "lostGroupsTitle": "Vietējās meklēšanas grupas",
+  "lostGroupsNote": "Tās uztur brīvprātīgie, Snuffel tās nepārbauda. Dalies ar foto, vietu un laiku; nekad nevienam nemaksā iepriekš.",
+  "lostGroupsNone": "Šim apgabalam vēl nav meklēšanas grupas.",
+  "lostGroupsAdd": "Zini labu vietējo grupu? Iesaki to"
 }

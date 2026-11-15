@@ -109,5 +109,9 @@
   "lostLinkSearch": "Hledat ztracené a nalezené psy",
   "lostLinkChip": "Ověřit číslo čipu",
   "lostShowHelp": "📍 Veterináři a útulky v okolí",
-  "lostOtherNote": "V jiných zemích: nahlaste to v národním registru zvířat nebo na obecním úřadě. Europetnet vyhledává čísla čipů v registrech po celé Evropě."
+  "lostOtherNote": "V jiných zemích: nahlaste to v národním registru zvířat nebo na obecním úřadě. Europetnet vyhledává čísla čipů v registrech po celé Evropě.",
+  "lostGroupsTitle": "Místní pátrací skupiny",
+  "lostGroupsNote": "Vedou je dobrovolníci, Snuffel je neověřuje. Sdílejte fotku, kde a kdy; nikdy nikomu neplaťte předem.",
+  "lostGroupsNone": "Pro tuto oblast zatím není uvedena žádná pátrací skupina.",
+  "lostGroupsAdd": "Znáte dobrou místní skupinu? Navrhněte ji"
 }

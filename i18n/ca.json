@@ -108,5 +108,9 @@
   "lostLinkSearch": "Busca gossos perduts i trobats",
   "lostLinkChip": "Consulta un número de xip",
   "lostShowHelp": "📍 Veterinaris i protectores a prop",
-  "lostOtherNote": "En altres països: notifica-ho al registre nacional d'animals de companyia o a l'ajuntament. Europetnet cerca números de xip en registres de tot Europa."
+  "lostOtherNote": "En altres països: notifica-ho al registre nacional d'animals de companyia o a l'ajuntament. Europetnet cerca números de xip en registres de tot Europa.",
+  "lostGroupsTitle": "Grups de cerca locals",
+  "lostGroupsNote": "Els porten voluntaris i Snuffel no els revisa. Comparteix una foto, on i quan; no paguis mai res per avançat.",
+  "lostGroupsNone": "Encara no hi ha cap grup de cerca per a aquesta zona.",
+  "lostGroupsAdd": "Coneixes un bon grup local? Proposa'l"
 }

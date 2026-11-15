@@ -107,5 +107,9 @@
   "lostLinkSearch": "Kërko qen të humbur dhe të gjetur",
   "lostLinkChip": "Kontrollo numrin e çipit",
   "lostShowHelp": "📍 Veterinerë dhe strehimore pranë meje",
-  "lostOtherNote": "Në vende të tjera: raportoje në regjistrin kombëtar të kafshëve shtëpiake ose në bashki. Europetnet kërkon numrat e çipave në regjistra në gjithë Evropën."
+  "lostOtherNote": "Në vende të tjera: raportoje në regjistrin kombëtar të kafshëve shtëpiake ose në bashki. Europetnet kërkon numrat e çipave në regjistra në gjithë Evropën.",
+  "lostGroupsTitle": "Grupe kërkimi lokale",
+  "lostGroupsNote": "Drejtohen nga vullnetarë, Snuffel nuk i kontrollon. Ndani një foto, ku dhe kur; mos paguani kurrë askënd paraprakisht.",
+  "lostGroupsNone": "Ende nuk ka asnjë grup kërkimi për këtë zonë.",
+  "lostGroupsAdd": "Njihni një grup të mirë lokal? Sugjerojeni"
 }
