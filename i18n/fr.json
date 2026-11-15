@@ -15,6 +15,7 @@
   "getApp": "Aussi en application :",
   "radius": "Rayon",
   "independentOnly": "Indépendants uniquement",
+  "filterAll": "Tout",
   "resultsTitle": "Lieux près de chez vous",
   "loading": "Recherche de lieux à proximité…",
   "geocoding": "Recherche de l'adresse…",

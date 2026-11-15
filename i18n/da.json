@@ -15,6 +15,7 @@
   "getApp": "Også som app:",
   "radius": "Radius",
   "independentOnly": "Kun uafhængige",
+  "filterAll": "Alle",
   "resultsTitle": "Steder i nærheden",
   "loading": "Søger efter steder i nærheden…",
   "geocoding": "Slår adressen op…",

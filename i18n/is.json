@@ -15,6 +15,7 @@
   "getApp": "Líka sem app:",
   "radius": "Radíus",
   "independentOnly": "Aðeins sjálfstæðir",
+  "filterAll": "Allt",
   "resultsTitle": "Staðir nálægt þér",
   "loading": "Leita að stöðum í nágrenninu…",
   "geocoding": "Fletti upp heimilisfanginu…",

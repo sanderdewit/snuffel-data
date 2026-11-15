@@ -15,6 +15,7 @@
   "getApp": "Edhe si aplikacion:",
   "radius": "Rrezja",
   "independentOnly": "Vetëm të pavarurit",
+  "filterAll": "Të gjitha",
   "resultsTitle": "Vende pranë teje",
   "loading": "Po kërkojmë vende afër…",
   "geocoding": "Po kërkojmë adresën…",

@@ -15,6 +15,7 @@
   "getApp": "Also as an app:",
   "radius": "Radius",
   "independentOnly": "Independents only",
+  "filterAll": "All",
   "resultsTitle": "Places near you",
   "loading": "Searching for places nearby…",
   "geocoding": "Looking up that address…",

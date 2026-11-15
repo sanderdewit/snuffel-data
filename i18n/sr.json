@@ -15,6 +15,7 @@
   "getApp": "Takođe kao aplikacija:",
   "radius": "Radijus",
   "independentOnly": "Samo nezavisni",
+  "filterAll": "Sve",
   "resultsTitle": "Mesta u blizini",
   "loading": "Tražimo mesta u blizini…",
   "geocoding": "Tražimo adresu…",

@@ -15,6 +15,7 @@
   "getApp": "Även som app:",
   "radius": "Radie",
   "independentOnly": "Bara fristående",
+  "filterAll": "Alla",
   "resultsTitle": "Ställen nära dig",
   "loading": "Söker efter ställen i närheten…",
   "geocoding": "Slår upp adressen…",

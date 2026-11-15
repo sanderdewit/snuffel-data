@@ -15,6 +15,7 @@
   "getApp": "Ka äpina:",
   "radius": "Raadius",
   "independentOnly": "Ainult sõltumatud",
+  "filterAll": "Kõik",
   "resultsTitle": "Kohad sinu lähedal",
   "loading": "Otsime lähedalt kohti…",
   "geocoding": "Otsime aadressi…",

@@ -15,6 +15,7 @@
   "getApp": "Aj ako aplikácia:",
   "radius": "Okruh",
   "independentOnly": "Iba nezávislé",
+  "filterAll": "Všetko",
   "resultsTitle": "Miesta vo vašom okolí",
   "loading": "Hľadám miesta v okolí…",
   "geocoding": "Hľadám adresu…",

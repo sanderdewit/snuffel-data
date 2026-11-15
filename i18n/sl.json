@@ -15,6 +15,7 @@
   "getApp": "Tudi kot aplikacija:",
   "radius": "Polmer",
   "independentOnly": "Samo neodvisni",
+  "filterAll": "Vse",
   "resultsTitle": "Lokacije v bližini",
   "loading": "Iščemo lokacije v bližini…",
   "geocoding": "Iščemo naslov…",

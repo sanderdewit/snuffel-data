@@ -15,6 +15,7 @@
   "getApp": "Auch als App:",
   "radius": "Radius",
   "independentOnly": "Nur unabhängige",
+  "filterAll": "Alle",
   "resultsTitle": "Orte in deiner Nähe",
   "loading": "Suche Orte in der Nähe…",
   "geocoding": "Adresse wird gesucht…",

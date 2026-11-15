@@ -15,6 +15,7 @@
   "getApp": "Arī kā lietotne:",
   "radius": "Rādiuss",
   "independentOnly": "Tikai neatkarīgie",
+  "filterAll": "Visi",
   "resultsTitle": "Vietas tuvumā",
   "loading": "Meklējam vietas tuvumā…",
   "geocoding": "Meklējam adresi…",

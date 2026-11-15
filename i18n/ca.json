@@ -15,6 +15,7 @@
   "getApp": "També com a app:",
   "radius": "Radi",
   "independentOnly": "Només independents",
+  "filterAll": "Tot",
   "resultsTitle": "Llocs a prop teu",
   "loading": "Cercant llocs a prop…",
   "geocoding": "Cercant l'adreça…",

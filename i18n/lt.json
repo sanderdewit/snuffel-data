@@ -15,6 +15,7 @@
   "getApp": "Taip pat kaip programėlė:",
   "radius": "Spindulys",
   "independentOnly": "Tik nepriklausomi",
+  "filterAll": "Visi",
   "resultsTitle": "Vietos netoliese",
   "loading": "Ieškome vietų netoliese…",
   "geocoding": "Ieškome adreso…",

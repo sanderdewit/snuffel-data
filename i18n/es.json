@@ -15,6 +15,7 @@
   "getApp": "También como app:",
   "radius": "Radio",
   "independentOnly": "Solo independientes",
+  "filterAll": "Todo",
   "resultsTitle": "Sitios cerca de ti",
   "loading": "Buscando sitios cercanos…",
   "geocoding": "Buscando esa dirección…",

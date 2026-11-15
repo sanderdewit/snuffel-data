@@ -15,6 +15,7 @@
   "getApp": "Alkalmazásként is:",
   "radius": "Sugár",
   "independentOnly": "Csak függetlenek",
+  "filterAll": "Mind",
   "resultsTitle": "Helyek a közeledben",
   "loading": "Helyek keresése a közelben…",
   "geocoding": "Cím keresése…",

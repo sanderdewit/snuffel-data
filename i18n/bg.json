@@ -15,6 +15,7 @@
   "getApp": "Също като приложение:",
   "radius": "Радиус",
   "independentOnly": "Само независими",
+  "filterAll": "Всички",
   "resultsTitle": "Места наблизо",
   "loading": "Търсим места наблизо…",
   "geocoding": "Търсим адреса…",

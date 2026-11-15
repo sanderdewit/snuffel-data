@@ -15,6 +15,7 @@
   "getApp": "Myös sovelluksena:",
   "radius": "Säde",
   "independentOnly": "Vain itsenäiset",
+  "filterAll": "Kaikki",
   "resultsTitle": "Paikat lähelläsi",
   "loading": "Haetaan lähellä olevia paikkoja…",
   "geocoding": "Haetaan osoitetta…",
