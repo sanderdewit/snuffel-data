@@ -113,5 +113,12 @@
   "lostGroupsTitle": "Lokalne iskalne skupine",
   "lostGroupsNote": "Vodijo jih prostovoljci, Snuffel jih ne preverja. Delite fotografijo, kje in kdaj; nikoli nikomur ne plačajte vnaprej.",
   "lostGroupsNone": "Za to območje še ni iskalne skupine.",
-  "lostGroupsAdd": "Poznate dobro lokalno skupino? Predlagajte jo"
+  "lostGroupsAdd": "Poznate dobro lokalno skupino? Predlagajte jo",
+  "lostSuggestName": "Ime skupine",
+  "lostSuggestUrl": "Povezava (https://…)",
+  "lostSuggestArea": "Območje (država, regija ali mesto)",
+  "lostSuggestNote": "Še kaj? (neobvezno, brez osebnih podatkov)",
+  "lostSuggestSend": "Pošlji",
+  "lostSuggestThanks": "Hvala! Skupino bomo preverili in jo dodali.",
+  "lostSuggestError": "Pošiljanje ni uspelo. Poskusite znova pozneje."
 }

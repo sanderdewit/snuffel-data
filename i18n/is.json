@@ -111,5 +111,12 @@
   "lostGroupsTitle": "Leitarhópar á svæðinu",
   "lostGroupsNote": "Sjálfboðaliðar sjá um þá og Snuffel fer ekki yfir þá. Deildu mynd, stað og tíma; borgaðu aldrei neinum fyrirfram.",
   "lostGroupsNone": "Enginn leitarhópur er enn skráður fyrir þetta svæði.",
-  "lostGroupsAdd": "Veistu um góðan hóp á svæðinu? Stingdu upp á honum"
+  "lostGroupsAdd": "Veistu um góðan hóp á svæðinu? Stingdu upp á honum",
+  "lostSuggestName": "Heiti hópsins",
+  "lostSuggestUrl": "Tengill (https://…)",
+  "lostSuggestArea": "Svæði (land, landshluti eða bær)",
+  "lostSuggestNote": "Eitthvað fleira? (valfrjálst, engar persónuupplýsingar)",
+  "lostSuggestSend": "Senda",
+  "lostSuggestThanks": "Takk! Við skoðum hópinn og bætum honum við.",
+  "lostSuggestError": "Ekki tókst að senda. Reyndu aftur síðar."
 }

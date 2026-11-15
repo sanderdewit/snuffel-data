@@ -111,5 +111,12 @@
   "lostGroupsTitle": "Lokale eftersøgningsgrupper",
   "lostGroupsNote": "Drives af frivillige og tjekkes ikke af Snuffel. Del et foto, hvor og hvornår; betal aldrig nogen på forhånd.",
   "lostGroupsNone": "Der er endnu ingen eftersøgningsgruppe for dette område.",
-  "lostGroupsAdd": "Kender du en god lokal gruppe? Foreslå den"
+  "lostGroupsAdd": "Kender du en god lokal gruppe? Foreslå den",
+  "lostSuggestName": "Gruppens navn",
+  "lostSuggestUrl": "Link (https://…)",
+  "lostSuggestArea": "Område (land, region eller by)",
+  "lostSuggestNote": "Andet? (valgfrit, ingen personoplysninger)",
+  "lostSuggestSend": "Send",
+  "lostSuggestThanks": "Tak! Vi tjekker gruppen og tilføjer den.",
+  "lostSuggestError": "Det kunne ikke sendes. Prøv igen senere."
 }

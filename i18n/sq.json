@@ -111,5 +111,12 @@
   "lostGroupsTitle": "Grupe kërkimi lokale",
   "lostGroupsNote": "Drejtohen nga vullnetarë, Snuffel nuk i kontrollon. Ndani një foto, ku dhe kur; mos paguani kurrë askënd paraprakisht.",
   "lostGroupsNone": "Ende nuk ka asnjë grup kërkimi për këtë zonë.",
-  "lostGroupsAdd": "Njihni një grup të mirë lokal? Sugjerojeni"
+  "lostGroupsAdd": "Njihni një grup të mirë lokal? Sugjerojeni",
+  "lostSuggestName": "Emri i grupit",
+  "lostSuggestUrl": "Lidhja (https://…)",
+  "lostSuggestArea": "Zona (shteti, rajoni ose qyteti)",
+  "lostSuggestNote": "Diçka tjetër? (opsionale, pa të dhëna personale)",
+  "lostSuggestSend": "Dërgo",
+  "lostSuggestThanks": "Faleminderit! Do ta kontrollojmë grupin dhe do ta shtojmë.",
+  "lostSuggestError": "Dërgimi nuk funksionoi. Provoni përsëri më vonë."
 }

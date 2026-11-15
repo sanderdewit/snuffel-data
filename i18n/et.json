@@ -111,5 +111,12 @@
   "lostGroupsTitle": "Kohalikud otsingugrupid",
   "lostGroupsNote": "Neid haldavad vabatahtlikud, Snuffel neid ei kontrolli. Jaga fotot, kohta ja aega; ära kunagi maksa kellelegi ette.",
   "lostGroupsNone": "Selle piirkonna jaoks pole veel ühtegi otsingugruppi.",
-  "lostGroupsAdd": "Tead head kohalikku gruppi? Soovita seda"
+  "lostGroupsAdd": "Tead head kohalikku gruppi? Soovita seda",
+  "lostSuggestName": "Grupi nimi",
+  "lostSuggestUrl": "Link (https://…)",
+  "lostSuggestArea": "Piirkond (riik, maakond või linn)",
+  "lostSuggestNote": "Midagi veel? (valikuline, ilma isikuandmeteta)",
+  "lostSuggestSend": "Saada",
+  "lostSuggestThanks": "Aitäh! Kontrollime gruppi ja lisame selle.",
+  "lostSuggestError": "Saatmine ebaõnnestus. Proovi hiljem uuesti."
 }

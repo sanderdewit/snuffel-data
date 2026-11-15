@@ -112,5 +112,12 @@
   "lostGroupsTitle": "Vietējās meklēšanas grupas",
   "lostGroupsNote": "Tās uztur brīvprātīgie, Snuffel tās nepārbauda. Dalies ar foto, vietu un laiku; nekad nevienam nemaksā iepriekš.",
   "lostGroupsNone": "Šim apgabalam vēl nav meklēšanas grupas.",
-  "lostGroupsAdd": "Zini labu vietējo grupu? Iesaki to"
+  "lostGroupsAdd": "Zini labu vietējo grupu? Iesaki to",
+  "lostSuggestName": "Grupas nosaukums",
+  "lostSuggestUrl": "Saite (https://…)",
+  "lostSuggestArea": "Apgabals (valsts, reģions vai pilsēta)",
+  "lostSuggestNote": "Vēl kaut kas? (nav obligāti, bez personas datiem)",
+  "lostSuggestSend": "Sūtīt",
+  "lostSuggestThanks": "Paldies! Mēs pārbaudīsim grupu un to pievienosim.",
+  "lostSuggestError": "Neizdevās nosūtīt. Mēģini vēlreiz vēlāk."
 }

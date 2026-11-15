@@ -111,5 +111,12 @@
   "lostGroupsTitle": "Lokale letegrupper",
   "lostGroupsNote": "Drives av frivillige og sjekkes ikke av Snuffel. Del et bilde, hvor og når; betal aldri noen på forhånd.",
   "lostGroupsNone": "Det er ingen letegruppe for dette området ennå.",
-  "lostGroupsAdd": "Kjenner du en god lokal gruppe? Foreslå den"
+  "lostGroupsAdd": "Kjenner du en god lokal gruppe? Foreslå den",
+  "lostSuggestName": "Navn på gruppen",
+  "lostSuggestUrl": "Lenke (https://…)",
+  "lostSuggestArea": "Område (land, region eller by)",
+  "lostSuggestNote": "Noe mer? (valgfritt, ingen personopplysninger)",
+  "lostSuggestSend": "Send",
+  "lostSuggestThanks": "Takk! Vi sjekker gruppen og legger den til.",
+  "lostSuggestError": "Det gikk ikke å sende. Prøv igjen senere."
 }

@@ -113,5 +113,12 @@
   "lostGroupsTitle": "Místní pátrací skupiny",
   "lostGroupsNote": "Vedou je dobrovolníci, Snuffel je neověřuje. Sdílejte fotku, kde a kdy; nikdy nikomu neplaťte předem.",
   "lostGroupsNone": "Pro tuto oblast zatím není uvedena žádná pátrací skupina.",
-  "lostGroupsAdd": "Znáte dobrou místní skupinu? Navrhněte ji"
+  "lostGroupsAdd": "Znáte dobrou místní skupinu? Navrhněte ji",
+  "lostSuggestName": "Název skupiny",
+  "lostSuggestUrl": "Odkaz (https://…)",
+  "lostSuggestArea": "Oblast (země, kraj nebo město)",
+  "lostSuggestNote": "Ještě něco? (nepovinné, bez osobních údajů)",
+  "lostSuggestSend": "Odeslat",
+  "lostSuggestThanks": "Děkujeme! Skupinu prověříme a přidáme.",
+  "lostSuggestError": "Odeslání se nezdařilo. Zkuste to prosím později."
 }

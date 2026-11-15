@@ -111,5 +111,12 @@
   "lostGroupsTitle": "Helyi keresőcsoportok",
   "lostGroupsNote": "Önkéntesek működtetik, a Snuffel nem ellenőrzi őket. Ossz meg fotót, helyet és időpontot; soha ne fizess előre senkinek.",
   "lostGroupsNone": "Ehhez a területhez még nincs keresőcsoport.",
-  "lostGroupsAdd": "Ismersz egy jó helyi csoportot? Ajánld"
+  "lostGroupsAdd": "Ismersz egy jó helyi csoportot? Ajánld",
+  "lostSuggestName": "A csoport neve",
+  "lostSuggestUrl": "Link (https://…)",
+  "lostSuggestArea": "Terület (ország, régió vagy város)",
+  "lostSuggestNote": "Valami más? (nem kötelező, személyes adatok nélkül)",
+  "lostSuggestSend": "Küldés",
+  "lostSuggestThanks": "Köszönjük! Ellenőrizzük a csoportot, és felvesszük.",
+  "lostSuggestError": "A küldés nem sikerült. Próbáld újra később."
 }

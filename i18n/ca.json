@@ -112,5 +112,12 @@
   "lostGroupsTitle": "Grups de cerca locals",
   "lostGroupsNote": "Els porten voluntaris i Snuffel no els revisa. Comparteix una foto, on i quan; no paguis mai res per avançat.",
   "lostGroupsNone": "Encara no hi ha cap grup de cerca per a aquesta zona.",
-  "lostGroupsAdd": "Coneixes un bon grup local? Proposa'l"
+  "lostGroupsAdd": "Coneixes un bon grup local? Proposa'l",
+  "lostSuggestName": "Nom del grup",
+  "lostSuggestUrl": "Enllaç (https://…)",
+  "lostSuggestArea": "Zona (país, regió o ciutat)",
+  "lostSuggestNote": "Alguna cosa més? (opcional, sense dades personals)",
+  "lostSuggestSend": "Envia",
+  "lostSuggestThanks": "Gràcies! Revisarem el grup i l'afegirem.",
+  "lostSuggestError": "No s'ha pogut enviar. Torna-ho a provar més tard."
 }

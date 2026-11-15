@@ -113,5 +113,12 @@
   "lostGroupsTitle": "Vietinės paieškos grupės",
   "lostGroupsNote": "Jas tvarko savanoriai, Snuffel jų netikrina. Pasidalykite nuotrauka, vieta ir laiku; niekada niekam nemokėkite iš anksto.",
   "lostGroupsNone": "Šiai vietovei paieškos grupės dar nėra.",
-  "lostGroupsAdd": "Žinote gerą vietinę grupę? Pasiūlykite ją"
+  "lostGroupsAdd": "Žinote gerą vietinę grupę? Pasiūlykite ją",
+  "lostSuggestName": "Grupės pavadinimas",
+  "lostSuggestUrl": "Nuoroda (https://…)",
+  "lostSuggestArea": "Vietovė (šalis, regionas ar miestas)",
+  "lostSuggestNote": "Dar kažkas? (neprivaloma, be asmens duomenų)",
+  "lostSuggestSend": "Siųsti",
+  "lostSuggestThanks": "Ačiū! Patikrinsime grupę ir ją pridėsime.",
+  "lostSuggestError": "Nepavyko išsiųsti. Bandykite vėliau."
 }

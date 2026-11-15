@@ -112,5 +112,12 @@
   "lostGroupsTitle": "Grupuri locale de căutare",
   "lostGroupsNote": "Conduse de voluntari, neverificate de Snuffel. Distribuie o fotografie, locul și ora; nu plăti niciodată nimic în avans.",
   "lostGroupsNone": "Încă nu există niciun grup de căutare pentru această zonă.",
-  "lostGroupsAdd": "Știi un grup local bun? Propune-l"
+  "lostGroupsAdd": "Știi un grup local bun? Propune-l",
+  "lostSuggestName": "Numele grupului",
+  "lostSuggestUrl": "Link (https://…)",
+  "lostSuggestArea": "Zona (țară, regiune sau oraș)",
+  "lostSuggestNote": "Altceva? (opțional, fără date personale)",
+  "lostSuggestSend": "Trimite",
+  "lostSuggestThanks": "Mulțumim! Vom verifica grupul și îl vom adăuga.",
+  "lostSuggestError": "Trimiterea nu a reușit. Încearcă din nou mai târziu."
 }

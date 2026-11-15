@@ -111,5 +111,12 @@
   "lostGroupsTitle": "Lokale Suchgruppen",
   "lostGroupsNote": "Von Ehrenamtlichen geführt, nicht von Snuffel geprüft. Teile ein Foto, wo und wann; zahle nie jemandem etwas im Voraus.",
   "lostGroupsNone": "Für diese Gegend ist noch keine Suchgruppe eingetragen.",
-  "lostGroupsAdd": "Kennst du eine gute lokale Gruppe? Schlag sie vor"
+  "lostGroupsAdd": "Kennst du eine gute lokale Gruppe? Schlag sie vor",
+  "lostSuggestName": "Name der Gruppe",
+  "lostSuggestUrl": "Link (https://…)",
+  "lostSuggestArea": "Gebiet (Land, Region oder Stadt)",
+  "lostSuggestNote": "Sonst noch etwas? (optional, keine persönlichen Daten)",
+  "lostSuggestSend": "Senden",
+  "lostSuggestThanks": "Danke! Wir prüfen die Gruppe und nehmen sie auf.",
+  "lostSuggestError": "Senden hat nicht geklappt. Bitte später noch einmal versuchen."
 }

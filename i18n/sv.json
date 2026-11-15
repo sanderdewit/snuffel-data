@@ -111,5 +111,12 @@
   "lostGroupsTitle": "Lokala sökgrupper",
   "lostGroupsNote": "Drivs av frivilliga och kontrolleras inte av Snuffel. Dela ett foto, var och när; betala aldrig någon i förväg.",
   "lostGroupsNone": "Det finns ingen sökgrupp för det här området än.",
-  "lostGroupsAdd": "Känner du till en bra lokal grupp? Föreslå den"
+  "lostGroupsAdd": "Känner du till en bra lokal grupp? Föreslå den",
+  "lostSuggestName": "Gruppens namn",
+  "lostSuggestUrl": "Länk (https://…)",
+  "lostSuggestArea": "Område (land, region eller stad)",
+  "lostSuggestNote": "Något mer? (valfritt, inga personuppgifter)",
+  "lostSuggestSend": "Skicka",
+  "lostSuggestThanks": "Tack! Vi kollar gruppen och lägger till den.",
+  "lostSuggestError": "Det gick inte att skicka. Försök igen senare."
 }

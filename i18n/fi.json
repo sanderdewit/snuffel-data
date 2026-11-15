@@ -111,5 +111,12 @@
   "lostGroupsTitle": "Paikalliset etsintäryhmät",
   "lostGroupsNote": "Vapaaehtoisten ylläpitämiä, Snuffel ei tarkista niitä. Jaa kuva, paikka ja aika; älä koskaan maksa kenellekään etukäteen.",
   "lostGroupsNone": "Tälle alueelle ei ole vielä etsintäryhmää.",
-  "lostGroupsAdd": "Tiedätkö hyvän paikallisen ryhmän? Ehdota sitä"
+  "lostGroupsAdd": "Tiedätkö hyvän paikallisen ryhmän? Ehdota sitä",
+  "lostSuggestName": "Ryhmän nimi",
+  "lostSuggestUrl": "Linkki (https://…)",
+  "lostSuggestArea": "Alue (maa, maakunta tai kaupunki)",
+  "lostSuggestNote": "Jotain muuta? (valinnainen, ei henkilötietoja)",
+  "lostSuggestSend": "Lähetä",
+  "lostSuggestThanks": "Kiitos! Tarkistamme ryhmän ja lisäämme sen.",
+  "lostSuggestError": "Lähettäminen epäonnistui. Yritä myöhemmin uudelleen."
 }

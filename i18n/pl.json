@@ -113,5 +113,12 @@
   "lostGroupsTitle": "Lokalne grupy poszukiwawcze",
   "lostGroupsNote": "Prowadzą je wolontariusze, Snuffel ich nie sprawdza. Udostępnij zdjęcie, miejsce i czas; nigdy nikomu nie płać z góry.",
   "lostGroupsNone": "Dla tego obszaru nie ma jeszcze grupy poszukiwawczej.",
-  "lostGroupsAdd": "Znasz dobrą lokalną grupę? Zaproponuj ją"
+  "lostGroupsAdd": "Znasz dobrą lokalną grupę? Zaproponuj ją",
+  "lostSuggestName": "Nazwa grupy",
+  "lostSuggestUrl": "Link (https://…)",
+  "lostSuggestArea": "Obszar (kraj, region lub miasto)",
+  "lostSuggestNote": "Coś jeszcze? (opcjonalnie, bez danych osobowych)",
+  "lostSuggestSend": "Wyślij",
+  "lostSuggestThanks": "Dziękujemy! Sprawdzimy grupę i ją dodamy.",
+  "lostSuggestError": "Nie udało się wysłać. Spróbuj ponownie później."
 }

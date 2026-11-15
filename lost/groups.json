@@ -1,4 +1,25 @@
 {
   "_help": "Local search groups for lost and found dogs, shown under the lost-dog guide on snuffel.app and in the app. Run by volunteers, not checked by Snuffel: only public groups about lost/found animals, recently active, not commercial. Fields: id (unique, lowercase-dashes), name, url (https), country (ISO 3166-1 alpha-2, as in tools/countries.json), region (optional, shown next to the name), lat/lon + radiusKm (optional: a regional group, shown near that point; without them the group covers the whole country), added and checked (YYYY-MM-DD). Validate with: node tools/lost-groups.js check",
-  "groups": []
+  "groups": [
+    {
+      "id": "overzicht-zoekteams-nl",
+      "name": "Overzicht hondenzoekteams in Nederland",
+      "url": "https://www.hondenzoekteammay.nl/overzicht-zoekteams",
+      "country": "NL",
+      "added": "2026-11-15",
+      "checked": "2026-11-15"
+    },
+    {
+      "id": "hondenzoekteam-may",
+      "name": "Hondenzoekteam May",
+      "url": "https://www.hondenzoekteammay.nl/",
+      "country": "NL",
+      "region": "Zeeland, West-Brabant, Goeree-Overflakkee",
+      "lat": 51.55,
+      "lon": 4.1,
+      "radiusKm": 60,
+      "added": "2026-11-15",
+      "checked": "2026-11-15"
+    }
+  ]
 }
