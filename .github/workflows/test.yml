@@ -28,3 +28,5 @@ jobs:
           node tests/hours.test.js
           node tests/i18n.test.js
           node tests/lost-groups.test.js
+          node tests/breeds.test.js
+          node tools/build-breeds.js check

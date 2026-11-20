@@ -12,6 +12,7 @@ Everything runs on GitHub Actions and writes static files to Azure Storage:
 |---|---|---|
 | [`data`](.github/workflows/data.yml) | monthly (3rd), or manually | `places/manifest.json` + 0.25° cells, `chains.json` |
 | [`tiles`](.github/workflows/tiles.yml) | quarterly, or manually | `tiles/snuffel.pmtiles` (Protomaps basemap) |
+| [`breeds`](.github/workflows/breeds.yml) | monthly (5th), or manually | a pull request when the breed list changed |
 | [`test`](.github/workflows/test.yml) | every push / PR | unit tests |
 
 ## Places
@@ -108,10 +109,30 @@ public, recently active, not commercial, checked by hand. Suggestions come in th
 validates the list, and the [`lost-groups`](.github/workflows/lost-groups.yml) workflow
 publishes it as `snuffel.app/data/lost-groups.json` on every change.
 
+## Dog breeds
+
+[`breeds/breeds.json`](breeds/breeds.json) is the breed list of the app's breed picker:
+every breed of the [FCI nomenclature](https://www.fci.be/en/Nomenclature/) (definitive
+and provisional), FCI varieties worth picking on their own (Malinois, Pomeranian,
+toy poodle...), common crosses (Labradoodle, Cockapoo, Cavapoo...), breeds the FCI
+doesn't recognise but that are common in Europe (American Bully, Podenco Andaluz,
+Markiesje...), "mixed breed" and "other". Every entry has a stable id (`fci-166`,
+`fci-15-malinois`, `x-labradoodle`, `nf-american-bully`, `mixed`, `other`), a name in
+all 29 languages and search terms (other names, local names, common misspellings).
+
+[`tools/build-breeds.js`](tools/build-breeds.js) builds it from the FCI's group pages
+(numbers, names, groups: facts only), [Wikidata](https://www.wikidata.org) (names and
+aliases, CC0) and the [Raad van Beheer](https://www.houdenvanhonden.nl/hondenrassen/alle-rassen/)
+(the official Dutch names), plus the hand-kept [`breeds/overrides.json`](breeds/overrides.json).
+A language without its own name for a breed gets the name of a close language or the
+English one. The monthly [`breeds`](.github/workflows/breeds.yml) workflow rebuilds it and
+opens a pull request with a summary when anything changed; ids that disappear stay,
+marked `removed`.
+
 ## Shared core
 
-`lib/` (chain detection, category rules, opening hours) and `i18n/` (29 language
-packs) are the single source for the website and the
+`lib/` (chain detection, category rules, opening hours), `i18n/` (29 language
+packs) and `breeds/breeds.json` (the app only) are the single source for the website and the
 [Snuffel app](https://github.com/sanderdewit/snuffel-app). Both keep identical
 copies; their CI fails when a copy differs from this repository.
 
@@ -130,6 +151,7 @@ node tools/build-chains.js                 # official lists -> dist/chains.json
 node tools/scan-websites.js nl             # needs tools/.cache/osm-vets-nl.json (from build-places add, or Overpass)
 node tools/evaluate-chains.js nl           # what is flagged, and by which signal
 node tools/scan-hours.js nl                # opening hours from clinic websites -> tools/hours-nl.json
+node tools/build-breeds.js --cache         # breed list -> breeds/breeds.json (downloads kept in tools/.cache/breeds)
 ```
 
 ## Credentials
@@ -155,6 +177,8 @@ forks, so secrets are not exposed.
   [Open Database License (ODbL) 1.0](https://www.openstreetmap.org/copyright).
 - Basemap: [Protomaps](https://protomaps.com) (BSD 3-Clause / ODbL).
 - Country outlines: Natural Earth (public domain).
+- Breed names: Wikidata (CC0); breed numbers and groups: the FCI nomenclature (fci.be);
+  Dutch names: Raad van Beheer.
 - Code, language packs, the lost-dog guide and documentation: © De Wit Automatisering B.V.,
   all rights reserved unless stated otherwise (public to read, not a licence to reuse).
   See [LICENSE](LICENSE).

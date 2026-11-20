@@ -1,0 +1,64 @@
+# Monthly: rebuild the breed list (breeds/breeds.json) from the FCI nomenclature,
+# Wikidata and the Raad van Beheer (tools/build-breeds.js). When anything changed
+# (a new or provisional breed, a rename, a new translation) it opens or updates the
+# pull request "breeds/update" with the summary: nothing reaches the app or the site
+# without review. The app copies the merged file with its next release
+# (tools/sync-core.mjs); "Other" covers a breed that is missing until then.
+#
+# Needs "Allow GitHub Actions to create and approve pull requests" (Settings >
+# Actions > General). A pull request opened with GITHUB_TOKEN doesn't start other
+# workflows, so the tests run here before it is opened.
+name: breeds
+
+on:
+  schedule:
+    - cron: "41 3 5 * *"          # 03:41 UTC on the 5th of every month
+  workflow_dispatch:
+
+concurrency:
+  group: breeds
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write             # push the breeds/update branch
+      pull-requests: write        # open or update its pull request
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+
+      - name: Rebuild from the sources
+        run: node tools/build-breeds.js --summary "$RUNNER_TEMP/summary.md" | tee -a $GITHUB_STEP_SUMMARY
+
+      - name: Tests
+        run: |
+          node tools/build-breeds.js check
+          node tests/breeds.test.js
+
+      - name: Open or update the pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- breeds/breeds.json; then
+            echo "No changes in the breed list." | tee -a $GITHUB_STEP_SUMMARY
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -C breeds/update
+          git commit -m "Breeds: monthly rebuild ($(date -u +%Y-%m-%d))" -- breeds/breeds.json
+          git push --force origin breeds/update
+          { echo "Monthly rebuild by the breeds workflow. Check the new and renamed breeds before merging; the app gets the list with its next release (node tools/sync-core.mjs)."; echo; cat "$RUNNER_TEMP/summary.md"; } > "$RUNNER_TEMP/body.md"
+          if [ -n "$(gh pr list --head breeds/update --state open --json number --jq '.[0].number')" ]; then
+            gh pr edit breeds/update --body-file "$RUNNER_TEMP/body.md"
+          else
+            gh pr create --head breeds/update --base main --title "Breeds: monthly rebuild" --body-file "$RUNNER_TEMP/body.md"
+          fi
