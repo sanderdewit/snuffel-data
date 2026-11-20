@@ -196,6 +196,10 @@ async function wikidata(extraIds) {
     FILTER(lang(?l) IN (${langs})) }`);
   const items = new Map();
   const item = (q) => items.get(q) || items.set(q, { q, labels: {}, aliases: {}, fci: [] }).get(q);
+  // SPARQL returns rows in any order: sorted, the same data always gives the same file (no noise in the monthly diff)
+  const key = (r) => [r.item.value, r.kind.value, r.l["xml:lang"], r.l.value].join("\u0000");
+  rows.sort((a, z) => (key(a) < key(z) ? -1 : key(a) > key(z) ? 1 : 0));
+  fciRows.sort((a, z) => (a.item.value + a.num.value < z.item.value + z.num.value ? -1 : 1));
   for (const r of rows) {
     const q = r.item.value.split("/").pop(), lang = r.l["xml:lang"], text = r.l.value.trim();
     if (!text) continue;
