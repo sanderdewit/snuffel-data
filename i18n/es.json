@@ -22,6 +22,8 @@
   "locating": "Obteniendo tu ubicación…",
   "retry": "Reintentar",
   "footerProto": "Datos de lugares © colaboradores de OpenStreetMap",
+  "footerPrivacy": "Privacidad",
+  "footerTerms": "Condiciones de uso",
   "footerRoadmap": "Novedad: ayuda con IA sobre salud y comportamiento, en cualquier idioma 🤖",
   "resultsNear": "Resultados cerca de",
   "countResults": {

@@ -22,6 +22,8 @@
   "locating": "Standort wird ermittelt…",
   "retry": "Erneut versuchen",
   "footerProto": "Ortsdaten © OpenStreetMap-Mitwirkende",
+  "footerPrivacy": "Datenschutz",
+  "footerTerms": "Nutzungsbedingungen",
   "footerRoadmap": "Neu: KI-Hilfe zu Gesundheit & Verhalten — in jeder Sprache 🤖",
   "resultsNear": "Ergebnisse in der Nähe von",
   "countResults": {

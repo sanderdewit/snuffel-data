@@ -22,6 +22,8 @@
   "locating": "Λήψη της τοποθεσίας σας…",
   "retry": "Δοκιμάστε ξανά",
   "footerProto": "Δεδομένα τοποθεσιών © συντελεστές του OpenStreetMap",
+  "footerPrivacy": "Απόρρητο",
+  "footerTerms": "Όροι χρήσης",
   "footerRoadmap": "Νέο: βοήθεια AI για υγεία και συμπεριφορά — σε οποιαδήποτε γλώσσα 🤖",
   "resultsNear": "Αποτελέσματα κοντά σε",
   "countResults": {

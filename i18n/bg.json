@@ -22,6 +22,8 @@
   "locating": "Определяме местоположението ви…",
   "retry": "Опитай отново",
   "footerProto": "Данни за местата © сътрудници на OpenStreetMap",
+  "footerPrivacy": "Поверителност",
+  "footerTerms": "Условия за ползване",
   "footerRoadmap": "Ново: AI помощ за здраве и поведение — на всеки език 🤖",
   "resultsNear": "Резултати близо до",
   "countResults": {

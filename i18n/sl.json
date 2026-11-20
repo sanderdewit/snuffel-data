@@ -22,6 +22,8 @@
   "locating": "Določamo vašo lokacijo…",
   "retry": "Poskusi znova",
   "footerProto": "Podatki o lokacijah © sodelavci OpenStreetMap",
+  "footerPrivacy": "Zasebnost",
+  "footerTerms": "Pogoji uporabe",
   "footerRoadmap": "Novo: pomoč UI za zdravje in vedenje — v katerem koli jeziku 🤖",
   "resultsNear": "Rezultati v bližini",
   "countResults": {

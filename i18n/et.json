@@ -22,6 +22,8 @@
   "locating": "Määrame sinu asukohta…",
   "retry": "Proovi uuesti",
   "footerProto": "Kohaandmed © OpenStreetMapi kaastöötajad",
+  "footerPrivacy": "Privaatsus",
+  "footerTerms": "Kasutustingimused",
   "footerRoadmap": "Uus: AI-abi tervise ja käitumise küsimustes — igas keeles 🤖",
   "resultsNear": "Tulemused piirkonnas:",
   "countResults": {

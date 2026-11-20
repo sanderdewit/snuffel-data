@@ -22,6 +22,8 @@
   "locating": "Obtenint la teva ubicació…",
   "retry": "Torna-ho a provar",
   "footerProto": "Dades dels llocs © col·laboradors d'OpenStreetMap",
+  "footerPrivacy": "Privadesa",
+  "footerTerms": "Condicions d'ús",
   "footerRoadmap": "Novetat: ajuda amb IA sobre salut i comportament, en qualsevol llengua 🤖",
   "resultsNear": "Resultats a prop de",
   "countResults": {

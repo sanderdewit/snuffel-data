@@ -22,6 +22,8 @@
   "locating": "Finder din placering…",
   "retry": "Prøv igen",
   "footerProto": "Stedsdata © OpenStreetMap-bidragydere",
+  "footerPrivacy": "Privatliv",
+  "footerTerms": "Vilkår for brug",
   "footerRoadmap": "Nyt: AI-hjælp til sundhed og adfærd — på alle sprog 🤖",
   "resultsNear": "Viser resultater nær",
   "countResults": {

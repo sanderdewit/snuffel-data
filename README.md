@@ -155,4 +155,6 @@ forks, so secrets are not exposed.
   [Open Database License (ODbL) 1.0](https://www.openstreetmap.org/copyright).
 - Basemap: [Protomaps](https://protomaps.com) (BSD 3-Clause / ODbL).
 - Country outlines: Natural Earth (public domain).
-- Code: © Sander de Wit, all rights reserved unless stated otherwise.
+- Code, language packs, the lost-dog guide and documentation: © De Wit Automatisering B.V.,
+  all rights reserved unless stated otherwise (public to read, not a licence to reuse).
+  See [LICENSE](LICENSE).

@@ -22,6 +22,8 @@
   "locating": "Zisťujem vašu polohu…",
   "retry": "Skúsiť znova",
   "footerProto": "Údaje o miestach © prispievatelia OpenStreetMap",
+  "footerPrivacy": "Ochrana súkromia",
+  "footerTerms": "Podmienky používania",
   "footerRoadmap": "Novinka: AI pomoc so zdravím a správaním — v akomkoľvek jazyku 🤖",
   "resultsNear": "Výsledky v okolí",
   "countResults": {

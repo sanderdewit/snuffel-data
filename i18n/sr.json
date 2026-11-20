@@ -22,6 +22,8 @@
   "locating": "Određujemo tvoju lokaciju…",
   "retry": "Pokušaj ponovo",
   "footerProto": "Podaci o mestima © saradnici OpenStreetMap-a",
+  "footerPrivacy": "Privatnost",
+  "footerTerms": "Uslovi korišćenja",
   "footerRoadmap": "Novo: AI pomoć za zdravlje i ponašanje — na bilo kom jeziku 🤖",
   "resultsNear": "Rezultati u blizini",
   "countResults": {

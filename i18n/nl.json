@@ -22,6 +22,8 @@
   "locating": "Je locatie bepalen…",
   "retry": "Opnieuw proberen",
   "footerProto": "Locatiegegevens © OpenStreetMap-bijdragers",
+  "footerPrivacy": "Privacy",
+  "footerTerms": "Algemene voorwaarden",
   "footerRoadmap": "Nieuw: AI-hulp bij gezondheid & gedrag — in elke taal 🤖",
   "resultsNear": "Resultaten in de buurt van",
   "countResults": {

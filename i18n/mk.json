@@ -22,6 +22,8 @@
   "locating": "Ја одредуваме твојата локација…",
   "retry": "Обиди се пак",
   "footerProto": "Податоци за местата © соработници на OpenStreetMap",
+  "footerPrivacy": "Приватност",
+  "footerTerms": "Услови за користење",
   "footerRoadmap": "Ново: AI помош за здравје и однесување — на секој јазик 🤖",
   "resultsNear": "Резултати во близина",
   "countResults": {
