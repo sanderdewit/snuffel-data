@@ -15,18 +15,22 @@
  *                              osmium export f.pbf -f geojsonseq -a type,id -o <extract>
  *       Classifies every feature with lib/classify.js (same rules as the site),
  *       keeps the tags the site uses, and stages dist/stage/<cc>.json. It also
- *       writes tools/.cache/osm-vets-<cc>.json for tools/scan-websites.js.
+ *       writes tools/.cache/osm-vets-<cc>.json for tools/scan-websites.js,
+ *       tools/vets.js (the vet register) and tools/scan-hours.js.
  *
  *   node tools/build-places.js assemble
  *       Merges all staged countries (dropping border duplicates) into cells and
  *       writes the manifest. Cells go into a dated folder so browsers can cache
- *       them for long; only the manifest is fetched fresh.
+ *       them for long; only the manifest is fetched fresh. Only the countries
+ *       staged in this run are in the manifest. Vets get "snuffel:" fields from
+ *       the register vets/<cc>.jsonl (else from dist/hours.json).
  * ========================================================================== */
 "use strict";
 const fs = require("fs");
 const path = require("path");
 const readline = require("readline");
 const { classify, KEEP_TAGS } = require("../lib/classify.js");
+const vetsRegister = require("./vets.js");
 
 // SNUFFEL_DIST lets tests build into a temporary folder.
 const DIST = process.env.SNUFFEL_DIST || path.join(__dirname, "..", "dist");
@@ -137,14 +141,33 @@ function assemble() {
     }
   }
 
-  // Opening hours / emergency info from the clinics' own websites (tools/scan-hours.js),
-  // as separate "snuffel:" fields: OSM's own opening_hours always wins.
+  // Websites and opening hours from our register of vets (vets/<cc>.jsonl, tools/vets.js):
+  // a branch's website, hours and emergency info from the clinic's own site, hand fixes.
+  // Countries without a register: the website scan's dist/hours.json. All as separate
+  // "snuffel:" fields; OSM's own website and opening_hours always win.
+  // (tests build into SNUFFEL_DIST and only use a register folder they name in SNUFFEL_VETS)
+  const vetsDir = process.env.SNUFFEL_VETS || (process.env.SNUFFEL_DIST ? "" : path.join(__dirname, "..", "vets"));
+  const register = new Map(), registered = new Set();
+  if (vetsDir && fs.existsSync(vetsDir)) {
+    for (const f of fs.readdirSync(vetsDir).filter((x) => /^[a-z]{2}\.jsonl$/.test(x))) {
+      registered.add(f.slice(0, 2));
+      for (const [id, e] of vetsRegister.read(f.slice(0, 2), vetsDir)) if (!e.gone) register.set(id, e);
+    }
+  }
   const hoursFile = path.join(DIST, "hours.json");
   const web = fs.existsSync(hoursFile) ? JSON.parse(fs.readFileSync(hoursFile, "utf8")).places || {} : {};
-  let withWebHours = 0;
+  let withWebHours = 0, withBranchSite = 0;
   const seen = new Set(best.keys()), cells = new Map(), countries = {};
   for (const { el, cc } of best.values()) {
-    const w = el.tags["snuffel:source"] ? null : web[el.id];   // hand-checked entries win
+    const handChecked = !!el.tags["snuffel:source"];   // hand-checked extra places win
+    const r = handChecked ? null : register.get(el.id);
+    if (r) {
+      const extra = vetsRegister.placeFields(r, el.tags);
+      if (extra["snuffel:opening_hours"]) withWebHours++;
+      if (extra["snuffel:website"]) withBranchSite++;
+      if (Object.keys(extra).length) el.tags = { ...el.tags, ...extra };
+    }
+    const w = handChecked || r || registered.has(cc) ? null : web[el.id];
     if (w) {
       const extra = {};
       if (w.opening_hours && !el.tags.opening_hours) { extra["snuffel:opening_hours"] = w.opening_hours; withWebHours++; }
@@ -177,7 +200,7 @@ function assemble() {
   fs.writeFileSync(path.join(PLACES, "manifest.json"), JSON.stringify(manifest));
   console.log(`assembled ${seen.size} places in ${cells.size} cells (${(bytes / 1e6).toFixed(1)} MB) -> dist/places/${version}/`);
   console.log(JSON.stringify(countries));
-  console.log(`opening hours from clinic websites: ${withWebHours} places; hand-checked extra places: ${extras}`);
+  console.log(`opening hours from clinic websites: ${withWebHours} places; websites from a branch or a hand fix: ${withBranchSite}; hand-checked extra places: ${extras}`);
 }
 
 module.exports = { OSMIUM_FILTER, centre };
