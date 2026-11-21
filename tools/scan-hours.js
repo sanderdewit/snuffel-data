@@ -40,6 +40,7 @@ const { evaluate } = require("../lib/hours.js");
 const { hostOf, allValues } = require("../lib/chains.js");
 const { ruleMatches, robotsBody } = require("./robots-match.js");
 const { safeFetch, readCapped } = require("./safe-fetch.js");
+const { read: readRegister, previousFor } = require("./vets.js");
 
 const UA = "Mozilla/5.0 (compatible; SnuffelBot/1.0; dog-services directory, opening hours; +https://snuffel.app)";
 const CONCURRENCY = 6;
@@ -370,13 +371,17 @@ async function scanCountry(cc) {
   const vets = JSON.parse(fs.readFileSync(path.join(__dirname, ".cache", `osm-vets-${cc}.json`), "utf8"));
   const prevFile = path.join(DIST, "previous-hours.json");
   const previous = fs.existsSync(prevFile) ? JSON.parse(fs.readFileSync(prevFile, "utf8")).places || {} : {};
+  // Our register (vets/<cc>.jsonl, tools/vets.js): a branch's website for a vet without
+  // one of its own, and last month's answer, so an unchanged page needs no AI call.
+  const register = readRegister(cc);
   const todo = [];
   for (const v of vets) {
-    const t = v.tags || {};
+    const t = v.tags || {}, id = v.type.charAt(0) + v.id, e = register.get(id);
     if (t.opening_hours) continue;
-    const raw = allValues(t.website || t["contact:website"] || t.url)[0];
+    if (e && e.hoursFrom === "manual") continue;          // checked by hand: nothing to read
+    const raw = allValues(t.website || t["contact:website"] || t.url)[0] || (e && e.site);
     if (!raw || !hostOf(raw)) continue;
-    todo.push({ id: v.type.charAt(0) + v.id, vet: v, url: /^https?:\/\//i.test(raw) ? raw : "https://" + raw, host: hostOf(raw) });
+    todo.push({ id, vet: v, url: /^https?:\/\//i.test(raw) ? raw : "https://" + raw, host: hostOf(raw), previous: previousFor(e) || previous[id] });
   }
   console.log(`${cc.toUpperCase()}: ${vets.length} vets, ${todo.length} without opening hours but with a website`);
 
@@ -390,7 +395,7 @@ async function scanCountry(cc) {
     while (queue.length) {
       for (const item of queue.shift()) {
         let r;
-        try { r = await scanSite(item.vet, item.url, previous[item.id]); }
+        try { r = await scanSite(item.vet, item.url, item.previous); }
         catch (e) { r = { status: e.name === "AbortError" ? "timeout" : "error" }; }
         const key = r.status === "ok" || r.status === "unchanged" ? (r.source || "emergency only") : r.status;
         tally[key] = (tally[key] || 0) + 1;
