@@ -2,7 +2,7 @@
 // Exercises web/js/hours.js without a browser. Days: 0 = Sunday ... 6 = Saturday.
 "use strict";
 const assert = require("assert");
-const { evaluate, marketNow, tzFor } = require("../lib/hours.js");
+const { evaluate, week, nextChange, marketNow, tzFor } = require("../lib/hours.js");
 
 const SUN = 0, MON = 1, TUE = 2, WED = 3, FRI = 5, SAT = 6;
 const at = (day, hh, mm = 0) => ({ day, minutes: hh * 60 + mm });
@@ -111,6 +111,74 @@ test("islands and fallbacks", () => {
   assert.strictEqual(tzFor("pt", 32.6, -16.9), "Atlantic/Madeira");
   assert.strictEqual(tzFor("pt", 38.7, -9.1), "Europe/Lisbon");
   assert.strictEqual(tzFor(null), undefined);                       // no country: device zone
+});
+
+console.log("week and next change");
+const THU = 4;
+const next = (str, now) => nextChange(str, now);
+
+test("week: ranges per day, closed days empty, complete when every rule is understood", () => {
+  const w = week("Mo-Fr 08:00-12:00,13:00-18:00; Sa 09:00-12:00");
+  assert.strictEqual(w.complete, true);
+  assert.deepStrictEqual(w.days[MON], [[480, 720], [780, 1080]]);
+  assert.deepStrictEqual(w.days[SAT], [[540, 720]]);
+  assert.deepStrictEqual(w.days[SUN], []);
+  assert.deepStrictEqual(week("24/7"), { always: true });
+  assert.strictEqual(week(""), null);
+  assert.strictEqual(week("by appointment"), null);
+});
+
+test("week: a rule it can't read makes the week incomplete (missing days unknown, not closed)", () => {
+  const w = week("Mo-Fr 08:00-18:00; Jan off");
+  assert.strictEqual(w.complete, false);
+  assert.deepStrictEqual(w.days[MON], [[480, 1080]]);
+});
+
+test("next change while open: the closing time today", () => {
+  assert.deepStrictEqual(next("Mo-Fr 08:00-18:00", at(WED, 10)), { open: true, at: { day: WED, minutes: 1080, daysAhead: 0 } });
+});
+
+test("next change while closed: later today, tomorrow, or after the weekend", () => {
+  assert.deepStrictEqual(next("Mo-Fr 08:00-18:00", at(WED, 7)), { open: false, at: { day: WED, minutes: 480, daysAhead: 0 } });
+  assert.deepStrictEqual(next("Mo-Fr 08:00-18:00", at(WED, 19)), { open: false, at: { day: THU, minutes: 480, daysAhead: 1 } });
+  assert.deepStrictEqual(next("Mo-Fr 08:00-18:00; Sa 09:00-12:00", at(SAT, 13)), { open: false, at: { day: MON, minutes: 480, daysAhead: 2 } });
+});
+
+test("lunch break: closes at 12:00, then opens at 13:00", () => {
+  const s = "Mo-Fr 08:00-12:00,13:00-18:00";
+  assert.deepStrictEqual(next(s, at(TUE, 11)), { open: true, at: { day: TUE, minutes: 720, daysAhead: 0 } });
+  assert.deepStrictEqual(next(s, at(TUE, 12, 30)), { open: false, at: { day: TUE, minutes: 780, daysAhead: 0 } });
+});
+
+test("back-to-back or overlapping ranges count as one opening", () => {
+  assert.strictEqual(next("Mo-Fr 08:00-12:00,12:00-18:00", at(TUE, 11)).at.minutes, 1080);
+});
+
+test("overnight: open until 08:00 tomorrow; after midnight the night from yesterday", () => {
+  assert.deepStrictEqual(next("Mo-Su 18:00-08:00", at(TUE, 22)), { open: true, at: { day: WED, minutes: 480, daysAhead: 1 } });
+  assert.deepStrictEqual(next("Mo-Su 18:00-08:00", at(TUE, 3)), { open: true, at: { day: TUE, minutes: 480, daysAhead: 0 } });
+  assert.deepStrictEqual(next("Fr 20:00-26:00", at(SAT, 1)), { open: true, at: { day: SAT, minutes: 120, daysAhead: 0 } });
+});
+
+test("evening hours across midnight join the next day's morning", () => {
+  assert.deepStrictEqual(next("Mo-Su 08:00-24:00, Mo-Su 00:00-02:00", at(TUE, 23)).at, { day: WED, minutes: 120, daysAhead: 1 });
+});
+
+test("nothing that could be wrong: unknown rules, 24/7, all week, no data, never open", () => {
+  assert.strictEqual(next("Mo-Fr 08:00-18:00; Jan off", at(WED, 10)), null);
+  assert.strictEqual(next("24/7", at(WED, 10)), null);
+  assert.strictEqual(next("Mo-Su 00:00-24:00", at(WED, 10)), null);
+  assert.strictEqual(next("", at(WED, 10)), null);
+  assert.strictEqual(next("Mo-Su off", at(WED, 10)), null);
+});
+
+test("next change agrees with evaluate on every quarter hour of a week", () => {
+  for (const s of ["Mo-Fr 08:00-12:00,13:30-17:30; Sa 09:00-12:00", "Mo-Su 18:00-08:00", "Mo-Th 08:00-20:00; Fr 08:00-17:00; Su off"]) {
+    for (let day = 0; day < 7; day++) for (let m = 0; m < 1440; m += 15) {
+      const n = next(s, { day, minutes: m }), e = evaluate(s, { day, minutes: m });
+      if (n) assert.strictEqual(n.open, e.open, `${s} at ${day} ${m}`);
+    }
+  }
 });
 
 console.log(`\n${passed} passed, ${failed} failed`);
