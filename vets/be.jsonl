@@ -4,7 +4,7 @@
 {"id":"n10132108886","name":"DierenKliniek Drogenboom","street":"Zultseweg 191","lat":50.900436,"lon":3.444577,"phones":["256615507"],"site":"http://dapdrogenboom.be/site/","siteFrom":"osm","hours":"\"Bellen voor afspraak\"","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n10136533133","name":"Sofie Breugelmans","lat":51.052367,"lon":3.755097,"site":"https://dierenarts-sofie.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n10140387014","name":"Dierenarts Xantha Dillen","street":"Steenovenstraat 35","postcode":"2040","lat":51.35303,"lon":4.329748,"phones":["472425144"],"site":"https://www.dierenarts-dillen.be/","siteFrom":"osm","since":"2026-11-03"}
-{"id":"n10176132953","name":"Pierre Leysens","lat":50.876439,"lon":4.329206,"phones":["224253794"],"since":"2026-11-03"}
+{"id":"n10176132953","name":"Pierre Leysens","lat":50.876439,"lon":4.329206,"phones":["224253794","475809327"],"since":"2026-11-03"}
 {"id":"n10209300090","name":"Centre vétérinaire Belcour","lat":50.711445,"lon":4.397073,"phones":["223547627"],"site":"https://www.vete.be","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n10216609369","name":"Dr. Vantyghem","street":"Rue Thabor 15","postcode":"7830","city":"Bassilly","lat":50.67377,"lon":3.934326,"since":"2026-11-03"}
 {"id":"n10233256017","name":"Vétérinaire Coquay","postcode":"6750","lat":49.566743,"lon":5.714272,"since":"2026-11-03"}
@@ -19,7 +19,7 @@
 {"id":"n10702033388","name":"Curavida","street":"Bredabaan 851","postcode":"2930","city":"Brasschaat","lat":51.310475,"lon":4.510835,"phones":["236455702"],"site":"https://www.curavida.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n10727257096","name":"Sine-Cura","street":"Kronenhoekstraat 7","lat":51.2204,"lon":4.124068,"phones":["237707525"],"site":"http://www.sine-cura.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n10727505632","name":"Cabinet Cornet-Liberton","street":"Chaussée de Mariemont","lat":50.458702,"lon":4.233995,"site":"https://www.cabinetlibertoncornet.be","siteFrom":"osm","since":"2026-11-03"}
-{"id":"n10736613328","name":"Cabinet vétérinaire - Sylvie MASURE","lat":50.487939,"lon":5.797887,"phones":["496121843"],"site":"https://veterinaire-sylvie-masure.be/","siteFrom":"osm","since":"2026-11-03"}
+{"id":"n10736613328","name":"Cabinet vétérinaire Sylvie Masure","street":"Rue Les Combles","postcode":"4910","city":"Theux","lat":50.487979,"lon":5.797891,"phones":["287530085","496121843"],"site":"https://veterinaire-sylvie-masure.be/","siteFrom":"osm","hours":"Mo-Fr 09:00-19:00; Sa,Su off","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n10736737382","name":"Séverine Deschamp","lat":50.837177,"lon":4.297014,"phones":["225231400"],"site":"https://www.veterinaire-dechamps.be/","siteFrom":"osm","hours":"Mo-Fr 09:00-12:00,14:00-19:00","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n10750148805","name":"Société Vétérinaire de Neufchâteau","lat":49.873082,"lon":5.506366,"since":"2026-11-03"}
 {"id":"n10792360218","name":"Patrice Vermeulen","lat":50.711139,"lon":3.825022,"hours":"\"Sur rendez vous\"","hoursFrom":"osm","since":"2026-11-03"}
@@ -37,7 +37,7 @@
 {"id":"n1091396026","lat":50.875437,"lon":3.234314,"since":"2026-11-03"}
 {"id":"n10929305389","name":"Marianne De Cuyper","lat":50.830614,"lon":4.022517,"since":"2026-11-03"}
 {"id":"n10931249476","name":"Georges Vandenhove","lat":49.875442,"lon":5.67737,"phones":["261214733"],"since":"2026-11-03"}
-{"id":"n1094135762","name":"Dr. Susanne E.","lat":50.892583,"lon":4.332938,"site":"https://www.imag-inn.be/veterinairesusanne/","siteFrom":"osm","since":"2026-11-03"}
+{"id":"n1094135762","name":"Dr. Susanne E.","lat":50.892583,"lon":4.332938,"phones":["476459750"],"site":"https://www.imag-inn.be/veterinairesusanne/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n10951301778","name":"Beff","lat":49.78499,"lon":5.603848,"phones":["263678298"],"since":"2026-11-03"}
 {"id":"n10964108811","name":"B&L","lat":49.848198,"lon":5.543604,"phones":["261255331"],"since":"2026-11-03"}
 {"id":"n11018699455","name":"Dokters van Vacht","street":"Koning Leopoldlaan 14","postcode":"9840","city":"De Pinte","lat":50.993633,"lon":3.652349,"phones":["292823781"],"site":"https://doktersvanvacht.be/","siteFrom":"osm","since":"2026-11-03"}
@@ -100,16 +100,16 @@
 {"id":"n11829357197","name":"Dierenartsen De Nekker","street":"Mechelsesteenweg 331A","lat":51.032147,"lon":4.515387,"phones":["215691692"],"site":"https://www.dierenartsendenekker.be","siteFrom":"osm","hours":"Mo-Fr 09:00-19:30; Sa 10:00-12:00; Su off","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n11882052192","name":"Lode De Clercq","lat":50.87001,"lon":3.622118,"phones":["255304181"],"site":"https://dierenartsendenast.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n1190703307","lat":50.298492,"lon":5.109485,"since":"2026-11-03"}
-{"id":"n11935760341","name":"booZoo","street":"Naamsesteenweg 34","postcode":"3001","city":"Heverlee","lat":50.867599,"lon":4.697485,"since":"2026-11-03"}
+{"id":"n11935760341","name":"booZoo","street":"Naamsesteenweg 34","postcode":"3001","city":"Heverlee","lat":50.867599,"lon":4.697485,"hours":"Mo-Th 08:00-13:00, Mo-Th 14:00-19:00, Fr 09:00-13:00, Fr 14:00-18:00","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n1194565885","lat":50.293177,"lon":5.097248,"since":"2026-11-03"}
 {"id":"n11954453010","name":"B. Marechal","lat":51.203597,"lon":3.232816,"since":"2026-11-03"}
 {"id":"n1196871851","name":"Bénédicte Mailleux","lat":50.739812,"lon":4.705178,"since":"2026-11-03"}
 {"id":"n11985258458","name":"Fideel","lat":51.001196,"lon":3.875,"since":"2026-11-03"}
 {"id":"n1199372685","street":"Rue Emile Carlier 103","lat":50.49631,"lon":3.671818,"phones":["497729613"],"since":"2026-11-03"}
-{"id":"n1200244824","lat":50.88674,"lon":4.318415,"since":"2026-11-03"}
+{"id":"n1200244824","lat":50.88674,"lon":4.318415,"phones":["497211465"],"since":"2026-11-03"}
 {"id":"n12011650572","name":"Cabinet vétérinaire Dr Lecuivre Jean-Christophe","street":"Rue Neuve 33","postcode":"6810","city":"Jamoigne","lat":49.695137,"lon":5.418854,"since":"2026-11-03"}
 {"id":"n12025536215","lat":50.838018,"lon":4.400945,"since":"2026-11-03"}
-{"id":"n12030023490","name":"Eric Van Welden","street":"Nevelemarkt 19","lat":51.032624,"lon":3.548985,"phones":["293280216"],"site":"https://www.dierenarts-eric.be/","siteFrom":"osm","since":"2026-11-03"}
+{"id":"n12030023490","name":"Eric Van Welden","street":"Nevelemarkt 19","lat":51.032624,"lon":3.548985,"phones":["293280216"],"site":"https://www.dierenarts-eric.be/","siteFrom":"osm","hours":"Mo 07:30-19:30; Tu 07:30-19:30; We 07:30-19:30; Th 07:30-19:30; Fr 07:30-19:30; Sa 07:30-12:00","hoursFrom":"structured","hoursUrl":"https://www.dierenarts-eric.be/","hoursHash":"a03c812982c37afd","hoursChecked":"2026-11-21","since":"2026-11-03"}
 {"id":"n12035135418","name":"Annelies Crul","street":"Dorp 32C","lat":50.958964,"lon":3.595812,"phones":["293715837"],"site":"https://dierenartsanneliescrul.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n12047903170","name":"Cabinet Vétérinaire","street":"Rue du Boclé 43","lat":50.743346,"lon":3.236654,"since":"2026-11-03"}
 {"id":"n12065960431","name":"Vet33","lat":50.468528,"lon":4.988043,"since":"2026-11-03"}
@@ -129,21 +129,21 @@
 {"id":"n12242117558","name":"Cabinet vétérinaire du Chant d'Oiseau","lat":50.825208,"lon":4.415896,"phones":["226754447"],"site":"http://www.veterinaireschantdoiseau.be","siteFrom":"osm","hours":"Mo-Fr 08:30-19:00, Sa 09:00-13:00","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n12247342968","name":"Dierenarts De Vlinderbeek","street":"Dorpsplein 39","lat":50.877153,"lon":3.178233,"phones":["495201258"],"site":"https://dierenartsendevlinderbeek.be","siteFrom":"osm","hours":"Mo-Fr 09:00-12:00,14:00-19:30; Sa 10:00-12:00; Su off","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n12275907819","name":"Poot","street":"Meulebekestraat 135","lat":50.933734,"lon":3.264655,"phones":["251794878"],"site":"https://www.dierenartsenpoot.be","siteFrom":"osm","hours":"Mo-Fr 08:30-12:30,13:30-18:30 \"op Afspraak\"","hoursFrom":"osm","since":"2026-11-03"}
-{"id":"n12289689601","name":"Cabinet vétérinaire de Rendeux","lat":50.234199,"lon":5.510248,"site":"https://www.veterinaire-mascetti.be/","siteFrom":"osm","since":"2026-11-03"}
+{"id":"n12289689601","name":"Cabinet vétérinaire de Rendeux","lat":50.234199,"lon":5.510248,"phones":["474518192"],"site":"https://www.veterinaire-mascetti.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n12313026304","name":"Tineke Bouw","lat":50.970711,"lon":3.734944,"site":"https://www.dierenartsmerelbeke.be","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n12363454975","name":"Karen Verdegem","lat":51.112572,"lon":3.563118,"site":"https://tipaw.com/be/nl/professional/dierenarts/dierenartsenpraktijk-karen-verdegem/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n12372512674","name":"VETERINAIR QUADRANT","lat":50.743653,"lon":4.096973,"phones":["254568031"],"site":"https://veterinairquadrant.be/","siteFrom":"osm","hours":"Mo-Fr 08:30-19:30; Sa 09:00-12:00","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n12372649490","name":"Demel JP","lat":50.72499,"lon":4.018435,"phones":["223961458"],"site":"https://www.zoekdierenarts.be/Dierenarts/vlaams-brabant/herne/Dierenartsenparktijk-JP-Demel","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n12372655745","name":"Yves Nerinckx","lat":50.72539,"lon":4.03346,"phones":["478267878"],"hours":"PH off","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n1237482192","lat":50.485629,"lon":4.889536,"since":"2026-11-03"}
-{"id":"n12388934612","name":"Curiovet","lat":50.898293,"lon":4.833363,"site":"https://www.curiovet.be/","siteFrom":"osm","hours":"\"Op afspraak\"","hoursFrom":"osm","since":"2026-11-03"}
+{"id":"n12388934612","name":"Curiovet","lat":50.898293,"lon":4.833363,"phones":["479784693"],"site":"https://www.curiovet.be/","siteFrom":"osm","hours":"\"Op afspraak\"","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n12398717710","name":"Dierenartsenpraktijk Den Bek","street":"Europalaan 57","lat":50.999492,"lon":3.332985,"phones":["251403997"],"site":"https://dierenartsenpraktijkdenbek.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n1240061505","lat":50.254838,"lon":4.916946,"since":"2026-11-03"}
 {"id":"n1241655965","name":"Dr. Muriel Buchet","street":"Rue Ferrer 20","lat":50.486393,"lon":3.833173,"phones":["265644168"],"since":"2026-11-03"}
 {"id":"n1241655969","name":"Dr. Catherine Di Blasio","street":"Rue Ferrer 20","lat":50.486361,"lon":3.833229,"phones":["479354343"],"since":"2026-11-03"}
 {"id":"n12438572743","name":"Christian Grosjean","street":"Rue de la Bouteille 56/2","lat":50.586975,"lon":5.503233,"phones":["475791079"],"hours":"Mo-Sa \"Sur rendez-vous\"","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n12466603569","name":"Bart Vander Kuylen","street":"Koning Albertstraat 4","lat":51.063341,"lon":4.459129,"phones":["215205088"],"since":"2026-11-03"}
-{"id":"n12486340204","name":"A. Cornette & J. Decleer","street":"Haachtsesteenweg 166","lat":50.934348,"lon":4.5416,"phones":["216656394"],"site":"https://www.dierenartsen-cornette-decleer.be/","siteFrom":"osm","since":"2026-11-03"}
+{"id":"n12486340204","name":"A. Cornette & J. Decleer","street":"Haachtsesteenweg 166","lat":50.934348,"lon":4.5416,"phones":["216656394","477702580"],"site":"https://www.dierenartsen-cornette-decleer.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n12501343934","name":"Peggy Houtmeyers","street":"Sint-Maartenstraat 37","postcode":"3000","city":"Leuven","lat":50.88223,"lon":4.704547,"since":"2026-11-03"}
 {"id":"n12506717089","name":"DAP De Raedt-Crols","street":"Hulgenrodestraat 23","postcode":"2150","city":"Borsbeek","lat":51.191894,"lon":4.492915,"phones":["233214329"],"hours":"Mo-Fr 18:00-19:30","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n12522982526","name":"Guy Soetaert","lat":51.301526,"lon":3.083279,"phones":["250415395"],"site":"https://www.dierenartsdehaan.com/","siteFrom":"osm","since":"2026-11-03"}
@@ -153,7 +153,7 @@
 {"id":"n12580346704","name":"Dierenarts Ulrike Cocquyt","street":"Molendreef 77","postcode":"9920","city":"Lievegem","lat":51.098918,"lon":3.610457,"phones":["474274183"],"site":"https://www.dierenartspraktijkcocquyt.be/","siteFrom":"osm","hours":"Mo-Fr 08:00-19:00","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n12586141430","name":"BeVet","street":"Rue Auguste Lannoye 8","postcode":"1435","city":"Mont-Saint-Guibert","lat":50.639997,"lon":4.604421,"site":"https://bevet.be/clinique/veterinaire-mont-saint-guibert/","siteFrom":"osm","hours":"Mo-Fr 09:00-13:00,14:00-19:00; Sa 10:00-13:00; PH off","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n12587550119","name":"Dierenartsenpraktijk Laura Lerinckx","lat":50.776063,"lon":4.248125,"phones":["223774825"],"site":"https://www.daplerinckx.be/","siteFrom":"osm","since":"2026-11-03"}
-{"id":"n12633325973","name":"Péters","lat":50.896134,"lon":4.327339,"site":"https://www.veterinairepeters.be/","siteFrom":"osm","since":"2026-11-03"}
+{"id":"n12633325973","name":"Péters","lat":50.896134,"lon":4.327339,"phones":["475760950"],"site":"https://www.veterinairepeters.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n12662469822","name":"Dierenartsen Brugsken","street":"Brugsken 150","postcode":"9100","city":"Sint-Niklaas","lat":51.15884,"lon":4.159461,"phones":["237664744"],"site":"https://www.dierenartsen-brugsken.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n12691601373","name":"Chirurgien Vétérinaire Vanseymortier","street":"Rue du Ruisseau 8","postcode":"7760","city":"Molenbaix","lat":50.693735,"lon":3.435144,"since":"2026-11-03"}
 {"id":"n12714851358","name":"Maniavet","street":"Rue de Merbes 353","postcode":"7131","city":"Waudrez","lat":50.391268,"lon":4.172672,"site":"https://maniavet.be/","siteFrom":"osm","since":"2026-11-03"}
@@ -170,9 +170,9 @@
 {"id":"n12944622192","name":"Dierenartsenpraktijk Achterbos","street":"Turnhoutsebaan 45","postcode":"2400","city":"Mol","lat":51.194695,"lon":5.115358,"phones":["214312253"],"site":"https://www.achterbosdierenartsen.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n12946254697","name":"Fondation Prince Laurent - Stichting Prins Laurent","lat":50.880467,"lon":4.340873,"phones":["225116646"],"site":"https://www.sfprlaurent.be/","siteFrom":"osm","hours":"Mo-Fr 10:00-12:00","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n12949966358","name":"Canisfelis","lat":50.875491,"lon":4.319411,"phones":["224273182"],"site":"https://www.canisfelis.be/","siteFrom":"osm","hours":"Mo-Fr 09:00-19:00; Sa 10:00-12:00","hoursFrom":"osm","since":"2026-11-03"}
-{"id":"n12951646490","name":"Cabinet Vétérinaire Evrard Decheneux","lat":50.49798,"lon":5.770812,"phones":["287220656"],"since":"2026-11-03"}
+{"id":"n12951646490","name":"Cabinet Vétérinaire Evrard Decheneux","street":"Rue Bois Renard","postcode":"4910","city":"Theux","lat":50.49798,"lon":5.770812,"phones":["287220656","477292399"],"hours":"Mo-Fr 09:00-10:30,17:00-19:00; Sa,Su off","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n12997364160","name":"Luc Censini","street":"Rue du Corbeau 24","postcode":"6200","city":"Châtelineau","lat":50.411891,"lon":4.493721,"phones":["271393885"],"hours":"Mo-Fr 17:00-18:30,Sa \"Sur rendez-vous\"","hoursFrom":"osm","since":"2026-11-03"}
-{"id":"n13021192100","name":"Cabinet Vétérinaire Drs Lacremans et Lousberg","street":"Voie de l'Ardenne 149","lat":50.586416,"lon":5.612886,"phones":["472751207"],"site":"https://www.cvll.be/","siteFrom":"osm","hours":"Mo-Fr 09:00-18:30; Sa 10:00-12:00","hoursFrom":"osm","since":"2026-11-03"}
+{"id":"n13021192100","name":"Cabinet Vétérinaire Drs Lacremans et Lousberg","street":"Voie de l'Ardenne 149","lat":50.586416,"lon":5.612886,"phones":["472751207","499731211"],"site":"https://www.cvll.be/","siteFrom":"osm","hours":"Mo-Fr 09:00-18:30; Sa 10:00-12:00","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n13042441618","lat":50.627723,"lon":5.590235,"since":"2026-11-03"}
 {"id":"n13048703039","name":"Lieselotte Baeyens","lat":51.270455,"lon":3.034679,"phones":["476368543"],"since":"2026-11-03"}
 {"id":"n13086256216","name":"Murielle Esnouf","street":"Place de Saint-Denis 32","lat":50.491324,"lon":4.017287,"phones":["265728581","475795818"],"site":"http://www.veterinaireesnouf.be","siteFrom":"osm","since":"2026-11-03"}
@@ -183,11 +183,11 @@
 {"id":"n13208408522","name":"Entre Chats et Moi","lat":50.64031,"lon":5.557496,"site":"https://entrechatsetmoi.be/","siteFrom":"osm","hours":"\"Sur rendez-vous\"","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n13231404670","name":"Alex Debailleul","lat":50.564998,"lon":3.557341,"since":"2026-11-03"}
 {"id":"n13238914405","name":"Tomovet 64","lat":50.502412,"lon":4.234253,"since":"2026-11-03"}
-{"id":"n13276534009","name":"Karibu","street":"Frans van Dunlaan 81","lat":51.17316,"lon":4.430661,"phones":["234495417"],"site":"https://www.karibu.be/","siteFrom":"osm","since":"2026-11-03"}
+{"id":"n13276534009","name":"Karibu","street":"Frans van Dunlaan 81","lat":51.17316,"lon":4.430661,"phones":["234495417"],"site":"https://www.karibu.be/","siteFrom":"osm","hours":"Mo-Th 09:00-19:00; Fr 09:00-16:00; Sa 10:00-12:00","hoursFrom":"structured","hoursUrl":"https://www.karibu.be/","hoursHash":"99e7e08bbbd4bbfa","hoursChecked":"2026-11-21","since":"2026-11-03"}
 {"id":"n13304531196","name":"Clinique Vétérinaire du Mont Falise","street":"Chaussée de Waremme 181","postcode":"4520","city":"Wanze","lat":50.537667,"lon":5.251164,"site":"https://www.cliniqueveterinairemontfalise.be/","siteFrom":"osm","hours":"Mo-Fr 08:00-19:00; Sa 08:00-14:00; Su 10:00-12:00","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n13306104937","name":"Dierenartsencentrum De Brug","street":"Brugsesteenweg 588","postcode":"9030","city":"Mariakerke","lat":51.074023,"lon":3.680784,"phones":["292266846"],"site":"https://dierenartsendebrug.be/","siteFrom":"osm","hours":"Mo-Fr 08:00-18:30","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n13307098545","name":"Animalier","lat":51.113971,"lon":4.641304,"since":"2026-11-03"}
-{"id":"n13357880929","name":"Véronique Lemaire","lat":50.681254,"lon":4.384873,"phones":["223870167"],"site":"https://les4pattes.wordpress.com/","siteFrom":"osm","since":"2026-11-03"}
+{"id":"n13357880929","name":"Véronique Lemaire","lat":50.681254,"lon":4.384873,"phones":["223870167","475485728"],"site":"https://les4pattes.wordpress.com/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n13369402342","name":"Dierenkliniek De Poort","lat":50.891683,"lon":5.660866,"phones":["289715555"],"site":"https://www.dierenkliniekdepoort.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n13373495989","name":"Dr. H.P. Grootveld","street":"Grensstraat 193","postcode":"9032","city":"Gent","lat":51.076193,"lon":3.709878,"phones":["292279013"],"site":"https://grootveld.github.io/","siteFrom":"osm","hours":"Mo-Fr 09:00-17:00","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n13401478177","name":"Naulaerts Paul","lat":50.935246,"lon":3.894459,"since":"2026-11-03"}
@@ -199,7 +199,7 @@
 {"id":"n13647242456","name":"Cabinet vétérinaire Marie Fransolet","lat":50.596767,"lon":3.62567,"phones":["269666928"],"hours":"Mo-Fr 09:00-19:00; Sa 09:00-12:00","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n13667908615","name":"Catherine Lefèvre","lat":50.693115,"lon":4.04958,"since":"2026-11-03"}
 {"id":"n1367813622","name":"Dierenarts Stephanie Maere","lat":51.129442,"lon":2.673821,"since":"2026-11-03"}
-{"id":"n13682822678","name":"Vétérinaire - Isabelle Mathieu","lat":50.546046,"lon":5.830372,"since":"2026-11-03"}
+{"id":"n13682822678","name":"Vétérinaire Isabelle Mathieu","street":"Voie Saint-Georges","postcode":"4910","city":"Theux","lat":50.546123,"lon":5.830495,"phones":["479189418"],"site":"https://veterinaire-isabelle-mathieu.reservio.com/","siteFrom":"osm","hours":"Mo,Tu,Th,Fr 08:30-17:30; We,Sa,Su off","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n13689623966","name":"Het Werft","lat":51.073525,"lon":4.69027,"phones":["215223865"],"site":"https://hetwerft.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n13703459994","lat":50.667122,"lon":4.13289,"since":"2026-11-03"}
 {"id":"n13711730558","name":"Centre Vétérinaire Villa Jean","lat":50.577632,"lon":5.676977,"hours":"Mo-Fr 17:30-19:00; Sa 10:00-12:00","hoursFrom":"osm","since":"2026-11-03"}
@@ -210,7 +210,7 @@
 {"id":"n13746373481","name":"Absil Sophie","street":"Chemin du Versant 24","lat":50.443946,"lon":3.944562,"phones":["265334363"],"since":"2026-11-03"}
 {"id":"n13754556010","name":"Amelinckx Katrien","street":"Steenweg op Aalst 10","postcode":"9308","city":"Hofstade","lat":50.960501,"lon":4.031158,"hours":"Mo,Tu,Th 08:30-19:30; We,Fr 08:30-18:00; Sa-Su off","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n13791662495","name":"Pierre Lequenne","lat":50.603025,"lon":3.618358,"hours":"Tu,Th,Fr","hoursFrom":"osm","since":"2026-11-03"}
-{"id":"n13809604995","name":"Gouverneur Gilles","lat":50.703843,"lon":4.430817,"site":"https://vetogouverneur.be/","siteFrom":"osm","hours":"Mo-We 08:30-19:00; Fr 08:30-19:00; Sa 09:30-17:30","hoursFrom":"osm","since":"2026-11-03"}
+{"id":"n13809604995","name":"Gouverneur Gilles","lat":50.703843,"lon":4.430817,"phones":["476330394"],"site":"https://vetogouverneur.be/","siteFrom":"osm","hours":"Mo-We 08:30-19:00; Fr 08:30-19:00; Sa 09:30-17:30","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n13831378973","name":"Sabine Hubin","street":"Rue Hubert Gouverneur 20","lat":50.233626,"lon":5.342656,"phones":["284312527"],"since":"2026-11-03"}
 {"id":"n13872516502","name":"De Wimp","street":"Molenstraat 58","lat":51.140164,"lon":4.761533,"phones":["474376170"],"since":"2026-11-03"}
 {"id":"n13891760468","name":"Centre vétérinaire Stéphanie","lat":50.827994,"lon":4.355197,"phones":["228876060"],"hours":"Mo-Fr 08:30-19:00; Sa 09:30-13:30","hoursFrom":"osm","since":"2026-11-03"}
@@ -225,6 +225,7 @@
 {"id":"n14225018494","name":"Ryhove","lat":51.092268,"lon":3.715939,"since":"2026-11-03"}
 {"id":"n14283970601","name":"Shu Vétérinaire","street":"Rue des Prés du Roy 13/1","postcode":"7800","lat":50.639612,"lon":3.782563,"phones":["268287061"],"site":"http://www.shuveterinaire.com","siteFrom":"osm","hours":"Mo-Fr 08:00-18:30","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n14289381211","name":"DAP Anima","lat":51.248529,"lon":4.540793,"phones":["233616575"],"since":"2026-11-03"}
+{"id":"n14360975155","name":"F. Lewinson","lat":50.848194,"lon":4.423875,"since":"2026-11-21"}
 {"id":"n1446213776","name":"Cabinet vétérinaire - Bonnard Christelle","street":"Avenue de la Reine 31","postcode":"1310","city":"La Hulpe","lat":50.745336,"lon":4.493607,"hours":"24/7","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n1461671212","name":"Catherine Maricq","lat":50.861983,"lon":4.463495,"hours":"Mo-We,Fr 09:30-18:00; Th,Sa,Su off","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n1465050990","name":"Dierenarts Berghman","street":"2","lat":50.969652,"lon":4.179445,"since":"2026-11-03"}
@@ -241,7 +242,7 @@
 {"id":"n1625192887","lat":50.806993,"lon":4.153808,"since":"2026-11-03"}
 {"id":"n1625270079","lat":51.05607,"lon":4.031663,"since":"2026-11-03"}
 {"id":"n1668916338","lat":50.917254,"lon":4.503622,"since":"2026-11-03"}
-{"id":"n1691683788","name":"Ingrid Lesage","lat":50.363393,"lon":4.273642,"phones":["271596100"],"site":"https://www.veterinaire-lobbes.be/","siteFrom":"osm","hours":"Mo,Tu,Th,Fr 08:30-13:00,14:00-18:00; We 08:30-13:00,14:00-17:00","hoursFrom":"osm","since":"2026-11-03"}
+{"id":"n1691683788","name":"Ingrid Lesage","lat":50.363393,"lon":4.273642,"phones":["271596100","477131956"],"site":"https://www.veterinaire-lobbes.be/","siteFrom":"osm","hours":"Mo,Tu,Th,Fr 08:30-13:00,14:00-18:00; We 08:30-13:00,14:00-17:00","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n1704259178","lat":50.61084,"lon":4.891512,"since":"2026-11-03"}
 {"id":"n1704459724","name":"Dierenarts Bruckers","street":"Dorpsplein 13","postcode":"3640","city":"Kinrooi","lat":51.145459,"lon":5.742273,"since":"2026-11-03"}
 {"id":"n1706374775","name":"Galhaut","lat":49.571558,"lon":5.803393,"since":"2026-11-03"}
@@ -283,7 +284,7 @@
 {"id":"n2091341704","street":"Chaussée Roosevelt 98","postcode":"4540","city":"Amay","lat":50.545309,"lon":5.312043,"since":"2026-11-03"}
 {"id":"n2119150378","name":"Vétérinaire Robette","street":"Place des Chasseurs à Pied 2","lat":50.44589,"lon":3.947177,"since":"2026-11-03"}
 {"id":"n2134770797","name":"Martine Bemong","lat":51.140027,"lon":4.386689,"since":"2026-11-03"}
-{"id":"n2148349788","name":"Karibu","street":"Guido Gezellestraat 60","postcode":"2630","city":"Aartselaar","lat":51.135983,"lon":4.383611,"phones":["238774241"],"site":"https://www.karibu.be/","siteFrom":"osm","since":"2026-11-03"}
+{"id":"n2148349788","name":"Karibu","street":"Guido Gezellestraat 60","postcode":"2630","city":"Aartselaar","lat":51.135983,"lon":4.383611,"phones":["238774241"],"site":"https://www.karibu.be/","siteFrom":"osm","hours":"Mo-Th 09:00-19:00; Fr 09:00-16:00; Sa 10:00-12:00","hoursFrom":"structured","hoursUrl":"https://www.karibu.be/","hoursHash":"99e7e08bbbd4bbfa","hoursChecked":"2026-11-21","since":"2026-11-03"}
 {"id":"n2148944151","lat":50.602036,"lon":4.125074,"since":"2026-11-03"}
 {"id":"n2150257414","lat":51.134516,"lon":4.379454,"since":"2026-11-03"}
 {"id":"n2156090842","lat":50.606565,"lon":4.143455,"since":"2026-11-03"}
@@ -318,7 +319,7 @@
 {"id":"n2765460808","lat":50.984594,"lon":5.713287,"since":"2026-11-03"}
 {"id":"n278574803","name":"Delphine Ruess | Vétérinaire","street":"Rue de la Poste 1","postcode":"4850","city":"Montzen","lat":50.707774,"lon":5.961933,"phones":["497920471"],"since":"2026-11-03"}
 {"id":"n2808283702","name":"De Morée & De Clippeleir","street":"Breeërsteenweg 240","postcode":"3640","city":"Kinrooi","lat":51.1456,"lon":5.74656,"since":"2026-11-03"}
-{"id":"n2850587744","name":"Animal Santé","street":"Rue Visé-Voie 66","postcode":"4680","lat":50.707197,"lon":5.640252,"site":"https://www.animalsante.be","siteFrom":"osm","since":"2026-11-03"}
+{"id":"n2850587744","name":"Animal Santé","lat":50.707197,"lon":5.640252,"site":"https://www.animalsante.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n2850603801","name":"Centre vétérinaire - Drs Schoffeniels, Schouben et Simon","street":"Avenue des MArtyrs 58","postcode":"4620","lat":50.616048,"lon":5.671991,"site":"http://www.centreveterinaire.be","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n2861742829","name":"Ilse Massin","street":"Doelhaagstraat 49","lat":51.08141,"lon":4.428924,"since":"2026-11-03"}
 {"id":"n2935956060","name":"Hans Smet","lat":51.058442,"lon":3.659157,"since":"2026-11-03"}
@@ -380,7 +381,7 @@
 {"id":"n4044193271","name":"Akuut","street":"Leuvensesteenweg 469","postcode":"3070","city":"Kortenberg","lat":50.889378,"lon":4.546906,"hours":"\"op afspraak\"","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n4103928989","lat":50.890319,"lon":4.318151,"since":"2026-11-03"}
 {"id":"n4131150051","name":"Dierenartsenpraktijk Daktari","street":"Dorpsstraat 48","postcode":"2845","city":"Niel","lat":51.108265,"lon":4.326553,"since":"2026-11-03"}
-{"id":"n4148655620","name":"France Dubois","lat":50.339911,"lon":4.230613,"since":"2026-11-03"}
+{"id":"n4148655620","name":"France Dubois","lat":50.339911,"lon":4.230613,"phones":["495865623"],"since":"2026-11-03"}
 {"id":"n4176523560","name":"Animal Care Center","street":"Antwerpse Steenweg 152","postcode":"2940","lat":51.302381,"lon":4.410164,"phones":["236653142"],"site":"https://www.animalcarecenter.be","siteFrom":"osm","hours":"Mo-Th 09:00-12:00,13:00-19:00 \"op afspraak\"; Fr 09:00-12:00,13:00-18:00 \"op afspraak\"; Sa 09:00-12:00 \"op afspraak\"; Su,PH off","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n4246388089","name":"Dierenarts S. De Smedt","street":"Paul van Roosbroecklaan 46","postcode":"2220","city":"Heist-op-den-Berg","lat":51.070623,"lon":4.72898,"phones":["215762764"],"site":"https://www.dierenartsdesmedt.be","siteFrom":"osm","hours":"Mo-Fr 08:30-12:00,13:30-17:00,18:30-19:30; Sa 09:00-12:30","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n4260592959","name":"Cabinet vétérinaire Didier Eeckhout","lat":50.684258,"lon":4.278605,"phones":["223663114"],"site":"https://veterinaire-eeckhout.be","siteFrom":"osm","since":"2026-11-03"}
@@ -425,7 +426,7 @@
 {"id":"n5164951595","lat":51.082028,"lon":4.161486,"since":"2026-11-03"}
 {"id":"n5198743421","name":"Cabinet Belleflamme S.","lat":50.713197,"lon":5.72343,"since":"2026-11-03"}
 {"id":"n5220302717","name":"Jackers Benoît","street":"Rue Devant la Ville 20","postcode":"4680","city":"Hermée","lat":50.709993,"lon":5.622311,"since":"2026-11-03"}
-{"id":"n5221207420","name":"Nicolas Bousse","lat":50.879927,"lon":4.40434,"since":"2026-11-03"}
+{"id":"n5221207420","name":"Nicolas Bousse","lat":50.879927,"lon":4.40434,"phones":["485678579"],"since":"2026-11-03"}
 {"id":"n5223625860","name":"Van Haver","lat":51.087909,"lon":3.431939,"site":"https://www.dierenartsvanhaver.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n5250227286","name":"Christian Dassy","lat":50.876065,"lon":4.406432,"phones":["222412958"],"since":"2026-11-03"}
 {"id":"n5259958449","name":"Vétérinaire","lat":50.335407,"lon":4.807454,"since":"2026-11-03"}
@@ -437,7 +438,7 @@
 {"id":"n539822005","lat":50.616821,"lon":5.938337,"since":"2026-11-03"}
 {"id":"n5403176570","name":"Dierenartspraktijk INVIVO","street":"Beverlosesteenweg 45","postcode":"3583","city":"Beringen","lat":51.043468,"lon":5.175702,"phones":["211725560"],"site":"https://dapinvivo.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n5410505660","lat":50.649343,"lon":4.264021,"since":"2026-11-03"}
-{"id":"n5434887681","name":"VT Lys","lat":50.509733,"lon":3.922842,"site":"https://www.vet-nelis.be/","siteFrom":"osm","hours":"Fr-Mo 10:00-12:00, Mo-Fr 16:00-19:00","hoursFrom":"osm","since":"2026-11-03"}
+{"id":"n5434887681","name":"VT Lys","lat":50.509733,"lon":3.922842,"phones":["474747748"],"site":"https://www.vet-nelis.be/","siteFrom":"osm","hours":"Fr-Mo 10:00-12:00, Mo-Fr 16:00-19:00","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n5487067915","name":"Cabinet vétérinaire du Dr Wargnies","street":"Grand Place","postcode":"7500","city":"Tournai","lat":50.606015,"lon":3.387654,"phones":["475268321"],"site":"https://www.wargnies.net","siteFrom":"osm","hours":"Mo-Sa 08:30-18:30","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n5578100789","name":"Dierenartsencentrum Eversbos","street":"Sprinkhaanstraat 37","postcode":"3271","city":"Averbode","lat":51.02356,"lon":4.993237,"phones":["213772845"],"site":"https://www.eversbos.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n5589932287","lat":50.676744,"lon":5.47823,"since":"2026-11-03"}
@@ -460,8 +461,8 @@
 {"id":"n5810246575","name":"Dierenarts Jolanda Krosse","street":"Herseltseweg 11","postcode":"2431","city":"Veerle","lat":51.067337,"lon":4.956246,"phones":["473791087"],"site":"https://dierenartsjolanda.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n5810942926","name":"Koen Devreese","lat":50.855584,"lon":3.857611,"since":"2026-11-03"}
 {"id":"n5843343833","name":"Baeyens Degreve","lat":50.730118,"lon":4.240723,"since":"2026-11-03"}
-{"id":"n5869341127","name":"Lezy Annick","street":"Chaussée du Rœulx 1139","lat":50.463612,"lon":4.044053,"since":"2026-11-03"}
-{"id":"n5874419885","name":"Henri Van Lierde","lat":50.885191,"lon":4.318463,"site":"https://veterinaire-veearts-vanlierde.be/","siteFrom":"osm","since":"2026-11-03"}
+{"id":"n5869341127","name":"Lezy Annick","lat":50.463612,"lon":4.044053,"since":"2026-11-03"}
+{"id":"n5874419885","name":"Henri Van Lierde","lat":50.885191,"lon":4.318463,"phones":["475724078"],"site":"https://veterinaire-veearts-vanlierde.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n5881871650","name":"E. Delwiche","lat":50.229607,"lon":5.006236,"since":"2026-11-03"}
 {"id":"n5896638396","lat":50.634318,"lon":3.788892,"phones":["268840494"],"since":"2026-11-03"}
 {"id":"n5896638397","lat":50.635103,"lon":3.779891,"phones":["268285949"],"since":"2026-11-03"}
@@ -480,11 +481,11 @@
 {"id":"n6208873455","name":"Clinique Vétérinaire Champ du Roi","lat":50.836014,"lon":4.393926,"phones":["226402123"],"site":"https://champduroi.be/","siteFrom":"osm","hours":"Mo-Fr 08:00-19:30; Sa 09:00-18:00","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n6225915075","name":"Dierenarts Stakenborg","lat":51.093363,"lon":5.795364,"since":"2026-11-03"}
 {"id":"n6264364998","name":"BeVet","street":"Chemin de la Procession 433","lat":50.457482,"lon":3.9767,"phones":["265140950"],"site":"https://www.bevet.be","siteFrom":"osm","hours":"Mo-Fr 08:00-18:00 \"by appointment\"","hoursFrom":"osm","since":"2026-11-03"}
-{"id":"n6269309999","name":"Dr. Marie Decouvreur","street":"Chemin de la Givronde 4","postcode":"5030","city":"Gembloux","lat":50.55332,"lon":4.697352,"phones":["281612961"],"site":"https://www.vtgembloux.be/","siteFrom":"osm","since":"2026-11-03"}
+{"id":"n6269309999","name":"Dr. Marie Decouvreur","street":"Chemin de la Givronde 4","postcode":"5030","city":"Gembloux","lat":50.55332,"lon":4.697352,"phones":["281612961"],"site":"https://www.vtgembloux.be/","siteFrom":"osm","hours":"Mo-Th 09:00-18:30; Fr 09:00-18:00","hoursFrom":"structured","hoursUrl":"https://www.vtgembloux.be/","hoursHash":"fde7ee78d6b3c399","hoursChecked":"2026-11-21","since":"2026-11-03"}
 {"id":"n6278585096","name":"Magali Maury","lat":49.563171,"lon":5.842126,"phones":["263676745"],"since":"2026-11-03"}
 {"id":"n6335994961","name":"Dierenartsenpraktijk Veerle Bocken","street":"Haeyershoek 53","postcode":"9660","lat":50.802761,"lon":3.746784,"site":"https://www.dierenartsveerlebocken.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n6338488647","name":"Dr Dubois","lat":50.47385,"lon":4.280353,"since":"2026-11-03"}
-{"id":"n6338741019","name":"Annick De Keyser","lat":51.136683,"lon":3.420553,"site":"https://www.annickdekeyser.be/","siteFrom":"osm","since":"2026-11-03"}
+{"id":"n6338741019","name":"Annick De Keyser","lat":51.136683,"lon":3.420553,"site":"https://www.annickdekeyser.be/","siteFrom":"osm","hours":"Mo-Fr 08:00-19:30; Sa 08:00-12:00","hoursFrom":"structured","hoursUrl":"https://www.annickdekeyser.be/","hoursHash":"201fcd525a6aded2","hoursChecked":"2026-11-21","since":"2026-11-03"}
 {"id":"n6343335129","name":"DENEYER Marc","street":"Chemin de Chièvres 2","postcode":"7940","city":"Brugelette","lat":50.586452,"lon":3.850593,"phones":["268455640"],"since":"2026-11-03"}
 {"id":"n6365139069","name":"D.A.P. De Mol","street":"Maastrichterstraat 46","postcode":"3740","city":"Bilzen","lat":50.864425,"lon":5.530624,"phones":["289501738"],"site":"https://dapdemol.be","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n6373093009","name":"Cabinet Vétérinaire juspin & Hernalsteens","lat":50.689137,"lon":4.70432,"phones":["210680600"],"since":"2026-11-03"}
@@ -500,7 +501,7 @@
 {"id":"n6655240412","name":"Philippo Marianne","lat":50.634959,"lon":3.376724,"since":"2026-11-03"}
 {"id":"n6693229570","name":"Dierenarts praktijk","lat":51.226209,"lon":4.417496,"site":"https://sintjan.be","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n6696088987","street":"Brugse baan 40","postcode":"8470","city":"Gistel","lat":51.156967,"lon":2.97728,"since":"2026-11-03"}
-{"id":"n6744443148","name":"Jan Verbeke","lat":50.810293,"lon":4.403504,"hours":"Mo,Tu,Th-Fr 17:30-19:30; We 14:00-16:00; Sa 10:30-12:00","hoursFrom":"osm","since":"2026-11-03"}
+{"id":"n6744443148","name":"Jan Verbeke","lat":50.810293,"lon":4.403504,"phones":["475422460"],"hours":"Mo,Tu,Th-Fr 17:30-19:30; We 14:00-16:00; Sa 10:30-12:00","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n6749767407","name":"De Harlekijn","street":"Varendriesstraat 5","lat":51.047624,"lon":3.631244,"phones":["292264205"],"since":"2026-11-03"}
 {"id":"n6749773146","name":"Dierenarts Inge Verboven","street":"Congregatiestraat 12A","lat":51.052052,"lon":3.653682,"phones":["471571198"],"site":"https://www.dierenartsverboven.com","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n6750037212","name":"Vétérinaire Noirfalise","lat":50.600805,"lon":5.632515,"phones":["475382705"],"site":"https://www.veterinaire-noirfalise-eric.be","siteFrom":"osm","hours":"Mo-Fr 09:00-18:00; Sa 09:00-12:00","hoursFrom":"osm","since":"2026-11-03"}
@@ -514,12 +515,12 @@
 {"id":"n6958266403","name":"Cabinet vétérinaire BeVeT - Hyon","street":"Chaussée de Maubeuge 482","postcode":"7022","city":"Hyon","lat":50.4272,"lon":3.947864,"phones":["265840404"],"site":"https://www.bevet.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n6958637334","name":"Paul Maes","street":"Slachthuisstraat 35","lat":51.221476,"lon":3.210099,"phones":["250316415"],"hours":"Mo-Fr 17:00-19:00; Sa 10:00-12:00","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n6966392392","name":"Kat&Ko","lat":51.035651,"lon":3.689255,"phones":["293281669"],"site":"https://katenko.be/","siteFrom":"osm","hours":"Mo-Fr 09:00-19:00 \"Enkel op afspraak\"","hoursFrom":"osm","since":"2026-11-03"}
-{"id":"n6973377913","name":"Julie Zaccaï","lat":50.815846,"lon":4.364999,"site":"https://www.veterinaire-zaccai.be/","siteFrom":"osm","hours":"Mo-Sa 09:00-19:00 \"sur rendez-vous\"","hoursFrom":"osm","since":"2026-11-03"}
+{"id":"n6973377913","name":"Julie Zaccaï","lat":50.815846,"lon":4.364999,"phones":["475583193"],"site":"https://www.veterinaire-zaccai.be/","siteFrom":"osm","hours":"Mo-Sa 09:00-19:00 \"sur rendez-vous\"","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n6979874318","name":"Clos Fleuri","street":"Strandlaan 202","postcode":"8670","city":"Koksijde","lat":51.10802,"lon":2.614192,"since":"2026-11-03"}
 {"id":"n7021574719","name":"Dierenartsenpraktijk De Eggel","street":"Schalbroekstraat 35","postcode":"3560","city":"Lummen","lat":50.981899,"lon":5.178974,"phones":["213531025"],"site":"https://www.deeggel.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n7031726972","name":"Vincent Charpentier","lat":50.82643,"lon":4.350953,"hours":"Mo-Fr 10:00-19:00","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n7066012496","name":"J. Van den Daele","street":"Graaf van Vlaanderenplein 30","postcode":"9000","city":"Gent","lat":51.046863,"lon":3.732836,"phones":["475631500"],"site":"https://janvandendaele.be/","siteFrom":"osm","since":"2026-11-03"}
-{"id":"n7074404080","name":"Cabinet Vétérinaire Flagey","lat":50.828966,"lon":4.370566,"since":"2026-11-03"}
+{"id":"n7074404080","name":"Cabinet Vétérinaire Flagey","lat":50.828966,"lon":4.370566,"phones":["487360112"],"since":"2026-11-03"}
 {"id":"n7079528435","name":"Dierenarts Nathalie Coenen","street":"Weidestraat 19","postcode":"3293","city":"Kaggevinne","lat":50.987052,"lon":5.028874,"phones":["471807373"],"site":"https://dierenartsnathaliecoenen.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n7085959085","name":"Ch. Barbiers","street":"Waterstraat 86","postcode":"9040","city":"Gent","lat":51.072638,"lon":3.755583,"phones":["292515452"],"hours":"Mo-Sa 08:00-20:00","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n7111915666","name":"Floris Sophie","street":"Rue de l'Épinette 20","postcode":"7500","city":"Tournai","lat":50.610664,"lon":3.390271,"since":"2026-11-03"}
@@ -541,11 +542,11 @@
 {"id":"n7419418409","name":"Annelies Depuydt","street":"Kruiswegestraat 25","lat":51.03889,"lon":3.389873,"phones":["251689119"],"site":"https://www.dierenartsdepuydt.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n7438155526","name":"Gevaert","street":"Sterrestraat 66","lat":50.994052,"lon":3.416308,"site":"https://www.dierenartsgevaert.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n7456818839","name":"Dierenarts Sam Verstraete","street":"Bruggestraat 212","postcode":"8770","city":"Ingelmunster","lat":50.932599,"lon":3.251684,"phones":["251695694"],"since":"2026-11-03"}
-{"id":"n7459105878","name":"Rudi Nollet","lat":51.180167,"lon":4.135248,"phones":["237666280"],"site":"https://dierenartsnollet.be/","siteFrom":"osm","since":"2026-11-03"}
+{"id":"n7459105878","name":"Rudi Nollet","lat":51.180167,"lon":4.135248,"phones":["237666280","475291961"],"site":"https://dierenartsnollet.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n7462358555","name":"Niv-vet","street":"Chemin Maxile 2","postcode":"1400","city":"Nivelles","lat":50.604071,"lon":4.331563,"phones":["267214550"],"site":"https://www.niv-vet.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n746309448","lat":51.008579,"lon":4.299063,"since":"2026-11-03"}
 {"id":"n7475500652","name":"Dierenartsenpraktijk De Vroey","street":"Dorpsstraat 76","postcode":"3550","city":"Heusden-Zolder","lat":51.023568,"lon":5.315345,"phones":["475801114"],"site":"https://www.dierenartsdevroey.be/","siteFrom":"osm","since":"2026-11-03"}
-{"id":"n7481967922","name":"Gelders G.","lat":50.680986,"lon":4.377185,"phones":["223452355"],"hours":"\"sur rendez-vous\"","hoursFrom":"osm","since":"2026-11-03"}
+{"id":"n7481967922","name":"Gelders G.","lat":50.680986,"lon":4.377185,"phones":["223452355","475307845"],"hours":"\"sur rendez-vous\"","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n7565983959","name":"Chirurgie Gezelschapsdieren","street":"Steenstraat 45","postcode":"1750","city":"Sint-Martens-Lennik","lat":50.826476,"lon":4.197371,"phones":["470434987"],"site":"https://www.chirurgiegezelschapsdieren.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n7590503354","name":"Lena Busselot","lat":50.733899,"lon":4.306515,"since":"2026-11-03"}
 {"id":"n7598469111","name":"Leyssens","street":"Bosstraat 112","lat":50.872208,"lon":4.630394,"phones":["216880677"],"site":"https://www.dierenartsleyssens.be/","siteFrom":"osm","since":"2026-11-03"}
@@ -554,7 +555,7 @@
 {"id":"n7632060771","name":"Eveline Hendrickx","street":"Turnhoutsebaan 209","postcode":"2110","city":"Wijnegem","lat":51.226291,"lon":4.515098,"phones":["476212929"],"site":"https://dierernartswijnegem.be","siteFrom":"osm","hours":"\"Op Afspraak\"","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n7671773524","name":"Dierenarts Peter Schoofs","street":"Bondgenotenlaan 28","postcode":"8301","city":"Knokke-Heist","lat":51.33619,"lon":3.239274,"phones":["250518389"],"site":"http://www.dierenarts-schoofs.be/","siteFrom":"osm","hours":"Mo-Th 17:00-19:00; Fr 18:00-19:00; Sa 10:00-12:00","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n7685247125","name":"Phoebe Van Volcen","lat":51.213319,"lon":3.215219,"since":"2026-11-03"}
-{"id":"n7709848778","name":"CosyVet","lat":50.831208,"lon":4.461383,"site":"https://www.cosyvet.com/","siteFrom":"osm","hours":"Mo-Fr 08:30-18:00; Sa 10:00-12:00","hoursFrom":"osm","since":"2026-11-03"}
+{"id":"n7709848778","name":"CosyVet","lat":50.831208,"lon":4.461383,"phones":["475916241"],"site":"https://www.cosyvet.com/","siteFrom":"osm","hours":"Mo-Fr 08:30-18:00; Sa 10:00-12:00","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n7734363770","name":"Dierenartsenpraktijk Herckenrode-West","street":"Koepoortstraat 9","postcode":"3545","city":"Halen","lat":50.949113,"lon":5.114861,"phones":["213556662"],"site":"https://www.dierenkliniekherckenrode.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n775882793","lat":50.302947,"lon":5.11479,"since":"2026-11-03"}
 {"id":"n7784559182","name":"Centre Vétérinaire du Lion","street":"Chaussée de Tervuren 174","lat":50.707837,"lon":4.406393,"phones":["223542268"],"site":"https://www.centreveterinairedulion.be","siteFrom":"osm","since":"2026-11-03"}
@@ -574,7 +575,7 @@
 {"id":"n8167703013","name":"Dejonckheere / Pierre","street":"Rue de Bétissart 45","postcode":"7802","city":"Ath","lat":50.601228,"lon":3.747318,"phones":["268281817"],"since":"2026-11-03"}
 {"id":"n8187716083","name":"Hildegard Beeckman","lat":50.870905,"lon":4.324324,"phones":["224251986"],"since":"2026-11-03"}
 {"id":"n8192243320","name":"Dierenarts Kevin Langens","lat":51.041968,"lon":5.578766,"since":"2026-11-03"}
-{"id":"n8196434033","name":"Coralie Beele","lat":50.865611,"lon":4.377619,"phones":["222420743"],"site":"https://dr-coralie-beele.business.site/","siteFrom":"osm","hours":"Mo,Tu,Fr 10:00-19:00 \"by appointment\"; We 09:00-12:30 \"by appointment\"; Th 10:00-17:30 \"by appointment\"","hoursFrom":"osm","since":"2026-11-03"}
+{"id":"n8196434033","name":"Coralie Beele","lat":50.865611,"lon":4.377619,"phones":["222420743","473633402"],"site":"https://dr-coralie-beele.business.site/","siteFrom":"osm","hours":"Mo,Tu,Fr 10:00-19:00 \"by appointment\"; We 09:00-12:30 \"by appointment\"; Th 10:00-17:30 \"by appointment\"","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n8228677006","name":"Cabinet Vétérinaire pour Chats","lat":50.821893,"lon":4.369911,"phones":["227791999"],"hours":"\"uniquement sur rendez-vous\"","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n8242357968","name":"Centre vétérinaire Vetes","lat":50.614819,"lon":4.665311,"since":"2026-11-03"}
 {"id":"n8267210540","lat":51.310896,"lon":3.124812,"since":"2026-11-03"}
@@ -589,6 +590,7 @@
 {"id":"n8571891178","name":"Cabinet Vétérinaire Peeters","lat":50.620126,"lon":3.367178,"since":"2026-11-03"}
 {"id":"n8571891179","name":"Cabinet Vétérinaire de la Drève","lat":50.619963,"lon":3.369334,"since":"2026-11-03"}
 {"id":"n8644840340","name":"Dierenartsenpraktijk Moscou","street":"Jules de Saint-Genoisstraat 49A","postcode":"9050","city":"Gentbrugge","lat":51.030172,"lon":3.759395,"hours":"24/7","hoursFrom":"osm","since":"2026-11-03"}
+{"id":"n8662832432","name":"Kleintierpraxis","street":"Im Venn 11","postcode":"52152","city":"Simmerath","lat":50.628783,"lon":6.271078,"phones":["735496717"],"site":"https://www.eifel-kleintierpraxis.de/","siteFrom":"osm","since":"2026-11-21"}
 {"id":"n8688145657","name":"Dierenartsenpraktijk 't Stokt - Peeters","street":"Stokt 10","postcode":"2400","city":"Mol","lat":51.191632,"lon":5.068243,"site":"https://dierenarts-peeters.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n8732229877","name":"Gérard Doem","street":"Rue Fernand Piron 43","lat":50.475411,"lon":3.898296,"since":"2026-11-03"}
 {"id":"n8739233345","name":"Animali","lat":50.722845,"lon":4.226162,"site":"https://www.animali.be/","siteFrom":"osm","since":"2026-11-03"}
@@ -617,7 +619,7 @@
 {"id":"n9269236116","name":"Tsalos & Lemaire","street":"Avenue de la Résistance 508B","postcode":"4630","city":"Soumagne","lat":50.633948,"lon":5.744881,"since":"2026-11-03"}
 {"id":"n926991269","name":"Van Kets","lat":50.879847,"lon":4.47125,"since":"2026-11-03"}
 {"id":"n927110412","name":"Animal Care","lat":50.891487,"lon":4.589121,"site":"https://www.animalcare.be/","siteFrom":"osm","since":"2026-11-03"}
-{"id":"n9291161401","name":"Jonckheere / P.","lat":50.328656,"lon":4.24789,"phones":["271596023"],"hours":"Mo-Fr 17:00-18:00; \"sur rendez-vous toutes les jours\"","hoursFrom":"osm","since":"2026-11-03"}
+{"id":"n9291161401","name":"Jonckheere / P.","lat":50.328656,"lon":4.24789,"phones":["271596023","495576023"],"hours":"Mo-Fr 17:00-18:00; \"sur rendez-vous toutes les jours\"","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n9300993693","street":"Rue du Fosteau 33A","lat":50.33816,"lon":4.280775,"hours":"Mo-Fr 18:00-19:00; \"Sur rendez_vous 24/7, 7/7\"","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n9317856884","name":"SAO EL","street":"Kraanbeekstraat 70","lat":50.773689,"lon":4.9931,"since":"2026-11-03"}
 {"id":"n9321989105","name":"Dier en Zorg","street":"Stenenmuurstraat 56C","city":"Sinaai","lat":51.169667,"lon":4.049361,"since":"2026-11-03"}
@@ -625,7 +627,7 @@
 {"id":"n9375670418","name":"Veterinarian Animoretus","postcode":"2610","lat":51.172408,"lon":4.389599,"site":"https://www.animoretus.be/","siteFrom":"osm","hours":"Mo-Fr 09:00-19:00","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"n9391788833","name":"'T Klaverblad","street":"Leestraat 51","postcode":"9112","city":"Sinaai","lat":51.149284,"lon":4.004207,"since":"2026-11-03"}
 {"id":"n9427823454","name":"Opdebeeck","lat":50.853114,"lon":4.388308,"phones":["227350416"],"site":"http://m.opdebeeck.wikeo.be/","siteFrom":"osm","since":"2026-11-03"}
-{"id":"n9433247936","name":"Fidelis","street":"Antwerpsesteenweg 13","lat":51.08682,"lon":4.451543,"site":"https://www.dapfidelis.be","siteFrom":"osm","since":"2026-11-03"}
+{"id":"n9433247936","name":"Fidelis","street":"Antwerpsesteenweg 13","lat":51.08682,"lon":4.451543,"phones":["475914222"],"site":"https://www.dapfidelis.be","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n945480350","name":"Ilse Wauters","street":"Petrus Basteleusstraat 132","lat":50.786807,"lon":4.270771,"since":"2026-11-03"}
 {"id":"n9458685046","name":"Dierenkliniek de Aak","street":"Koerselsesteenweg 208","postcode":"3582","city":"Beringen","lat":51.052556,"lon":5.250545,"phones":["211432601"],"site":"https://www.deaak.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"n9515958019","name":"Fabrice Van Lierde","street":"Rue de Gougnies 31","postcode":"5640","city":"Biesme","lat":50.339875,"lon":4.597654,"since":"2026-11-03"}
@@ -703,7 +705,7 @@
 {"id":"w1246472818","name":"Dierenarts Stefan Haustraete","street":"Buke 59","lat":50.878497,"lon":3.819354,"since":"2026-11-03"}
 {"id":"w1249503000","name":"Dierenartsenpraktijk Katrien De Roover","street":"Sint-Andriessteenweg 71;73","lat":50.867976,"lon":3.797966,"since":"2026-11-03"}
 {"id":"w125079510","name":"Vétérinaire Ruyssen","street":"Rue Joseph Grafé 5","postcode":"5000","city":"Namur","lat":50.465416,"lon":4.858485,"phones":["470884486"],"site":"https://www.vtnamur.com/","siteFrom":"osm","hours":"\"Sur rendez vous\"","hoursFrom":"osm","since":"2026-11-03"}
-{"id":"w127668735","name":"Renaud Pire","street":"Rue de Milmort 106","postcode":"4680","city":"Hermée","lat":50.701014,"lon":5.611953,"since":"2026-11-03"}
+{"id":"w127668735","name":"Renaud Pire","street":"Rue de Milmort 106","lat":50.701014,"lon":5.611953,"since":"2026-11-03"}
 {"id":"w1309318680","name":"Lanneau Pascal","street":"Keiberg 31","postcode":"8552","city":"Moen","lat":50.782,"lon":3.389633,"site":"http://www.pascallanneau.be/?LC=nl","siteFrom":"osm","since":"2026-11-03"}
 {"id":"w131473284","name":"Dierenarts Raf Van Den Broeck","street":"Kapellenstraat 19","lat":51.002659,"lon":4.089504,"since":"2026-11-03"}
 {"id":"w134646753","street":"Verlorenkostbaan 13","lat":50.943689,"lon":4.171385,"since":"2026-11-03"}
@@ -732,7 +734,7 @@
 {"id":"w219895125","name":"Stefanie Van den Broeck","street":"Biesblokstraat 9","lat":51.040512,"lon":4.441586,"phones":["474561211"],"site":"https://www.dierenartsvandenbroeck.be","siteFrom":"osm","since":"2026-11-03"}
 {"id":"w221806483","name":"Equitom","street":"Paalstraat 8","postcode":"3560","city":"Meldert-Lummen","lat":51.016366,"lon":5.160895,"phones":["213552006"],"site":"https://www.equitom.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"w223896068","name":"Firmin Wéverberg","street":"Chaussée de Bruxelles - Brusselsesteenweg 165","lat":50.691581,"lon":4.081772,"phones":["223955393"],"site":"http://firminweverberg.be/","siteFrom":"osm","since":"2026-11-03"}
-{"id":"w225097577","street":"Avenue de Mai - Meilaan 11","lat":50.848172,"lon":4.423863,"since":"2026-11-03"}
+{"id":"w225097577","street":"Avenue de Mai - Meilaan 11","lat":50.848172,"lon":4.423863,"since":"2026-11-03","gone":"2026-11-21"}
 {"id":"w225732489","street":"Heindonksesteenweg 190","lat":51.064865,"lon":4.379236,"since":"2026-11-03"}
 {"id":"w227774222","name":"Coranimo","street":"Arendlaan 69","lat":50.908716,"lon":4.366086,"phones":["222678051"],"site":"https://www.coranimo.be","siteFrom":"osm","hours":"Mo-Fr 08:15-20:00; Sa 09:00-12:00","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"w235858027","name":"Dispensarium","street":"Vogelenzangpark 9","lat":51.064573,"lon":3.721138,"phones":["292330313"],"site":"https://www.sfprlaurent.be/","siteFrom":"osm","since":"2026-11-03"}
@@ -745,7 +747,7 @@
 {"id":"w284194812","name":"Raes & Poskin","street":"Rue Joseph Gos 64","lat":50.679967,"lon":4.372882,"hours":"Mo-Fr 08:30-19:00; Sa 08:30-12:00","hoursFrom":"osm","since":"2026-11-03"}
 {"id":"w287109012","name":"Luc Semey","street":"Keienberglaan 5","lat":50.936897,"lon":4.365992,"since":"2026-11-03"}
 {"id":"w295661230","name":"Dierenartsencentrum Anthemis","street":"Lagesteenweg 73","postcode":"1850","city":"Grimbergen","lat":50.932627,"lon":4.366657,"since":"2026-11-03"}
-{"id":"w305848725","name":"A Denis","street":"Avenue Monbijou 95","city":"Malmedy","lat":50.420157,"lon":6.04689,"since":"2026-11-03"}
+{"id":"w305848725","name":"A Denis","street":"Avenue Monbijou 95","postcode":"4960","city":"Malmedy","lat":50.420157,"lon":6.04689,"since":"2026-11-03"}
 {"id":"w306873749","name":"Dr. Jaucot","street":"Rue Grande 255","postcode":"7020","city":"Maisières","lat":50.504306,"lon":3.997217,"phones":["265848460"],"site":"https://www.veterinairejaucot.be/","siteFrom":"osm","since":"2026-11-03"}
 {"id":"w307163561","street":"Avenue des Alliés 113","lat":50.421602,"lon":6.013783,"since":"2026-11-03"}
 {"id":"w309953072","street":"Sint-Jansstraat 94","lat":50.970905,"lon":3.020749,"since":"2026-11-03"}
