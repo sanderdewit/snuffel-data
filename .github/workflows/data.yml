@@ -30,7 +30,11 @@ on:
         description: "Country codes, space separated, or 'all'. Only these countries are published: the new manifest lists only them, so every other country is missing from the live site and app until the next full run."
         default: "all"
       scan:
-        description: "Scan clinic websites for chain ownership"
+        description: "Scan clinic websites for chain ownership and opening hours"
+        type: boolean
+        default: true
+      ai:
+        description: "Let the AI read opening hours on changed or new pages (off: no AI cost; unchanged pages and structured data still count)"
         type: boolean
         default: true
 
@@ -111,13 +115,15 @@ jobs:
       # Opening hours from the clinics' own websites, for the countries in the
       # HOURS_COUNTRIES variable (default: nl be). Unchanged pages reuse last
       # month's answer (the register, else the published hours.json), so the AI
-      # only sees changes.
+      # only sees changes. Started by hand with "ai" off: no AI calls at all
+      # (HOURS_MAX_AI 0); pages that changed wait for a run with AI.
       - name: Opening hours from clinic websites
         if: env.SCAN == 'true' && contains(format(' {0} ', vars.HOURS_COUNTRIES || 'nl be'), format(' {0} ', matrix.cc))
         env:
           AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
           AZURE_OPENAI_KEY: ${{ secrets.AZURE_OPENAI_KEY }}
           AZURE_OPENAI_DEPLOYMENT: ${{ vars.AZURE_OPENAI_DEPLOYMENT }}
+          HOURS_MAX_AI: ${{ github.event.inputs.ai == 'false' && '0' || '3000' }}
         run: |
           mkdir -p dist
           curl -fsSL -o dist/previous-hours.json "https://snuffel.app/data/hours.json" || rm -f dist/previous-hours.json
