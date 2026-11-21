@@ -15,12 +15,15 @@
  *                              osmium export f.pbf -f geojsonseq -a type,id -o <extract>
  *       Classifies every feature with lib/classify.js (same rules as the site),
  *       keeps the tags the site uses, and stages dist/stage/<cc>.json. It also
- *       writes tools/.cache/osm-vets-<cc>.json for tools/scan-websites.js.
+ *       writes tools/.cache/osm-vets-<cc>.json for tools/scan-websites.js,
+ *       tools/vets.js (the vet register) and tools/scan-hours.js.
  *
  *   node tools/build-places.js assemble
  *       Merges all staged countries (dropping border duplicates) into cells and
  *       writes the manifest. Cells go into a dated folder so browsers can cache
- *       them for long; only the manifest is fetched fresh.
+ *       them for long; only the manifest is fetched fresh. Only the countries
+ *       staged in this run are in the manifest. Vets get "snuffel:" fields from
+ *       the register vets/<cc>.jsonl (else from dist/hours.json).
  * ========================================================================== */
 "use strict";
 const fs = require("fs");

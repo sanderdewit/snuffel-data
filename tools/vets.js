@@ -13,9 +13,11 @@
  *                                    OpenStreetMap vets (tools/.cache/osm-vets-<cc>.json),
  *                                    the hand fixes (vets/overrides.json) and branches
  *   node tools/vets.js hours <cc>    after the scan: take in tools/hours-<cc>.json
+ *                                    (no file: nothing confirmed, so only expiry)
  *   node tools/vets.js check         validate vets/*.jsonl and vets/overrides.json
+ *   node tools/vets.js summary       one line per country: vets, websites, hours by source
  *
- * One line per vet, sorted by id. Fields (only id and seen are always there):
+ * One line per vet, sorted by id. Fields (only id and since are always there):
  *   id             OSM element (n123, w456); was: earlier ids of the same clinic
  *   name, street, postcode, city, lat, lon
  *   phones         last 9 digits of each number, to find branches
@@ -23,14 +25,18 @@
  *                  same practice: same phone number, a shared name, nearby)
  *   hours          opening hours, OpenStreetMap syntax; hoursFrom "manual" | "osm" |
  *                  "structured" | "ai" (the last two: read from the clinic's website,
- *                  with hoursUrl, hoursHash, hoursChecked)
+ *                  with hoursUrl, hoursHash, hoursChecked; manual: hoursChecked)
  *   emergency      "24/7" | "on_call" from the clinic's website (emergencyPhone,
  *                  emergencyChecked), hospital: the name says animal hospital
- *   seen           last run the vet was in OpenStreetMap; gone: first run it wasn't
- *                  (kept GONE_DAYS for a clinic that comes back under a new id)
+ *   since          first run the vet was in the register; gone: first run it wasn't in
+ *                  OpenStreetMap (kept GONE_DAYS for a clinic that comes back under a new
+ *                  id). No "last seen" date: it would change every line every month.
  *
  * Order of trust: a hand fix, then OpenStreetMap's own value, then the clinic's
- * own website, then a branch. Nothing is written back to OpenStreetMap.
+ * own website, then a branch. The published places never hide OSM's own website
+ * or opening_hours: our values are separate "snuffel:" fields that the site and
+ * app use only where OSM has none (a wrong OSM value is fixed in OSM itself).
+ * Nothing is written back to OpenStreetMap.
  * Licence: derived from OpenStreetMap data (ODbL 1.0) plus facts published by the
  * clinics themselves.
  * ========================================================================== */
@@ -50,11 +56,13 @@ const MOVED_M = 150;          // the same clinic under a new OSM id: this close
 const BRANCH_KM = 40;         // branches of one practice: this close
 const ORDER = ["id", "was", "name", "street", "postcode", "city", "lat", "lon", "phones",
   "site", "siteFrom", "hours", "hoursFrom", "hoursUrl", "hoursHash", "hoursChecked",
-  "emergency", "emergencyPhone", "emergencyChecked", "hospital", "seen", "gone"];
+  "emergency", "emergencyPhone", "emergencyChecked", "hospital", "since", "gone"];
 
 // ---- small helpers ---------------------------------------------------------------
 const days = (a, b) => (Date.parse(a) - Date.parse(b)) / 86400000;
 const round = (x) => Math.round(x * 1e6) / 1e6;
+const DATE = /^\d{4}-\d{2}-\d{2}$/;
+const ID = /^[nwr]\d+$/;
 function km(a, b) {
   const r = Math.PI / 180, x = (b.lon - a.lon) * r * Math.cos(((a.lat + b.lat) / 2) * r), y = (b.lat - a.lat) * r;
   return Math.sqrt(x * x + y * y) * 6371;
@@ -64,6 +72,7 @@ function phoneKey(p) {
   const d = String(p || "").replace(/\D/g, "");
   return d.length >= 9 ? d.slice(-9) : null;
 }
+const phonesOf = (t) => [...new Set([t.phone, t["contact:phone"], t["contact:mobile"]].flatMap(allValues).map(phoneKey).filter(Boolean))];
 const siteKey = (u) => String(u || "").trim().toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").replace(/[/#?]+$/, "");
 const website = (t) => allValues(t.website || t["contact:website"] || t.url)[0] || null;
 
@@ -73,10 +82,11 @@ const GENERIC = new Set(("dierenarts dierenartsen dierenartspraktijk dierenartse
   "veterinair veterinaire veterinaires veterinaria veterinario veterinari veterinary vet vets clinic clinique " +
   "clinica hospital hopital ospedale animal animals animaux huisdieren practice surgery centre center group groupe " +
   "tierarzt tierarztpraxis tierarztin tierklinik tierarzte praxis kleintierpraxis kleintiere cabinet " +
-  "and und und the van het den der des dei del les une voor pour per dr drs dvm").split(" "));
+  "and und the van het den der des dei del les une voor pour per dr drs dvm").split(" "));
 function nameTokens(name) {
   return foldName(name).split(/[^a-z0-9]+/).filter((t) => t.length >= 3 && !GENERIC.has(t));
 }
+/** A shared distinctive word ("Mark" in "Mark dierenarts" / "Mark Dierenarts"); names of only generic words must match whole. */
 function sameName(a, b) {
   const ta = nameTokens(a), tb = new Set(nameTokens(b));
   if (!ta.length || !tb.size) return foldName(a).trim() !== "" && foldName(a).trim() === foldName(b).trim();
@@ -113,21 +123,20 @@ const fromWebsite = (e) => e.hoursFrom === "structured" || e.hoursFrom === "ai";
 /**
  * Before the website scan: the register brought in line with this run's OpenStreetMap
  * vets (tools/.cache/osm-vets-<cc>.json, objects {type, id, lat, lon, tags}).
- * Returns the new register and a tally of what changed.
+ * Returns the new register and a tally of what changed; `reg` itself is not changed.
  */
 function refresh(reg, vets, fixes, today) {
   const out = new Map(), tally = { vets: vets.length, new: 0, moved: 0, gone: 0, dropped: 0, branchSites: 0, manual: 0 };
   const present = new Set(vets.map((v) => v.type.charAt(0) + v.id));
   // entries whose OSM id disappeared this run: maybe the same clinic under a new id
-  const orphans = [...reg.values()].filter((e) => !present.has(e.id));
+  const orphans = [...reg.values()].filter((e) => !present.has(e.id)), taken = new Set();
   for (const v of vets) {
-    const id = v.type.charAt(0) + v.id, t = v.tags || {};
+    const id = v.type.charAt(0) + v.id, t = v.tags || {}, phones = phonesOf(t);
     let e = reg.get(id);
     if (!e) {
-      const here = { lat: v.lat, lon: v.lon }, phones = new Set([t.phone, t["contact:phone"]].flatMap(allValues).map(phoneKey).filter(Boolean));
-      const hit = orphans.find((o) => !o.taken && km(here, o) * 1000 <= MOVED_M &&
-        (sameName(o.name, t.name) || (o.phones || []).some((p) => phones.has(p))));
-      if (hit) { hit.taken = true; e = { ...hit, id, was: [...new Set([...(hit.was || []), hit.id])] }; delete e.taken; tally.moved++; }
+      const hit = orphans.find((o) => !taken.has(o.id) && km({ lat: v.lat, lon: v.lon }, o) * 1000 <= MOVED_M &&
+        (sameName(o.name, t.name) || (o.phones || []).some((p) => phones.includes(p))));
+      if (hit) { taken.add(hit.id); e = { ...hit, id, was: [...new Set([...(hit.was || []), hit.id])] }; tally.moved++; }
       else { e = { id }; tally.new++; }
     } else e = { ...e };
     // OpenStreetMap's own facts, as they are now
@@ -136,7 +145,7 @@ function refresh(reg, vets, fixes, today) {
     e.postcode = t["addr:postcode"] || undefined;
     e.city = t["addr:city"] || undefined;
     e.lat = round(v.lat); e.lon = round(v.lon);
-    e.phones = [...new Set([t.phone, t["contact:phone"], t["contact:mobile"]].flatMap(allValues).map(phoneKey).filter(Boolean))];
+    e.phones = phones;
     const osmSite = website(t);
     if (osmSite) { e.site = osmSite; e.siteFrom = "osm"; }
     else if (e.siteFrom === "osm") { delete e.site; delete e.siteFrom; }      // removed in OSM: a branch may fill it below
@@ -152,11 +161,11 @@ function refresh(reg, vets, fixes, today) {
       tally.manual++;
     }
     delete e.gone;
-    e.seen = today;
+    e.since = e.since || today;
     out.set(id, e);
   }
   for (const o of orphans) {
-    if (o.taken) continue;
+    if (taken.has(o.id)) continue;
     const e = { ...o };
     e.gone = e.gone || today;
     if (days(today, e.gone) > GONE_DAYS) { tally.dropped++; continue; }
@@ -180,9 +189,8 @@ function linkBranches(reg) {
   let n = 0;
   for (const e of live) {
     if (e.siteFrom === "osm" || e.siteFrom === "manual") continue;
-    const own = new Set([e.id]);
     const branches = [...new Set((e.phones || []).flatMap((p) => byPhone.get(p) || []))]
-      .filter((b) => !own.has(b.id) && b.site && (b.siteFrom === "osm" || b.siteFrom === "manual") && sameName(b.name, e.name) && km(e, b) <= BRANCH_KM);
+      .filter((b) => b.id !== e.id && b.site && (b.siteFrom === "osm" || b.siteFrom === "manual") && sameName(b.name, e.name) && km(e, b) <= BRANCH_KM);
     const sites = new Set(branches.map((b) => siteKey(b.site)));
     if (sites.size === 1) {
       const b = branches.sort((x, y) => km(e, x) - km(e, y))[0];
@@ -193,24 +201,29 @@ function linkBranches(reg) {
 }
 
 /**
- * After the website scan: tools/hours-<cc>.json ({places: {id: result}, failed: {id: status}}).
- * A result with hours replaces the website hours; a failed or empty scan keeps them.
- * Then website facts without a confirmation for KEEP_DAYS expire.
+ * After the website scan: tools/hours-<cc>.json ({places: {id: result}}; only vets with
+ * an answer are in it). A result with hours replaces the website hours; a site that
+ * failed or gave nothing keeps them. Then website facts without a confirmation for
+ * KEEP_DAYS expire. Hand-fixed and OSM hours are never touched here.
  */
 function takeHours(reg, scan, today) {
-  const tally = { updated: 0, confirmed: 0, kept: 0, expired: 0 };
+  const tally = { updated: 0, confirmed: 0, kept: 0, expired: 0, emergency: 0 };
+  const places = (scan && scan.places) || {};
   for (const e of reg.values()) {
-    const r = (scan.places || {})[e.id];
-    const manualOrOsm = e.hoursFrom === "manual" || e.hoursFrom === "osm";
-    if (r) {
-      if (r.opening_hours && !manualOrOsm) {
-        if (e.hours === r.opening_hours) tally.confirmed++; else tally.updated++;
-        Object.assign(e, { hours: r.opening_hours, hoursFrom: r.source || "ai", hoursUrl: r.url || e.site, hoursHash: r.hash, hoursChecked: r.checked || today });
-      } else if (!manualOrOsm && e.hours) tally.kept++;
-      if (r.emergency) Object.assign(e, { emergency: r.emergency, emergencyPhone: r.emergency_phone || undefined, emergencyChecked: r.checked || today, hospital: r.hospital || undefined });
-    } else if (fromWebsite(e)) tally.kept++;
-    if (fromWebsite(e) && (!e.hoursChecked || days(today, e.hoursChecked) > KEEP_DAYS)) { clear(e, WEB_HOURS); tally.expired++; }
-    if (e.emergency && (!e.emergencyChecked || days(today, e.emergencyChecked) > KEEP_DAYS)) clear(e, WEB_EMERGENCY);
+    const r = places[e.id];
+    const ours = !(e.hoursFrom === "manual" || e.hoursFrom === "osm");
+    if (r && r.opening_hours && ours) {
+      if (e.hours === r.opening_hours) tally.confirmed++; else tally.updated++;
+      Object.assign(e, { hours: r.opening_hours, hoursFrom: r.source || "ai", hoursUrl: r.url || e.site, hoursHash: r.hash || undefined, hoursChecked: r.checked || today });
+    } else if (fromWebsite(e)) {
+      if (!e.hoursChecked || days(today, e.hoursChecked) > KEEP_DAYS) { clear(e, WEB_HOURS); tally.expired++; }
+      else tally.kept++;
+    }
+    if (r && r.emergency) {
+      clear(e, WEB_EMERGENCY);
+      Object.assign(e, { emergency: r.emergency, emergencyPhone: r.emergency_phone || undefined, emergencyChecked: r.checked || today, hospital: r.hospital || undefined });
+      tally.emergency++;
+    } else if (e.emergency && (!e.emergencyChecked || days(today, e.emergencyChecked) > KEEP_DAYS)) clear(e, WEB_EMERGENCY);
   }
   return tally;
 }
@@ -224,13 +237,14 @@ function previousFor(e) {
 
 /** The "snuffel:" fields tools/build-places.js adds to a place from its register entry. */
 function placeFields(e, osmTags) {
-  const f = {};
+  const f = {}, t = osmTags || {};
   if (!e) return f;
-  if (e.site && e.siteFrom !== "osm" && !website(osmTags || {})) f["snuffel:website"] = e.site;
-  if (e.hours && e.hoursFrom !== "osm" && !(osmTags || {}).opening_hours) f["snuffel:opening_hours"] = e.hours;
+  if (e.site && e.siteFrom !== "osm" && !website(t)) f["snuffel:website"] = e.site;
+  if (e.hours && e.hoursFrom !== "osm" && !t.opening_hours) f["snuffel:opening_hours"] = e.hours;
   if (e.emergency) f["snuffel:emergency"] = e.emergency;
   if (e.emergency && e.emergencyPhone) f["snuffel:emergency_phone"] = e.emergencyPhone;
-  if (f["snuffel:opening_hours"] || f["snuffel:emergency"]) f["snuffel:checked"] = e.hoursChecked || e.emergencyChecked;
+  const checked = f["snuffel:opening_hours"] ? e.hoursChecked || e.emergencyChecked : f["snuffel:emergency"] ? e.emergencyChecked : null;
+  if (checked) f["snuffel:checked"] = checked;
   return f;
 }
 
@@ -238,31 +252,72 @@ function check(dir = DIR) {
   const { validHours } = require("./scan-hours.js");
   const problems = [];
   const files = fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => /^[a-z]{2}\.jsonl$/.test(f)) : [];
+  const url = (u) => /^https?:\/\/[^\s/]+\.[^\s/]+/i.test(String(u || ""));
   for (const f of files) {
     let prev = "";
     fs.readFileSync(path.join(dir, f), "utf8").split("\n").forEach((line, i) => {
       if (!line.trim()) return;
+      const at = `${f}:${i + 1}`;
       let e;
-      try { e = JSON.parse(line); } catch (err) { problems.push(`${f}:${i + 1} invalid JSON`); return; }
-      if (!/^[nwr]\d+$/.test(e.id || "")) problems.push(`${f}:${i + 1} bad id`);
-      if (e.id <= prev) problems.push(`${f}:${i + 1} not sorted or duplicate (${e.id})`);
+      try { e = JSON.parse(line); } catch (err) { problems.push(`${at} invalid JSON`); return; }
+      if (!ID.test(e.id || "")) problems.push(`${at} bad id`);
+      if (e.id <= prev) problems.push(`${at} not sorted or duplicate (${e.id})`);
       prev = e.id;
-      if (!/^\d{4}-\d{2}-\d{2}$/.test(e.seen || "")) problems.push(`${f}:${i + 1} ${e.id} without seen date`);
-      if (e.hours && e.hoursFrom !== "osm" && !validHours(e.hours)) problems.push(`${f}:${i + 1} ${e.id} hours not valid: ${e.hours}`);
-      if (e.site && !e.siteFrom) problems.push(`${f}:${i + 1} ${e.id} site without siteFrom`);
+      if (!DATE.test(e.since || "")) problems.push(`${at} ${e.id} without a since date`);
+      if (e.gone && !DATE.test(e.gone)) problems.push(`${at} ${e.id} bad gone date`);
+      if ((e.was || []).some((w) => !ID.test(w))) problems.push(`${at} ${e.id} bad earlier id`);
+      if (e.site && !/^(manual|osm|branch:[nwr]\d+)$/.test(e.siteFrom || "")) problems.push(`${at} ${e.id} site without a valid siteFrom`);
+      if (!e.site && e.siteFrom) problems.push(`${at} ${e.id} siteFrom without site`);
+      if (e.hours && !/^(manual|osm|structured|ai)$/.test(e.hoursFrom || "")) problems.push(`${at} ${e.id} hours without a valid hoursFrom`);
+      if (!e.hours && e.hoursFrom) problems.push(`${at} ${e.id} hoursFrom without hours`);
+      if (e.hours && e.hoursFrom !== "osm" && !validHours(e.hours)) problems.push(`${at} ${e.id} hours not valid: ${e.hours}`);
+      if (e.hours && e.hoursFrom !== "osm" && !DATE.test(e.hoursChecked || "")) problems.push(`${at} ${e.id} hours without a checked date`);
+      if (e.emergency && !/^(24\/7|on_call)$/.test(e.emergency)) problems.push(`${at} ${e.id} bad emergency value`);
+      if (e.emergency && !DATE.test(e.emergencyChecked || "")) problems.push(`${at} ${e.id} emergency info without a checked date`);
     });
   }
-  const fixes = overrides(dir);
+  let fixes = {};
+  const of = path.join(dir, "overrides.json");
+  if (fs.existsSync(of)) {
+    try {
+      const data = JSON.parse(fs.readFileSync(of, "utf8"));
+      if (!data.vets || typeof data.vets !== "object" || Array.isArray(data.vets)) problems.push("overrides.json: needs a \"vets\" object");
+      else fixes = data.vets;
+    } catch (err) { problems.push("overrides.json: invalid JSON"); }
+  }
   for (const [id, x] of Object.entries(fixes)) {
-    if (!/^[nwr]\d+$/.test(id)) problems.push(`overrides.json: bad id ${id}`);
+    if (!ID.test(id)) problems.push(`overrides.json: bad id ${id}`);
+    if (!x || typeof x !== "object") { problems.push(`overrides.json: ${id} is not an object`); continue; }
+    if (!x.site && !x.hours) problems.push(`overrides.json: ${id} has neither site nor hours`);
+    if (x.site && !url(x.site)) problems.push(`overrides.json: ${id} site is not an http(s) address: ${x.site}`);
     if (x.hours && !validHours(x.hours)) problems.push(`overrides.json: ${id} hours not valid: ${x.hours}`);
-    if (x.hours && !/^\d{4}-\d{2}-\d{2}$/.test(x.checked || "")) problems.push(`overrides.json: ${id} hours need a checked date`);
+    if (x.hours && !DATE.test(x.checked || "")) problems.push(`overrides.json: ${id} hours need a checked date`);
     if (!x.note) problems.push(`overrides.json: ${id} needs a note (who checked what, how)`);
   }
   return { files: files.length, problems };
 }
 
-module.exports = { phoneKey, siteKey, nameTokens, sameName, refresh, linkBranches, takeHours, previousFor, placeFields, read, write, overrides, check, KEEP_DAYS, GONE_DAYS };
+/** Per country: vets, and websites / opening hours by source (for the monthly commit message). */
+function summary(dir = DIR) {
+  const files = fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => /^[a-z]{2}\.jsonl$/.test(f)).sort() : [];
+  return files.map((f) => {
+    const all = [...read(f.slice(0, 2), dir).values()], live = all.filter((e) => !e.gone);
+    // counts by source, in the order of trust
+    const by = (key, kinds, kind) => {
+      const c = Object.fromEntries(kinds.map((k) => [k, 0]));
+      for (const e of live) if (e[key]) c[kind(e[key + "From"])]++;
+      const n = Object.values(c).reduce((x, y) => x + y, 0);
+      return `${n} (${kinds.filter((k) => c[k]).map((k) => `${k} ${c[k]}`).join(", ") || "none"})`;
+    };
+    const sites = by("site", ["manual", "osm", "branch"], (s) => (String(s).startsWith("branch:") ? "branch" : s));
+    const hours = by("hours", ["manual", "osm", "website"], (s) => (s === "structured" || s === "ai" ? "website" : s));
+    return `${f.slice(0, 2)}: ${live.length} vets${all.length > live.length ? ` (+${all.length - live.length} gone, kept ${GONE_DAYS} days)` : ""}; ` +
+      `website ${sites}; opening hours ${hours}; ` +
+      `emergency info ${live.filter((e) => e.emergency).length}`;
+  });
+}
+
+module.exports = { phoneKey, siteKey, nameTokens, sameName, refresh, linkBranches, takeHours, previousFor, placeFields, read, write, overrides, check, summary, KEEP_DAYS, GONE_DAYS };
 
 if (require.main === module) {
   const [cmd, cc] = process.argv.slice(2);
@@ -270,7 +325,13 @@ if (require.main === module) {
   if ((cmd === "update" || cmd === "hours") && !/^[a-z]{2}$/.test(cc || "")) { console.error(`usage: vets.js ${cmd} <cc>`); process.exit(2); }
   if (cmd === "update") {
     const vets = JSON.parse(fs.readFileSync(path.join(CACHE, `osm-vets-${cc}.json`), "utf8"));
-    const { reg, tally } = refresh(read(cc), vets, overrides(), today);
+    const old = read(cc), live = [...old.values()].filter((e) => !e.gone).length;
+    // a broken or truncated extract must not mark half the country as gone
+    if (live >= 20 && vets.length < live / 2) {
+      console.error(`vets/${cc}.jsonl: only ${vets.length} vets in this run's OpenStreetMap data against ${live} in the register - not updated`);
+      process.exit(1);
+    }
+    const { reg, tally } = refresh(old, vets, overrides(), today);
     write(cc, reg);
     console.log(`vets/${cc}.jsonl: ${JSON.stringify(tally)}`);
   } else if (cmd === "hours") {
@@ -279,11 +340,13 @@ if (require.main === module) {
     const tally = takeHours(reg, fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, "utf8")) : {}, today);
     write(cc, reg);
     const n = [...reg.values()].filter((e) => !e.gone);
-    console.log(`vets/${cc}.jsonl hours: ${JSON.stringify(tally)}; ${n.filter((e) => e.site).length} of ${n.length} with a website, ${n.filter((e) => e.hours).length} with opening hours`);
+    console.log(`vets/${cc}.jsonl hours${fs.existsSync(f) ? "" : " (no scan this run)"}: ${JSON.stringify(tally)}; ${n.filter((e) => e.site).length} of ${n.length} with a website, ${n.filter((e) => e.hours).length} with opening hours`);
   } else if (cmd === "check") {
     const { files, problems } = check();
     problems.forEach((p) => console.log("  " + p));
     console.log(`${files} register file(s), ${problems.length} problem(s)`);
     if (problems.length) process.exit(1);
-  } else { console.error("usage: vets.js update <cc> | hours <cc> | check"); process.exit(2); }
+  } else if (cmd === "summary") {
+    summary().forEach((l) => console.log(l));
+  } else { console.error("usage: vets.js update <cc> | hours <cc> | check | summary"); process.exit(2); }
 }

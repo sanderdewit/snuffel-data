@@ -27,7 +27,9 @@
  * Polite: robots.txt (Disallow and Crawl-delay), at most 3 pages per site, one
  * request per host at a time, at most a minute per site. Only public http(s)
  * addresses are fetched (tools/safe-fetch.js: the URLs come from OSM). Pages whose text didn't change since the previous
- * run (dist/previous-hours.json) reuse the earlier answer: no AI call.
+ * run (the register vets/<cc>.jsonl, else dist/previous-hours.json) reuse the earlier answer: no AI call.
+ * Vets without a website of their own are read on a branch's site from the register
+ * (tools/vets.js), where only hours for the vet's own address count.
  *
  * AI: AZURE_OPENAI_ENDPOINT, AZURE_OPENAI_KEY, AZURE_OPENAI_DEPLOYMENT. Without
  * them only structured data is used. HOURS_MAX_AI caps the calls per run.
@@ -227,7 +229,7 @@ function businesses(node, out) {
   return out;
 }
 const postcodeKey = (p) => String(p || "").replace(/\s+/g, "").toUpperCase();
-function structuredHours(html, vet) {
+function structuredHours(html, vet, shared) {
   const found = [];
   for (const m of html.matchAll(/<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
     let data;
@@ -241,9 +243,9 @@ function structuredHours(html, vet) {
   if (micro.length) found.push({ oh: fromOpeningHoursText(micro), postcode: "" });
   const valid = found.filter((f) => validHours(f.oh));
   if (!valid.length) return null;
-  // Several branches on one site: only the one at this vet's postcode.
+  // Several branches on one site, or a branch's site (shared): only the one at this vet's postcode.
   const own = postcodeKey(vet.tags["addr:postcode"]);
-  if (new Set(valid.map((f) => f.oh)).size > 1) {
+  if (shared || new Set(valid.map((f) => f.oh)).size > 1) {
     const match = own && valid.find((f) => f.postcode === own);
     return match ? match.oh : null;
   }
@@ -279,12 +281,13 @@ emergency: "24/7" if the clinic itself provides emergency care for animals 24 ho
 emergency_phone: a phone number given specifically for emergencies, otherwise null.`;
 
 let aiCalls = 0;
-async function aiExtract(vet, text) {
+async function aiExtract(vet, text, shared) {
   const endpoint = process.env.AZURE_OPENAI_ENDPOINT, key = process.env.AZURE_OPENAI_KEY, deployment = process.env.AZURE_OPENAI_DEPLOYMENT;
   if (!endpoint || !key || !deployment || aiCalls >= MAX_AI) return null;
   aiCalls++;
   const t = vet.tags;
-  const who = `Clinic: ${t.name || "?"}; address: ${[t["addr:street"], t["addr:housenumber"], t["addr:postcode"], t["addr:city"]].filter(Boolean).join(" ") || "?"}`;
+  const who = `Clinic: ${t.name || "?"}; address: ${[t["addr:street"], t["addr:housenumber"], t["addr:postcode"], t["addr:city"]].filter(Boolean).join(" ") || "?"}` +
+    (shared ? "\nThis website is shared by more than one location of the practice: give opening_hours only when the text states them for this address." : "");
   const request = {
     model: deployment,
     messages: [{ role: "system", content: PROMPT }, { role: "user", content: who + "\n\nWEBSITE TEXT:\n" + text }],
@@ -308,7 +311,8 @@ async function aiExtract(vet, text) {
 const ROUND_THE_CLOCK = /24\s*(?:uur|uurs|\/\s*7|h\b|stunden|heures)|dag en nacht|day and night|rund um die uhr|jour et nuit|7 dagen per week/i;
 
 // ---- scanning ---------------------------------------------------------------------------
-async function scanSite(vet, url, previous) {
+// shared: the website of another branch of the same practice (tools/vets.js), not the clinic's own.
+async function scanSite(vet, url, previous, shared) {
   const origin = new URL(url).origin;
   const deadline = Date.now() + SITE_BUDGET_MS;
   const rules = await robots(origin, deadline);
@@ -328,7 +332,7 @@ async function scanSite(vet, url, previous) {
     }
     seen++;
     if (!page.ok) { if (i === 0) return { status: "http " + page.status }; continue; }
-    structured = structured || structuredHours(page.html, vet);
+    structured = structured || structuredHours(page.html, vet, shared);
     texts.push(relevantText(pageText(page.html)));
     if (i === 0) pages = pages.concat(hoursLinks(page.html, page.finalUrl).slice(0, MAX_PAGES - 1));
   }
@@ -343,7 +347,7 @@ async function scanSite(vet, url, previous) {
     return { ...previous, status: "unchanged", checked: new Date().toISOString().slice(0, 10) };
   }
   if (text && HOURS_WORDS.test(text)) {
-    const ai = await aiExtract(vet, text);
+    const ai = await aiExtract(vet, text, shared);
     if (ai) {
       if (!opening_hours && validHours(ai.opening_hours)) { opening_hours = ai.opening_hours.trim(); source = "ai"; }
       // "24/7" only with plain evidence in the text as well
@@ -367,6 +371,19 @@ function settle(r) {
   return r;
 }
 
+/**
+ * Which website to read for a vet: a hand-fixed one (vets/overrides.json), then OSM's
+ * own, then a branch's from the register. shared: it is a branch's site, which may
+ * show the hours of the other location, so only hours for this address count.
+ */
+function siteToScan(tags, e) {
+  const own = allValues(tags.website || tags["contact:website"] || tags.url)[0] || null;
+  if (e && e.siteFrom === "manual" && e.site) return { url: e.site, shared: false };
+  if (own) return { url: own, shared: false };
+  if (e && e.site) return { url: e.site, shared: String(e.siteFrom || "").startsWith("branch:") };
+  return { url: null, shared: false };
+}
+
 async function scanCountry(cc) {
   const vets = JSON.parse(fs.readFileSync(path.join(__dirname, ".cache", `osm-vets-${cc}.json`), "utf8"));
   const prevFile = path.join(DIST, "previous-hours.json");
@@ -379,9 +396,9 @@ async function scanCountry(cc) {
     const t = v.tags || {}, id = v.type.charAt(0) + v.id, e = register.get(id);
     if (t.opening_hours) continue;
     if (e && e.hoursFrom === "manual") continue;          // checked by hand: nothing to read
-    const raw = allValues(t.website || t["contact:website"] || t.url)[0] || (e && e.site);
-    if (!raw || !hostOf(raw)) continue;
-    todo.push({ id, vet: v, url: /^https?:\/\//i.test(raw) ? raw : "https://" + raw, host: hostOf(raw), previous: previousFor(e) || previous[id] });
+    const { url, shared } = siteToScan(t, e);
+    if (!url || !hostOf(url)) continue;
+    todo.push({ id, vet: v, url: /^https?:\/\//i.test(url) ? url : "https://" + url, host: hostOf(url), shared, previous: previousFor(e) || previous[id] });
   }
   console.log(`${cc.toUpperCase()}: ${vets.length} vets, ${todo.length} without opening hours but with a website`);
 
@@ -395,7 +412,7 @@ async function scanCountry(cc) {
     while (queue.length) {
       for (const item of queue.shift()) {
         let r;
-        try { r = await scanSite(item.vet, item.url, item.previous); }
+        try { r = await scanSite(item.vet, item.url, item.previous, item.shared); }
         catch (e) { r = { status: e.name === "AbortError" ? "timeout" : "error" }; }
         const key = r.status === "ok" || r.status === "unchanged" ? (r.source || "emergency only") : r.status;
         tally[key] = (tally[key] || 0) + 1;
@@ -435,7 +452,7 @@ function merge() {
   console.log(`hours.json: ${Object.keys(out.places).length} places from ${Object.keys(out.countries).join(", ") || "no countries"}`);
 }
 
-module.exports = { settle, validHours, structuredHours, fromSpecification, relevantText, pageText, allowedPath, hoursLinks };
+module.exports = { settle, validHours, structuredHours, fromSpecification, relevantText, pageText, allowedPath, hoursLinks, siteToScan };
 if (require.main === module) {
   const arg = (process.argv[2] || "").toLowerCase();
   if (arg === "merge") merge();

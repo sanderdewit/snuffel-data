@@ -115,6 +115,54 @@ test("website hours are added as separate fields", () => {
   assert.strictEqual(byId2.w2.tags.opening_hours, undefined);
 });
 
+// Third build: our register of vets (vets/<cc>.jsonl, tools/vets.js) for nl; be has none.
+fs.writeFileSync(path.join(tmp, "nl.geojsonseq"), [nl,
+  feat("node", 8, { type: "Point", coordinates: [4.95, 52.36] }, { amenity: "veterinary", name: "Kliniek C", website: "https://c.nl/", opening_hours: "Mo-Fr 08:00-18:00" }),
+  feat("node", 9, { type: "Point", coordinates: [4.96, 52.36] }, { amenity: "veterinary", name: "Kliniek D" })
+].join("\n"));
+execFileSync("node", [tool, "add", "nl", path.join(tmp, "nl.geojsonseq")], { env });
+fs.mkdirSync(path.join(tmp, "vets"));
+fs.writeFileSync(path.join(tmp, "vets", "nl.jsonl"), [
+  { id: "n1", name: "Dierenkliniek A", site: "https://a-branch.nl/", siteFrom: "branch:n20", hours: "Mo-Sa 08:00-18:00", hoursFrom: "ai", hoursChecked: "2026-11-03",
+    emergency: "on_call", emergencyPhone: "+31 20 2", emergencyChecked: "2026-11-03", since: "2026-11-03" },
+  { id: "n8", name: "Kliniek C", site: "https://c-fixed.nl/", siteFrom: "manual", hours: "Mo-Fr 09:00-17:00", hoursFrom: "manual", hoursChecked: "2026-11-01", since: "2026-11-03" },
+  { id: "n9", name: "Kliniek D", site: "https://d.nl/", siteFrom: "osm", hours: "Mo-Fr 09:00-17:00", hoursFrom: "ai", hoursChecked: "2026-11-03", since: "2026-10-03", gone: "2026-11-03" }
+].map((e) => JSON.stringify(e)).join("\n") + "\n");
+fs.writeFileSync(path.join(tmp, "hours.json"), JSON.stringify({ places: {
+  n1: { opening_hours: "Mo-Fr 08:00-18:00", emergency: null, emergency_phone: null, checked: "2026-10-11" },
+  w2: { opening_hours: "Mo-Fr 09:00-17:00", emergency: null, emergency_phone: null, checked: "2026-10-11" },
+  n7: { opening_hours: "Mo-Sa 09:00-18:00", emergency: null, emergency_phone: null, checked: "2026-10-11" }
+} }));
+const out3 = execFileSync("node", [tool, "assemble"], { env: Object.assign({}, env, { SNUFFEL_VETS: path.join(tmp, "vets") }), encoding: "utf8" });
+const m3 = JSON.parse(fs.readFileSync(path.join(tmp, "places", "manifest.json"), "utf8"));
+const all3 = [];
+for (const c of m3.cells) all3.push(...JSON.parse(fs.readFileSync(path.join(tmp, m3.path, c + ".json"), "utf8")));
+const byId3 = Object.fromEntries(all3.map((e) => [e.id, e]));
+test("register: a branch's website, website hours and emergency info as snuffel: fields", () => {
+  const t = byId3.n1.tags;
+  assert.strictEqual(t["snuffel:website"], "https://a-branch.nl/");
+  assert.strictEqual(t["snuffel:opening_hours"], "Mo-Sa 08:00-18:00");          // the register, not hours.json
+  assert.strictEqual(t["snuffel:emergency"], "on_call");
+  assert.strictEqual(t["snuffel:emergency_phone"], "+31 20 2");
+  assert.strictEqual(t["snuffel:checked"], "2026-11-03");
+  assert.strictEqual(t.website, undefined);
+  assert.match(out3, /opening hours from clinic websites: 2 places; websites from a branch or a hand fix: 1/);
+});
+test("register: OSM's own website and opening_hours win, also over a hand fix", () => {
+  const t = byId3.n8.tags;
+  assert.strictEqual(t.website, "https://c.nl/");
+  assert.strictEqual(t.opening_hours, "Mo-Fr 08:00-18:00");
+  assert.ok(!Object.keys(t).some((k) => k.startsWith("snuffel:")), JSON.stringify(t));
+});
+test("register: a vet marked gone adds nothing", () => {
+  assert.ok(!Object.keys(byId3.n9.tags).some((k) => k.startsWith("snuffel:")), JSON.stringify(byId3.n9.tags));
+});
+test("register: a country with a register no longer uses hours.json; one without still does", () => {
+  assert.strictEqual(byId3.w2.tags["snuffel:opening_hours"], undefined);
+  assert.strictEqual(byId3.n7.tags["snuffel:opening_hours"], "Mo-Sa 09:00-18:00");
+  assert.strictEqual(byId3.n7.tags["snuffel:checked"], "2026-10-11");
+});
+
 fs.rmSync(tmp, { recursive: true, force: true });
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);

@@ -10,7 +10,7 @@ Everything runs on GitHub Actions and writes static files to Azure Storage:
 
 | Workflow | When | Output |
 |---|---|---|
-| [`data`](.github/workflows/data.yml) | monthly (3rd), or manually | `places/manifest.json` + 0.25° cells, `chains.json` |
+| [`data`](.github/workflows/data.yml) | monthly (3rd), or manually | `places/manifest.json` + 0.25° cells, `chains.json`; commits the [vet register](#vet-register) |
 | [`tiles`](.github/workflows/tiles.yml) | quarterly, or manually | `tiles/snuffel.pmtiles` (Protomaps basemap) |
 | [`breeds`](.github/workflows/breeds.yml) | monthly (5th), or manually | a pull request when the breed list changed |
 | [`test`](.github/workflows/test.yml) | every push / PR | unit tests |
@@ -93,12 +93,61 @@ three pages of that site (robots.txt honoured) and takes:
 
 Every answer must pass a strict grammar check (only plain weekday/time rules)
 or it is dropped. Unchanged pages reuse last month's answer, so the AI only sees
-changes. The results are published as `hours.json` and added to the places as
+changes. The results are published as `hours.json`, kept in the
+[vet register](#vet-register), and added to the places as
 separate `snuffel:opening_hours` / `snuffel:emergency` fields: OpenStreetMap's own
 hours always win, and the site and app label these as "according to their own
 website". Nothing is written to OpenStreetMap automatically; each place links to
 the OSM editor so people can correct the source. Countries: the
-`HOURS_COUNTRIES` variable (default `nl`).
+`HOURS_COUNTRIES` variable (default `nl be`).
+
+## Vet register
+
+Only about a fifth of the vets in OpenStreetMap have a website there, and a site
+that can't be read one month used to lose the hours found the month before. So
+we keep our own register: [`vets/<cc>.jsonl`](vets/), one JSON line per vet in
+OpenStreetMap, sorted by OSM id, with its website and opening hours and where each
+came from (fields: the header of [`tools/vets.js`](tools/vets.js)). Countries: the
+`VETS_COUNTRIES` variable (default `nl be`).
+
+Sources, in order of trust:
+
+1. **a hand fix** in [`vets/overrides.json`](vets/overrides.json);
+2. **OpenStreetMap's own** `website` / `opening_hours`;
+3. **the clinic's own website**, read by `tools/scan-hours.js` (above);
+4. **a branch of the same practice**, for a vet without a website: the same phone
+   number, a shared distinctive name and within 40 km, and only when every such
+   branch has the same website (Mark Dierenarts in Utrecht gets the site of Mark
+   dierenarts in Vleuten; a group number with one page per clinic gives nothing).
+   On a branch's site only hours for the vet's own address count.
+
+Hours read from a website stay until a scan says otherwise, or until no scan has
+confirmed them for 180 days. A vet gone from OpenStreetMap is kept 90 days, and
+picked up again if it comes back under a new id within 150 m with the same name
+or phone number. The monthly data run updates the register before the website
+scan (`node tools/vets.js update <cc>`), takes in the scan's answers after it
+(`node tools/vets.js hours <cc>`) and, once the data is published, commits the
+changed files straight to `main` with a summary, so the history shows every
+change. The places get our values as separate `snuffel:website` /
+`snuffel:opening_hours` / `snuffel:emergency` fields; OpenStreetMap's own values
+are never hidden.
+
+**Hand fix:** add the vet under its OSM id to `vets/overrides.json`, with `site`
+and/or `hours` (plain OSM syntax), always a `note` (who checked what, and how) and,
+for hours, the date they were `checked`:
+
+```json
+"n123": { "hours": "Mo-Fr 08:00-18:00; Sa 09:00-12:00", "checked": "2026-11-21", "note": "phoned the clinic" }
+```
+
+`node tools/vets.js check` validates it; it takes effect at the next data run, and
+removing it makes the next run go back to the other sources. Where OpenStreetMap
+itself is wrong, please fix it there too. A country taken out of `VETS_COUNTRIES`
+should also lose its file: a register file that stays is still used.
+
+The register is derived from OpenStreetMap data and therefore available under the
+ODbL 1.0 (© OpenStreetMap contributors), plus facts the clinics publish themselves
+(their website and opening hours).
 
 ## Search groups for lost dogs
 
@@ -150,7 +199,9 @@ node tests/places.test.js && node tests/chains.test.js && node tests/scan.test.j
 node tools/build-chains.js                 # official lists -> dist/chains.json
 node tools/scan-websites.js nl             # needs tools/.cache/osm-vets-nl.json (from build-places add, or Overpass)
 node tools/evaluate-chains.js nl           # what is flagged, and by which signal
+node tools/vets.js update nl               # vet register vets/nl.jsonl from tools/.cache/osm-vets-nl.json
 node tools/scan-hours.js nl                # opening hours from clinic websites -> tools/hours-nl.json
+node tools/vets.js hours nl                # ... into the register; `node tools/vets.js check` validates it
 node tools/build-breeds.js --cache         # breed list -> breeds/breeds.json (downloads kept in tools/.cache/breeds)
 ```
 
@@ -175,6 +226,8 @@ forks, so secrets are not exposed.
 
 - Places and derived data: © OpenStreetMap contributors, available under the
   [Open Database License (ODbL) 1.0](https://www.openstreetmap.org/copyright).
+- Vet register (`vets/`): derived from OpenStreetMap (ODbL 1.0), plus websites and
+  opening hours published by the clinics themselves.
 - Basemap: [Protomaps](https://protomaps.com) (BSD 3-Clause / ODbL).
 - Country outlines: Natural Earth (public domain).
 - Breed names: Wikidata (CC0); breed numbers and groups: the FCI nomenclature (fci.be);

@@ -1,0 +1,4 @@
+{
+  "about": "Hand fixes for the vet register (vets/<cc>.jsonl, tools/vets.js), applied at the next data run. Key: the vet's OpenStreetMap id (n123, w456, r789). Value: \"site\" (the clinic's own website, http(s)) and/or \"hours\" (its regular opening hours in plain OpenStreetMap syntax, e.g. \"Mo-Fr 08:00-18:00; Sa 09:00-12:00\"), and always a \"note\": who checked what, and how (for example: phoned the clinic; the opening-hours page of its own website). Hours also need \"checked\": the date they were checked (YYYY-MM-DD). A hand fix wins over OpenStreetMap and the website scan in the register, and the scan skips a vet with hand-fixed hours; take an entry out and the next run goes back to the other sources. The published places never hide OpenStreetMap's own website or opening_hours, so where OSM has a wrong value, fix it in OpenStreetMap as well. `node tools/vets.js check` validates this file.",
+  "vets": {}
+}
