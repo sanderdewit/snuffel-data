@@ -89,7 +89,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p work
-          curl -fsSL --retry 5 --retry-delay 20 -o work/x.osm.pbf "https://download.geofabrik.de/${{ matrix.geofabrik }}-latest.osm.pbf"
+          curl -fsSL --retry 5 --retry-delay 30 --retry-all-errors -o work/x.osm.pbf "https://download.geofabrik.de/${{ matrix.geofabrik }}-latest.osm.pbf"
           ls -lh work/x.osm.pbf
           osmium tags-filter work/x.osm.pbf $(node tools/build-places.js filter) -o work/x.filtered.pbf --overwrite
           rm work/x.osm.pbf
