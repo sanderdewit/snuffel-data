@@ -23,7 +23,8 @@
  *       writes the manifest. Cells go into a dated folder so browsers can cache
  *       them for long; only the manifest is fetched fresh. Only the countries
  *       staged in this run are in the manifest. Vets get "snuffel:" fields from
- *       the register vets/<cc>.jsonl (else from dist/hours.json).
+ *       the register vets/<cc>.jsonl (else from dist/hours.json). Places that
+ *       OpenStreetMap lacks come from overture/<cc>.jsonl (tools/overture.js).
  * ========================================================================== */
 "use strict";
 const fs = require("fs");
@@ -31,6 +32,7 @@ const path = require("path");
 const readline = require("readline");
 const { classify, KEEP_TAGS, GROOMING_TAGS } = require("../lib/classify.js");
 const vetsRegister = require("./vets.js");
+const overture = require("./overture.js");
 
 // SNUFFEL_DIST lets tests build into a temporary folder.
 const DIST = process.env.SNUFFEL_DIST || path.join(__dirname, "..", "dist");
@@ -142,6 +144,23 @@ function assemble() {
     }
   }
 
+  // Places OpenStreetMap lacks, from Overture Maps (overture/<cc>.jsonl, tools/overture.js):
+  // only for countries in this build. The register was made against this run's OSM
+  // places, so it holds nothing OSM already has.
+  // (tests build into SNUFFEL_DIST and only use a register folder they name in SNUFFEL_OVERTURE)
+  const overtureDir = process.env.SNUFFEL_OVERTURE || (process.env.SNUFFEL_DIST ? "" : path.join(__dirname, "..", "overture"));
+  let fromOverture = 0;
+  if (overtureDir && fs.existsSync(overtureDir)) {
+    for (const cc of overture.countries(overtureDir)) {
+      if (!stagedCc.has(cc)) continue;
+      for (const e of overture.read(cc, overtureDir).values()) {
+        if (best.has(e.id)) continue;
+        best.set(e.id, { el: overture.placeOf(e), cc });
+        fromOverture++;
+      }
+    }
+  }
+
   // Websites and opening hours from our register of vets (vets/<cc>.jsonl, tools/vets.js):
   // a branch's website, hours and emergency info from the clinic's own site, hand fixes.
   // Countries without a register: the website scan's dist/hours.json. All as separate
@@ -196,12 +215,13 @@ function assemble() {
   const manifest = {
     version, generated: new Date().toISOString(), cell: CELL, path: `places/${version}/`,
     countries, places: seen.size, cells: [...cells.keys()].sort(),
-    licence: "Contains OpenStreetMap data © OpenStreetMap contributors, ODbL 1.0 (https://www.openstreetmap.org/copyright)"
+    licence: "Contains OpenStreetMap data © OpenStreetMap contributors, ODbL 1.0 (https://www.openstreetmap.org/copyright)" +
+      (fromOverture ? "; and Overture Maps Foundation data, CDLA-Permissive-2.0 (https://cdla.dev/permissive-2-0/)" : "")
   };
   fs.writeFileSync(path.join(PLACES, "manifest.json"), JSON.stringify(manifest));
   console.log(`assembled ${seen.size} places in ${cells.size} cells (${(bytes / 1e6).toFixed(1)} MB) -> dist/places/${version}/`);
   console.log(JSON.stringify(countries));
-  console.log(`opening hours from clinic websites: ${withWebHours} places; websites from a branch or a hand fix: ${withBranchSite}; hand-checked extra places: ${extras}`);
+  console.log(`opening hours from clinic websites: ${withWebHours} places; websites from a branch or a hand fix: ${withBranchSite}; hand-checked extra places: ${extras}; from Overture Maps: ${fromOverture}`);
 }
 
 module.exports = { OSMIUM_FILTER, centre };

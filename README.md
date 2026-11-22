@@ -22,6 +22,7 @@ extracts (filtered with `osmium`) and keeps every vet, animal hospital, pet shop
 groomer, boarding kennel, dog trainer, shelter, dog park and off-leash area, plus
 parks whose name marks them as a dog field (hondenweide, Hundewiese, caniparc,
 wybieg dla psów, psí louka). Classification rules: [`lib/classify.js`](lib/classify.js).
+Grooming salons OpenStreetMap lacks come from Overture Maps (below).
 
 ## Independent or chain-owned?
 
@@ -149,6 +150,53 @@ The register is derived from OpenStreetMap data and therefore available under th
 ODbL 1.0 (© OpenStreetMap contributors), plus facts the clinics publish themselves
 (their website and opening hours).
 
+## Places from Overture Maps
+
+OpenStreetMap has about 100 of the Netherlands' thousands of dog grooming salons.
+[Overture Maps](https://overturemaps.org) (open data from business registers and
+public business pages) has most of them, with closed and stale ones among them.
+[`overture/<cc>.jsonl`](overture/) lists the ones we publish, one JSON line per
+place (fields: the header of [`tools/overture.js`](tools/overture.js)). Countries:
+the `OVERTURE_COUNTRIES` variable (default `nl`); category: grooming salons.
+
+Each data run, `python3 tools/overture.py <cc>` reads the newest Overture release
+straight from its public files (DuckDB) and `node tools/overture.js update <cc>`
+decides, against that run's OpenStreetMap places:
+
+- **OpenStreetMap wins:** a candidate within 150 m of an OSM place with a name
+  word in common (or within 25 m) is left out, so nothing appears twice. Overture's
+  own duplicates (same name within 150 m) are merged, and closed places are skipped.
+- **With a website:** published when the home page answers and is about dogs or
+  grooming (robots.txt honoured, no AI), kept while a later run can't reach it for
+  up to 180 days after the last confirmation. Dead, parked or unrelated sites keep a
+  new place out.
+- **Without a website** (or one robots.txt keeps us out of): published when
+  Overture's own confidence is at least 0.77.
+
+Many salons are run from home: the checks above keep old registrations at private
+addresses out. The places get `snuffel:source` `overture` and the date of the last
+check in `snuffel:checked`. A place that is wrong is best fixed by adding it to
+OpenStreetMap: from the next run the OSM entry is used instead.
+
+Measured for the Netherlands in November 2026 (Overture 2026-11-18.0 against our
+published data); "usable" are places we don't have that pass the checks above:
+
+| Overture category | Overture | already ours | usable | ours (OSM) |
+|---|---|---|---|---|
+| grooming salons (taken) | 3,623 | 140 | ~2,050 | 98 |
+| dog trainers | 1,830 | 53 | ~1,270 | 54 |
+| pet shops | 3,153 | 663 | ~1,240 | 760 |
+| vets | 2,412 | 771 | ~1,230 | 709 |
+| shelters and rescues | 744 | 71 | ~330 | 112 |
+| boarding | 413 | 17 | ~250 | 83 |
+| animal hospitals | 116 | 32 | ~50 | 25 |
+| dog parks | 356 | 30 | ~50 | 2,011 |
+
+Vets and animal hospitals are not taken: people use them in emergencies, and
+Overture's extra vets include ambulant vets registered at home, farm and horse
+vets and moved practices. Missing vets go through the vet register and
+`tools/extra-places.json` instead, checked by hand.
+
 ## Search groups for lost dogs
 
 [`lost/groups.json`](lost/groups.json) lists local search groups (often Facebook groups)
@@ -228,6 +276,10 @@ forks, so secrets are not exposed.
   [Open Database License (ODbL) 1.0](https://www.openstreetmap.org/copyright).
 - Vet register (`vets/`): derived from OpenStreetMap (ODbL 1.0), plus websites and
   opening hours published by the clinics themselves.
+- Places from Overture Maps (`overture/`, and those places in the published data):
+  © Overture Maps Foundation, under the
+  [CDLA-Permissive-2.0](https://cdla.dev/permissive-2-0/); the few places Overture
+  has from Foursquare are under the Apache-2.0 licence.
 - Basemap: [Protomaps](https://protomaps.com) (BSD 3-Clause / ODbL).
 - Country outlines: Natural Earth (public domain).
 - Breed names: Wikidata (CC0); breed numbers and groups: the FCI nomenclature (fci.be);
