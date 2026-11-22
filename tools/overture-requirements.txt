@@ -1,0 +1,5 @@
+# DuckDB for tools/overture.py; the data workflow installs it with --require-hashes.
+# To update: take the version's manylinux x86_64 wheel on https://pypi.org/project/duckdb/#files
+# and copy its sha256. (DuckDB loads its signed httpfs extension from extensions.duckdb.org.)
+duckdb==2.0.1 \
+    --hash=sha256:39ffeb136abed770a496e5592a464f18a07b1543e7ddb1ff6453215e179f1647

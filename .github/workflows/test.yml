@@ -32,3 +32,5 @@ jobs:
           node tools/build-breeds.js check
           node tests/vets.test.js
           node tools/vets.js check
+          node tests/overture.test.js
+          node tools/overture.js check

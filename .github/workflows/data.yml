@@ -3,12 +3,13 @@
 #
 #   plan     -> which countries (all, or the ones given when started by hand)
 #   country  -> one parallel job per country: Geofabrik extract -> osmium ->
-#               tools/build-places.js add -> vet register (vets/<cc>.jsonl) ->
+#               tools/build-places.js add -> places from Overture Maps that OSM lacks
+#               (overture/<cc>.jsonl) -> vet register (vets/<cc>.jsonl) ->
 #               website scans -> opening hours into the register; results as artifacts
 #   official -> the chain groups' own clinic lists (parallel to the countries)
 #   publish  -> chains.json, the 0.25-degree cells and the
 #               manifest; uploaded cells first, manifest last; then the
-#               changed vets/*.jsonl are committed straight to main
+#               changed vets/*.jsonl and overture/*.jsonl are committed straight to main
 #
 # If any country fails, nothing is published (the live data stays as it was):
 # use "Re-run failed jobs" and publish continues with the finished ones.
@@ -97,6 +98,21 @@ jobs:
           node tools/build-places.js add "$CC" work/x.geojsonseq | tee -a $GITHUB_STEP_SUMMARY
           rm -rf work
 
+      # Places OpenStreetMap lacks, from Overture Maps (overture/<cc>.jsonl,
+      # tools/overture.js; grooming salons for now) for the countries in the
+      # OVERTURE_COUNTRIES variable (default: nl). The query reads Overture's public
+      # files directly (DuckDB, hash-pinned in tools/overture-requirements.txt); the
+      # website checks use no AI. If the query fails, the register stays as it was;
+      # without "scan" only published places are kept and new ones with a website wait.
+      - name: Places from Overture Maps
+        if: contains(format(' {0} ', vars.OVERTURE_COUNTRIES || 'nl'), format(' {0} ', matrix.cc))
+        run: |
+          set -o pipefail
+          python3 -m venv "$RUNNER_TEMP/overture"
+          "$RUNNER_TEMP/overture/bin/pip" install --quiet --require-hashes -r tools/overture-requirements.txt
+          "$RUNNER_TEMP/overture/bin/python" tools/overture.py "$CC" | tee -a "$GITHUB_STEP_SUMMARY"             || echo "::warning::Overture query for $CC failed - the register is kept"
+          node tools/overture.js update "$CC" $([ "$SCAN" = true ] || echo --no-sites) | tee -a "$GITHUB_STEP_SUMMARY" "tools/.cache/overture-$CC.txt"
+
       # Our register of vets (vets/<cc>.jsonl, tools/vets.js) for the countries in
       # the VETS_COUNTRIES variable (default: nl be), brought in line with this
       # run's OpenStreetMap vets and the hand fixes in vets/overrides.json. The
@@ -145,9 +161,11 @@ jobs:
             dist/stage/${{ matrix.cc }}.json
             tools/.cache/osm-vets-${{ matrix.cc }}.json
             tools/.cache/vets-${{ matrix.cc }}.txt
+            tools/.cache/overture-${{ matrix.cc }}.txt
             tools/scan-${{ matrix.cc }}.json
             tools/hours-${{ matrix.cc }}.json
             vets/${{ matrix.cc }}.jsonl
+            overture/${{ matrix.cc }}.jsonl
           if-no-files-found: warn
           retention-days: 14
           include-hidden-files: true
@@ -177,7 +195,7 @@ jobs:
     timeout-minutes: 60
     environment: publish        # main only; its OIDC identity may write the storage containers
     permissions:
-      contents: write           # commits the updated vet register (vets/*.jsonl) to main
+      contents: write           # commits the updated registers (vets/*.jsonl, overture/*.jsonl) to main
       id-token: write           # GitHub OIDC sign-in to Azure, no stored key
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -190,14 +208,15 @@ jobs:
           pattern: country-*
           merge-multiple: true
           path: incoming
-      # This run's results over the checkout: vets/<cc>.jsonl from the country jobs
-      # replaces the committed one, and that is what assemble reads and what is
-      # committed below. Countries not in this run keep the committed file.
+      # This run's results over the checkout: vets/<cc>.jsonl and overture/<cc>.jsonl
+      # from the country jobs replace the committed ones, and that is what assemble
+      # reads and what is committed below. Countries not in this run keep the committed file.
       - name: This run's country results
         run: |
           cp -a incoming/. .
           rm -rf incoming
           ls vets/*.jsonl 2>/dev/null | sed 's/^/vet register: /' || true
+          ls overture/*.jsonl 2>/dev/null | sed 's/^/overture register: /' || true
       - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           name: official-clinics
@@ -211,7 +230,9 @@ jobs:
           node tests/scan.test.js
           node tests/hours-scan.test.js
           node tests/vets.test.js
+          node tests/overture.test.js
           node tools/vets.js check
+          node tools/overture.js check
 
       - name: Build chain reference data
         env:
@@ -288,25 +309,26 @@ jobs:
               done
           echo "published places $VERSION" >> $GITHUB_STEP_SUMMARY
 
-      # Only after a successful publish: the register as published, straight to
-      # main (no pull request), so git shows every change month by month. A push
-      # made with this token starts no other workflow; the Tests step above has
-      # checked the register already.
-      - name: Commit the vet register
+      # Only after a successful publish: the registers as published (vets/,
+      # overture/), straight to main (no pull request), so git shows every change
+      # month by month. A push made with this token starts no other workflow; the
+      # Tests step above has checked the registers already.
+      - name: Commit the registers
         env:
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A -- vets
-          if git diff --cached --quiet; then echo "vet register unchanged" | tee -a "$GITHUB_STEP_SUMMARY"; exit 0; fi
+          git add -A -- vets overture
+          if git diff --cached --quiet; then echo "registers unchanged" | tee -a "$GITHUB_STEP_SUMMARY"; exit 0; fi
           {
-            echo "Vet register: monthly update $(date -u +%Y-%m-%d)"
+            echo "Registers: monthly update $(date -u +%Y-%m-%d)"
             echo
             node tools/vets.js summary
+            node tools/overture.js summary
             echo
-            cat tools/.cache/vets-*.txt 2>/dev/null || true
+            cat tools/.cache/vets-*.txt tools/.cache/overture-*.txt 2>/dev/null || true
             echo
             git diff --cached --stat | tail -n 1
             echo "Data run: $RUN_URL"
@@ -314,11 +336,11 @@ jobs:
           git commit -q -F "$RUNNER_TEMP/vets-message.txt"
           for attempt in 1 2 3; do
             if git push origin HEAD:main; then
-              { echo '### Vet register committed to main'; echo '```'; cat "$RUNNER_TEMP/vets-message.txt"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+              { echo '### Registers committed to main'; echo '```'; cat "$RUNNER_TEMP/vets-message.txt"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
               exit 0
             fi
             echo "push rejected (attempt $attempt): rebasing on main"
             git pull --rebase origin main
           done
-          echo "::error::the vet register could not be pushed to main"
+          echo "::error::the registers could not be pushed to main"
           exit 1

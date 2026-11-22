@@ -163,6 +163,32 @@ test("register: a country with a register no longer uses hours.json; one without
   assert.strictEqual(byId3.n7.tags["snuffel:checked"], "2026-10-11");
 });
 
+// Fourth build: places OpenStreetMap lacks, from Overture Maps (overture/<cc>.jsonl); de is not in the build.
+fs.mkdirSync(path.join(tmp, "overture"));
+fs.writeFileSync(path.join(tmp, "overture", "nl.jsonl"), JSON.stringify({ id: "o-0a1b2c3d4e5f", cat: "grooming", name: "Trimsalon Bello",
+  street: "Dorpsstraat 1", postcode: "1234 AB", city: "Utrecht", lat: 52.09, lon: 5.12, phone: "+31301234567", site: "https://bello.nl/",
+  conf: 0.95, src: ["meta"], siteOk: "2026-11-20", since: "2026-11-20" }) + "\n");
+fs.writeFileSync(path.join(tmp, "overture", "de.jsonl"), JSON.stringify({ id: "o-ffff0000aaaa", cat: "grooming", name: "Hundesalon",
+  lat: 52.5, lon: 13.4, conf: 0.9, since: "2026-11-20" }) + "\n");
+const out4 = execFileSync("node", [tool, "assemble"], { env: Object.assign({}, env, { SNUFFEL_OVERTURE: path.join(tmp, "overture") }), encoding: "utf8" });
+const m4 = JSON.parse(fs.readFileSync(path.join(tmp, "places", "manifest.json"), "utf8"));
+const all4 = [];
+for (const c of m4.cells) all4.push(...JSON.parse(fs.readFileSync(path.join(tmp, m4.path, c + ".json"), "utf8")));
+const byId4 = Object.fromEntries(all4.map((e) => [e.id, e]));
+test("overture: places for countries in the build, as grooming salons with their source", () => {
+  assert.ok(byId4["o-0a1b2c3d4e5f"] && !byId4["o-ffff0000aaaa"]);
+  const p = byId4["o-0a1b2c3d4e5f"];
+  assert.strictEqual(p.cc, "nl");
+  assert.deepStrictEqual(p.tags, { name: "Trimsalon Bello", shop: "pet_grooming", "addr:street": "Dorpsstraat 1", "addr:postcode": "1234 AB",
+    "addr:city": "Utrecht", phone: "+31301234567", website: "https://bello.nl/", "snuffel:source": "overture", "snuffel:checked": "2026-11-20" });
+  assert.match(out4, /from Overture Maps: 1/);
+});
+test("overture: the manifest names its licence too, only when something came from it", () => {
+  assert.match(m4.licence, /ODbL/);
+  assert.match(m4.licence, /Overture Maps Foundation data, CDLA-Permissive-2\.0/);
+  assert.doesNotMatch(m3.licence, /Overture/);
+});
+
 fs.rmSync(tmp, { recursive: true, force: true });
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);
