@@ -1,5 +1,5 @@
 {
-  "note": "Emergency clinics missing from (or outdated in) OpenStreetMap, checked by hand against the clinic's own website. Applied by tools/build-places.js assemble. Prefer fixing OSM itself; remove an entry here once OSM is right. New place: id/cc/lat/lon/tags (replaces: OSM ids with an outdated location). Patch: patch=<OSM id> plus tags.",
+  "note": "Vets missing from (or outdated in) OpenStreetMap, emergency clinics first, checked by hand against the clinic's own website. Applied by tools/build-places.js assemble. Prefer fixing OSM itself; remove an entry here once OSM is right. New place: id/cc/lat/lon/tags (replaces: OSM ids with an outdated location). Patch: patch=<OSM id> plus tags.",
   "places": [
     {
       "id": "x-nl-edz-nieuwegein",
@@ -105,6 +105,25 @@
         "website": "https://evidensiadierenziekenhuis.nl/dierenziekenhuizen/barendrecht/",
         "opening_hours": "24/7",
         "snuffel:emergency": "24/7"
+      }
+    },
+    {
+      "id": "x-nl-healthhoeve-swolgen",
+      "cc": "nl",
+      "lat": 51.50791,
+      "lon": 6.11208,
+      "source": "https://healthhoeve.nl/contact/",
+      "checked": "2026-11-22",
+      "tags": {
+        "amenity": "veterinary",
+        "name": "Healthhoeve Dierenkliniek",
+        "addr:street": "Gun",
+        "addr:housenumber": "26a",
+        "addr:postcode": "5866CC",
+        "addr:city": "Swolgen",
+        "phone": "+31 478 745 600",
+        "website": "https://healthhoeve.nl/",
+        "opening_hours": "Mo-Fr 08:30-17:00"
       }
     }
   ]
