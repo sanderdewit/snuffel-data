@@ -35,6 +35,17 @@ const cases = [
   [shop("Грумінг-салон Хвостик"), "grooming"],
   [shop("Zoo Shop Centrum"), "shop"],
   [{ shop: "pet_grooming", name: "Anything" }, "grooming"],
+  [shop("Trim- en dierenverzorgingssalon Van der Plaats"), "grooming"],
+  [shop("Dierenspeciaalzaak Patrimonium"), "shop"],           // "trim" inside a word is not a salon
+  [{ shop: "dog_trimming", name: "Trimstation Fiona" }, "grooming"],
+  [{ craft: "dog_grooming", name: "Anything" }, "grooming"],
+  // grooming salons mapped as hairdressers; human hairdressers stay out
+  [{ shop: "hairdresser", name: "Hondenkapsalon Nancy" }, "grooming"],
+  [{ shop: "hairdresser", name: "Trimsalon Kia Mena" }, "grooming"],
+  [{ shop: "hairdresser", name: "Hundesalon Struppi" }, "grooming"],
+  [{ shop: "hairdresser", name: "Beyond Male Grooming" }, null],
+  [{ shop: "hairdresser", name: "Barber Salon Trims & Shaves" }, null],
+  [{ shop: "hairdresser", name: "Kapsalon Patrimonium" }, null],
   // dog areas vs. ordinary parks
   [park("Area cani Parco Sempione"), "play"],
   [park("Parco Sempione"), null],

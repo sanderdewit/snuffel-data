@@ -29,7 +29,7 @@
 const fs = require("fs");
 const path = require("path");
 const readline = require("readline");
-const { classify, KEEP_TAGS } = require("../lib/classify.js");
+const { classify, KEEP_TAGS, GROOMING_TAGS } = require("../lib/classify.js");
 const vetsRegister = require("./vets.js");
 
 // SNUFFEL_DIST lets tests build into a temporary folder.
@@ -44,8 +44,9 @@ const CELL = 0.25;
 // "Hundewiese") can be found; classify() drops every park without such a name.
 const OSMIUM_FILTER = [
   "nwr/amenity=veterinary,animal_boarding,animal_shelter,animal_training",
-  "nwr/shop=pet,pet_grooming,pet_care",
-  "nwr/craft=pet_grooming",
+  // hairdresser: grooming salons mapped as one (classify() keeps only dog-grooming names)
+  "nwr/shop=pet,pet_care,hairdresser," + GROOMING_TAGS.join(","),
+  "nwr/craft=" + GROOMING_TAGS.join(","),
   "nwr/leisure=dog_park,park,common,recreation_ground",
   "nwr/dog=unleashed"
 ];
