@@ -12,8 +12,9 @@
  *   - With a website: published when the site answers and is about dogs or
  *     grooming (its home page, robots.txt honoured), and kept while a later run
  *     can't reach it for up to KEEP_DAYS after the last confirmation.
- *   - Without a website, or one robots.txt keeps us out of: published when
- *     Overture's own confidence is at least MIN_CONFIDENCE.
+ *   - Without a website of its own (none, a booking platform, social media or a
+ *     short link: pages we can't read) or one robots.txt keeps us out of: published
+ *     when Overture's own confidence is at least MIN_CONFIDENCE.
  *   - Gone from Overture, closed there, or now in OSM: removed.
  * Many salons are run from home: the checks above keep old registrations at
  * private addresses out, and nothing else about a place is stored.
@@ -78,8 +79,8 @@ function tidyStreet(s) {
 }
 // A salon only for cats ("Kattensalon", "The Catbarber"): not for a dog app. One that
 // also names dogs ("Trimsalon voor hond & kat") stays.
-const CAT_RE = /(^|[^a-z])(katten|kat(salon|trim|kapper|verzorg)|kat|poes|poezen|cats?|catbarber|catgroom\w*|katze|gatto|gato)([^a-z]|$)/;
-const DOG_NAME_RE = /hond|hund|dog|chien|cane|perro|pies|psi|koira|kutya/;
+const CAT_RE = /(^|[^a-z])(katten|kat(salon|trim|kapper|verzorg)|kat|poes|poezen|cats?|catbarber|catgroom\w*|katze|gatto|gato|kot|koty|kotow|koci|kocia|kocie|kotki|kotek)([^a-z]|$)/;
+const DOG_NAME_RE = /hond|hund|dog|chien|cane|perro|pies|psi|psow|psy|psa|kundel|szczen|koira|kutya/;
 function catOnly(name) {
   const n = foldName(name);
   return CAT_RE.test(n.replace(/(katten|kat)(salon|trim|kapper|verzorg|huis|kenner|bus)/g, "$1 $2")) && !DOG_NAME_RE.test(n);
@@ -144,6 +145,13 @@ async function robotsAllows(origin) {
     return true;
   } catch (e) { return true; }
 }
+// Booking platforms, social media and short links: pages rendered in the browser or behind
+// a login, so a live salon and a deleted one look the same (Poland: 175 Booksy pages).
+// A place with only such a link is judged on Overture's confidence; the link stays.
+const PLATFORM_RE = /(^|\.)(booksy\.com|instagram\.com|facebook\.com|fb\.com|fb\.me|tiktok\.com|twitter\.com|x\.com|youtube\.com|linktr\.ee|wa\.me|g\.co|goo\.gl|g\.page|share\.google|google\.[a-z.]+|business\.site)$/i;
+function platform(site) {
+  try { return PLATFORM_RE.test(new URL(/^https?:\/\//i.test(site) ? site : "http://" + site).hostname); } catch (e) { return false; }
+}
 /** "ok" | "off-topic" | "parked": what a home page's HTML says about a place of category `cat`. */
 function pageVerdict(html, cat) {
   const text = foldName(String(html).replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, " ").replace(/<[^>]+>/g, " "));
@@ -204,7 +212,8 @@ async function merge({ candidates, osm, prev, today, check }) {
     if (kept.some((k) => foldName(k.name) === foldName(c.name) && metres(k, c) < SAME_PLACE_M)) { log.duplicate++; continue; }
     kept.push(c);
   }
-  const sites = check ? await checkAll(kept.filter((c) => c.site).map((c) => ({ id: c.id, site: c.site, cat: c.cat })), check) : new Map();
+  const own = (c) => c.site && !platform(c.site);
+  const sites = check ? await checkAll(kept.filter(own).map((c) => ({ id: c.id, site: c.site, cat: c.cat })), check) : new Map();
 
   const entries = [];
   for (const c of kept) {
@@ -217,7 +226,7 @@ async function merge({ candidates, osm, prev, today, check }) {
     const confident = (c.conf || 0) >= MIN_CONFIDENCE;
     const recent = e.siteOk && days(today, e.siteOk) <= KEEP_DAYS;
     let keep = false;
-    if (!c.site) { keep = confident; if (keep) log.byConfidence++; else drop("no website, low confidence"); }
+    if (!own(c)) { keep = confident; if (keep) log.byConfidence++; else drop(c.site ? "platform page, low confidence" : "no website, low confidence"); }
     else if (!check) { keep = recent || (!!before && confident); if (!keep) drop("website not checked this run"); }
     else {
       const v = sites.get(c.id);
@@ -272,7 +281,7 @@ function checkFile(cc, dir) {
 }
 const countries = (dir) => (fs.existsSync(dir || DIR) ? fs.readdirSync(dir || DIR).filter((f) => /^[a-z]{2}\.jsonl$/.test(f)).map((f) => f.slice(0, 2)) : []);
 
-module.exports = { merge, placeOf, read, write, checkFile, countries, checkSite, pageVerdict, tidyCity, tidyStreet, catOnly, shareWord, MIN_CONFIDENCE, KEEP_DAYS };
+module.exports = { merge, placeOf, read, write, checkFile, countries, checkSite, pageVerdict, platform, tidyCity, tidyStreet, catOnly, shareWord, MIN_CONFIDENCE, KEEP_DAYS };
 
 if (require.main === module) {
   const [cmd, cc, flag] = process.argv.slice(2);

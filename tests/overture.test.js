@@ -35,6 +35,15 @@ test("without a website (or kept out by robots.txt): Overture's confidence decid
   const r = await run([cand("a1", { conf: MIN_CONFIDENCE }), cand("a2", { conf: 0.6 }), cand("a3", { site: "robots.nl", conf: 0.9 }), cand("a4", { site: "robots.nl", conf: 0.5 })]);
   assert.deepStrictEqual(ids(r), ["o-a1", "o-a3"]);
 });
+test("a booking, social or short-link page counts as no website: confidence decides, the link stays", async () => {
+  let asked = 0;
+  const r = await run([cand("a1", { site: "https://booksy.com/pl-pl/123_salon", conf: 0.9 }), cand("a2", { site: "instagram.com/salon", conf: 0.5 }),
+    cand("a3", { site: "https://g.page/salon", conf: 0.8 })], null, { check: async () => { asked++; return "error"; } });
+  assert.deepStrictEqual(ids(r), ["o-a1", "o-a3"]);
+  assert.strictEqual(asked, 0);                                   // never fetched
+  assert.strictEqual(r.entries[0].site, "https://booksy.com/pl-pl/123_salon");
+  assert.strictEqual(r.log.dropped["platform page, low confidence"], 1);
+});
 test("a website that fails is kept for 180 days after its last confirmation", async () => {
   const prev = new Map([["o-a1", { id: "o-a1", siteOk: "2026-07-01", since: "2026-06-01" }], ["o-a2", { id: "o-a2", siteOk: "2026-04-01", since: "2026-03-01" }]]);
   const r = await run([cand("a1", { site: "down.nl" }), cand("a2", { site: "down.nl" })], prev);
