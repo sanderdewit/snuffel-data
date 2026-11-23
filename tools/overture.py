@@ -28,10 +28,14 @@ import duckdb
 BUCKET = "https://overturemaps-us-west-2.s3.amazonaws.com"
 # Overture's category (taxonomy.primary) -> ours. Day care and boarding is spread over
 # several of Overture's categories: pet_boarding is taken as it is, the others only
-# with a boarding word in the name (tools/overture.js). The other categories were
-# measured (README, "Places from Overture Maps") but not taken yet.
-CATEGORIES = {"pet_groomer": "grooming", "pet_boarding": "boarding", "pet_sitting": "boarding",
-              "dog_walker": "boarding", "animal_or_pet_service": "boarding", "pet_care_service": "boarding"}
+# with a boarding word in the name (tools/overture.js), and so on per category there.
+# Vets, animal hospitals and dog parks are not taken (README, "Places from Overture Maps").
+CATEGORIES = {"pet_groomer": "grooming",
+              "pet_boarding": "boarding", "pet_sitting": "boarding", "dog_walker": "boarding",
+              "animal_or_pet_service": "boarding", "pet_care_service": "boarding",
+              "dog_trainer": "training", "pet_training": "training",
+              "animal_shelter": "shelter", "animal_rescue_service": "shelter", "pet_adoption": "shelter",
+              "pet_store": "shop"}
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 DIST = os.environ.get("SNUFFEL_DIST") or os.path.join(ROOT, "dist")
 CACHE = os.environ.get("SNUFFEL_CACHE") or os.path.join(ROOT, "tools", ".cache")
