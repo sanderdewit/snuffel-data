@@ -81,9 +81,62 @@ test("Overture's own duplicates: the same name within 150 m, the most confident 
   assert.deepStrictEqual(ids(r), ["o-b1"]);
   assert.strictEqual(r.log.duplicate, 1);
 });
-test("categories not taken yet are skipped", async () => {
-  const r = await run([cand("a1", { cat: "training", conf: 0.99 })]);
+test("categories not taken (vets, hospitals, dog parks) are skipped", async () => {
+  const r = await run([cand("a1", { cat: "vet", conf: 0.99 }), cand("a2", { cat: "hospital", conf: 0.99 }), cand("a3", { cat: "play", conf: 0.99 })]);
   assert.deepStrictEqual(ids(r), []);
+});
+test("trainers: no walkers, groomers, masseurs or breeders unless a training word says so; no cat or horse trainers", async () => {
+  const t = (id, name) => cand(id, { cat: "training", kind: "dog_trainer", name, conf: 0.9 });
+  const r = await run([t("a1", "Hondenschool Be Brave"), t("a2", "Hondenuitlaatservice Bessing"), t("a3", "Hondentrimsalon Cynthia"),
+    t("a4", "Boxerkennel Van 't Regge"), t("a5", "Uitlaatservice & Hondenschool Max"), t("a6", "Kattengedragstherapie Amsterdam"),
+    t("a7", "Szkolenie Psów DAR-MAK"), t("a8", "Psie trenowanie i spacery"), t("a9", "Horse & Dog of Course")]);
+  assert.deepStrictEqual(ids(r), ["o-a1", "o-a5", "o-a7", "o-a9"]);
+  assert.deepStrictEqual(r.log.dropped, { "not a trainer (by name)": 4, "other animals only": 1 });
+});
+test("shelters: a shelter word in the name, and only on a confirmed website", async () => {
+  const s = (id, name, extra) => cand(id, Object.assign({ cat: "shelter", kind: "animal_shelter", name, site: "ok.nl" }, extra));
+  const r = await run([s("a1", "Dierenasiel Utrecht"), s("a2", "Schronisko dla Bezdomnych Zwierząt w Rybniku"),
+    s("a3", "Centrum Opieki nad Zwierzętami Bezdomnymi"), s("a4", "Labrador Kennel Stars and Tails"), s("a5", "Hondentrimsalon Blaf"),
+    s("a6", "Stichting Labrador Herplaatsing"), s("a7", "Kattenasiel Witte Gerrit"), s("a8", "Wildopvang Delft"),
+    s("a9", "Dierenasiel Leiden", { site: undefined, conf: 0.99 }), s("a10", "Dierentehuis Hoorn", { site: "facebook.com/x", conf: 0.99 }),
+    s("a11", "Dierenasiel Crailo", { site: "robots.nl", conf: 0.99 }), s("a12", "Dierenopvang Breda", { site: "other.nl" })]);
+  assert.deepStrictEqual(ids(r), ["o-a1", "o-a2", "o-a3"]);
+  assert.deepStrictEqual(r.log.dropped, { "no shelter word in the name": 3, "other animals only": 2, "shelter without a website": 2,
+    "shelter, robots.txt": 1, "website off-topic": 1 });
+});
+test("shops: a shop word in the name or web address, or a chain; no webshops, no shops for fishing, aquaria or riding", async () => {
+  const s = (id, name, extra) => cand(id, Object.assign({ cat: "shop", kind: "pet_store", name, conf: 0.9 }, extra));
+  const r = await run([s("a1", "Dierenspeciaalzaak De Lange"), s("a2", "Sklep Zoologiczny Bajka"), s("a3", "Kwispel", { site: "ok.nl/" }),
+    s("a3b", "Kwispel", { site: "http://www.dierenwinkelkwispel.nl", lat: 53 }), s("a4", "Snuffelkussens"), s("a5", "Kauwpret.nl"),
+    s("a6", "Haps internetowy sklep zoologiczny"), s("a7", "Hengelsport Rotterdam"), s("a8", "Dieren & Hengelsport Nelis"),
+    s("a9", "Sklep Wędkarski Szczupak"), s("a10", "Engelhart Aquaria"), s("a11", "Sklep Zoologiczny Pan i Kot"), s("a12", "Kattenshop Purrfect"),
+    s("a13", "Sklep Zoologiczny multivet24.pl"), s("a14", "Bemelmans Ruitersport")], null, { check: async () => "ok" });
+  assert.deepStrictEqual(ids(r), ["o-a1", "o-a11", "o-a13", "o-a2", "o-a3b", "o-a8"]);
+  assert.deepStrictEqual(r.log.dropped, { "no shop word in the name or web address": 2, webshop: 2, "shop for other animals": 4, "other animals only": 1 });
+});
+test("chains: a brand OSM tags with brand:wikidata here (twice or more) is given to a shop with that brand in its name or address", async () => {
+  const { detect } = require("../lib/chains.js");
+  const osm = [{ lat: 51, lon: 4, tags: { shop: "pet", name: "Pets Place", brand: "Pets Place", "brand:wikidata": "Q116951772" } },
+    { lat: 51.1, lon: 4, tags: { shop: "pet", name: "Pets Place", brand: "Pets Place", "brand:wikidata": "Q116951772" } },
+    { lat: 51.2, lon: 4, tags: { shop: "pet", name: "Zoo Uno", brand: "Zoo Uno", "brand:wikidata": "Q1" } }];
+  const s = (id, name, extra) => cand(id, Object.assign({ cat: "shop", kind: "pet_store", name, conf: 0.9 }, extra));
+  const r = await run([s("a1", "Pet's Place Driebergen"), s("a2", "PetsPlace The Kingfish", { site: "https://www.petsplace.nl/" }),
+    s("a3", "Dierenspeciaalzaak Zoo Uno"), s("a4", "Pets Placement Dierenwinkel"),
+    s("a5", "Dierenwinkel Petsplaceshop", { site: "https://www.petsplaceshop.com/" }),
+    s("a6", "Royal Canin", { site: "http://www.petsplace.nl/" }), s("a7", "Jumper Dierenspeciaalzaak", { site: "http://www.petsplace.nl" })],
+  null, { osm, check: async () => "ok" });
+  const by = Object.fromEntries(r.entries.map((e) => [e.id, e.brand || null]));
+  assert.deepStrictEqual(by, { "o-a1": "Pets Place", "o-a2": "Pets Place", "o-a3": null, "o-a4": null, "o-a5": null, "o-a7": "Pets Place" });
+  assert.deepStrictEqual(r.log.dropped, { "a chain's website, another name": 1 });   // "Royal Canin" at petsplace.nl
+  const p = placeOf(r.entries.find((e) => e.id === "o-a1"));
+  assert.strictEqual(p.tags["brand:wikidata"], "Q116951772");
+  assert.deepStrictEqual(detect(p.tags, null, p.id), { group: "Pets Place", via: "osm" });
+});
+test("the published trainer, shelter and shop land in their categories", () => {
+  const { classify } = require("../lib/classify.js");
+  for (const cat of ["training", "shelter", "shop"]) {
+    assert.strictEqual(classify(placeOf({ id: "o-c1", cat, name: "X", lat: 52, lon: 5, since: TODAY }).tags), cat);
+  }
 });
 test("the website check: about dogs or grooming, in any language; short words only as whole words", () => {
   assert.strictEqual(pageVerdict("<h1>Trimsalon Bello</h1><p>Wij knippen en wassen uw hond.</p>", "grooming"), "ok");
@@ -152,6 +205,9 @@ test("the register round-trips sorted, and check finds problems", () => {
   assert.deepStrictEqual(checkFile("nl", dir), []);
   fs.writeFileSync(path.join(dir, "be.jsonl"), JSON.stringify({ id: "o-cccccccc", cat: "grooming", name: "C", lat: 50, lon: 4, conf: 0.3, since: TODAY }) + "\n");
   assert.match(checkFile("be", dir).join(), /neither a confirmed website nor enough confidence/);
+  fs.writeFileSync(path.join(dir, "pl.jsonl"), [{ id: "o-dddddddd", cat: "shelter", name: "D", lat: 50, lon: 20, conf: 0.99, since: TODAY },
+    { id: "o-eeeeeeee", cat: "shop", name: "E", lat: 50, lon: 20, conf: 0.99, brand: "Maxi Zoo", since: TODAY }].map((e) => JSON.stringify(e)).join("\n") + "\n");
+  assert.match(checkFile("pl", dir).join(), /a shelter needs a confirmed website.*brand needs a wikidata id/);
   fs.rmSync(dir, { recursive: true, force: true });
 });
 

@@ -101,7 +101,7 @@ jobs:
           rm -rf work
 
       # Places OpenStreetMap lacks, from Overture Maps (overture/<cc>.jsonl,
-      # tools/overture.js; grooming salons for now) for the countries in the
+      # tools/overture.js: groomers, boarding, trainers, shelters, pet shops) for the countries in the
       # OVERTURE_COUNTRIES variable (default: nl). The query reads Overture's public
       # files directly (DuckDB, hash-pinned in tools/overture-requirements.txt); the
       # website checks use no AI. If the query fails, the register stays as it was;
