@@ -3,9 +3,16 @@
  * Snuffel — places that OpenStreetMap lacks, from Overture Maps
  *
  * OpenStreetMap has about 100 of the Netherlands' thousands of dog grooming
- * salons. Overture Maps (open data: business registers and public pages,
- * CDLA-Permissive-2.0) has most of them, with closed and stale ones among them.
- * overture/<cc>.jsonl lists the ones we publish, after these checks:
+ * salons, and about 60 of its dog boarding kennels and day care places. Overture
+ * Maps (open data: business registers and public pages, CDLA-Permissive-2.0) has
+ * most of them, with closed and stale ones among them. overture/<cc>.jsonl lists
+ * the ones we publish, after these checks:
+ *
+ *   - For dogs: places for cats only, or for horses, rabbits or birds only
+ *     (by name), are left out. Boarding from Overture's categories other than
+ *     pet_boarding (pet sitting, dog walking, general pet services) only with a
+ *     boarding word in the name ("hondenopvang", "dierenpension", "hotel"), and
+ *     no rescues or shelters.
  *
  *   - OpenStreetMap wins: a candidate within 150 m of an OSM place with a name
  *     word in common (or within 25 m) is left out, so nothing appears twice.
@@ -34,7 +41,7 @@
 "use strict";
 const fs = require("fs");
 const path = require("path");
-const { foldName, GROOMING } = require("../lib/classify.js");
+const { foldName, GROOMING, otherAnimalsOnly } = require("../lib/classify.js");
 const { safeFetch, readCapped } = require("./safe-fetch.js");
 const { robotsBody } = require("./robots-match.js");
 
@@ -48,9 +55,9 @@ const SAME_PLACE_M = 150, SAME_SPOT_M = 25;
 const UA = "Mozilla/5.0 (compatible; SnuffelBot/1.0; dog-services directory, website check)";
 const CONCURRENCY = 6, TIMEOUT_MS = 15000, MAX_BYTES = 600000;
 const ORDER = ["id", "cat", "name", "street", "postcode", "city", "lat", "lon", "phone", "site", "conf", "src", "siteOk", "since"];
-const CATS = ["grooming"];
+const CATS = ["grooming", "boarding"];
 // The tags a published place gets, so the site and app put it in the right category.
-const CAT_TAGS = { grooming: { shop: "pet_grooming" } };
+const CAT_TAGS = { grooming: { shop: "pet_grooming" }, boarding: { amenity: "animal_boarding" } };
 
 // ---- helpers ---------------------------------------------------------------------
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
@@ -61,6 +68,8 @@ function metres(a, b) {
 }
 // Words that say what a place is, not which one it is: no evidence that two names match.
 const GENERIC = new Set(("trimsalon hondentrimsalon trimster hondenkapsalon hondensalon salon grooming groomer dog dogs pet pets " +
+  "pension hondenpension dierenpension opvang hondenopvang dagopvang hondendagopvang hotel hondenhotel dierenhotel daycare resort " +
+  "uitlaatservice hondenuitlaatservice oppas hondenoppas dierenoppas " +
   "hond honden hondjes dier dieren dierenspeciaalzaak dierenwinkel de het een van en voor bij the and").split(" "));
 function nameWords(s) {
   return new Set(foldName(s).split(/[^a-z0-9]+/).filter((w) => w.length >= 3 && !GENERIC.has(w)));
@@ -83,7 +92,19 @@ const CAT_RE = /(^|[^a-z])(katten|kat(salon|trim|kapper|verzorg)|kat|poes|poezen
 const DOG_NAME_RE = /hond|hund|dog|chien|cane|perro|pies|psi|psow|psy|psa|kundel|szczen|koira|kutya/;
 function catOnly(name) {
   const n = foldName(name);
-  return CAT_RE.test(n.replace(/(katten|kat)(salon|trim|kapper|verzorg|huis|kenner|bus)/g, "$1 $2")) && !DOG_NAME_RE.test(n);
+  return CAT_RE.test(n.replace(/(katten|kat)(salon|trim|kapper|verzorg|huis|kenner|bus|pension|hotel|opvang|oppas|boerderij)/g, "$1 $2")) && !DOG_NAME_RE.test(n);
+}
+// Boarding from Overture's broader categories (pet sitting, dog walking, pet services):
+// only with a word for day care or boarding in the name, and no rescue or shelter
+// ("Stichting Dierenopvang", "Egelopvang": not a place to board a dog). "Kennel" is
+// left out: in Dutch and Polish names it is mostly a breeder.
+const BOARDING_NAME_RE = /opvang|pension|boarding|pensjonat|hotel|swietlica|logeer|daycare|day care|dagverblijf|creche|resort|przedszkole|garderie|guarderia|pensione/;
+const RESCUE_RE = /stichting|foundation|fundacja|stowarzyszenie|ochrony zwierzat|asiel|schronisko|rescue|tierheim|tierschutz|refuge|adoptie|herplaatsing/;
+function boardingName(c) {
+  const n = foldName(c.name);
+  if (RESCUE_RE.test(n)) return "rescue or shelter";
+  if (c.kind && c.kind !== "pet_boarding" && !BOARDING_NAME_RE.test(n)) return "no boarding word in the name";
+  return null;
 }
 
 // ---- the register ----------------------------------------------------------------
@@ -121,7 +142,12 @@ const GROOM_RE = new RegExp([
   "(?:^|[^\\p{L}])(" + DOG_WHOLE.map(esc).join("|") + ")(?![\\p{L}])"
 ].join("|"), "u");
 const PARKED_RE = /domain(name)? (is )?for sale|buy this domain|this domain (name )?(is|has been) (registered|parked|for sale)|domein(naam)? (is )?te koop|parked (free )?(by|domain)|sedoparking|domain parking/i;
-const TOPIC = { grooming: GROOM_RE };
+// Boarding: the page talks about dogs (no grooming words: a cattery's page has "vacht").
+const DOG_RE = new RegExp([
+  "(?:^|[^\\p{L}])(" + DOG_PREFIX.filter((w) => !["trim", "groom", "toilett", "vacht"].includes(w)).map(esc).join("|") + ")",
+  "(?:^|[^\\p{L}])(" + DOG_WHOLE.map(esc).join("|") + ")(?![\\p{L}])"
+].join("|"), "u");
+const TOPIC = { grooming: GROOM_RE, boarding: DOG_RE };
 
 async function fetchText(url) {
   const ctrl = new AbortController();
@@ -208,6 +234,11 @@ async function merge({ candidates, osm, prev, today, check }) {
   for (const c of [...candidates].sort((a, b) => (b.conf || 0) - (a.conf || 0))) {
     if (!CATS.includes(c.cat)) continue;
     if (c.cat === "grooming" && catOnly(c.name)) { drop("cats only"); continue; }
+    if (c.cat === "boarding") {
+      if (otherAnimalsOnly(c.name)) { drop("other animals only"); continue; }
+      const why = boardingName(c);
+      if (why) { drop(why); continue; }
+    }
     if (inOsm(c)) { log.inOsm++; continue; }
     if (kept.some((k) => foldName(k.name) === foldName(c.name) && metres(k, c) < SAME_PLACE_M)) { log.duplicate++; continue; }
     kept.push(c);
@@ -281,9 +312,14 @@ function checkFile(cc, dir) {
 }
 const countries = (dir) => (fs.existsSync(dir || DIR) ? fs.readdirSync(dir || DIR).filter((f) => /^[a-z]{2}\.jsonl$/.test(f)).map((f) => f.slice(0, 2)) : []);
 
-module.exports = { merge, placeOf, read, write, checkFile, countries, checkSite, pageVerdict, platform, tidyCity, tidyStreet, catOnly, shareWord, MIN_CONFIDENCE, KEEP_DAYS };
+module.exports = { merge, placeOf, read, write, checkFile, countries, checkSite, pageVerdict, platform, tidyCity, tidyStreet, catOnly, boardingName, shareWord, MIN_CONFIDENCE, KEEP_DAYS };
 
 if (require.main === module) {
+  // Newer Node versions (26) let fetch speak HTTP/2, and undici then reports a server
+  // closing a stream as an unhandled 'error' event (UND_ERR_SOCKET), outside any
+  // request's promise: one website must not end the whole run. (The request itself
+  // fails or times out and counts as "error".)
+  process.on("uncaughtException", (e) => { if (e && e.code === "UND_ERR_SOCKET") return; throw e; });
   const [cmd, cc, flag] = process.argv.slice(2);
   (async () => {
     if (cmd === "update" && /^[a-z]{2}$/.test(cc || "")) {

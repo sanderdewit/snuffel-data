@@ -101,6 +101,33 @@ test("salons only for cats are left out; ones that also name dogs stay", async (
   assert.deepStrictEqual(ids(r), ["o-a3", "o-a4"]);
   assert.strictEqual(r.log.dropped["cats only"], 2);
 });
+test("boarding: places for other animals only are left out; ones that also take dogs stay", async () => {
+  const b = (id, name) => cand(id, { cat: "boarding", kind: "pet_boarding", name, conf: 0.9 });
+  const r = await run([b("a1", "Kattenpension Den Hoet"), b("a2", "Paardenpension De Lindehoef"), b("a3", "Honden- en kattenpension De Hoef"),
+    b("a4", "Dierenpension Vogelzang"), b("a5", "Konijnenhotel Sammy")]);
+  assert.deepStrictEqual(ids(r), ["o-a3", "o-a4"]);
+  assert.strictEqual(r.log.dropped["other animals only"], 3);
+});
+test("boarding from Overture's broader categories needs a boarding word in the name; no rescues", async () => {
+  const b = (id, kind, name) => cand(id, { cat: "boarding", kind, name, conf: 0.9 });
+  const r = await run([b("a1", "dog_walker", "Hondenuitlaatservice Bas"), b("a2", "dog_walker", "Hondenopvang Bas"),
+    b("a3", "pet_sitting", "Stichting Dierenopvang Dumpie"), b("a4", "pet_boarding", "Logeren bij Bella"),
+    b("a5", "animal_or_pet_service", "Kennel van Tilburgs Roem"), b("a6", "pet_sitting", "Daisy's Doggy Daycare")]);
+  assert.deepStrictEqual(ids(r), ["o-a2", "o-a4", "o-a6"]);
+  assert.deepStrictEqual(r.log.dropped, { "no boarding word in the name": 2, "rescue or shelter": 1 });
+});
+test("the boarding website check wants dogs; grooming words alone don't count", () => {
+  assert.strictEqual(pageVerdict("<p>Wij passen met liefde op uw hond.</p>", "boarding"), "ok");
+  assert.strictEqual(pageVerdict("<p>Hotel dla psów, spacery i opieka</p>", "boarding"), "ok");
+  assert.strictEqual(pageVerdict("<p>Wij verzorgen de vacht van uw kat tijdens zijn verblijf</p>", "boarding"), "off-topic");
+  assert.strictEqual(pageVerdict("<p>Wij verzorgen de vacht van uw kat</p>", "grooming"), "ok");
+});
+test("the published boarding place gets amenity=animal_boarding, so it lands under boarding", () => {
+  const { classify } = require("../lib/classify.js");
+  const p = placeOf({ id: "o-b1", cat: "boarding", name: "Hondenopvang Bas", lat: 52.2, lon: 6.5, since: TODAY });
+  assert.strictEqual(p.tags.amenity, "animal_boarding");
+  assert.strictEqual(classify(p.tags), "boarding");
+});
 test("streets in capitals are tidied, a comma before the number goes", () => {
   assert.strictEqual(tidyStreet("VAN SPEYKSTRAAT 67"), "Van Speykstraat 67");
   assert.strictEqual(tidyStreet("Zieuwentseweg, 4A"), "Zieuwentseweg 4A");
