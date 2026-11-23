@@ -22,7 +22,9 @@ extracts (filtered with `osmium`) and keeps every vet, animal hospital, pet shop
 groomer, boarding kennel, dog trainer, shelter, dog park and off-leash area, plus
 parks whose name marks them as a dog field (hondenweide, Hundewiese, caniparc,
 wybieg dla psów, psí louka). Classification rules: [`lib/classify.js`](lib/classify.js).
-Grooming salons OpenStreetMap lacks come from Overture Maps (below).
+Boarding only counts when it takes dogs: `animal_boarding=*` when mapped, otherwise
+the name (catteries, livery stables and rabbit hotels are left out). Grooming salons
+and boarding places OpenStreetMap lacks come from Overture Maps (below).
 
 ## Independent or chain-owned?
 
@@ -152,22 +154,29 @@ ODbL 1.0 (© OpenStreetMap contributors), plus facts the clinics publish themsel
 
 ## Places from Overture Maps
 
-OpenStreetMap has about 100 of the Netherlands' thousands of dog grooming salons.
+OpenStreetMap has about 100 of the Netherlands' thousands of dog grooming salons,
+and about 60 of its dog boarding kennels and day care places.
 [Overture Maps](https://overturemaps.org) (open data from business registers and
 public business pages) has most of them, with closed and stale ones among them.
 [`overture/<cc>.jsonl`](overture/) lists the ones we publish, one JSON line per
 place (fields: the header of [`tools/overture.js`](tools/overture.js)). Countries:
-the `OVERTURE_COUNTRIES` variable (default `nl`); category: grooming salons.
+the `OVERTURE_COUNTRIES` variable (default `nl`); categories: grooming salons, and
+boarding and day care.
 
 Each data run, `python3 tools/overture.py <cc>` reads the newest Overture release
 straight from its public files (DuckDB) and `node tools/overture.js update <cc>`
 decides, against that run's OpenStreetMap places:
 
+- **For dogs:** places for cats only, or for horses, rabbits or birds only (by
+  name), are left out. Boarding comes from Overture's `pet_boarding`, and from its
+  pet sitting, dog walking and pet service categories only with a boarding word in
+  the name (hondenopvang, dierenpension, hotel, daycare); rescues and shelters
+  (stichting, foundation, asiel) are left out.
 - **OpenStreetMap wins:** a candidate within 150 m of an OSM place with a name
   word in common (or within 25 m) is left out, so nothing appears twice. Overture's
   own duplicates (same name within 150 m) are merged, and closed places are skipped.
-- **With a website:** published when the home page answers and is about dogs or
-  grooming (robots.txt honoured, no AI), kept while a later run can't reach it for
+- **With a website:** published when the home page answers and is about dogs (or,
+  for a salon, grooming) (robots.txt honoured, no AI), kept while a later run can't reach it for
   up to 180 days after the last confirmation. Dead, parked or unrelated sites keep a
   new place out.
 - **Without a website** (or one robots.txt keeps us out of): published when
@@ -188,7 +197,7 @@ published data); "usable" are places we don't have that pass the checks above:
 | pet shops | 3,153 | 663 | ~1,240 | 760 |
 | vets | 2,412 | 771 | ~1,230 | 709 |
 | shelters and rescues | 744 | 71 | ~330 | 112 |
-| boarding | 413 | 17 | ~250 | 83 |
+| boarding (taken) | 413 | 17 | ~250 | 83 |
 | animal hospitals | 116 | 32 | ~50 | 25 |
 | dog parks | 356 | 30 | ~50 | 2,011 |
 

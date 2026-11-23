@@ -26,9 +26,12 @@ import urllib.request
 import duckdb
 
 BUCKET = "https://overturemaps-us-west-2.s3.amazonaws.com"
-# Overture's category (taxonomy.primary) -> ours. Only grooming for now: the other
-# categories were measured (README, "Places from Overture Maps") but not taken yet.
-CATEGORIES = {"pet_groomer": "grooming"}
+# Overture's category (taxonomy.primary) -> ours. Day care and boarding is spread over
+# several of Overture's categories: pet_boarding is taken as it is, the others only
+# with a boarding word in the name (tools/overture.js). The other categories were
+# measured (README, "Places from Overture Maps") but not taken yet.
+CATEGORIES = {"pet_groomer": "grooming", "pet_boarding": "boarding", "pet_sitting": "boarding",
+              "dog_walker": "boarding", "animal_or_pet_service": "boarding", "pet_care_service": "boarding"}
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 DIST = os.environ.get("SNUFFEL_DIST") or os.path.join(ROOT, "dist")
 CACHE = os.environ.get("SNUFFEL_CACHE") or os.path.join(ROOT, "tools", ".cache")
@@ -85,7 +88,7 @@ def main():
         for (oid, name, category, conf, sites, phones, street, postcode, city, lat, lon, datasets) in rows:
             cat = CATEGORIES[category]
             counts[cat] = counts.get(cat, 0) + 1
-            line = {"id": oid, "cat": cat, "name": name, "street": street, "postcode": postcode, "city": city,
+            line = {"id": oid, "cat": cat, "kind": category, "name": name, "street": street, "postcode": postcode, "city": city,
                     "lat": round(lat, 6), "lon": round(lon, 6), "phone": (phones or [None])[0],
                     "site": (sites or [None])[0], "conf": round(conf or 0, 3),
                     "src": sorted(d for d in (datasets or []) if d), "release": release}

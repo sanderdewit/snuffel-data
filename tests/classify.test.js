@@ -59,7 +59,24 @@ const cases = [
   [{ amenity: "pharmacy", name: "Farmacia 24h" }, null],
   [{ amenity: "hospital", name: "Ziekenhuis Rijnstate" }, null],
   [{ amenity: "animal_training", animal_training: "horse", name: "Reitschule" }, null],
-  [{ amenity: "animal_training", animal_training: "dog", name: "Hundeschule" }, "training"]
+  [{ amenity: "animal_training", animal_training: "dog", name: "Hundeschule" }, "training"],
+  // boarding: only places that take dogs (animal_boarding=* when mapped, else the name)
+  [{ amenity: "animal_boarding", name: "Hondenpension De Rimpelaar" }, "boarding"],
+  [{ amenity: "animal_boarding", name: "Dierenpension Vogelzang" }, "boarding"],        // a place name, not birds
+  [{ amenity: "animal_boarding", name: "Honden- en Kattenpension De Hoef" }, "boarding"],
+  [{ amenity: "animal_boarding", name: "Hotel dla psów i kotów" }, "boarding"],
+  [{ amenity: "animal_boarding", name: "Tierpension Schmidt" }, "boarding"],
+  [{ amenity: "animal_boarding" }, "boarding"],
+  [{ amenity: "animal_boarding", name: "Kattenpension Den Hoet" }, null],
+  [{ amenity: "animal_boarding", name: "Poezen Hotel Twente" }, null],
+  [{ amenity: "animal_boarding", name: "Dressuur- en Pensionstal De Cavalier" }, null],
+  [{ amenity: "animal_boarding", name: "Stal de Roover" }, null],
+  [{ amenity: "animal_boarding", name: "Konijnen- en Knaagdierenpension" }, null],
+  [{ amenity: "animal_boarding", name: "Katzenpension Miau" }, null],
+  [{ amenity: "animal_boarding", name: "Pferdepension Hof Lindenau" }, null],
+  [{ amenity: "animal_boarding", name: "Hotel dla kotów" }, null],
+  [{ amenity: "animal_boarding", animal_boarding: "horse", name: "Pension Benjie" }, null],
+  [{ amenity: "animal_boarding", animal_boarding: "cat;dog", name: "Kattenpension Mimi" }, "boarding"]
 ];
 
 let passed = 0, failed = 0;
