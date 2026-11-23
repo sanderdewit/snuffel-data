@@ -90,9 +90,15 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p work
-          # Geofabrik refuses connections for minutes when many jobs download at once
-          # (22 Nov 2026: six countries failed after 5 tries 30 s apart): up to 10 minutes.
-          curl -fsSL --retry 10 --retry-delay 60 --retry-all-errors -o work/x.osm.pbf "https://download.geofabrik.de/${{ matrix.geofabrik }}-latest.osm.pbf"
+          # Geofabrik refuses connections from some runners for a long time (22 Nov 2026:
+          # six countries after 5 tries 30 s apart; 23 Nov: five after 10 tries 60 s apart,
+          # two of them again on a re-run), and a download can stall (Poland: 90 minutes,
+          # then the runner was lost). So: a stalled download (under 100 kB/s for 3 minutes)
+          # is retried, up to about 30 minutes, and then the same extract from
+          # openstreetmap.fr where it has one (Denmark, Poland, ...; not every country).
+          get() { curl -fsSL --connect-timeout 30 --speed-limit 100000 --speed-time 180 "$@" -o work/x.osm.pbf; }
+          get --retry 20 --retry-delay 90 --retry-all-errors "https://download.geofabrik.de/${{ matrix.geofabrik }}-latest.osm.pbf" \
+            || { echo "::warning::Geofabrik failed for $CC - trying openstreetmap.fr"; get --retry 5 --retry-delay 60 "https://download.openstreetmap.fr/extracts/${{ matrix.geofabrik }}-latest.osm.pbf"; }
           ls -lh work/x.osm.pbf
           osmium tags-filter work/x.osm.pbf $(node tools/build-places.js filter) -o work/x.filtered.pbf --overwrite
           rm work/x.osm.pbf
