@@ -76,15 +76,32 @@ const phonesOf = (t) => [...new Set([t.phone, t["contact:phone"], t["contact:mob
 const siteKey = (u) => String(u || "").trim().toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").replace(/[/#?]+$/, "");
 const website = (t) => allValues(t.website || t["contact:website"] || t.url)[0] || null;
 
-// Words that say what a place is, not which practice it is (all languages in use).
-const GENERIC = new Set(("dierenarts dierenartsen dierenartspraktijk dierenartsenpraktijk dierenkliniek dierenklinieken " +
-  "dierenziekenhuis dierenartsencentrum dierenartsenpraktijken praktijk kliniek dieren dier centrum medisch " +
-  "veterinair veterinaire veterinaires veterinaria veterinario veterinari veterinary vet vets clinic clinique " +
-  "clinica hospital hopital ospedale animal animals animaux huisdieren practice surgery centre center group groupe " +
-  "tierarzt tierarztpraxis tierarztin tierklinik tierarzte praxis kleintierpraxis kleintiere cabinet " +
-  "and und the van het den der des dei del les une voor pour per dr drs dvm").split(" "));
+// Words that say what a place is, not which practice it is, in every language Snuffel
+// covers (written naturally, folded like names).
+const GENERIC = new Set([
+  "dierenarts dierenartsen dierenartspraktijk dierenartsenpraktijk dierenkliniek dierenklinieken dierenziekenhuis",
+  "dierenartsencentrum dierenartsenpraktijken praktijk kliniek dieren dier centrum medisch huisdieren",
+  "veterinair veterinaire veterinaires veterinaria veterinarie veterinario veterinari veterinary vet vets",
+  "clinic clinics clinique clinica clinicas hospital hopital ospedale animal animals animaux practice surgery",
+  "centre center centro group groupe gruppo grupo medical",
+  "tierarzt tierärzte tierarztpraxis tierärztin tierärztliche tierärztlicher tierklinik tierarztzentrum",
+  "fachtierarzt kleintierpraxis kleintierklinik kleintiere tierspital praxis cabinet",
+  "ambulatorio studio medico pequeños animales animali consultorio",
+  "dyrlæge dyrlæger dyrlægerne dyreklinik dyreklinikken dyrehospital dyrlege dyreklinikk dyresykehus",
+  "veterinär veterinærklinikk djurklinik djurklinikken djursjukhus smådjursklinik",
+  "eläinlääkäri eläinlääkäriasema eläinklinikka eläinsairaala dýralæknir dýraspítali",
+  "loomakliinik veterinaarkliinik loomaarst veterinārā klīnika veterinārārsts veterinarijos",
+  "przychodnia gabinet weterynaryjny weterynaryjna weterynaryjne lecznica klinika weterynarz zwierząt",
+  "veterinární ordinace veterina veterinárna ambulancia állatorvos állatorvosi rendelő",
+  "veterinar veterinară cabinetul",
+  "ветеринарна ветеринарен ветеринарний ветеринарная ветеринарска клиника клініка ветклініка ветклиника кабинет",
+  "veterinarska veterinarski veterinarske ambulanta stanica ordinacija bolnica",
+  "κτηνιατρείο κτηνίατρος κτηνιατρική κτηνιατρικό κλινική klinika veterinare",
+  "and und the van het den der des dei del les une voor pour per dr drs dvm mvdr"
+].join(" ").split(" ").map(foldName));
+// Words of a folded name in any script ("Ветеринарна клиника Зоовет": one distinctive word).
 function nameTokens(name) {
-  return foldName(name).split(/[^a-z0-9]+/).filter((t) => t.length >= 3 && !GENERIC.has(t));
+  return foldName(name).split(/[^\p{L}\p{N}]+/u).filter((t) => t.length >= 3 && !GENERIC.has(t));
 }
 /** A shared distinctive word ("Mark" in "Mark dierenarts" / "Mark Dierenarts"); names of only generic words must match whole. */
 function sameName(a, b) {
@@ -207,7 +224,8 @@ function linkBranches(reg) {
  * KEEP_DAYS expire. Hand-fixed and OSM hours are never touched here.
  */
 function takeHours(reg, scan, today) {
-  const tally = { updated: 0, confirmed: 0, kept: 0, expired: 0, emergency: 0 };
+  const { oneRulePerDay } = require("./scan-hours.js");
+  const tally = { updated: 0, confirmed: 0, kept: 0, expired: 0, ambiguous: 0, emergency: 0 };
   const places = (scan && scan.places) || {};
   for (const e of reg.values()) {
     const r = places[e.id];
@@ -215,6 +233,9 @@ function takeHours(reg, scan, today) {
     if (r && r.opening_hours && ours) {
       if (e.hours === r.opening_hours) tally.confirmed++; else tally.updated++;
       Object.assign(e, { hours: r.opening_hours, hoursFrom: r.source || "ai", hoursUrl: r.url || e.site, hoursHash: r.hash || undefined, hoursChecked: r.checked || today });
+    } else if (e.hoursFrom === "ai" && !oneRulePerDay(e.hours)) {
+      // an earlier answer with a day in two rules (tools/scan-hours.js oneRulePerDay): not kept
+      clear(e, WEB_HOURS); tally.ambiguous++;
     } else if (fromWebsite(e)) {
       if (!e.hoursChecked || days(today, e.hoursChecked) > KEEP_DAYS) { clear(e, WEB_HOURS); tally.expired++; }
       else tally.kept++;
