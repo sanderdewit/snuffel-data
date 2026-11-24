@@ -1,0 +1,255 @@
+{"id":"n10239646053","name":"Hälsinglands Smådjursklinik","lat":61.749517,"lon":17.116396,"since":"2026-11-24"}
+{"id":"n1043043598","name":"Blå Stjärnans Djursjukhus","street":"Gjutjärnsgatan 4","postcode":"417 07","city":"Göteborg","lat":57.719911,"lon":11.964331,"site":"https://www.blastjarnan.se/","siteFrom":"osm","hours":"Mo-Su 00:00-24:00","hoursFrom":"ai","hoursUrl":"https://www.blastjarnan.se/","hoursHash":"ad4c4555413180a3","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"031-65 35 35","emergencyChecked":"2026-11-24","hospital":true,"since":"2026-11-24"}
+{"id":"n10536567930","name":"Djurvårdscentralen Sexdrega","lat":57.584595,"lon":13.124735,"since":"2026-11-24"}
+{"id":"n10575448910","name":"Evidensia djurkliniken Nacka","street":"Planiavägen 11","postcode":"131 54","city":"Nacka","lat":59.304668,"lon":18.133532,"since":"2026-11-24"}
+{"id":"n10594893626","name":"Distriktsveterinärerna Södra Dalarna","lat":60.29362,"lon":15.984666,"phones":["101228630"],"site":"https://distriktsveterinarerna.se","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n10677019518","name":"AniCura Västra djursjukhuset","lat":57.64925,"lon":11.942927,"since":"2026-11-24"}
+{"id":"n10738188064","name":"AniCura","street":"Köpenhamnsvägen 44","city":"Malmö","lat":55.593636,"lon":12.970007,"since":"2026-11-24"}
+{"id":"n10756757720","name":"Veterinärkliniken i Djurås","street":"Centrumvägen 3","postcode":"785 61","city":"Djurås","lat":60.560402,"lon":15.130412,"phones":["241121220"],"site":"https://www.djuraskliniken.se","siteFrom":"osm","hours":"Mo-Fr 07:30-12:00, 13:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n10764749433","name":"AniCura Värmdö Djurklinik","lat":59.311687,"lon":18.385297,"phones":["857033375"],"site":"https://www.varmdodjurklinik.se/","siteFrom":"osm","hours":"Mo-Tu 08:00-21:00; Fr 08:00-17:00; Sa 10:00-17:00; Su 10:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n10837417944","name":"Smådjursveterinären Åmål-Säffle","lat":59.04479,"lon":12.700568,"since":"2026-11-24"}
+{"id":"n10857565460","name":"AniCura","lat":59.202641,"lon":17.662538,"since":"2026-11-24"}
+{"id":"n10880877404","name":"Erika Rask AB","lat":57.873348,"lon":11.978958,"since":"2026-11-24"}
+{"id":"n10931561875","name":"Evidensia","lat":57.871792,"lon":11.951181,"hours":"Mo-Fr 07:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1096391136","name":"Universitetsdjursjukhuset","street":"Ultunaallén 5","city":"Uppsala","lat":59.813916,"lon":17.65662,"since":"2026-11-24"}
+{"id":"n11074183799","name":"Vettris","street":"Trandögatan 26","postcode":"50433","city":"Borås","lat":57.710578,"lon":12.94487,"phones":["633120150","105508351"],"site":"https://www.vettris.se/boras/","siteFrom":"osm","hours":"Mo-Fr 08:00-12:00,13:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11090488113","name":"Solstadens smådjursklinik","lat":59.376428,"lon":13.446535,"phones":["654150620"],"site":"https://solstadenssmadjursklinik.se/","siteFrom":"osm","hours":"Mo-Th 07:30-20:00; Fr 07:30-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11102146531","name":"Jan Mattsson","lat":56.521915,"lon":14.820734,"since":"2026-11-24"}
+{"id":"n11138592088","name":"Lilleruds veterinärmottagning","lat":59.40399,"lon":13.266255,"phones":["722483394"],"site":"https://www.lillerud.se/veterinar/","siteFrom":"osm","hours":"Mo,Fr 08:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11154440774","name":"Kongahälla Djursjukvård","lat":57.864237,"lon":11.927285,"hours":"Mo-Fr 08:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11160209076","name":"Vettris","lat":58.772265,"lon":17.018728,"since":"2026-11-24"}
+{"id":"n11175142977","name":"Lindsdals Veterinärklinik","lat":56.739256,"lon":16.299884,"site":"https://lindsdalsvet.se/","siteFrom":"osm","hours":"Mo-Tu 08:10-16:00; Th-Fr 08:10-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11204920520","name":"Evidensia","street":"Ringugnsgatan 16","postcode":"216 16","city":"Limhamn","lat":55.573966,"lon":12.930621,"phones":["640496160"],"site":"https://evidensia.se/klinik/veterinarkliniken-limhamn/","siteFrom":"osm","hours":"Mo-Fr 08:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11232273790","name":"Gerd Wolter","lat":58.370706,"lon":11.91765,"phones":["706674870"],"since":"2026-11-24"}
+{"id":"n11486668920","name":"Djur doktorn i Årsta","lat":59.866463,"lon":17.684552,"phones":["618221100"],"hours":"Mo,We 09:00-19:00; Tu 09:00-17:00; Th 09:00-12:30,13:30-19:00; Fr 08:00-12:00,13:00-16:00; Sa-Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11925916546","name":"Vasastans veterinärklinik","lat":59.34725,"lon":18.057169,"phones":["812139139"],"site":"https://evidensia.se/klinik/vasastans-veterinarklinik/","siteFrom":"osm","hours":"Mo-Th 07:00-19:00; Fr 07:00-17:45; Sa-Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11989582361","name":"Rinkeby Djurklinik","lat":59.39207,"lon":17.92935,"since":"2026-11-24"}
+{"id":"n12009207207","name":"Kati’s Hundvård","lat":59.292287,"lon":17.962361,"since":"2026-11-24"}
+{"id":"n12014448318","name":"Blackebergs Veterinärpraktik","lat":59.344046,"lon":17.883683,"since":"2026-11-24"}
+{"id":"n12016638148","name":"Silk Dog Rehab","lat":59.266842,"lon":18.037666,"since":"2026-11-24"}
+{"id":"n12058941240","name":"Ekeröveterinären","lat":59.290032,"lon":17.811994,"since":"2026-11-24"}
+{"id":"n12090994423","name":"Lapplands Djurklinik","lat":65.594492,"lon":19.169817,"hours":"Mo-Fr 08:00-16:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12095139593","name":"Ekerö Djurklinik","lat":59.274665,"lon":17.845783,"since":"2026-11-24"}
+{"id":"n12106803148","lat":59.374231,"lon":16.466964,"hours":"Mo-Fr 08:00-12:00, 13:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1211144086","name":"Årstakliniken","street":"Lindetorpsvägen 17","lat":59.294342,"lon":18.067127,"since":"2026-11-24"}
+{"id":"n12125019296","lat":59.504061,"lon":13.318341,"since":"2026-11-24"}
+{"id":"n12151592219","name":"Lapplands Djurllinik","street":"Österleden 22B","lat":67.844555,"lon":20.249837,"phones":["698074400"],"site":"https://lapplandsdjurklinik.se/kliniken-i-kiruna/","siteFrom":"osm","hours":"Mo-Fr 08:00-16:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12154218164","name":"Bergslagens Djurklinik","street":"Kungsgatan 28","postcode":"71130","city":"Lindesberg","lat":59.592129,"lon":15.226339,"since":"2026-11-24"}
+{"id":"n12207807897","name":"PetVet","street":"Månskensgatan 50","lat":65.326485,"lon":21.452829,"phones":["911400000"],"site":"https://www.petvet.se","siteFrom":"osm","hours":"Mo-Th 08:00-20:00; Fr 08:00-17:00; Sa-Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12211339424","name":"Habo Smådjurspraktik","lat":57.907191,"lon":14.076093,"since":"2026-11-24"}
+{"id":"n12216112396","name":"Distriktsveterinärerna Överkalix","lat":66.326368,"lon":22.84238,"since":"2026-11-24"}
+{"id":"n12241729871","name":"Din Veterinär","lat":63.168957,"lon":17.262609,"since":"2026-11-24"}
+{"id":"n12258265030","name":"Veterinär Kathy Coppens","lat":66.087427,"lon":21.799621,"since":"2026-11-24"}
+{"id":"n12277284470","name":"Djurkliniken i Luleå","street":"Stengatan 47","postcode":"97252","city":"Luleå","lat":65.574511,"lon":22.097407,"site":"https://www.ewhdjurklinik.se","siteFrom":"osm","hours":"Mo-Fr 08:00-12:00,13:00-16:30","hoursFrom":"ai","hoursUrl":"https://www.ewhdjurklinik.se","hoursHash":"aa104abea2903f2a","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n12328878871","name":"Dyreklinikken Nordic Vet","lat":59.120803,"lon":11.310433,"phones":["769181869"],"site":"https://www.nordicvet.no/","siteFrom":"osm","hours":"Mo 08:00-19:30, Tu-Fr 08:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12606896101","name":"Husaby Hästakut Skara","street":"Gråbrödragatan 6","postcode":"53231","lat":58.389893,"lon":13.438789,"phones":["651127550"],"site":"https://www.husabyhastklinik.se/husaby-hastakut/","siteFrom":"osm","hours":"Mo-Su 00:00-24:00","hoursFrom":"ai","hoursUrl":"https://www.husabyhastklinik.se/husaby-hastakut/","hoursHash":"ecfe74c7f27aceb1","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"0511-27550","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n12647069801","name":"Veterinärkliniken i Kalmar AB","street":"Franska vägen 8","postcode":"393 56","lat":56.695451,"lon":16.324452,"since":"2026-11-24"}
+{"id":"n12697404336","name":"ReDog","street":"Tallmätargatan 1","postcode":"721 34","city":"Västerås","lat":59.612983,"lon":16.602679,"phones":["621412020"],"since":"2026-11-24"}
+{"id":"n12762274809","name":"Smådjurskliniken i Knivsta","lat":59.74281,"lon":17.811292,"since":"2026-11-24"}
+{"id":"n12898838497","name":"Björklinge Djurklinik","lat":60.030809,"lon":17.551461,"since":"2026-11-24"}
+{"id":"n12919043807","name":"Vesslarp Veterinärklinik","lat":56.552643,"lon":14.161044,"since":"2026-11-24"}
+{"id":"n13006728270","name":"Farsta djurklinik","lat":59.242087,"lon":18.108863,"since":"2026-11-24"}
+{"id":"n1307005495","name":"Djurkliniken Farsta centrum","street":"Munkforsplan 27","lat":59.242171,"lon":18.094024,"since":"2026-11-24"}
+{"id":"n13074804751","name":"R&S Veterinärpraktik","street":"Stenhammars Väg 8","postcode":"75649","city":"Uppsala","lat":59.811487,"lon":17.621526,"site":"https://rsvet.se/","siteFrom":"osm","emergency":"on_call","emergencyPhone":"076-083 68 90","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n13119251595","name":"Sollentuna Veterinärklinik","lat":59.445376,"lon":17.932421,"phones":["686231010"],"site":"https://sollvet.se","siteFrom":"osm","hours":"Mo 10:00-17:00; Tu 08:30-16:00; We 15:00-19:00; Th 08:30-16:00; Fr 08:30-14:00; Sa-Su closed","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13298264444","name":"AniMed","lat":59.361817,"lon":17.969532,"hours":"Mo-Fr 08:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13404341310","name":"AniMed Djurklinik","street":"Ängsstigen 1","lat":59.364966,"lon":17.976419,"site":"https://animed.se/","siteFrom":"osm","hours":"Mo-Fr 08:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13448576065","name":"Evidensia Djurkliniken Kållered","street":"Bangårdsvägen 39A","postcode":"428 36","city":"Kållered","lat":57.611441,"lon":12.047415,"phones":["317959070"],"site":"https://evidensia.se/klinik/evidensia-djurkliniken-kallered","siteFrom":"osm","hours":"Mo-Fr 07:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13480133343","name":"CoM Djurklinik","street":"Svanabäcksvägen 2","postcode":"26193","city":"Saxtorp","lat":55.828455,"lon":12.950575,"phones":["721800450"],"site":"https://comdjurklinik.se/","siteFrom":"osm","emergency":"on_call","emergencyPhone":"0721-800 450","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n13480226776","name":"Awake djursjukhus","street":"Västra Sandgatan 7","postcode":"25225","city":"Helsingborg","lat":56.032689,"lon":12.706497,"phones":["423114660"],"site":"https://www.awakedjursjukhus.se/helsingborg","siteFrom":"osm","hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13535286601","name":"Alla Tassars Veterinärklinik","lat":59.301787,"lon":18.013825,"since":"2026-11-24"}
+{"id":"n13584546426","name":"Din veterinär City","street":"Anders Personsgatan 14-16","lat":57.710304,"lon":11.994902,"phones":["631971460"],"site":"https://www.dinveterinargoteborg.se","siteFrom":"osm","hours":"Mo-Th 08:00-17:00; Fr 08:00-16:00; Sa-Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13611163205","name":"Dala DjurAkut","lat":60.48428,"lon":15.465581,"site":"https://daladjurakut.se","siteFrom":"osm","emergency":"on_call","emergencyPhone":"+46 70-317 23 80","emergencyChecked":"2026-11-24","hospital":true,"since":"2026-11-24"}
+{"id":"n13668265689","name":"AniCura Uppsala Djurklinik","street":"Libro Ringväg 6","postcode":"75228","lat":59.879448,"lon":17.583273,"phones":["618300660"],"site":"https://www.anicura.se/hitta-klinik/uppsala-djurklinik/","siteFrom":"osm","hours":"Mo-Fr 08:00-17:00; Sa-Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13676993316","name":"VR Hemveterinär","street":"Kungsgatan 91a","lat":59.852157,"lon":17.654806,"since":"2026-11-24"}
+{"id":"n13706069142","name":"Djurklinik","lat":61.755467,"lon":17.119399,"since":"2026-11-24"}
+{"id":"n13718124841","street":"Pellikantie 28","postcode":"95900","city":"Kolari","lat":67.327768,"lon":23.766458,"site":"https://www.kolari.fi/fi/asuminen-ja-ymparisto/ymparistoterveys/elainlaakaripalvelut","siteFrom":"osm","hours":"Mo-Fr 08:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13749076883","name":"Alunda veterinärstation","lat":60.065057,"lon":18.081561,"since":"2026-11-24"}
+{"id":"n13780872326","name":"Kungsängens Veterinärklinik","street":"Tibble Torg 3","postcode":"196 34","city":"Kungsängen","lat":59.484389,"lon":17.734123,"phones":["700954884"],"site":"https://kungsvet.se/","siteFrom":"osm","hours":"Mo-Th 08:00-15:00; Fr 08:00-12:00; Sa-Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13844097736","name":"Veterinärhuset Öresund","street":"Järnvägsgatan 47-49","postcode":"216 14","city":"Limhamn","lat":55.581262,"lon":12.931644,"phones":["640181600"],"site":"https://veterinarhus.se/","siteFrom":"osm","hours":"Mo-Fr 08:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13875617936","name":"Uddevalla Veterinärpraktik AB","lat":58.326579,"lon":11.917717,"phones":["652210066"],"site":"https://www.uddevalla-veterinar.com/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n13995287133","name":"Hund och kattkliniken","street":"Attorpsgatan 17B","postcode":"582 73","city":"Linköping","lat":58.428877,"lon":15.602961,"phones":["131908799"],"site":"https://hundochkattkliniken.se/","siteFrom":"osm","hours":"Mo-Fr 07:40-15:00","hoursFrom":"ai","hoursUrl":"https://hundochkattkliniken.se/","hoursHash":"bcf50b88e7c899bc","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n14027491601","name":"Lapplands Djurklinik","street":"Gammelstadsvägen 17","postcode":"97334","lat":65.593302,"lon":22.154565,"site":"https://lapplandsdjurklinik.se/","siteFrom":"osm","hours":"Mo-Fr 08:00-16:30","hoursFrom":"ai","hoursUrl":"https://lapplandsdjurklinik.se/","hoursHash":"14c5e66d21eb0687","hoursChecked":"2026-11-24","emergency":"on_call","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n14029179024","name":"Råda Bot","street":"Metallvägen 5","postcode":"43533","city":"Mölnlycke","lat":57.670129,"lon":12.097325,"phones":["317883600"],"site":"https://radabot.se/","siteFrom":"osm","hours":"Mo-Th 08:00-17:00; Fr 08:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n14038757701","name":"Djurkirurgen Limhamn","street":"Ringugnsgatan 10b","postcode":"216 16","lat":55.57376,"lon":12.932873,"site":"https://djurkirurgen.se/","siteFrom":"osm","hours":"Mo-Fr 08:00-16:00","hoursFrom":"ai","hoursUrl":"https://djurkirurgen.se/","hoursHash":"c4b51a43de011ff7","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n14067118100","name":"Villa Qrera Djurklinik","lat":58.24008,"lon":11.914177,"since":"2026-11-24"}
+{"id":"n14068096744","name":"Tyresö Djurklinik Evidensia","street":"Studiovägen 10","postcode":"13521","city":"Tyresö","lat":59.240051,"lon":18.215929,"hours":"Mo-Th 08:00-20:00; Fr 08:00-16:00; Sa 10:00-14:00; week 26-33 Mo-Fr 08:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n14078410659","name":"Knivsta Veterinärpraktik","street":"Apoteksvägen 15b","lat":59.726824,"lon":17.793263,"phones":["618388115"],"since":"2026-11-24"}
+{"id":"n14132733173","name":"Lilla veterinärintättningen","lat":58.385361,"lon":13.437979,"site":"https://www.lillavet.se/","siteFrom":"osm","hours":"Mo 08:00-15:00; Tu 08:00-17:00; We-Th 08:00-15:00; Fr 08:00-14:00","hoursFrom":"ai","hoursUrl":"https://www.lillavet.se/","hoursHash":"079c5f3ac930ad21","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n14163506389","name":"Uppsala Veterinärklinik","lat":59.849839,"lon":17.674863,"phones":["184182900"],"since":"2026-11-24"}
+{"id":"n14232968689","name":"Kungsgårdens Djurklinik","street":"Torgbacken 4","postcode":"81240","city":"Kungsgården","lat":60.60694,"lon":16.601982,"hours":"Mo 15:00-21:00,Tu 09:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n14304886068","name":"Veteriet","street":"Carlbecksvägen 1A","postcode":"54232","city":"Mariestad","lat":58.709772,"lon":13.841569,"phones":["501385770"],"site":"https://veteriet.se/","siteFrom":"osm","hours":"Mo-Fr 08:00-17:00","hoursFrom":"ai","hoursUrl":"https://veteriet.se/","hoursHash":"35be8c9299f14bb9","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n14339191331","name":"Sannegårdens Djurklinik","street":"Östra Eriksbergsgatan 12","postcode":"417 60","city":"Göteborg","lat":57.705878,"lon":11.919663,"phones":["631225052"],"site":"https://www.sannegardensdjurklinik.se","siteFrom":"osm","hours":"Mo-Fr 08:00-17:00","hoursFrom":"ai","hoursUrl":"https://www.sannegardensdjurklinik.se","hoursHash":"7a82dfe65faea4ba","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n14369379501","name":"Veterinärklinik Åredalen","lat":63.392441,"lon":12.920526,"phones":["704129901"],"site":"http://arevet.se","siteFrom":"osm","hours":"Mo-Fr 09:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1505589419","lat":57.023878,"lon":16.433859,"since":"2026-11-24"}
+{"id":"n1587419843","name":"Strängnäs Djurklinik","lat":59.381822,"lon":17.048151,"since":"2026-11-24"}
+{"id":"n1674407260","name":"Läckeby Djursjukhus","lat":56.784475,"lon":16.268266,"since":"2026-11-24"}
+{"id":"n1708239517","name":"Djurkliniken i Västerås AB","lat":59.614283,"lon":16.601648,"site":"https://evidensia.se/sv/djurkliniker/djurkliniken-vasteras","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n1714755121","name":"Alnö Veterinärmottagning","street":"Raholmsvägen 10","postcode":"865 31","city":"Alnö","lat":62.429176,"lon":17.415791,"since":"2026-11-24"}
+{"id":"n1715053824","name":"Motala Djurklinik","lat":58.537012,"lon":15.010862,"site":"https://www.motaladjurklinik.se/","siteFrom":"osm","hours":"Mo 08:00-17:00; Tu 08:00-19:00; We-Fr 08:00-17:00","hoursFrom":"ai","hoursUrl":"https://www.motaladjurklinik.se/","hoursHash":"6756012ed3fb8a43","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"0141-21 09 71","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n1779588333","name":"Djurklinik","lat":56.113781,"lon":13.08348,"since":"2026-11-24"}
+{"id":"n1780649215","lat":57.107707,"lon":12.258391,"since":"2026-11-24"}
+{"id":"n1800872719","name":"Min Veterinär","lat":58.34334,"lon":13.828759,"phones":["500434390"],"site":"http://www.minvet.se/","siteFrom":"osm","hours":"Mo-Th 07:30-12:30,13:00-17:00; Fr 07:30-12:30,13:00-16:00","hoursFrom":"ai","hoursUrl":"http://www.minvet.se/","hoursHash":"8fd760e92f22ce73","hoursChecked":"2026-11-24","emergency":"on_call","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n1821500029","name":"Specialistdjursjukhuset Häst","street":"Djursjukhusvägen 11","postcode":"734 94","city":"Strömsholm","lat":59.520235,"lon":16.248408,"phones":["622045200"],"site":"http://www.stromsholmdjursjukvard.se","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n1821500030","name":"Specialistdjursjukhuset Hund och Katt","street":"Djursjukhusvägen 11","postcode":"734 94","city":"Strömsholm","lat":59.520909,"lon":16.250158,"phones":["622045800"],"site":"http://www.stromsholmdjursjukvard.se","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n1836562892","lat":55.591245,"lon":13.10803,"since":"2026-11-24"}
+{"id":"n1882290243","name":"Djursjukhus","lat":57.161694,"lon":14.938937,"since":"2026-11-24"}
+{"id":"n1899048711","name":"Vettris Falun","lat":60.605351,"lon":15.663789,"phones":["462328801"],"since":"2026-11-24"}
+{"id":"n1931828352","name":"Hallands djursjukhus","lat":56.857037,"lon":12.679821,"since":"2026-11-24"}
+{"id":"n1992160568","name":"AniCura","lat":56.878359,"lon":16.6665,"site":"https://www.anicura.se/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n2004327957","name":"Östersunds Djursjukhus","street":"Inspektörsvägen 19","postcode":"83148","lat":63.175683,"lon":14.687621,"site":"https://www.ostersundsdjursjukhus.se/","siteFrom":"osm","hours":"24/7","hoursFrom":"structured","hoursUrl":"https://www.ostersundsdjursjukhus.se/","hoursHash":"b738ca02e297d78b","hoursChecked":"2026-11-24","emergency":"24/7","emergencyPhone":"063-13 40 00","emergencyChecked":"2026-11-24","hospital":true,"since":"2026-11-24"}
+{"id":"n2041553982","name":"Djurkliniken","lat":59.334956,"lon":14.548904,"since":"2026-11-24"}
+{"id":"n2063353853","name":"Ekens Djurklinik","lat":58.388839,"lon":13.865934,"since":"2026-11-24"}
+{"id":"n233798588","name":"Norra Djurkliniken","lat":60.677256,"lon":17.138559,"since":"2026-11-24"}
+{"id":"n2340563385","name":"Ronneby veterinärklinik","lat":56.211329,"lon":15.271413,"since":"2026-11-24"}
+{"id":"n2393086590","lat":59.152986,"lon":15.135706,"since":"2026-11-24"}
+{"id":"n2396136360","name":"Sollentuna Djurklinik","street":"Djupdalsvägen 23","postcode":"19251","city":"Sollentuna","lat":59.445509,"lon":17.951913,"phones":["468350035"],"site":"http://sollentunadjurklinik.se","siteFrom":"osm","hours":"Mo-Th 08:00-18:00; Fr 08:00-17:00; Sa-Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n2440102501","name":"Veterinären i Vallentuna","street":"Tellusvägen 25 B","city":"Vallentuna","lat":59.533881,"lon":18.084553,"site":"https://veterinarenivallentuna.se/","siteFrom":"osm","hours":"Mo 08:00-19:00; Tu-We 08:00-17:00; Th 08:00-19:00; Fr 08:00-15:00","hoursFrom":"ai","hoursUrl":"https://veterinarenivallentuna.se/","hoursHash":"5a59ccdd73b5313f","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"08-50530400","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n2488731356","name":"Evidensia Djursjukhuset Göteborg","street":"Ingeborgsgatan 6","postcode":"416 59","city":"Göteborg","lat":57.709818,"lon":12.005733,"phones":["631214040"],"site":"https://evidensia.se/djursjukhuset-goteborg","siteFrom":"osm","hours":"Mo-Fr 07:00-21:00; Sa-Su 09:00-21:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n2516712684","name":"Södra djursjukhuset","lat":59.26303,"lon":17.903723,"since":"2026-11-24"}
+{"id":"n2604800592","name":"Haninge djurklinik","lat":59.177231,"lon":18.131933,"hours":"Mo-Th 08:00-20:00; Fr 08:00-16:00; Sa,Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n2642731716","name":"Falköpings Veterinärklinik","street":"Bangatan 4A","postcode":"52143","city":"Falköping","lat":58.167804,"lon":13.545192,"since":"2026-11-24"}
+{"id":"n2681952403","name":"Bengt Rökens Veterinärmottagning","lat":58.584339,"lon":16.14236,"since":"2026-11-24"}
+{"id":"n2698725587","name":"Djurkliniken","street":"Värtavägen 23","postcode":"11553","city":"Stockholm","lat":59.341469,"lon":18.09633,"phones":["686610090"],"site":"https://www.smadjurskliniken-cb.se","siteFrom":"osm","hours":"Mo-We 09:00-15:00; Th closed; Fr 09:00-15:00; Sa-Su closed","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n2864474085","name":"Husdjurshälsan","lat":57.836648,"lon":12.299311,"since":"2026-11-24"}
+{"id":"n3037381813","name":"Distriksveterinärerna","lat":55.756065,"lon":13.360582,"since":"2026-11-24"}
+{"id":"n3170415614","name":"Dalbyveterinären","street":"Veberödsvägen 24","postcode":"24750","city":"Dalby","lat":55.662421,"lon":13.353406,"hours":"Mo-Th 08:00-17:00; Fr 08:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3201667557","name":"Veterinärerna Luleå","lat":65.583656,"lon":22.152083,"hours":"Mo-Fr 07:30-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3235053254","name":"Djurkliniken i Partille","street":"Gamla Kronvägen 10","postcode":"433 33","city":"Partille","lat":57.736278,"lon":12.094554,"phones":["631446842"],"site":"https://djurklinikenipartille.se/","siteFrom":"osm","hours":"Mo 08:00-15:00; Tu 08:00-16:00; We 12:00-21:00; Th 09:00-17:00; Fr 08:00-16:00","hoursFrom":"ai","hoursUrl":"https://djurklinikenipartille.se/","hoursHash":"5df743d39a5b351f","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n3414127385","lat":55.77139,"lon":13.483893,"since":"2026-11-24"}
+{"id":"n3659944325","name":"DinVet","lat":63.84759,"lon":20.317259,"site":"https://dinvetumea.se/","siteFrom":"osm","hours":"Mo-Fr 08:15-16:30","hoursFrom":"ai","hoursUrl":"https://dinvetumea.se/","hoursHash":"a26a13a4b15a2971","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n3693537014","name":"Veterinär","lat":55.632819,"lon":13.0712,"since":"2026-11-24"}
+{"id":"n3722167999","name":"Erik Mörne","street":"Tågarpsvägen 56","postcode":"261 76","city":"Asmundtorp","lat":55.893431,"lon":12.966503,"phones":["418432435"],"site":"http://www.morne.se/","siteFrom":"osm","hours":"08:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3748222769","name":"Dingleveterinärerna","street":"Trädgårdsgatan 9","postcode":"45561","city":"Dingle","lat":58.529489,"lon":11.57801,"phones":["652442000"],"site":"http://dingleveterinarerna.se/","siteFrom":"osm","hours":"Mo-Fr 08:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3798033617","name":"Distriktsveterinärerna Tibro","street":"Norra vägen 9","postcode":"54335","city":"Tibro","lat":58.429827,"lon":14.159225,"phones":["101229220"],"site":"https://distriktsveterinarerna.se/dv/veterinarmottagningar/kontakt-veterinarmottagningar/lan/vastra-gotalands-lan/tibro.html","siteFrom":"osm","hours":"Mo-Tu 08:00-16:00; We 08:00-10:00; Th 08:00-20:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3830054771","lat":57.171255,"lon":15.344422,"since":"2026-11-24"}
+{"id":"n3941977167","name":"Veterinär","lat":55.959271,"lon":13.578452,"since":"2026-11-24"}
+{"id":"n3956322362","name":"Distriktsveterinärerna","lat":63.86646,"lon":20.196985,"since":"2026-11-24"}
+{"id":"n4125680291","name":"Distriktsveterinärerna","street":"Importgatan 43","lat":58.591666,"lon":16.224105,"phones":["101229060"],"site":"https://distriktsveterinarerna.se/","siteFrom":"osm","hours":"Mo-Fr 08:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n415276633","name":"Awake djursjukhus","lat":59.315963,"lon":18.038177,"phones":["843733401"],"site":"https://www.awakedjursjukhus.se/stockholm","siteFrom":"osm","hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4265381929","name":"Lars Åslund Veterinärpraktik AB","lat":60.44005,"lon":15.461208,"since":"2026-11-24"}
+{"id":"n4304602789","lat":59.302253,"lon":14.073755,"since":"2026-11-24"}
+{"id":"n4339467797","name":"Djurdoktorn","lat":59.845101,"lon":17.616097,"phones":["618502878"],"since":"2026-11-24"}
+{"id":"n4348281800","name":"Hudiksvalls smådjursklinik","lat":61.293949,"lon":17.015035,"since":"2026-11-24"}
+{"id":"n452532781","name":"Blå stjärnan","lat":58.389262,"lon":13.438279,"since":"2026-11-24"}
+{"id":"n4687638941","name":"Stångebro Djurklinik","street":"Gamla Tanneforsvägen 90","postcode":"582 54","city":"Linköping","lat":58.411935,"lon":15.63442,"site":"https://stangebrodjurklinik.se/","siteFrom":"osm","hours":"Mo-Fr 09:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4767271062","name":"Huddinge Djurklinik","lat":59.26539,"lon":17.929724,"since":"2026-11-24"}
+{"id":"n4794748312","name":"Husdjurshälsan","street":"J A Wettergrens Gata 6","postcode":"42130","city":"Västra Frölunda","lat":57.666713,"lon":11.939995,"site":"https://www.husdjurshalsan.se/","siteFrom":"osm","hours":"Mo 07:30-20:00; Tu 07:30-18:00; We 07:30-20:00; Th-Fr 07:30-18:00","hoursFrom":"ai","hoursUrl":"https://www.husdjurshalsan.se/","hoursHash":"9914201e985bef33","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"031-21 40 40","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n4821043369","name":"ER Veterinär","lat":58.396398,"lon":15.660989,"hours":"Mo-Fr 08:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n492097758","name":"AniCura Djursjukhuset i Hässleholm","street":"Stjärnfallsvägen 9","postcode":"281 43","lat":56.169074,"lon":13.80478,"phones":["645184600"],"site":"https://www.anicura.se/hitta-klinik/skane/djursjukhuset-i-hassleholm/","siteFrom":"osm","hours":"Mo-Fr 08:00-21:00; Sa-Su 08:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4953407253","name":"Storegårds veterinärpraktik","lat":55.735924,"lon":13.106915,"since":"2026-11-24"}
+{"id":"n4955831073","name":"Evidensia Djurkliniken Frölunda","street":"Torgny Segerstedtsgatan 70","postcode":"426 69","city":"Västra Frölunda","lat":57.674528,"lon":11.884037,"site":"https://evidensia.se/klinik/evidensia-djurkliniken-frolunda/","siteFrom":"osm","hours":"Mo-Fr 08:00-17:00","hoursFrom":"structured","hoursUrl":"https://evidensia.se/klinik/evidensia-djurkliniken-frolunda/","hoursHash":"7a975640bbbd0005","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n5166046115","lat":59.458008,"lon":13.589275,"since":"2026-11-24"}
+{"id":"n5168549460","name":"Tassarnas djurklinik","street":"Djurgårdsgatan 43","postcode":"414 64","city":"Göteborg","lat":57.694838,"lon":11.934326,"hours":"Mo-Fr 07:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n5169959764","lat":59.732669,"lon":17.77831,"since":"2026-11-24"}
+{"id":"n5315210459","name":"Distriktsveterinärerna","lat":62.418574,"lon":13.509053,"since":"2026-11-24"}
+{"id":"n5546103886","lat":60.0509,"lon":18.595214,"since":"2026-11-24"}
+{"id":"n5725181346","name":"Sundsvalls Veterinärmottagning","lat":62.419143,"lon":17.335333,"phones":["660101616"],"since":"2026-11-24"}
+{"id":"n5834006444","name":"AniCura Bohusläns Djursjukhus","street":"Bastiongatan 26","postcode":"45150","city":"Uddevalla","lat":58.349058,"lon":11.918999,"site":"https://www.bosmab.se/","siteFrom":"osm","hours":"Mo-Fr 08:00-20:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n5913343992","name":"Veterinärhuset Södra Berget","lat":62.377377,"lon":17.307309,"site":"http://vhsb.se/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n5958108085","name":"Kusthöjdens djurklinik","street":"Sälstensgränd 119","lat":62.639822,"lon":17.961936,"phones":["661120000"],"site":"www.vmkh.se","siteFrom":"osm","hours":"Mo-Fr 08:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n5969177665","name":"Härnösands smådjursmottagning","street":"Storgatan 6","city":"Härnösand","lat":62.629643,"lon":17.933762,"phones":["765620620"],"site":"https://harnosand-vet.se/","siteFrom":"osm","hours":"Mo-Fr 08:00-17:00","hoursFrom":"ai","hoursUrl":"https://harnosand-vet.se/","hoursHash":"b81e23b334134a32","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"073-867 34 70","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n6180753402","name":"EMPET Halden dyreklinikk","lat":59.122297,"lon":11.390542,"site":"https://www.empet.no/dyreklinikker/halden","siteFrom":"osm","hours":"Mo-Th 09:00-18:00; Fr 09:00-16:00; Sa,Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n6297122486","name":"Hellströms Veterinärpraktik","street":"Börjegatan 56","postcode":"75229","city":"Uppsala","lat":59.865004,"lon":17.609604,"phones":["618550015"],"site":"https://www.hellstromsvet.se/","siteFrom":"osm","hours":"Mo 10:00-12:30,13:00-17:00; Tu 11:00-15:00,15:30-17:00; We 10:00-12:30,13:00-17:00; Th 11:00-15:00,15:30-17:00; Fr 10:00-12:30,13:00-16:00","hoursFrom":"ai","hoursUrl":"https://www.hellstromsvet.se/","hoursHash":"0fa672d8b0be8076","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n6387463580","name":"Varekils Djurklinik","lat":58.125355,"lon":11.710522,"since":"2026-11-24"}
+{"id":"n6419128778","name":"Distriktsveterinärerna Kiruna","street":"Värmeverksvägen 13","lat":67.839525,"lon":20.243475,"since":"2026-11-24"}
+{"id":"n650382290","name":"Euromedivet","street":"25","lat":65.842747,"lon":24.175907,"phones":["816445891"],"since":"2026-11-24"}
+{"id":"n6594633073","name":"Hagsätra Veterinärmottagning","street":"Glanshammarsgatan 37","postcode":"124 73","city":"Bandhagen","lat":59.263681,"lon":18.013197,"phones":["687493150"],"site":"https://hagsatravet.se/","siteFrom":"osm","hours":"Mo-Fr 08:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n6594853044","name":"Södermalms veterinärklinik","lat":59.313132,"lon":18.081869,"phones":["468333760"],"site":"https://sodervet.se/","siteFrom":"osm","hours":"Mo-Fr 08:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n6594853045","name":"Ahlbergs Veterinärpraktik","lat":59.312395,"lon":18.064036,"phones":["687200655"],"site":"https://ahlbergsvet.se/","siteFrom":"osm","hours":"Mo 10:00-19:00; Tu-Fr 10:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n6698016803","name":"VeterinärResurs","lat":56.282897,"lon":13.278227,"since":"2026-11-24"}
+{"id":"n6815637087","name":"Distriktsveterinärerna Karlskrona","lat":56.206296,"lon":15.655676,"site":"https://distriktsveterinarerna.se/karlskrona","siteFrom":"osm","hours":"Mo-Fr 08:00-17:00","hoursFrom":"ai","hoursUrl":"https://distriktsveterinarerna.se/karlskrona","hoursHash":"d1300f3a4265a165","hoursChecked":"2026-11-24","emergency":"on_call","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n683790736","name":"Distriktsveterinärerna","lat":58.649623,"lon":12.057741,"since":"2026-11-24"}
+{"id":"n6960155785","name":"Ejra Djurklinik","street":"Arenavägen 9","postcode":"831 32","city":"Östersund","lat":63.19052,"lon":14.647857,"phones":["663131500"],"site":"https://ejra.se/","siteFrom":"osm","hours":"Mo-Fr 08:00-17:00; week 25-28 off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n7262818169","name":"Krokeks Veterinärpraktik","lat":58.674933,"lon":16.364411,"since":"2026-11-24"}
+{"id":"n7490290042","name":"Evidensia","lat":55.645306,"lon":13.234311,"since":"2026-11-24"}
+{"id":"n763512937","name":"Cityveterinärerna","lat":55.698885,"lon":13.213046,"since":"2026-11-24"}
+{"id":"n7646454032","name":"AlfaVeta","lat":55.5399,"lon":13.095866,"since":"2026-11-24"}
+{"id":"n7687257278","name":"Björkstadens djurklinik","lat":63.822231,"lon":20.251484,"since":"2026-11-24"}
+{"id":"n7772254874","lat":65.720148,"lon":18.6921,"since":"2026-11-24"}
+{"id":"n7779372421","name":"Evidensia Ystad","lat":55.438581,"lon":13.835841,"since":"2026-11-24"}
+{"id":"n7807411386","name":"Djurkliniken Små Tassar","lat":56.743657,"lon":15.895578,"since":"2026-11-24"}
+{"id":"n8085814989","name":"AniCura Nättraby","lat":56.205061,"lon":15.5244,"since":"2026-11-24"}
+{"id":"n813228502","name":"Kullabygdens smådjursklinik","lat":56.152266,"lon":12.577185,"hours":"We 14:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n847258587","name":"AniCura Falu Djursjukhus","street":"Samuelsdalsvägen 2B","postcode":"791 61","city":"Falun","lat":60.587964,"lon":15.618505,"phones":["462364610"],"site":"https://www.anicura.se/hitta-klinik/dalarna/falu-djursjukhus/","siteFrom":"osm","hours":"Mo-Fr 07:30-20:00; Sa 08:00-20:00; Su 08:00-14:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n847296302","name":"Djurklinik Nälser","lat":60.472561,"lon":15.401935,"since":"2026-11-24"}
+{"id":"n847296304","name":"Djurhälsan i Dalarna","street":"Tunavägen 287","postcode":"781 73","city":"Borlänge","lat":60.444878,"lon":15.495759,"phones":["243227722"],"site":"www.djurhalsanidalarna.se","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n847298118","name":"Veterinär","street":"Glans väg 23","postcode":"781 68","city":"Borlänge","lat":60.531905,"lon":15.420007,"since":"2026-11-24"}
+{"id":"n8695356241","name":"Falköpings Smådjursklinik","lat":58.150742,"lon":13.562045,"phones":["651581020"],"site":"https://klinfal.com/","siteFrom":"osm","hours":"Mo-Tu 08:00-13:00,14:00-17:30; We 08:00-13:00,14:00-19:00; Th-Fr 08:00-13:00,14:00-17:30","hoursFrom":"ai","hoursUrl":"https://klinfal.com/","hoursHash":"f9088b3ef694806b","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"0515-810 20","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n870714568","lat":55.416101,"lon":12.949759,"since":"2026-11-24"}
+{"id":"n8740325664","name":"Gratian Djurklinik","lat":65.426873,"lon":16.217974,"phones":["695150055"],"site":"https://gratian-djurklinik.eu/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n876862994","lat":59.678061,"lon":17.701324,"since":"2026-11-24"}
+{"id":"n8806746209","name":"Sjöstadens Veterinärpraktik","lat":59.305295,"lon":18.106504,"phones":["686411730"],"site":"https://www.sjostadensvetpraktik.se/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n8815755614","name":"Zootopia Vet","street":"Lågskärsvägen 4","lat":59.284852,"lon":18.112881,"phones":["686592050"],"site":"https://www.zootopiavet.se/","siteFrom":"osm","hours":"Mo-Fr 10:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8910292119","name":"Hofors Veterinärpraktik","lat":60.541659,"lon":16.282634,"site":"https://hoforsvet.com/","siteFrom":"osm","hours":"Mo 08:00-12:00,13:00-17:00; Tu 09:00-11:30,13:00-17:00; We 08:00-11:30,13:00-17:00; Th 08:00-12:00,13:00-17:00; Fr 08:00-12:00,13:00-16:00","hoursFrom":"ai","hoursUrl":"https://hoforsvet.com/","hoursHash":"e7c98f22101dc949","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n8977916538","name":"Djursjukhuset Albano","street":"Rinkebyvägen 21A","postcode":"182 36","city":"Danderyd","lat":59.416894,"lon":18.040994,"phones":["850530400"],"site":"https://www.anicura.se/djursjukhuset-albano/","siteFrom":"osm","hours":"Mo-Fr 07:00-22:00; Sa,Su 10:00-22:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9032789326","name":"Kattens Veterinär","lat":55.790312,"lon":13.108341,"since":"2026-11-24"}
+{"id":"n9130405293","name":"AniCura","street":"Bonnorpsgatan 2","postcode":"582 73","city":"Linköping","lat":58.430797,"lon":15.600668,"phones":["613270897"],"site":"https://www.anicura.se/hitta-klinik/ostergotland/djurdoktorn-i-linkoping/","siteFrom":"osm","hours":"Mo-Fr 08:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9219732209","name":"AniCura Hund- och Kattkliniken i Bista","lat":59.266228,"lon":15.164452,"since":"2026-11-24"}
+{"id":"n9323147276","name":"Öresunds Veterinärklinik","lat":55.476451,"lon":13.016778,"site":"https://www.veterinarkliniken.se/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n9349358914","name":"Evidensia Djurkliniken Kristianstad","lat":56.02952,"lon":14.180762,"phones":["644247797"],"site":"https://evidensia.se/klinik/evidensia-djurkliniken-kristianstad/","siteFrom":"osm","hours":"Mo-Tu,Th 08:00-20:00; We,Fr 08:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9394846364","name":"AniCura Djursjukhuset","street":"Hjortronvägen 8","postcode":"55475","city":"Jönköping","lat":57.764071,"lon":14.086892,"phones":["636341880"],"site":"https://www.anicura.se/djursjukhuset-i-jonkoping/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n9713948090","name":"Stochholms Djurklinik","lat":59.333229,"lon":17.97952,"site":"https://stockholmsdjurklinik.se","siteFrom":"osm","hours":"Mo-We 08:00-21:00; Th,Fr 08:00-17:00","hoursFrom":"structured","hoursUrl":"https://stockholmsdjurklinik.se","hoursHash":"9cf005f0b726bcf0","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n9806792532","name":"Vettris","street":"Prologgatan 3","postcode":"703 70","city":"Örebro","lat":59.296215,"lon":15.197916,"site":"https://vetpris.se/kliniker/vettris-%C3%B6rebro","siteFrom":"osm","hours":"Mo-Fr 08:00-17:00; Sa-Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9847423243","name":"Tuve Djurklinik","street":"Gunnestorpsvägen 105","lat":57.749811,"lon":11.928611,"hours":"Mo-Fr 09:00-18:00; PH off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9881593796","name":"vettris","street":"Norra Backagatan 7A","postcode":"781 70","city":"Borlänge","lat":60.477296,"lon":15.417675,"hours":"Mo-Fr 08:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9904935621","name":"AniCura Veterinärhuset Ängelholm","street":"Kristianstadsgatan 1","postcode":"262 71","city":"Ängelholm","lat":56.253633,"lon":12.890806,"site":"https://www.anicura.se/hitta-klinik/skane/anicura-veterinarhuset-angelholm/","siteFrom":"osm","hours":"Mo-Fr 08:00-17:00","hoursFrom":"ai","hoursUrl":"https://www.anicura.se/hitta-klinik/skane/anicura-veterinarhuset-angelholm/","hoursHash":"5a7becfa98897f60","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n9911337997","name":"Sävedalens Veterinärklinik Evidensia","street":"Göteborgsvägen 74","postcode":"433 63","city":"Sävedalen","lat":57.732735,"lon":12.072381,"site":"https://evidensia.se/klinik/savedalens-veterinarklinik/","siteFrom":"osm","hours":"Mo-Fr 08:00-17:00","hoursFrom":"structured","hoursUrl":"https://evidensia.se/klinik/savedalens-veterinarklinik/","hoursHash":"9ee2bbae35ccd4bb","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"r18316822","name":"Blå Stjärnans Djursjukhus Göteborg","street":"Bergfotsgatan 1A","postcode":"431 37","city":"Mölndal","lat":57.668143,"lon":12.017584,"since":"2026-11-24"}
+{"id":"r19665306","name":"Evidensia Specialistdjursjukhuset Helsingborg","street":"Bergavägen 3","postcode":"254 66","city":"Helsingborg","lat":56.069699,"lon":12.716874,"phones":["642168000"],"site":"https://evidensia.se/klinik/evidensia-specialistdjursjukhuset-helsingborg/","siteFrom":"osm","hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w1004155945","name":"Lapplands Djurklinik Boden","lat":65.795945,"lon":21.724536,"since":"2026-11-24"}
+{"id":"w1014464754","name":"Evidensia Djurkliniken Sandviken","street":"Länsmansvägen 5","postcode":"81135","city":"Sandviken","lat":60.640231,"lon":16.792813,"phones":["626270152"],"site":"http://evidensia.se/klinik/evidensia-djurkliniken-sandviken/","siteFrom":"osm","hours":"Mo-Fr 08:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w102893123","name":"Evidensia Djursjukhuset Växjö","street":"Renvägen 2","postcode":"352 45","city":"Växjö","lat":56.906768,"lon":14.820585,"phones":["470719050"],"site":"https://evidensia.se/djursjukhuset-vaxjo","siteFrom":"osm","hours":"Mo-Fr 07:30-21:30; Sa-Su 10:00-21:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w1056781770","name":"Töre Djurklinik","street":"Backvägen 28","postcode":"952 43","city":"Töre","lat":65.911483,"lon":22.642984,"site":"https://www.toredjurklinik.se","siteFrom":"osm","hours":"Mo-Fr 07:30-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w1065496553","name":"Delsbo Veterinärpraktik","street":"Olnirsvägen 8","postcode":"82470","city":"Delsbo","lat":61.79962,"lon":16.570463,"phones":["653717971"],"site":"https://www.delsboveterinarpraktik.se/","siteFrom":"osm","hours":"Mo-We 07:30-12:00,13:00-17:00; Th 08:00-12:00,13:00-17:00","hoursFrom":"ai","hoursUrl":"https://www.delsboveterinarpraktik.se/","hoursHash":"fa2f9d3470e0f8ef","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"w1068160126","name":"Våxtorp Djurklinik AB","lat":56.498929,"lon":13.031089,"since":"2026-11-24"}
+{"id":"w1079502697","name":"Jennifers Veterinärtjänst AB","street":"12","postcode":"545 90","city":"Töreboda","lat":58.705273,"lon":14.080065,"site":"https://veterinartjanst.se/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"w1094459022","lat":65.805243,"lon":21.703682,"since":"2026-11-24"}
+{"id":"w112733223","name":"Evidensia","lat":55.694483,"lon":13.220782,"since":"2026-11-24"}
+{"id":"w1171540248","name":"Distriktveterinärerna Tierp","street":"Parkgatan 5","postcode":"815 40","city":"Tierp","lat":60.349441,"lon":17.508594,"hours":"Mo-Fr 08:30-16:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w122562857","name":"Evidensia Djurkliniken Mölndal","street":"Lantbruksgatan 6","lat":57.665705,"lon":11.989963,"phones":["631417100"],"site":"https://evidensia.se","siteFrom":"osm","emergency":"on_call","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"w1227797951","name":"Distriksvetrinärerna","lat":59.762889,"lon":16.927266,"since":"2026-11-24"}
+{"id":"w124840947","name":"Väsby djursjukhus","street":"Vilundavägen 30","postcode":"194 34","city":"Upplands Väsby","lat":59.514712,"lon":17.908446,"phones":["859030708"],"site":"http://www.vasbyvet.se/","siteFrom":"osm","hours":"Mo-Th 08:00-22:00; Fr 08:00-18:00; Sa-Su 10:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w125561946","name":"Skövde Djurklinik","street":"Bäckaskogsvägen 16","postcode":"54134","city":"Skövde","lat":58.384198,"lon":13.876727,"site":"https://skovdedjurklinik.se/","siteFrom":"osm","hours":"Mo-Th 07:30-20:00; Fr 07:30-17:00; Sa-Su 10:00-16:00","hoursFrom":"ai","hoursUrl":"https://skovdedjurklinik.se/","hoursHash":"52d8fda0f528f1ff","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"w1312106380","name":"Distriktsveterinärerna Östhammar","street":"Norra Hökhuvudsvägen 14","postcode":"747 95","city":"Gimo","lat":60.217745,"lon":18.200119,"since":"2026-11-24"}
+{"id":"w1335980832","name":"Vettris","lat":56.678387,"lon":12.807181,"since":"2026-11-24"}
+{"id":"w1347372994","lat":56.69266,"lon":12.921857,"since":"2026-11-24"}
+{"id":"w137259508","name":"Kronobäcks veterinärpraktik","lat":57.023763,"lon":16.433937,"since":"2026-11-24"}
+{"id":"w145989430","name":"Valla djursjukhus","street":"Westmansgatan 21","postcode":"58213","city":"Linköping","lat":58.403383,"lon":15.603803,"hours":"Mo-Fr 07:30-21:30; Sa-Su 09:00-19:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w1544019646","lat":60.160338,"lon":16.310181,"since":"2026-11-24"}
+{"id":"w163409849","name":"Karlskrona Djurklinik","street":"Carlandravägen 1","postcode":"37162","city":"Lyckeby","lat":56.203278,"lon":15.66266,"phones":["545523065"],"site":"https://www.karlskronadjurklinik.se/","siteFrom":"osm","hours":"Mo 08:00-17:00; Tu 08:00-21:00; We-Fr 08:00-17:00","hoursFrom":"ai","hoursUrl":"https://www.karlskronadjurklinik.se/","hoursHash":"c6e8bf12c8f01ef9","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"w170696944","lat":58.311071,"lon":14.905712,"since":"2026-11-24"}
+{"id":"w188220252","name":"Djursjukhuset i Bagarmossen","street":"Ljusnevägen 17","postcode":"128 48","city":"Bagarmossen","lat":59.277581,"lon":18.142362,"hours":"Mo-Su,PH 00:00-00:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w191453687","name":"Evidensia Djursjukhuset Malmö","street":"Cypressvägen 11","city":"Malmö","lat":55.570889,"lon":13.044954,"hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w216191955","name":"Mälaren Hästklinik","lat":59.003396,"lon":17.534141,"since":"2026-11-24"}
+{"id":"w217556595","name":"Hästkliniken Bergsåker","lat":62.418916,"lon":17.21797,"since":"2026-11-24"}
+{"id":"w238740585","name":"Blå stjärnan","lat":58.501637,"lon":13.124796,"since":"2026-11-24"}
+{"id":"w244133966","name":"Evidensia Hästsjukhuset Stav","street":"Stavsvägen 4","postcode":"13792","city":"Tungelsta","lat":59.093442,"lon":18.064616,"since":"2026-11-24"}
+{"id":"w267126080","name":"Västerort Djursjukhus","street":"Bromstensvägen 174","lat":59.379403,"lon":17.905429,"phones":["468362670"],"site":"http://www.vasterortdjursjukhus.se/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"w282878029","name":"Evidensia Djurkliniken","street":"Högåsvägen","lat":59.664627,"lon":12.596085,"site":"https://evidensia.se/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"w310497041","name":"Distriktsveterinärerna Vårgårda","street":"2","postcode":"44791","city":"Vårgårda","lat":58.019542,"lon":12.786186,"phones":["101229340"],"site":"http://www.distriktsveterinarerna.se/dv/veterinarmottagningar/kontakt-veterinarmottagning/lan/vastra-gotalands-lan/vargarda.html","siteFrom":"osm","hours":"09:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w311370087","name":"Ale Djurklinik","street":"Norra Kilandavägen 22","city":"Nödinge","lat":57.893179,"lon":12.06918,"since":"2026-11-24"}
+{"id":"w311370158","street":"22","lat":57.893733,"lon":12.068486,"since":"2026-11-24"}
+{"id":"w311370159","lat":57.893418,"lon":12.0691,"since":"2026-11-24"}
+{"id":"w313944803","name":"Din veterinär i Piteå","street":"80","lat":65.31898,"lon":21.474341,"since":"2026-11-24"}
+{"id":"w359861807","name":"Evidensia Djurkliniken Nyköping","lat":58.759679,"lon":17.006704,"since":"2026-11-24"}
+{"id":"w361483100","name":"Evidensia","lat":65.35045,"lon":21.394775,"since":"2026-11-24"}
+{"id":"w378370252","name":"Älmhults Veterinärklinik","lat":56.555933,"lon":14.14391,"since":"2026-11-24"}
+{"id":"w422593159","name":"Ljungby Smådjursklinik","street":"Ringvägen 9","postcode":"341 32","city":"Ljungby","lat":56.817601,"lon":13.905556,"since":"2026-11-24"}
+{"id":"w436559330","lat":58.376716,"lon":12.344233,"since":"2026-11-24"}
+{"id":"w467783350","name":"Djursjukhuset Karlstad","lat":59.411565,"lon":13.496329,"hours":"Mo-Fr 07:30-20:00; Sa 09:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w48977465","name":"AniCura Regiondjursjukhuset Bagarmossen","lat":59.277639,"lon":18.142166,"hours":"Mo-Su,PH 00:00-00:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w540244247","name":"Bålsta smådjursveterinärer","lat":59.558481,"lon":17.536171,"since":"2026-11-24"}
+{"id":"w556147799","lat":59.069518,"lon":16.583018,"since":"2026-11-24"}
+{"id":"w584261246","name":"Ulvsby Smådjursklinik","street":"Bengtsbol 608","postcode":"65593","city":"Karlstad","lat":59.472458,"lon":13.576585,"phones":["654866510"],"site":"http://www.ulvsbysmadjursklinik.com/","siteFrom":"osm","hours":"Mo 08:00-20:00; Tu-Fr 08:00-17:00; Th 08:00-20:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w643535915","street":"Drottninggatan 44","lat":56.168535,"lon":14.863766,"since":"2026-11-24"}
+{"id":"w747873112","lat":63.260638,"lon":14.603273,"since":"2026-11-24"}
+{"id":"w805173289","name":"Hammarö Smådjursklinik","street":"Nolgårdsvägen 39","postcode":"66341","city":"Hammarö","lat":59.341263,"lon":13.500482,"phones":["544540640"],"site":"https://hammarosmadjursklinik.se/","siteFrom":"osm","hours":"Mo-Th 08:00-17:00, Fr 08:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w817293935","lat":59.921441,"lon":16.877182,"since":"2026-11-24"}
+{"id":"w830931810","name":"Gävle Djurklinik","street":"Bomhusvägen 56","postcode":"80429","city":"Gävle","lat":60.671219,"lon":17.19964,"hours":"Mo-Fr 07:30-15:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w89955505","name":"Blå Stjärnan","lat":57.700871,"lon":12.923263,"since":"2026-11-24"}
+{"id":"w90469518","name":"AniCura Jägarvallens Djursjukhus","lat":58.401587,"lon":15.551306,"site":"https://www.anicura.se/jagarvallens-djursjukhus/","siteFrom":"osm","hours":"Mo-Fr 08:30-20:00, Sa-Su 09:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w90469530","name":"AniCura Jägarvallens Djursjukhus","lat":58.401505,"lon":15.551596,"site":"https://www.anicura.se/jagarvallens-djursjukhus/","siteFrom":"osm","hours":"Mo-Fr 08:30-20:00, Sa-Su 09:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w90469533","name":"AniCura Jägarvallens Djursjukhus","street":"Jägarvallsvägen 2","postcode":"584 22","city":"Linköping","lat":58.401331,"lon":15.551371,"site":"https://www.anicura.se/jagarvallens-djursjukhus/","siteFrom":"osm","hours":"Mo-Fr 08:30-20:00, Sa-Su 09:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w93536024","name":"Kalmar Djursjukhus","lat":56.664538,"lon":16.336753,"since":"2026-11-24"}
+{"id":"w97346101","name":"Djurkliniken Skånes Mitt Evidensia","lat":55.926296,"lon":13.547114,"since":"2026-11-24"}

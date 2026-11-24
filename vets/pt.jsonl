@@ -1,0 +1,626 @@
+{"id":"n10013451436","name":"Clínica veterinária de Veiros","lat":40.752486,"lon":-8.617285,"since":"2026-11-24"}
+{"id":"n10017774175","name":"Pet ways","street":"Avenida dos Estados Unidos da América 100","city":"Lisboa","lat":38.749696,"lon":-9.142432,"since":"2026-11-24"}
+{"id":"n10030603177","name":"Bichos e Companhia","lat":38.929609,"lon":-9.253567,"since":"2026-11-24"}
+{"id":"n10049021479","name":"Vet4U","street":"Avenida Rui Grácio 57B","lat":38.631338,"lon":-9.149672,"since":"2026-11-24"}
+{"id":"n10056748717","name":"Petz centro veterinario","street":"Rua de Nossa Senhora de Lurdes 140","postcode":"4465-214","lat":41.19071,"lon":-8.610647,"hours":"Mo-Sa 10:00-13:00, 15:00-20:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n10064255941","name":"Centro Veterinário de Amarante","street":"Rua do Lugar do Salto 39","city":"Amarante","lat":41.275112,"lon":-8.083196,"phones":["255432289"],"site":"https://centrovetamarante.pt","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n10065763828","name":"Centro Veterinário Alverca","street":"Rua da Indústria 5","postcode":"2615-094","city":"Alverca","lat":38.890882,"lon":-9.040955,"phones":["219572846"],"site":"https://centrovetalverca.com/","siteFrom":"osm","hours":"Mo-Fr 09:00-21:00; Sa 09:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n10155725917","name":"Hospital Veterinário de Loures","street":"Rua Pêro Vaz de Caminha","lat":38.816105,"lon":-9.155156,"phones":["219887202"],"site":"https://veterinario24h.pt/","siteFrom":"osm","hours":"Mo-Su,PH 00:00-00:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n10160884993","name":"Bicharada","street":"Rua Professor Doutor Elísio de Moura","lat":41.555104,"lon":-8.408023,"phones":["963849769"],"site":"https://www.facebook.com/veterinariobicharada/","siteFrom":"osm","hours":"Mo-Fr 10:00-13:00,15:00-20:00; Sa 10:00-13:00; Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n10223866778","name":"VetiFarma","lat":38.874919,"lon":-7.17194,"since":"2026-11-24"}
+{"id":"n10266002767","name":"Canis & Felis","lat":38.67582,"lon":-9.163279,"site":"https://www.canisefelis.pt","siteFrom":"osm","emergency":"on_call","emergencyPhone":"215 886 065","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n10268709336","name":"Clínica Veterinária de Sacavém","lat":38.793227,"lon":-9.107894,"phones":["219402046"],"since":"2026-11-24"}
+{"id":"n10270147590","name":"Sosvet Hospital Veterinário","lat":38.670977,"lon":-9.160963,"phones":["212723338"],"hours":"Mo-Sa 10:00-13:00,14:00-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n10308851209","name":"Clinica Veterineria da Albufeira","lat":37.101587,"lon":-8.254557,"since":"2026-11-24"}
+{"id":"n10313557593","name":"Clinica Veterinária Pedras Rubras","street":"Praça do Exercito Libertador","lat":41.241593,"lon":-8.664751,"site":"https://pedrasrubrascity.com/negocios/clinica-veterinaria-pedras-rubras.html","siteFrom":"osm","hours":"Mo-Fr 09:30-12:30,14:30-19:30; Sa 10:00-15:00","hoursFrom":"structured","hoursUrl":"https://pedrasrubrascity.com/negocios/clinica-veterinaria-pedras-rubras.html","hoursHash":"df041d0f8256b4a2","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"960 190 681","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n1052970509","name":"Clínica Veterinária de Amares","lat":41.625933,"lon":-8.364029,"since":"2026-11-24"}
+{"id":"n10617174791","name":"Aqui há gato & cãopanhia","street":"Rua Lourenço Chaves de Almeida","postcode":"3000-084","city":"Coimbra","lat":40.216271,"lon":-8.399735,"phones":["239095315","918799494"],"hours":"Mo, We, Fr 10:00-13:00, 15:00-19:00; Tu, Th 15:00-19:00; Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n10679027497","name":"Ani","lat":38.753331,"lon":-9.256262,"since":"2026-11-24"}
+{"id":"n10838047091","name":"Hospital Veterinário da Universidade de Évora","street":"Polo da Mitra, CM 1079","postcode":"7002-554","lat":38.531114,"lon":-8.014465,"since":"2026-11-24"}
+{"id":"n10879711097","name":"Centro Veterinario Povoa da Galega","street":"Av. de Portugal 64","postcode":"2665-357","city":"Milharado","lat":38.932317,"lon":-9.202435,"hours":"Mo-Fr 10:00-13:00,15:00-20:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n10894088080","name":"Centro Veterinário PetVitalis","lat":40.97807,"lon":-8.536325,"since":"2026-11-24"}
+{"id":"n10929455221","name":"Vetmedis","street":"Estrada João Gonçalves Zarco","city":"Caniço","lat":32.652381,"lon":-16.842259,"since":"2026-11-24"}
+{"id":"n11030254930","name":"Patas e Penas","lat":38.529983,"lon":-8.8927,"since":"2026-11-24"}
+{"id":"n11038151468","name":"Clinica Veterinária","lat":40.409137,"lon":-7.706328,"since":"2026-11-24"}
+{"id":"n11043071390","name":"Clínica Veterinária das Nogueiras","street":"Rua do Estádio 6","lat":40.203526,"lon":-8.409943,"phones":["239401902"],"site":"https://clinicavetnogueiras.pt","siteFrom":"osm","hours":"Mo-Fr 11:00-13:00,14:00-20:00; Sa 11:00-13:00,14:00-18:00; Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11043663514","name":"Vet R'In Area","lat":38.525136,"lon":-8.872358,"since":"2026-11-24"}
+{"id":"n11100261105","name":"Clínica Veterinária de Telheiras","street":"Rua Professor João de Castro Mendes 10A","postcode":"1600-638","lat":38.765574,"lon":-9.171825,"phones":["217574648"],"site":"https://clinicaveterinariatelheiras.com","siteFrom":"osm","hours":"Mo-Fr 10:00-20:00; Sa 10:00-19:00; Su 15:00-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11127261505","name":"Clínica BBVet","street":"Rua 26 de Janeiro 26","postcode":"2835-169","lat":38.657921,"lon":-9.045677,"phones":["211828818","965062656"],"site":"https://bbvet.pt","siteFrom":"osm","hours":"Mo-Fr 09:00-20:00; Sa 09:00-14:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11152254285","name":"C.R.O.A.C. Sesimbra","lat":38.489192,"lon":-9.122848,"site":"https://www.sesimbra.pt/croac","siteFrom":"osm","hours":"Mo-Fr 09:00-12:00,14:30-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11225889230","name":"Clínica Veterinária da Prelada","lat":41.177063,"lon":-8.628425,"hours":"Mo-Fr 10:00-13:00,14:00-20:00; Sa 10:00-13:00,15:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11234486748","name":"Royalvet","street":"Rua de Lisboa 295","postcode":"2925-561","city":"Azeitão","lat":38.537025,"lon":-9.024782,"phones":["212191411"],"site":"https://www.royalvet-veterinarios.pt/azeitao","siteFrom":"osm","hours":"Tu-Fr 10:00-13:00,15:00-19:00; Sa 09:00-15:00; Su,Mo off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11267212674","lat":37.125382,"lon":-8.520038,"since":"2026-11-24"}
+{"id":"n11270820236","name":"Cãofraria da Baixa","street":"Rua do Carmo 75","lat":40.211711,"lon":-8.431226,"phones":["926414340"],"site":"https://caofraria.com","siteFrom":"osm","hours":"Mo-Fr 10:00-13:00, 14:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11360225459","name":"Consultório Quinta do Mar - Veterinário","street":"Avenida da Beira Mar 1677","lat":41.122845,"lon":-8.666019,"since":"2026-11-24"}
+{"id":"n11363059650","name":"Vet Sagres","lat":37.008905,"lon":-8.943364,"phones":["282624362"],"site":"https://vetsagres.pt/","siteFrom":"osm","hours":"Mo-Fr 10:00-12:30,15:30-18:30; Sa 10:00-11:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11364384869","name":"Petluz","lat":38.752336,"lon":-9.172746,"phones":["914043721"],"since":"2026-11-24"}
+{"id":"n11385965459","name":"Patas&Pelos","street":"Avenida dos Negreiros 551","postcode":"2975-107","city":"Quinta do Conde","lat":38.552849,"lon":-9.040621,"since":"2026-11-24"}
+{"id":"n11386662540","name":"Clínica Veterinária Picôto","street":"Rua Estrada Nacional Nº 1 719","postcode":"4505-007","lat":41.015339,"lon":-8.55681,"phones":["227450319"],"site":"https://www.cvpicoto.pt/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n11406498582","name":"Hospital Veterinário de Santa Marinha","street":"Rua Dom Henrique de Cernache 163","postcode":"4400-625","city":"Vila Nova de Gaia","lat":41.122062,"lon":-8.62626,"phones":["223752375"],"site":"https://www.hospvetsantamarinha.com/","siteFrom":"osm","hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11407306853","name":"Vetmar","lat":41.186484,"lon":-8.693503,"since":"2026-11-24"}
+{"id":"n11482417105","name":"Espaço Gato","lat":32.641009,"lon":-16.947983,"phones":["291143068"],"since":"2026-11-24"}
+{"id":"n11497547922","name":"Vetmedis","lat":32.681886,"lon":-17.101496,"phones":["964896707"],"hours":"Mo-Fr 10:00-12:30,14:00-19:00; Sa 10:00-13:00; Su,PH off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11500425007","name":"Vetmedis","lat":32.678609,"lon":-17.060527,"phones":["964896707"],"hours":"Mo-Fr 10:00-12:30,14:00-19:00; Sa 10:00-13:00; Su,PH off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11653916642","name":"Vetalbu Centro Veterinario de Albufeira","street":"Arcadas de São João","postcode":"8200-260","city":"Albufeira","lat":37.094803,"lon":-8.22995,"phones":["289587724"],"site":"https://vetalbuclientes.wixsite.com/vetalbu","siteFrom":"osm","hours":"Mo-Fr 10:00-13:00,17:30-20:00; Sa 10:00-13:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11696860097","name":"Cr2al","street":"Rua Mário Moreira 11","city":"Odivelas","lat":38.791255,"lon":-9.193308,"phones":["210515216"],"site":"https://crral.pt/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n11704373158","name":"Marão Vet - Serviços Veterinários","street":"Rua Estrada Nacional 24","postcode":"5000-081","city":"Vila Real","lat":41.283391,"lon":-7.699981,"since":"2026-11-24"}
+{"id":"n11795775026","name":"Vet Planet","lat":38.583285,"lon":-8.891619,"since":"2026-11-24"}
+{"id":"n11849930100","name":"VetOlaias","lat":38.738079,"lon":-9.123608,"since":"2026-11-24"}
+{"id":"n11849945835","name":"Clinica Veterinária de Santa Maria Olivais","street":"Rua Cidade de Cabinda 12","postcode":"1800-080","city":"Lisboa","lat":38.768036,"lon":-9.111642,"phones":["218530416"],"hours":"Mo-Su 10:30-20:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11849945843","name":"Centro Médico Veterinário dos Olivai- CMVO","street":"Rua Cidade de Cabinda 8","postcode":"1800-080","city":"Lisboa","lat":38.767937,"lon":-9.1107,"phones":["218522054"],"hours":"Mo-Su 10:30-20:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11869615820","name":"Clínica Veterinária do Fundão","lat":40.140346,"lon":-7.499025,"since":"2026-11-24"}
+{"id":"n11876867064","name":"MyVetCare","lat":40.270364,"lon":-7.498938,"phones":["275333033"],"site":"www.myvetcare.pt","siteFrom":"osm","hours":"Mo-Fr 10:00-13:00,15:00-20:00; Sa 10:00-13:00,14:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11879644739","name":"Clínica Veterinária de Alvalade","street":"Avenida do Brasil 184","postcode":"1700-078","city":"Lisboa","lat":38.758781,"lon":-9.138433,"phones":["218487597"],"since":"2026-11-24"}
+{"id":"n11881545855","name":"Clínica Veterinária João XXI","street":"Avenida João XXI","postcode":"1000-302","city":"Areeiro","lat":38.742591,"lon":-9.137053,"site":"https://clinicaveterinaria.com.pt/","siteFrom":"osm","hours":"Mo-Sa 08:30-20:30 ; Su 10:00-14:00 ,15:00-20:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11883502312","name":"Clínica Veterinária Infante Santo","street":"Avenida Infante Santo 17B","postcode":"1350-177","city":"Lisboa","lat":38.706495,"lon":-9.167886,"phones":["213901017"],"hours":"Mo-Fr 10:00-13:00,15:00-19:00; Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11897453326","name":"VETCARNIDE, Lda","street":"Rua Neves Costa 38","postcode":"1600-537","city":"Carnide","lat":38.760139,"lon":-9.188848,"hours":"Mo-Sa 10:30-20:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11897565464","lat":40.028652,"lon":-8.394172,"since":"2026-11-24"}
+{"id":"n11898720641","name":"miauau au","lat":38.757168,"lon":-9.09543,"hours":"Mo-Fr 11:00-13:00,15:00-19:00; Sa 11:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11905168129","name":"Clínica Veterinária de Santo André","lat":38.643884,"lon":-9.057814,"since":"2026-11-24"}
+{"id":"n11960970569","name":"Centro Veterinário de Tomar","lat":39.605558,"lon":-8.408518,"phones":["918508512"],"since":"2026-11-24"}
+{"id":"n11964807829","name":"Serviços Veterinários SAND","lat":38.681723,"lon":-9.157114,"site":"https://www.sandveterinario.pt","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n12030047059","name":"Veterinário Santiago Saguér","lat":38.465577,"lon":-9.099134,"phones":["212686975"],"hours":"Mo-Sa 10:00-13:00,15:00-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12048663633","name":"Clinica Veterinária Costa Azul","lat":38.467714,"lon":-9.101121,"phones":["212685413"],"since":"2026-11-24"}
+{"id":"n12140966993","lat":39.237028,"lon":-9.307262,"since":"2026-11-24"}
+{"id":"n12147875224","name":"Clinica Veterinaria De Ovar","street":"Rua Marquês de Pombal 44","lat":40.858798,"lon":-8.626619,"since":"2026-11-24"}
+{"id":"n12151250243","name":"Atlântico Sul Clínica Veterinária","street":"Rua da Floresta 72","postcode":"7520-187","city":"Sines","lat":37.9555,"lon":-8.878516,"since":"2026-11-24"}
+{"id":"n1216137096","name":"Cambra vete","lat":40.838282,"lon":-8.397853,"since":"2026-11-24"}
+{"id":"n12168166913","name":"TermasVet","lat":40.971082,"lon":-8.504548,"since":"2026-11-24"}
+{"id":"n12189161057","name":"Centro Veterinário do Jamor","street":"Estrada das Várzeas 17A","postcode":"2790-444","city":"Queijas","lat":38.716896,"lon":-9.263598,"phones":["211990696"],"site":"https://www.vetjamor.pt","siteFrom":"osm","hours":"Mo-Fr 10:30-13:00,15:00-19:30; Sa 10:00-13:00; Su,PH off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12206134654","name":"Hospital Veterinário das Travessas","lat":40.902369,"lon":-8.477713,"site":"https://www.hospitalveterinariotravessas.com/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n12206134659","name":"Centro Veterinário da Corga","lat":40.991426,"lon":-8.484535,"site":"https://servicosveterinarios.pt/","siteFrom":"osm","emergency":"on_call","emergencyPhone":"915562444","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n12209349484","name":"Médico Veterinário - Município de Odivelas","lat":38.802064,"lon":-9.19276,"since":"2026-11-24"}
+{"id":"n12209451745","name":"Mordomia - Consultório Veterinário, Pet Shop, Spa, Educação Canina, Treino","street":"Rua 16 768","postcode":"4500-240","city":"Espinho","lat":41.006714,"lon":-8.641525,"phones":["223265745","916514893"],"site":"https://mordomia.pt/","siteFrom":"osm","hours":"Mo-Fr 10:00-12:30,14:30-19:00; Sa 10:00-12:30,14:30-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12216227879","name":"CRASSA - Centro de Recuperação de Animais Selvagens de Santo André","lat":38.074178,"lon":-8.782487,"since":"2026-11-24"}
+{"id":"n12218322603","name":"Clinica Veterinária da Sé","lat":39.827486,"lon":-7.490427,"since":"2026-11-24"}
+{"id":"n12233066065","name":"Clínica Veterinária Castelo Branco","lat":39.817402,"lon":-7.485941,"since":"2026-11-24"}
+{"id":"n12238902677","street":"Rua de Paimogo 39","postcode":"7830-100","city":"Vila Nova de São Bento","lat":37.923785,"lon":-7.406797,"since":"2026-11-24"}
+{"id":"n12254204227","name":"Vetsesimbra","lat":38.444972,"lon":-9.104409,"phones":["212231001"],"hours":"Mo-Fr 10:00-13:00,15:00-20:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12264347111","name":"Hospvet","lat":40.940049,"lon":-8.579487,"since":"2026-11-24"}
+{"id":"n12304773098","name":"Petclinic","street":"Rua Padre Américo 15","city":"Carnide","lat":38.761794,"lon":-9.179871,"since":"2026-11-24"}
+{"id":"n12306830542","name":"Curaevet","street":"Rua Ferreira Borges 69A","postcode":"1350-133","city":"Campo de Ourique","lat":38.716918,"lon":-9.164133,"since":"2026-11-24"}
+{"id":"n12307130598","name":"Vet Planet","street":"Rua Morais Soares 149","postcode":"1900-344","lat":38.733215,"lon":-9.132915,"phones":["916768111","218122989"],"hours":"Mo-Fr 09:00-20:00; Sa-Su 10:00-20:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12318783234","name":"Âncora Vet","lat":41.81367,"lon":-8.858132,"phones":["925122900"],"hours":"Mo-Fr 09:30-12:30, 14:30-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12319320227","name":"Clinica Veterinaria das Conchas","street":"Rua Luís Pastor de Macedo 3A","postcode":"1750-155","city":"Lisboa","lat":38.767933,"lon":-9.157135,"since":"2026-11-24"}
+{"id":"n12326985271","name":"Restelo Vet","street":"Rua Duarte Pacheco Pereira 5B","postcode":"1400-139","city":"Belém","lat":38.697853,"lon":-9.219348,"hours":"Mon-Fri 10:00-20:00 // Sat 10:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12328826636","name":"IRA","lat":38.724523,"lon":-9.128714,"since":"2026-11-24"}
+{"id":"n12331355301","name":"Animália Hospital Veterinário Baixo Alentejo","lat":38.016322,"lon":-7.871034,"since":"2026-11-24"}
+{"id":"n12331527747","name":"Dogtor","street":"Calçada de Dom Gastão 20 a 22","postcode":"1900-193 Beato","city":"Beato","lat":38.728671,"lon":-9.109348,"since":"2026-11-24"}
+{"id":"n1234839841","name":"Clínica Veterinária Século XXI","lat":41.560454,"lon":-8.408346,"phones":["253251409"],"site":"https://www.facebook.com/clinicaveterinariavetseculoxxi/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n12385503628","street":"Avenida de Palmela 6","postcode":"2965-316","city":"Poceirão","lat":38.63346,"lon":-8.741861,"since":"2026-11-24"}
+{"id":"n1239085285","lat":40.929115,"lon":-8.254738,"since":"2026-11-24"}
+{"id":"n12407130825","name":"We Care for Pet","street":"Praça Madre de Deus","lat":41.09346,"lon":-8.595491,"hours":"Mo-Fr 09:30-20:00; Sa 09:30-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12431361185","name":"Clínica Veterinária","street":"Cais das Falcoeiras 20","lat":40.642943,"lon":-8.658033,"since":"2026-11-24"}
+{"id":"n12443621812","name":"Clínica veterinária da Areosa","street":"80","lat":41.177708,"lon":-8.583894,"phones":["916606427"],"hours":"Mo-Fr 09:30-20:00; Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12518589206","name":"Trio Patinhas","lat":41.41832,"lon":-8.446693,"since":"2026-11-24"}
+{"id":"n12551147899","lat":37.128904,"lon":-7.643255,"since":"2026-11-24"}
+{"id":"n12556861477","lat":37.033932,"lon":-7.960547,"since":"2026-11-24"}
+{"id":"n12563384395","lat":37.130229,"lon":-8.446526,"since":"2026-11-24"}
+{"id":"n12571062530","name":"Clínica Veterenária do Infantado","lat":38.841761,"lon":-9.162215,"phones":["219820335","912471434"],"hours":"Mo-Fr 09:30-12:30,15:00-20:00; Sa 10:00-13:00,14:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12582091120","lat":38.056877,"lon":-8.78571,"since":"2026-11-24"}
+{"id":"n12588881347","name":"Linda-a-Vet","street":"Rua Rodrigues Sampaio 3A","postcode":"2795-175","city":"Linda-a-Velha","lat":38.707462,"lon":-9.241618,"phones":["214141606"],"site":"https://lindaavet.pt/pt/home","siteFrom":"osm","hours":"Mo-We 10:00-13:30, 15:30-20:30; Th 14h30 - 20h30; Fr 10:00-13:30, 15:30-20:30; Sa 10:00-13:30; Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12590324824","lat":38.568226,"lon":-8.888468,"since":"2026-11-24"}
+{"id":"n12590734673","name":"Kivet","lat":38.697053,"lon":-8.944298,"since":"2026-11-24"}
+{"id":"n12601522669","lat":39.143308,"lon":-8.686148,"since":"2026-11-24"}
+{"id":"n12613372767","lat":40.670509,"lon":-8.606307,"since":"2026-11-24"}
+{"id":"n12617936603","lat":41.332957,"lon":-8.730992,"since":"2026-11-24"}
+{"id":"n12650824906","lat":41.416649,"lon":-8.524037,"since":"2026-11-24"}
+{"id":"n12652223901","name":"CisterVet","street":"Rua de Moçambique 3","postcode":"2460-013","lat":39.545302,"lon":-8.975193,"hours":"Mo-Fr 10:00-19:00; Sa 10:00-12:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1272265818","name":"VetTop","street":"Rua do Recife 11","lat":38.695989,"lon":-9.302059,"phones":["211950873"],"hours":"Mo-Sa 09:30-13:00,14:30-21:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12769147560","name":"Centro Veterinário maisVida","lat":40.503726,"lon":-7.61465,"phones":["232102299"],"since":"2026-11-24"}
+{"id":"n12881907625","name":"Vet Animal","street":"Rua António da Conceição Bento 36","lat":39.358969,"lon":-9.380368,"hours":"Mo,We,Fr 10:00-13:00,14:00-18:00; Tu,Th 10:00-15:00; Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13017742086","name":"Amivet","street":"Rua Capitão Salgueiro Maia 19","postcode":"7000-253","city":"Évora","lat":38.573275,"lon":-7.930963,"phones":["266098058"],"hours":"Mo-Fr 09:00-20:00; Sa 09:00-15:00; PH off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13030514650","name":"Benavet","street":"Rua Imaculado Coração de Maria 162D","postcode":"2120-188","city":"Foros de Salvaterra","lat":38.997151,"lon":-8.736626,"phones":["263516468"],"since":"2026-11-24"}
+{"id":"n13043464716","name":"Vetplus","lat":39.474607,"lon":-8.189899,"since":"2026-11-24"}
+{"id":"n13110584878","name":"Centro Médico Veterinário do Jardim","lat":38.954415,"lon":-8.98709,"phones":["263273144"],"hours":"Mo-Fr 10:00-13:00 15:00-19:00; Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13125124299","name":"Onlypets","lat":39.023896,"lon":-8.974712,"since":"2026-11-24"}
+{"id":"n13157821913","name":"Vetoeiras Hospital Veterinário","street":"Estrada de Oeiras 18","postcode":"2780-114","lat":38.699146,"lon":-9.31035,"phones":["214415438"],"site":"https://www.vetoeiras.pt","siteFrom":"osm","hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13171687892","name":"Clínica Veterinária Fernando Soares","street":"Rua Senador Sousa Fernandes 239","postcode":"4760-164","city":"Vila Nova de Famalicão","lat":41.413523,"lon":-8.519638,"phones":["252331252"],"site":"http://www.cvfs.pt","siteFrom":"osm","hours":"Mo-Fr 10:00-20:00; Sa 10:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13171861271","name":"Clínica Veterinária de Abrantes","street":"Praceta Arquipélago da Madeira 53","postcode":"2200-183","city":"Abrantes","lat":39.465829,"lon":-8.208223,"phones":["241371989"],"site":"https://www.cvetabrantes.pt/","siteFrom":"osm","hours":"Mo-Fr 09:00-13:00,14:00-19:00; Sa 09:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13174257985","name":"Animal care","lat":41.190546,"lon":-8.632939,"phones":["229547122"],"site":"https://www.animalcare.pt/","siteFrom":"osm","hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13180326013","name":"DomBicho - Clínica Vetérnaria da Tocha","street":"Rua Professor Manuel Rodrigues Romão 90","postcode":"3060-719","city":"Tocha","lat":40.315527,"lon":-8.752552,"hours":"Mo-Fr 10:00-19:00; Sa 10:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13196130055","name":"Dom Dínis Vet Clinic","street":"Rua Abel Manta 1","lat":38.798457,"lon":-9.178935,"phones":["219338652"],"site":"https://clinicaveterinariadomdinis.pt","siteFrom":"osm","hours":"Mo-Sa 10:00-13:00,14:00-20:00; Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13203108630","name":"Clínica Veterinária de Famalicão","street":"Rua Artur Cupertino de Miranda 251","postcode":"4760-124","city":"Vila Nova de Famalicão","lat":41.412214,"lon":-8.520971,"phones":["936477677"],"site":"https://www.instagram.com/cv_famalicao/?hl=en","siteFrom":"osm","hours":"Mo-Fr 09:00-19:30; Sa 09:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13249805715","lat":41.15819,"lon":-8.637144,"since":"2026-11-24"}
+{"id":"n13251506469","name":"BONEMATRIX Centro de Cirurgia Veterinária Avançada","street":"594","lat":41.218168,"lon":-8.679293,"site":"https://bonematrix.pt/","siteFrom":"osm","hours":"Mo-Fr 09:00-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13264738437","name":"Clínica Veterinária do Vouga","lat":40.734235,"lon":-8.374826,"phones":["234556540"],"since":"2026-11-24"}
+{"id":"n13319273575","name":"Clínica veterinária Suilpark","lat":40.966721,"lon":-8.537593,"since":"2026-11-24"}
+{"id":"n13329339348","name":"Centro Veterinário Saúde Animal","city":"Gueifães","lat":41.220398,"lon":-8.612477,"since":"2026-11-24"}
+{"id":"n13346862417","name":"Onevet Hospital Veterinário Trás-os-Montes","street":"Rua de La Lys 7","postcode":"5000-056","city":"Vila Real","lat":41.308776,"lon":-7.738847,"phones":["259328918"],"site":"https://onevetgroup.pt/tras-os-montes/","siteFrom":"osm","hours":"24/7","hoursFrom":"ai","hoursUrl":"https://onevetgroup.pt/tras-os-montes/","hoursHash":"ad922dc93a430b76","hoursChecked":"2026-11-24","emergency":"24/7","emergencyChecked":"2026-11-24","hospital":true,"since":"2026-11-24"}
+{"id":"n13365854601","name":"Clínica Animal do Sul","street":"Rua Jornal \"Correio do Sul\" 11","postcode":"8005-240","lat":37.026738,"lon":-7.92651,"phones":["289818000"],"hours":"Mo-Fr 10:00-12:30, 15:00-19:30; Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13396517901","name":"Centro Veterinário do Bom João","street":"Rua Azevedo Coutinho 35","postcode":"8000-224","lat":37.015496,"lon":-7.919902,"phones":["289872700"],"site":"https://www.bomjoaoveterinaria.com","siteFrom":"osm","hours":"Mo-Fr 09:00-19:00; Sa 09:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13408440201","name":"Clínica veterinária animais da vila","street":"Rua do Arco 248","postcode":"4585-689","lat":41.152148,"lon":-8.394002,"phones":["222427775","936682504"],"hours":"Mo-Fr 09:00-13:00,15:00-19:30; Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13513479957","name":"Centro Veterinário Sintra","lat":38.830336,"lon":-9.357765,"since":"2026-11-24"}
+{"id":"n13520059122","name":"Clínica Veterinária de Francelos","street":"Avenida de Francelos 575","postcode":"4405-647","city":"Vila Nova de Gaia","lat":41.083455,"lon":-8.641052,"phones":["220930915","914038571"],"site":"https://www.cvfrancelos.pt/","siteFrom":"osm","hours":"Mo-Fr 09:00-20:00; Sa 09:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13520727241","name":"Clínica Veterinária Vetsam","lat":38.933716,"lon":-8.871725,"since":"2026-11-24"}
+{"id":"n13526778701","name":"VetBaia","lat":39.510253,"lon":-9.134429,"since":"2026-11-24"}
+{"id":"n1353887524","name":"Clínica Veterinária de Infias","street":"Praceta Frei Baltazar Braga 17 R/C","postcode":"4700-365","lat":41.562084,"lon":-8.420485,"phones":["253623658"],"site":"https://www.facebook.com/people/Cl%C3%ADnica-Veterin%C3%A1ria-de-Infias/100049265557185/","siteFrom":"osm","hours":"Mo-Sa 09:30-13:00,15:00-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13594186693","name":"Hospital Veterinário de Guimarães","city":"Creixomil","lat":41.439263,"lon":-8.323568,"since":"2026-11-24"}
+{"id":"n1361260836","name":"Centro de Atendimento Veterinário Porto Santo","lat":33.051669,"lon":-16.349139,"since":"2026-11-24"}
+{"id":"n1364747221","name":"Hospital Veterinário","lat":40.626625,"lon":-8.649362,"since":"2026-11-24"}
+{"id":"n13663681639","name":"Clínica Veterinária de Braga","lat":41.545277,"lon":-8.404015,"phones":["253098370"],"site":"https://clinicaveterinariabraga.blogspot.com/","siteFrom":"osm","hours":"Mo-Fr 10:30-13:00,14:30-20:00; Sa 10:30-13:00","hoursFrom":"ai","hoursUrl":"https://clinicaveterinariabraga.blogspot.com/","hoursHash":"40a7d13783d7b30d","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"931 783 221","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n13686956101","name":"Animais no Parque","lat":38.656442,"lon":-9.011107,"hours":"Mo-Fr 10:00-13:00, 14:00-19:00; Sa 10:00-14:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13711118627","lat":38.779335,"lon":-9.150374,"since":"2026-11-24"}
+{"id":"n13758888295","name":"Hospital Veterinário de Santo Tirso","street":"Travessa do Casal Velho 3","postcode":"4780-521","city":"Santo Tirso","lat":41.336818,"lon":-8.473876,"phones":["252098515"],"site":"https://onevetgroup.pt/hvsantotirso/","siteFrom":"osm","hours":"24/7 \"Urgências\"","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13768789406","name":"SosVet Hospital Veterinário","lat":38.672503,"lon":-9.166342,"phones":["212723338"],"since":"2026-11-24"}
+{"id":"n13819573588","name":"Veterinário Municipal","lat":40.534288,"lon":-7.853001,"since":"2026-11-24"}
+{"id":"n13823794802","name":"Clínica veterinária de são romão","lat":39.735212,"lon":-8.79252,"since":"2026-11-24"}
+{"id":"n13845686151","name":"Healthy Pets","lat":38.667153,"lon":-9.167867,"hours":"Mo-Fr 10:00-13:00,15:00-19:00; Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13878966853","name":"Pet Lounge - Veterinário, Banhos e Tosquias","street":"Avenida Prof. Egas Moniz 6 A R/C Direito","postcode":"2135-232","city":"Samora Correia","lat":38.934672,"lon":-8.872291,"site":"https://petloungevet.com","siteFrom":"osm","hours":"Mo-Fr 09:30-13:00, 14:30-18:30; Sa 09:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13916767700","name":"House Vet","lat":38.700697,"lon":-9.295662,"since":"2026-11-24"}
+{"id":"n13931283678","name":"Centro Veterinário de Nogueira","street":"Rua de Barreiros","lat":41.530248,"lon":-8.410289,"hours":"Mo-Fr 10:00-12:30, 14:30-19:30; Sa 10:00-12:30, 14:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13932145736","name":"Dr. Bicharada","street":"Rua Luís de Camões 5B","city":"Oeiras","lat":38.700382,"lon":-9.229029,"phones":["210174597"],"site":"https://doutorbicharada.pt","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n13978415904","name":"São Lourenço - Clínica Veterinária","lat":38.522465,"lon":-8.815199,"since":"2026-11-24"}
+{"id":"n13981413058","lat":39.072396,"lon":-9.39279,"since":"2026-11-24"}
+{"id":"n14049564639","lat":40.955221,"lon":-8.652984,"since":"2026-11-24"}
+{"id":"n14054967250","name":"Centro veterinário Oliveiravet","lat":40.359848,"lon":-7.855432,"since":"2026-11-24"}
+{"id":"n14070364205","name":"São Luís Veterinários","lat":38.576096,"lon":-8.946021,"hours":"Mo-Fr 10:00-13:00, Mo-Fr 15:30-19:00, Sa,PH 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n14071018837","name":"Clínica Veterinária d'Atalaia","street":"EN 4 11","postcode":"2870-700","city":"Atalaia e Alto Estanqueiro-Jardia","lat":38.706665,"lon":-8.928059,"phones":["212302199"],"site":"https://www.sospet.pt","siteFrom":"osm","hours":"Mo-Fr 10:00-19:00; Sa 10:00-13:00; Su closed","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n14104424826","name":"São Francisco Vet","street":"Avenida do Corvo-Marinho 304","lat":38.729137,"lon":-8.973642,"phones":["927586590"],"since":"2026-11-24"}
+{"id":"n14104424885","name":"Clínica Veterinária de Alcochete","lat":38.753704,"lon":-8.95879,"since":"2026-11-24"}
+{"id":"n14111872602","name":"Hospital Veterinário do Porto","street":"Rua das Palmeiras 19","lat":41.153094,"lon":-8.652357,"phones":["228348170"],"site":"https://onevetgroup.pt","siteFrom":"osm","hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n14112932270","name":"SaúdeVet","street":"Rua Quinta das Matas 2","postcode":"3130-545","city":"Senhor das Almas","lat":40.05825,"lon":-8.632373,"since":"2026-11-24"}
+{"id":"n14131977992","name":"Gabinete Médico Veterinário Municipal","lat":38.444265,"lon":-9.097151,"since":"2026-11-24"}
+{"id":"n14137925199","name":"Vet","lat":40.110145,"lon":-8.250115,"since":"2026-11-24"}
+{"id":"n14159543301","name":"Clínica Veterinária Arca D'Água","street":"Rua de Vale Formoso 625","postcode":"4200 514","lat":41.170915,"lon":-8.612958,"since":"2026-11-24"}
+{"id":"n14159544101","name":"Clínica Veterinária Arca D'Água","street":"Rua de Vale Formoso 625","postcode":"4200 514","lat":41.170915,"lon":-8.612958,"phones":["224967590"],"hours":"Mo-Fr 10:00-20:00; Sa 10:00-14:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n14181863102","name":"Clínica Veterinária de Pedras Rubras","street":"Praça do Exército Libertador","postcode":"4470-601","city":"Moreira","lat":41.242196,"lon":-8.665965,"phones":["226094580"],"site":"https://pedrasrubrascity.com/negocios/clinica-veterinaria-pedras-rubras.html","siteFrom":"osm","hours":"Mo-Fr 09:30-12:30,14:30-19:30; Sa 10:00-15:00","hoursFrom":"structured","hoursUrl":"https://pedrasrubrascity.com/negocios/clinica-veterinaria-pedras-rubras.html","hoursHash":"df041d0f8256b4a2","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"960 190 681","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n14196480602","name":"Hospital Veterinário da Trofa","street":"Avenida Trofa Velha 107","postcode":"4785-716","lat":41.326211,"lon":-8.566733,"phones":["252411444"],"site":"http://hvtrofa.pt","siteFrom":"osm","hours":"24/7","hoursFrom":"ai","hoursUrl":"http://hvtrofa.pt","hoursHash":"576eadbf66d5e893","hoursChecked":"2026-11-24","emergency":"24/7","emergencyPhone":"913 548 132","emergencyChecked":"2026-11-24","hospital":true,"since":"2026-11-24"}
+{"id":"n14201438601","name":"Vet Spa","street":"Rua do Marechal Sardanha 365","postcode":"4150-657","lat":41.157784,"lon":-8.680132,"phones":["226169266"],"site":"https://www.vetporto.com/","siteFrom":"osm","hours":"Mo-Fr 10:00-19:00; Sa 09:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n14268578701","name":"CLILEGRE - Clínica veterinária de Portalegre","street":"Rua Martinho de Azevedo Coutinho 16A","postcode":"7300-126","lat":39.293242,"lon":-7.425289,"hours":"Mo-Fr 09:00-20:00; Sa 09:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n14269373301","name":"Anivet - Consultório Veterinário","street":"Rua Américo Alves de Almeida 12-A","postcode":"2840-096","lat":38.624348,"lon":-9.08336,"phones":["212215823"],"site":"http://anivet.com.pt","siteFrom":"osm","hours":"Mo-We,Fr 10:00-13:00,15:00-20:00; Th 15:00-20:00; Sa 10:00-13:00","hoursFrom":"ai","hoursUrl":"http://anivet.com.pt","hoursHash":"ce4fd1b00e0ac982","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n14281719373","name":"Centro Veterinário de Matosinhos","lat":41.180902,"lon":-8.685865,"since":"2026-11-24"}
+{"id":"n14305752946","name":"MyVet","street":"Rua Manuel Inácio 9B","lat":38.709298,"lon":-9.286428,"since":"2026-11-24"}
+{"id":"n14316244822","name":"AndriVet","lat":38.703769,"lon":-9.342855,"since":"2026-11-24"}
+{"id":"n14364318901","name":"Hospital Veterinário de Leiria","lat":39.74463,"lon":-8.79966,"since":"2026-11-24"}
+{"id":"n14366605701","name":"Onevet - HVUC","street":"Avenida José Sousa Fernandes 197","postcode":"3020-210","lat":40.234251,"lon":-8.415216,"phones":["239499160"],"site":"https://onevetgroup.pt/coimbra/","siteFrom":"osm","hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n14367671325","name":"Vetouressa","street":"Rua Francisco Sá Carneiro 29","lat":38.798679,"lon":-9.355453,"since":"2026-11-24"}
+{"id":"n14368845803","name":"Clínica Veterinária da Fonte de Baixo","lat":41.529254,"lon":-8.624157,"since":"2026-11-24"}
+{"id":"n14386967401","name":"VetViana","lat":38.333628,"lon":-7.999891,"since":"2026-11-24"}
+{"id":"n1475051131","name":"Clinispad","street":"Rua do Matadouro 10-A","postcode":"9050-100","lat":32.655658,"lon":-16.900704,"phones":["291220852"],"hours":"Mo-Fr 08:30-20:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1621836794","name":"Consultorio veterinario","lat":41.766423,"lon":-8.596117,"hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1628350077","name":"Clínica Veterinária do Carandá","street":"Praça Araújo Carandá 31","city":"Braga","lat":41.545999,"lon":-8.418575,"phones":["253271375"],"site":"http://clinicaveterinariacaranda.pt/pt","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n1642189292","name":"Clínica Veterinária Santa Iria","lat":39.039979,"lon":-9.264278,"since":"2026-11-24"}
+{"id":"n1679124810","name":"Argus - Clínica Veterinária","lat":38.754341,"lon":-9.211325,"since":"2026-11-24"}
+{"id":"n1692011927","lat":39.165331,"lon":-8.784438,"since":"2026-11-24"}
+{"id":"n1699892448","name":"1 Cão 100 Pulgas","lat":40.639487,"lon":-8.649309,"since":"2026-11-24"}
+{"id":"n1708856189","name":"Clínica Veterinária SOS Patinhas","lat":41.21573,"lon":-8.559554,"site":"http://sospatinhas.blogspot.pt/","siteFrom":"osm","hours":"Mo-Fr 10:00-13:00,15:00-20:00; Sa 10:00-13:00,14:00-17:00","hoursFrom":"ai","hoursUrl":"http://sospatinhas.blogspot.pt/","hoursHash":"7079142a102b8ea1","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"934 493 004","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n1716982802","name":"Hospital dos Animais","lat":38.807035,"lon":-9.184305,"phones":["219348550"],"site":"https://hospitaldosanimais.com","siteFrom":"osm","hours":"Mo-Sa 10:00-20:00","hoursFrom":"ai","hoursUrl":"https://hospitaldosanimais.com","hoursHash":"e00c7740a4563363","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"21 934 8550","emergencyChecked":"2026-11-24","hospital":true,"since":"2026-11-24"}
+{"id":"n1736389499","lat":41.225632,"lon":-8.611543,"since":"2026-11-24"}
+{"id":"n1743496837","name":"Filipa Alves - Serviços Veterinários, Unipessoal Lda.","lat":37.316026,"lon":-8.794325,"since":"2026-11-24"}
+{"id":"n1744280374","lat":38.010737,"lon":-8.708975,"since":"2026-11-24"}
+{"id":"n1776180027","name":"VetMachico","street":"Praceta 25 de Abril Loja 9","postcode":"9200-084","city":"Machico","lat":32.71784,"lon":-16.765642,"phones":["291098228"],"since":"2026-11-24"}
+{"id":"n1781025095","name":"Vetmédis Ajuda","street":"Rua do Vale D'Ajuda 18-20","postcode":"9000-100","lat":32.637401,"lon":-16.94158,"phones":["291772244"],"site":"https://www.facebook.com/vetmedis.veterinaria","siteFrom":"osm","hours":"Mo-Fr 10:00-20:00; Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1784518599","lat":38.477427,"lon":-9.112912,"since":"2026-11-24"}
+{"id":"n1788982405","name":"Clínica Veterinária do Salgueiral","lat":41.434792,"lon":-8.302836,"since":"2026-11-24"}
+{"id":"n1795623832","name":"Centro Veterinário São Salvador","lat":40.604869,"lon":-8.662771,"since":"2026-11-24"}
+{"id":"n1799538474","name":"Consultório Veterinário da Barra","lat":40.634461,"lon":-8.746178,"since":"2026-11-24"}
+{"id":"n1806384367","lat":39.247336,"lon":-9.312931,"since":"2026-11-24"}
+{"id":"n1813780009","name":"Canil Municipal","lat":32.69227,"lon":-16.948589,"since":"2026-11-24"}
+{"id":"n1819120132","name":"Centro Médico Veterinário do Pragal","street":"Rua Dom João de Castro 78","lat":38.67562,"lon":-9.167105,"hours":"Tu-Su 09:30-14:00,15:30-19:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1819124095","lat":38.666009,"lon":-9.196922,"since":"2026-11-24"}
+{"id":"n1848656520","name":"Clínica Veterinária São Miguel","lat":37.748212,"lon":-25.593,"since":"2026-11-24"}
+{"id":"n1848669405","name":"Clínica Veterinária do Paim","lat":37.749237,"lon":-25.686304,"site":"http://clinicavetdopaim.com/default.asp","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n1880648800","lat":40.162684,"lon":-8.850417,"since":"2026-11-24"}
+{"id":"n1911679916","name":"CASVET","street":"Avenida dos Plátanos 93","postcode":"2775-352","lat":38.697233,"lon":-9.366312,"site":"http://www.casvet.pt","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n1912595620","lat":38.719447,"lon":-9.331136,"since":"2026-11-24"}
+{"id":"n1919323083","name":"Veterinária Animália","lat":38.626172,"lon":-9.16556,"since":"2026-11-24"}
+{"id":"n1925796346","name":"Hospital Veterinário do Baixo Vouga","lat":40.44635,"lon":-8.436502,"since":"2026-11-24"}
+{"id":"n1935790647","name":"Vetgranja","lat":39.821422,"lon":-7.505094,"since":"2026-11-24"}
+{"id":"n1936990583","name":"Clínica Veterinária de Pevidém","lat":41.426532,"lon":-8.348896,"since":"2026-11-24"}
+{"id":"n1937161743","name":"Clínica Veterinária de São João do Estoril","lat":38.703791,"lon":-9.384232,"since":"2026-11-24"}
+{"id":"n1944466938","lat":38.70679,"lon":-9.377988,"since":"2026-11-24"}
+{"id":"n1946447450","lat":37.123663,"lon":-7.650511,"since":"2026-11-24"}
+{"id":"n1946749391","lat":37.063341,"lon":-7.760189,"since":"2026-11-24"}
+{"id":"n1951337279","name":"Centro Médico Veterinário Mãe Deus","lat":37.744685,"lon":-25.658798,"hours":"Mo-Fr 11:00-13:00,15:30-19:00; Sa 10:30-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1962690430","lat":37.728993,"lon":-8.783983,"since":"2026-11-24"}
+{"id":"n1968076757","name":"Centro Veterinário da Costa","lat":38.638619,"lon":-9.231644,"since":"2026-11-24"}
+{"id":"n2006625198","name":"Consultório Veterinário da Carapinheira","lat":40.205204,"lon":-8.64823,"since":"2026-11-24"}
+{"id":"n2007271969","name":"Vetivete - Serviços Médico Veterinários","street":"20-A","postcode":"2580-531","city":"Alenquer","lat":39.046749,"lon":-8.998973,"since":"2026-11-24"}
+{"id":"n2036109737","lat":41.573248,"lon":-8.267014,"since":"2026-11-24"}
+{"id":"n2044759158","name":"Clínica Veterinária de Delães","lat":41.384118,"lon":-8.415785,"since":"2026-11-24"}
+{"id":"n2052981654","lat":41.085493,"lon":-8.599098,"since":"2026-11-24"}
+{"id":"n2065263413","lat":41.534449,"lon":-8.778842,"since":"2026-11-24"}
+{"id":"n2077417607","lat":38.717499,"lon":-9.302751,"since":"2026-11-24"}
+{"id":"n2110952385","name":"VetMondego","lat":40.174388,"lon":-8.681605,"since":"2026-11-24"}
+{"id":"n2134830155","name":"Clínica Veterinária da Marinha","lat":39.752707,"lon":-8.927779,"since":"2026-11-24"}
+{"id":"n2134863900","name":"Canil","lat":39.752277,"lon":-8.936124,"since":"2026-11-24"}
+{"id":"n2145474916","name":"Estação Zootécnica da Madeira - Carlos Dória","lat":32.845209,"lon":-17.18491,"since":"2026-11-24"}
+{"id":"n2149158866","name":"Veterinário","lat":41.5027,"lon":-7.644773,"since":"2026-11-24"}
+{"id":"n2182187932","name":"Clínica Veterinária de Viana","lat":41.707967,"lon":-8.820305,"since":"2026-11-24"}
+{"id":"n2191423041","name":"Clivefar, Clínica Veterinária","lat":39.744149,"lon":-8.919792,"since":"2026-11-24"}
+{"id":"n2196735092","name":"Veterinário Municipal","lat":41.175238,"lon":-7.054294,"since":"2026-11-24"}
+{"id":"n2197497908","name":"Novavet","lat":37.130564,"lon":-7.650883,"since":"2026-11-24"}
+{"id":"n2232093126","lat":38.742304,"lon":-9.221733,"since":"2026-11-24"}
+{"id":"n2234825961","name":"MinhoVet","lat":41.808189,"lon":-8.416171,"hours":"Mo-Fr 09:00-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n2241681523","name":"Clínica Veterinária da Meadela","lat":41.706711,"lon":-8.793706,"hours":"Mo-Sa 10:00-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n2241681527","name":"Clínica Veterinária da Meadela","lat":41.707263,"lon":-8.809391,"hours":"Mo-Sa 10:00-20:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n2264276480","name":"Clínica Veterinária da Areosa","lat":41.726974,"lon":-8.860075,"since":"2026-11-24"}
+{"id":"n2270029533","name":"Comercial Covega","street":"Avenida de Europa 46","postcode":"37480","city":"Fuentes de Oñoro","lat":40.603366,"lon":-6.820785,"phones":["923487541"],"site":"https://www.covegaganadera.com/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n2270090226","lat":39.601716,"lon":-8.816741,"since":"2026-11-24"}
+{"id":"n2287572449","name":"Vetbeirão","lat":39.81486,"lon":-7.502087,"since":"2026-11-24"}
+{"id":"n2302741004","lat":38.754966,"lon":-9.112662,"since":"2026-11-24"}
+{"id":"n2305150299","lat":40.848235,"lon":-8.379154,"since":"2026-11-24"}
+{"id":"n2308306474","name":"Centro Veterinário de Macieira","lat":40.855706,"lon":-8.372606,"since":"2026-11-24"}
+{"id":"n2357456540","name":"Veterinarian","lat":38.730026,"lon":-27.061503,"hours":"Mo-Sa 09:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n2365860468","name":"Consultório Veterinário da Branca","lat":40.765378,"lon":-8.482003,"since":"2026-11-24"}
+{"id":"n2365943629","name":"Clínica Veterinária de Albergaria","lat":40.695825,"lon":-8.479596,"since":"2026-11-24"}
+{"id":"n2374773787","name":"Liga Portuguesa dos Direitos dos Animais","lat":41.3985,"lon":-8.523878,"since":"2026-11-24"}
+{"id":"n2396316652","name":"Amoravet","lat":38.630928,"lon":-9.123631,"since":"2026-11-24"}
+{"id":"n2396317272","lat":38.619593,"lon":-9.125559,"since":"2026-11-24"}
+{"id":"n2396317273","lat":38.61016,"lon":-9.124467,"since":"2026-11-24"}
+{"id":"n2414810221","name":"Clínica Veterinária de Campolide","street":"Rua de Campolide 84C","lat":38.727697,"lon":-9.162246,"hours":"Mo-Fr 11:00-14:00, Mo,Tu,Th,Fr 17:00-20:00, We 17:00-19:00, Sa 11:00-14:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n2430226671","lat":38.600313,"lon":-9.097041,"since":"2026-11-24"}
+{"id":"n2450620291","name":"Zoo Panda","lat":41.415009,"lon":-8.457458,"since":"2026-11-24"}
+{"id":"n2479520915","name":"Animais e Cãopanhia","lat":38.761973,"lon":-9.261651,"since":"2026-11-24"}
+{"id":"n2629951259","name":"Clínica Veterinária Doutor António Vieira Leite","lat":41.636061,"lon":-8.145342,"since":"2026-11-24"}
+{"id":"n2671394313","name":"Clínica Veterinária da Avenida","lat":41.645508,"lon":-8.435878,"since":"2026-11-24"}
+{"id":"n2712464954","name":"Clínica Veterinária de Chaves","street":"Avenida de Nuno Álvares 37","postcode":"5400-419","city":"Chaves","lat":41.746546,"lon":-7.471999,"phones":["276325325"],"site":"https://www.clinicaveterinariadechaves.com/","siteFrom":"osm","hours":"Mo-Fr 10:00-12:30, 14:30-19:30; Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n2742035028","name":"Dog Minho","lat":41.639962,"lon":-8.484687,"phones":["968870004"],"since":"2026-11-24"}
+{"id":"n2792487935","name":"Consultório Veterinário","lat":41.243405,"lon":-7.305668,"since":"2026-11-24"}
+{"id":"n2847864905","name":"Sosvet","lat":38.670836,"lon":-9.161002,"since":"2026-11-24"}
+{"id":"n2879698498","name":"Hospital Veterinário da Tapada","street":"Rua Professor Agostinho da Silva 1","postcode":"2725-528","city":"Tapada das Mercês","lat":38.796367,"lon":-9.331161,"phones":["219204587"],"site":"http://www.hospitalveterinariodatapada.com/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n2887724350","name":"Instituto Zoófilo Quinta Carbonne","lat":38.746463,"lon":-9.283608,"since":"2026-11-24"}
+{"id":"n2899574018","name":"Clínica Veterinária Ani+","street":"Rua da Bandeira 786","postcode":"4900-562","city":"Viana do Castelo","lat":41.703687,"lon":-8.817567,"phones":["258817091","960454049"],"site":"http://www.clivetanimais.pt","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n2901104801","name":"Vetria","street":"Avenida de Adelino Amaro da Costa 2","postcode":"3800-005","city":"Aveiro","lat":40.640318,"lon":-8.640687,"phones":["234348051"],"site":"https://www.vetria.com.pt","siteFrom":"osm","emergency":"on_call","emergencyPhone":"969 939 939","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n2911921450","name":"Centro Veterinário do Minho","lat":41.582002,"lon":-8.428316,"phones":["910232701"],"since":"2026-11-24"}
+{"id":"n2930839648","name":"Vet Plus - Clínica Veterinária","lat":39.598104,"lon":-8.410159,"since":"2026-11-24"}
+{"id":"n2951413237","lat":38.788927,"lon":-9.349541,"since":"2026-11-24"}
+{"id":"n2967425763","name":"Clínica Veterinária","lat":41.48682,"lon":-8.353477,"since":"2026-11-24"}
+{"id":"n2969584359","name":"Vetset","street":"Rua Doutor Bernardo Teixeira Botelho 68","postcode":"2950-298","lat":38.568836,"lon":-8.914025,"site":"http://www.vetsete.com/pt/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n2975719278","name":"Climevet","lat":39.606551,"lon":-8.407529,"since":"2026-11-24"}
+{"id":"n2996294564","name":"Clínica Veterinária","lat":42.021085,"lon":-8.640417,"phones":["251824098"],"since":"2026-11-24"}
+{"id":"n3009205562","name":"Amicão Consultório Veterinário","street":"Rua Padre Manuel Romero Vila","lat":41.123803,"lon":-8.634107,"since":"2026-11-24"}
+{"id":"n3045925713","name":"Clínica Vet - Templários","lat":39.600118,"lon":-8.402809,"since":"2026-11-24"}
+{"id":"n3057565165","name":"Clínica Veterinária de Joane","lat":41.433307,"lon":-8.418018,"since":"2026-11-24"}
+{"id":"n3103919707","name":"Clínica Veterinária Alto Minho","street":"Rua Ramalho Ortigão 147","lat":41.703299,"lon":-8.823623,"phones":["258847181"],"hours":"Mo-Fr 09:30-12:30,14:30-19:30, Sa 10:00-12:30,14:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3165265562","name":"Vetzone - Consultório Veterinário","lat":38.180426,"lon":-8.566921,"since":"2026-11-24"}
+{"id":"n3165265600","street":"Praça Dom Jorge 11","postcode":"7570-136","city":"Grândola","lat":38.175402,"lon":-8.568257,"since":"2026-11-24"}
+{"id":"n3184294475","name":"Consultório Veterinário da Ribeira Brava","street":"Rua de São Pedro","postcode":"9350-212","lat":32.67458,"lon":-17.063508,"phones":["291616284","965650700"],"hours":"Mo-Fr 09:00-12:30,14:00-18:00; Sa-Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3203647529","name":"Clínica Veterinária","lat":41.598752,"lon":-8.463198,"since":"2026-11-24"}
+{"id":"n3206153909","name":"Minho Vet","lat":41.848143,"lon":-8.422228,"since":"2026-11-24"}
+{"id":"n3237731973","name":"Hospital do Gato","street":"Rua Fernão Mendes Pinto 56","postcode":"1400-146","city":"Lisboa","lat":38.698156,"lon":-9.226008,"hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3276728779","name":"Animal Especial","lat":41.531209,"lon":-8.775532,"phones":["931612825"],"since":"2026-11-24"}
+{"id":"n3314335367","name":"Clínica Veterinária de Mirandela","lat":41.488931,"lon":-7.182613,"phones":["963057504","917788992","961544749"],"hours":"Mo-Fr 09:00-12:00,14:00-19:00; Sa 09:00-12:00; Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3315068744","name":"Centro Veterinário Jorge Façanha","lat":41.308897,"lon":-7.157433,"since":"2026-11-24"}
+{"id":"n3353623160","name":"MeadelaVet","lat":41.648267,"lon":-8.704584,"phones":["968662083"],"since":"2026-11-24"}
+{"id":"n3383445497","lat":41.943365,"lon":-8.740637,"since":"2026-11-24"}
+{"id":"n3398122435","name":"Dom Gato","street":"Rua José Relvas","postcode":"2775-196","city":"Parede","lat":38.690398,"lon":-9.353166,"since":"2026-11-24"}
+{"id":"n3415895541","name":"Centro Veterinário de Aveiro","lat":40.640711,"lon":-8.611199,"since":"2026-11-24"}
+{"id":"n3457915927","name":"Romão","lat":41.40015,"lon":-8.514764,"since":"2026-11-24"}
+{"id":"n3481343016","name":"Clínica Veterinária Aguiar","lat":41.503353,"lon":-7.636975,"phones":["936245196"],"since":"2026-11-24"}
+{"id":"n3517065854","name":"Centro Veterinário de Vila Verde","lat":41.655002,"lon":-8.431832,"phones":["960154732"],"hours":"Mo-Fr 10:00-12:30, 15:00-20:00; Sa 10:00-13:00, 14:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3522662622","name":"Clínicas Veterinárias Dr. Jorge Lino","lat":41.913162,"lon":-8.561385,"phones":["251824098"],"since":"2026-11-24"}
+{"id":"n3575235597","name":"Medicina Veterinária de Colares","street":"Avenida do Atlântico 86","postcode":"2705-284","city":"Colares - Sintra","lat":38.8118,"lon":-9.456641,"phones":["219292793"],"site":"https://www.mvcvet.pt/","siteFrom":"osm","hours":"Mo-Fr 10:00-12:30, 16:00-19:00; Sa 10:30-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3617262223","name":"Centro Veterinário de Moscavide","lat":38.778174,"lon":-9.099963,"hours":"Mo,Th,Fr 10:30-13:00; Tu, We, Sa 09:30-13:00; Mo-Fr 15:30-20:00; Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3645919040","name":"Clínica Veterinária das Capelas","lat":37.830431,"lon":-25.669728,"site":"https://www.cvcapelas.pt/","siteFrom":"osm","hours":"Mo-Fr 10:00-19:30; Sa 10:00-12:30","hoursFrom":"ai","hoursUrl":"https://www.cvcapelas.pt/","hoursHash":"3e5554cb73405a97","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n3654397271","name":"Íris","street":"Rua Doutor Germano Amorim 205","city":"Arcos de Valdevez","lat":41.84307,"lon":-8.420585,"phones":["258518089"],"hours":"Mo-Fr 15:00-19:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3658852302","name":"Vet Santa Cruz","street":"Rua da Fonte 15","postcode":"9100-160","lat":32.688567,"lon":-16.791545,"phones":["916023896"],"since":"2026-11-24"}
+{"id":"n3663652419","name":"Clínica Veterinária de Arroios","street":"Rua de Arroios 157","postcode":"1150-053","city":"Lisboa","lat":38.730929,"lon":-9.136445,"phones":["213521501","914619719"],"site":"https://clinicaveterinaria.pai.pt","siteFrom":"osm","hours":"Mo-Fr 16:00-20:00; Sa 11:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3677311875","name":"Clínica Veterinária","street":"Avenida Saraiva de Carvalho","postcode":"4910-108","city":"Caminha","lat":41.874951,"lon":-8.833383,"phones":["258922018"],"site":"http://www.clinicavetvalenca.com/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n3722669795","name":"Clinica Veterinária","lat":41.971252,"lon":-8.687277,"since":"2026-11-24"}
+{"id":"n3728957959","name":"Clínica Veterinária do Alto da Maia","street":"Praceta Jaime Cortesão 30","postcode":"4425-101","city":"Águas Santas","lat":41.204322,"lon":-8.561724,"since":"2026-11-24"}
+{"id":"n3729031191","name":"Clínica Veterinária Santa Rita","street":"Rua Doutor Faria Sampaio 37","postcode":"4445","city":"Ermesinde","lat":41.208216,"lon":-8.541155,"since":"2026-11-24"}
+{"id":"n3732968615","name":"Hospital Veterinário da Maia","street":"Rua do Mosteiro 680","postcode":"4425-140","city":"Águas Santas","lat":41.209306,"lon":-8.573931,"phones":["229721251"],"hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3790637741","name":"Centro Veterinário de Adaúfe","lat":41.582472,"lon":-8.405038,"since":"2026-11-24"}
+{"id":"n3794331757","name":"Centro Veterinário do Médio Ave","lat":41.384986,"lon":-8.405811,"since":"2026-11-24"}
+{"id":"n3804309290","name":"Veterinário Aldeia de Juzo","street":"Rua Alexandre Prista 24","lat":38.729664,"lon":-9.448705,"since":"2026-11-24"}
+{"id":"n3846680275","name":"Hospital Veterinário da Trofa","lat":41.330236,"lon":-8.565279,"since":"2026-11-24"}
+{"id":"n3856480917","name":"Clínica Veterinária Santa Luzia","lat":41.37893,"lon":-8.306277,"since":"2026-11-24"}
+{"id":"n3912371223","name":"Centro Veterinário Vale das Flores","street":"Rua Dom Ernesto Sena de Oliveira 39","postcode":"3030-378","city":"Coimbra","lat":40.196272,"lon":-8.400871,"phones":["919104996","239402339"],"site":"www.cvvaledasflores.pt","siteFrom":"osm","hours":"Mo-Fr 10:00-13:00, 15:00-20:00; Sa 10:00-13:00, 15:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3999539691","name":"Centro Veterinário Berna","street":"Avenida de Berna 35A","postcode":"1050-038","city":"Lisboa","lat":38.739277,"lon":-9.152007,"phones":["218299810"],"site":"www.onevetgroup.pt/hvb","siteFrom":"osm","hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4019557693","name":"Saúde Animal","lat":41.511167,"lon":-7.991951,"since":"2026-11-24"}
+{"id":"n4038772713","name":"Veterinário","lat":39.339711,"lon":-8.932166,"since":"2026-11-24"}
+{"id":"n4090272127","name":"BichoMix","lat":38.777803,"lon":-9.095297,"since":"2026-11-24"}
+{"id":"n4097873892","name":"UPVet - Hospital Veterinário da Universidade do Porto","street":"Rua de Jorge Viterbo Ferreira 132","postcode":"4050-313","city":"Porto","lat":41.146861,"lon":-8.62462,"phones":["220428400"],"site":"www1.icbas.up.pt/clinicavet/","siteFrom":"osm","hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4105290681","name":"AniCura Vasco da Gama Hospital Veterinário","street":"Rotunda das Oliveiras 1","postcode":"1990-427","city":"Lisboa","lat":38.781475,"lon":-9.096682,"phones":["214073002"],"hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4109381791","name":"Vetfunchal","street":"Calçada Cabouquiera 61","postcode":"9000-171","lat":32.647406,"lon":-16.918184,"phones":["291743883"],"since":"2026-11-24"}
+{"id":"n4146064449","name":"Consultório Veterinário da Nazaré","street":"Avenida da Independência Nacional 11","city":"Nazaré","lat":39.602136,"lon":-9.070118,"since":"2026-11-24"}
+{"id":"n4157811714","name":"Clínica Veterinária de Viana","lat":41.814566,"lon":-8.864061,"since":"2026-11-24"}
+{"id":"n4172185341","name":"Veterinário","street":"Rua Engenheiro Almeida Manso","postcode":"7860","city":"Moura","lat":38.139988,"lon":-7.445719,"since":"2026-11-24"}
+{"id":"n4180959346","name":"Vetdinha - Clínica Veterinária","street":"Rua Conde Ferreira 32","postcode":"3460-553","city":"Tondela","lat":40.520619,"lon":-8.077304,"phones":["232813727"],"site":"https://vetdinha.com/","siteFrom":"osm","hours":"Mo-Fr 09:00-20:00; Sa 09:00-13:00, 14:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4180959360","name":"Caniféli","street":"Avenida dos Bombeiros Voluntários 154","postcode":"3460-572","city":"Tondela","lat":40.513822,"lon":-8.080794,"phones":["232812002"],"since":"2026-11-24"}
+{"id":"n4230251041","name":"Breed","lat":41.334184,"lon":-8.151801,"since":"2026-11-24"}
+{"id":"n4234147077","name":"Bichos e Caprichos","lat":40.541489,"lon":-7.264117,"since":"2026-11-24"}
+{"id":"n4266243395","name":"Consultório Veterinário de Mogadouro","street":"Rua Capitão Cruz 72","postcode":"5200-222","lat":41.344105,"lon":-6.705815,"phones":["279345055","919863635"],"hours":"Mo-Fr 09:30-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4269562351","name":"Vetmedis - Madalena","street":"Avenida da Madalena 91","postcode":"9020-329","lat":32.659118,"lon":-16.928667,"phones":["291759654"],"since":"2026-11-24"}
+{"id":"n4290129080","name":"Vetmedis","street":"Estrada João Gonçalves Zarco 181","postcode":"9300-166","lat":32.657142,"lon":-16.970953,"phones":["291098466"],"site":"https://www.facebook.com/vetmedis.veterinaria","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n4290201179","name":"Hospital Veterinário Central","lat":39.412117,"lon":-9.136819,"since":"2026-11-24"}
+{"id":"n4301827602","name":"Santoinho","lat":41.679834,"lon":-8.784638,"since":"2026-11-24"}
+{"id":"n4308811861","name":"Instituto Médico Veterinário da Parede","street":"Avenida António Arroio 4","postcode":"2775-153","city":"Parede","lat":38.689576,"lon":-9.345753,"since":"2026-11-24"}
+{"id":"n4313138058","name":"Happyvet - Centro Veterinário de Arazede","lat":40.281827,"lon":-8.652893,"since":"2026-11-24"}
+{"id":"n4313159588","name":"Vetcondeixa","lat":40.112779,"lon":-8.493512,"hours":"Mo-Fr 10:00-13:00,15:00-20:30; Sa 10:00-13:00,15:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4314721090","name":"Consultório Veterinário","lat":38.697544,"lon":-9.194507,"since":"2026-11-24"}
+{"id":"n4316241216","name":"Villa Animal","street":"Av. 29 de Agosto 186 A","postcode":"2705-854","lat":38.848593,"lon":-9.378815,"phones":["219619294"],"since":"2026-11-24"}
+{"id":"n4329102256","name":"Vetmadeira","street":"Rua Pimenta de Aguiar 2E","postcode":"9000-026","lat":32.649545,"lon":-16.914938,"phones":["291742220"],"since":"2026-11-24"}
+{"id":"n4364512904","lat":41.183042,"lon":-8.441016,"since":"2026-11-24"}
+{"id":"n4396793720","name":"Clínica Veterenária Fiel Amigo","lat":41.534659,"lon":-8.438322,"since":"2026-11-24"}
+{"id":"n4434222189","name":"Clínica Veterinária Santa Teresinha","street":"Travessa dos Piornais, Ed. Monumental Parque II, Loja AD","postcode":"9000-246","lat":32.643335,"lon":-16.94721,"phones":["291627498"],"since":"2026-11-24"}
+{"id":"n4434224490","name":"Auqmia","street":"Rua Henrique Franco Pintor","postcode":"9000-765","city":"Funchal","lat":32.648271,"lon":-16.931339,"phones":["291772337"],"site":"http://auqmia-clinicaveterinaria.pt","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n4434338889","name":"Clínica Veterinária Cristo Rei","street":"Estrada do Garajau 150","postcode":"9125-067","lat":32.643847,"lon":-16.852362,"phones":["291621789"],"since":"2026-11-24"}
+{"id":"n4434448393","name":"VetGarajau","street":"Estrada do Garajau 152-A Loja A","postcode":"9125-067","lat":32.643839,"lon":-16.852311,"phones":["291601311"],"site":"https://www.facebook.com/Vet-Garajau","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n4434450795","name":"Vetnorte","street":"Estrada Municipal Eng. Perry Vidal - Sítio das Feiteiras de Baixo","postcode":"9240-206","lat":32.791619,"lon":-17.038703,"phones":["924115584"],"site":"https://vetnorte.com/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n4436430489","name":"Biovetnatura","street":"Rua Cónego Fernando Vaz 10B","postcode":"9230-121","lat":32.806808,"lon":-16.880475,"phones":["291575122","966529489"],"site":"https://www.facebook.com/Biovetnatura-342440592622910/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n4453193197","name":"Consultório dos Animais","street":"Rua da Vargem 9","postcode":"9000-705","lat":32.648846,"lon":-16.93825,"phones":["291775000"],"site":"http://www.facebook.com/consultorio.dosanimais/?fref=ts","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n4457700896","name":"VetCaniço","street":"Estrada do Garajau","postcode":"9125-067","lat":32.647613,"lon":-16.845096,"phones":["291098113"],"site":"http://www.vetcanico.com","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n4466223030","lat":38.794509,"lon":-9.118919,"since":"2026-11-24"}
+{"id":"n4470459989","name":"Clínica Veterinária Quinta do Anjo","street":"Avenida dos Descobrimentos lote 190 RC Dto","postcode":"2950-751","lat":38.564957,"lon":-8.949694,"phones":["919912224"],"hours":"Mo-Fr 10:00-20:00; Sa 10:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4476649492","name":"Vetsantana","lat":32.804656,"lon":-16.879632,"phones":["917659080"],"site":"https://www.facebook.com/consultorio.veterinariodesantana","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n4513521597","name":"Vetconsulting - Clínica Veterinária","street":"Rua Doutor Francisco Peres Loja 7","postcode":"9125-014","lat":32.651594,"lon":-16.841016,"phones":["291934739"],"since":"2026-11-24"}
+{"id":"n4528788254","name":"Animais em Foco","lat":41.435994,"lon":-8.300367,"since":"2026-11-24"}
+{"id":"n4540212893","name":"Dogtel-Spa-Hotel-Reabilitação;Dogtel - Consultório Veterinário","street":"Rua do Lazareto 227-Porta 2","postcode":"9060-021","lat":32.64925,"lon":-16.880689,"phones":["291645399"],"site":"https://www.facebook.com/Dogtel","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n455517460","lat":37.315403,"lon":-8.803784,"since":"2026-11-24"}
+{"id":"n4610564296","lat":38.705034,"lon":-9.428783,"since":"2026-11-24"}
+{"id":"n4610565348","name":"Doutor Vieira Lopes","lat":38.70531,"lon":-9.428633,"since":"2026-11-24"}
+{"id":"n4611424887","name":"Veterinário da Vila","street":"Rua da Cevadeira","city":"Lisbon","lat":38.993846,"lon":-8.973717,"phones":["263098114","915194720"],"hours":"Mo-Fr 10:00-12:00, 16:00-19:00, Sa 10:00-12:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4661606830","name":"Clínica Veterinária do Juncal","street":"Rua Doutor José Cardoso de Miranda","lat":41.335473,"lon":-8.486961,"since":"2026-11-24"}
+{"id":"n4676710499","name":"Clínica Veterinária de Corroios","street":"Rua do Rouxinol 51","postcode":"2855-205","city":"Corroios","lat":38.644908,"lon":-9.14604,"hours":"Mo-Fr 10:30-20:30; Sa 11:30-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4684151279","name":"Vet Minho","street":"Rua de Santa Marinha 95","lat":41.924874,"lon":-8.754577,"phones":["251099100","925125124"],"site":"https://www.vetminho.pt/","siteFrom":"osm","hours":"Mo-Fr 10:00-12:30, 14:30-19:30; Sa 10:00-12:30, 14:30-16:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4703466578","name":"Clínica Veterinária","street":"Avenida de Ceuta 53d","postcode":"1300-125","city":"Lisboa","lat":38.711969,"lon":-9.175289,"since":"2026-11-24"}
+{"id":"n4703466579","name":"Liga Portuguesa dos Direitos do Animal (lpda)","street":"Avenida de Ceuta 53c","postcode":"1300-125","city":"Lisboa","lat":38.711949,"lon":-9.175279,"phones":["213635396","965037099"],"hours":"Mo-Fr 10:00-14:00, Mo-Fr 16:00-19:00, Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4703883993","name":"AniCura CHV Porto Hospital Veterinário","street":"Rua de Manuel Pinto de Azevedo 118","postcode":"4100-320","city":"Porto","lat":41.171581,"lon":-8.645056,"phones":["226155158"],"hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4704039832","name":"Clinica Veterinária do Castêlo","street":"Via Engenheiro Belmiro Mendes Azevedo 297;303","lat":41.259398,"lon":-8.619757,"phones":["229820112"],"site":"https://www.clinicaveterinariadocastelo.pt/","siteFrom":"osm","hours":"Mo-Fr 10:00-13:00, 15:00-20:00; Sa 10:00-13:00, 14:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4710039208","name":"Hospital Veterinário São Bento","lat":38.714821,"lon":-9.153783,"since":"2026-11-24"}
+{"id":"n4724513782","lat":37.093655,"lon":-8.269793,"since":"2026-11-24"}
+{"id":"n4744786742","name":"Guadiana","lat":37.194117,"lon":-7.419276,"since":"2026-11-24"}
+{"id":"n4754437406","name":"Clínica Veterinária da Quinta das Rosas","street":"Ferreira de Castro 111","lat":41.109916,"lon":-8.613941,"since":"2026-11-24"}
+{"id":"n4763815034","name":"Family Vet Ao Domicílio","city":"Lisboa","lat":38.756588,"lon":-9.203813,"phones":["211397743"],"site":"https://familyvet.pt/","siteFrom":"osm","hours":"Mo-Fr 10:00-13:00,15:00-20:00; Sa 10:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4780998997","name":"Clínica Veterinária de Gaia","lat":41.124565,"lon":-8.606332,"since":"2026-11-24"}
+{"id":"n4795085949","name":"Centro Veterinário de Santo Ovídio","lat":41.118756,"lon":-8.608512,"since":"2026-11-24"}
+{"id":"n4822620822","name":"Vetmedis - Boa Nova","street":"Estrada da Boa Nova 15","postcode":"9060-253","city":"Funchal","lat":32.65926,"lon":-16.895114,"phones":["291220958"],"since":"2026-11-24"}
+{"id":"n4879925746","name":"VetLand","lat":41.877611,"lon":-8.836231,"phones":["258724270"],"hours":"Mo-Fr 10:00-13:00,15:00-19:00; Sa 10:00-13:00; Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4932266496","name":"Avenida do Brasil","lat":41.410839,"lon":-8.51476,"phones":["968481615"],"since":"2026-11-24"}
+{"id":"n4947156739","name":"Centro Veterinário de Cerveira","lat":41.934479,"lon":-8.73933,"phones":["916082083"],"hours":"Mo, Tu 10:30-12:30, 14:30-18:30; We 14:30-18:30; Th, Fr 10:30-12:30, 14:30-18:30; Sa 10:30-12:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4947832863","name":"VetMonção","street":"Rua da Independência 1-5","postcode":"4950-467","city":"Monção","lat":42.079321,"lon":-8.48221,"since":"2026-11-24"}
+{"id":"n5053829030","name":"Clínica Veterinária D'Óbidos","street":"Estrada Nacional 8","postcode":"2510-082","lat":39.358805,"lon":-9.15715,"phones":["927549555"],"hours":"Mo-Fr 09:30-20:00; Sa 10:00-14:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n5054339467","name":"Centro Veterinário Doutor José Leite","street":"Avenida dos Pescadores 137","postcode":"2870-114","city":"Montijo","lat":38.706876,"lon":-8.979496,"phones":["212311627"],"site":"https://www.cvetleite.com/","siteFrom":"osm","hours":"Mo-Fr 10:00-13:00,15:00-19:00; Sa 10:00-13:00","hoursFrom":"ai","hoursUrl":"https://www.cvetleite.com/","hoursHash":"8f16ef59a52fcb44","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n5077638934","name":"Vetmonti","street":"Rua Dom Augusto Pereira Coutinho 4","postcode":"2870-309","city":"Montijo","lat":38.704767,"lon":-8.971193,"hours":"Mo-Fr 10:00-13:00,15:00-18:00; Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n5082082187","name":"cvet","street":"Rua Rui de Pina","postcode":"2870-431","city":"Montijo","lat":38.702008,"lon":-8.959118,"since":"2026-11-24"}
+{"id":"n5106019414","name":"Hospital Veterinário da Madeira","street":"Caminho de Santo António 200","postcode":"9020-002","city":"Funchal","lat":32.662174,"lon":-16.93476,"since":"2026-11-24"}
+{"id":"n5149434300","name":"Consultório Veterinário Puppycare","lat":41.107915,"lon":-8.6215,"since":"2026-11-24"}
+{"id":"n5201031438","name":"Clínica Veterinária Lidador","lat":41.252517,"lon":-8.663355,"since":"2026-11-24"}
+{"id":"n5223841137","name":"Vet Sul","lat":39.015653,"lon":-7.071969,"since":"2026-11-24"}
+{"id":"n5250475035","name":"Clínica Veterinária do Nordeste","street":"Rua Francisco Duarte","postcode":"9630-104","city":"Lomba da Fazenda","lat":37.846807,"lon":-25.165539,"phones":["296486212"],"site":"https://clinica-veterinaria-do-nordeste.webnode.pt/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n5326371024","name":"Veterinário Municipal","lat":41.039505,"lon":-8.269875,"since":"2026-11-24"}
+{"id":"n5326371026","name":"VetPaiva","lat":41.039469,"lon":-8.27099,"since":"2026-11-24"}
+{"id":"n5332186567","name":"Clínica Veterinária - Alma Vet","street":"Praceta do Estado da Baia","city":"Cacém e São Marcos","lat":38.749437,"lon":-9.298442,"since":"2026-11-24"}
+{"id":"n5347143332","name":"Jabutivet","street":"Rua Cândido dos Reis 109 A","postcode":"8300-126","city":"Silves","lat":37.192713,"lon":-8.4341,"phones":["282445648"],"site":"www.jabutivet.com","siteFrom":"osm","hours":"Mo-Sa 10:00-12:00; Mo-Fr 15:00-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n5350167556","name":"Bola de Pêlo","lat":38.75661,"lon":-9.341627,"since":"2026-11-24"}
+{"id":"n5351241528","name":"Vetévora","street":"Rua Circular Poente do Parque Industrial 38","postcode":"7005-328","city":"Évora","lat":38.548477,"lon":-7.915503,"since":"2026-11-24"}
+{"id":"n5352680808","name":"Clínica Veterinária Castro Verde","lat":37.698233,"lon":-8.087408,"since":"2026-11-24"}
+{"id":"n5412045141","name":"Clínica Veterinária Tebosa","lat":41.486135,"lon":-8.475694,"phones":["253286322"],"since":"2026-11-24"}
+{"id":"n5423651746","name":"Hospital Veterinário da Estefânia","street":"Rua Almirante Barroso 17a","postcode":"1000-012","city":"Lisboa","lat":38.73123,"lon":-9.142322,"phones":["213515030"],"site":"http://hvestefania.pt/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n5454609065","name":"Mil Animais Vet","lat":38.647378,"lon":-8.222371,"since":"2026-11-24"}
+{"id":"n5454716536","name":"Vet+","lat":38.646062,"lon":-8.221864,"since":"2026-11-24"}
+{"id":"n5481015472","name":"Sobrepatas","lat":41.008679,"lon":-8.629179,"phones":["227311026"],"since":"2026-11-24"}
+{"id":"n5554936928","name":"Quatro Patas","lat":38.533315,"lon":-28.520822,"hours":"Mo-Fr 10:00-19:30; Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n5559981201","lat":39.012936,"lon":-7.06849,"since":"2026-11-24"}
+{"id":"n5607526679","name":"Vetepatas","street":"Rua Nova Loja 1","postcode":"2775-674","city":"Carcavelos","lat":38.689996,"lon":-9.327459,"since":"2026-11-24"}
+{"id":"n5609578065","name":"Patas da Linha","street":"Avenida Infante Dom Henrique 455A","lat":38.702239,"lon":-9.366543,"since":"2026-11-24"}
+{"id":"n5609981675","name":"Low-Cost Veterinários","street":"Estrada da Torre 1396","lat":38.689863,"lon":-9.332116,"hours":"Mo-Fr 10:00-13:00,15:00-20:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n5611204113","name":"Proplan","lat":38.752637,"lon":-9.448215,"since":"2026-11-24"}
+{"id":"n5611747825","name":"Helpevet - Centro Veterinário","street":"Rua do Viveiro 47","city":"Cascais e Estoril","lat":38.713139,"lon":-9.405241,"since":"2026-11-24"}
+{"id":"n5611800354","name":"Clínica Veterinária","lat":38.71262,"lon":-9.363926,"since":"2026-11-24"}
+{"id":"n5613548779","name":"Clínica Veterinária das Avencas","street":"Rua João Luis Ricardo 65","postcode":"2775-211","city":"Parede","lat":38.686678,"lon":-9.353244,"phones":["214572195","968628047"],"since":"2026-11-24"}
+{"id":"n5614173927","name":"Cão de Loiça","street":"Avenida dos Maristas","city":"Carcavelos e Parede","lat":38.692475,"lon":-9.347007,"since":"2026-11-24"}
+{"id":"n5614189664","name":"Vet-24","street":"R. Mareantes 166A","postcode":"2750-299","city":"Cascais e Estoril","lat":38.698857,"lon":-9.438804,"phones":["214847925"],"site":"clinicavet24.com","siteFrom":"osm","hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n5614250399","name":"Clínica Veterenária","street":"Rua Mário Viegas 1","city":"Alcabideche","lat":38.715591,"lon":-9.427074,"since":"2026-11-24"}
+{"id":"n5615061528","name":"Centro Médico Veterinário","street":"Avenida Gago Coutinho 6B","lat":38.691008,"lon":-9.349258,"since":"2026-11-24"}
+{"id":"n5615296659","name":"Bicessevet","street":"18","lat":38.736009,"lon":-9.367882,"since":"2026-11-24"}
+{"id":"n5615857524","name":"Clínica Veterinária do Estoril","street":"Avenida Engenheiro Alfredo Vaz Pinto 143","postcode":"2765-126","city":"Estoril","lat":38.704314,"lon":-9.385193,"site":"clinicaveterinariasjestoril.com","siteFrom":"osm","hours":"Mo-Sa 10:00-13:00,15:00-20:00, Su 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n5616009397","name":"Veterinário da Galiza","street":"Rua Sacadura Cabral 216","lat":38.706457,"lon":-9.385616,"since":"2026-11-24"}
+{"id":"n5616265530","name":"Pet Shop","lat":38.7008,"lon":-9.444032,"since":"2026-11-24"}
+{"id":"n5618021921","name":"Holi.Pet & Family","street":"Avenida Maria Lamas 94","postcode":"2775-123","city":"Carcavelos e Parede","lat":38.702783,"lon":-9.362994,"site":"https://www.holipet.pt","siteFrom":"osm","hours":"Tu-Fr 11:00-13:00,15:00-18:00; Sa 11:00-15:00","hoursFrom":"structured","hoursUrl":"https://www.holipet.pt","hoursHash":"9e239ccbfdfc4f5f","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n5622146476","name":"Clínica Veterinária de Vizela","street":"Rua das Teixugueiras 198","postcode":"4815-490","city":"Vizela","lat":41.381267,"lon":-8.314454,"hours":"Mo-Fr 10:00-13:00/15:00-20:00, St 10:00-13:00/15:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n5622616740","name":"Clínica Veterinária Vet Parede","street":"Largo Humberto Delgado 12","city":"Carcavelos e Parede","lat":38.697374,"lon":-9.353464,"hours":"Mo-Sa 10:00-14:00,16:00-20:00, Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n5623963368","name":"Clínica Veterinária de São Martinho do Porto","street":"Rua Abilio Frazão 8","postcode":"2460-660","city":"São Martinho do Porto","lat":39.509536,"lon":-9.129383,"phones":["262989029"],"since":"2026-11-24"}
+{"id":"n5709698906","name":"Animações - Clínica Veterinária","street":"Rua Abade Pinheiro 368;370","city":"Esmoriz","lat":40.955747,"lon":-8.630265,"since":"2026-11-24"}
+{"id":"n5732599833","name":"SotaVet","lat":37.086957,"lon":-7.783372,"since":"2026-11-24"}
+{"id":"n5741075782","lat":38.065783,"lon":-8.774619,"since":"2026-11-24"}
+{"id":"n5757188135","name":"Clínica Veterinária de Porto de Mós","street":"Av. Vila Forte 146","postcode":"2480-330","city":"Porto de Mós","lat":39.599255,"lon":-8.823677,"since":"2026-11-24"}
+{"id":"n5781743104","name":"Matriz Vet","street":"98-106 102","lat":41.454414,"lon":-8.168496,"phones":["915015049"],"since":"2026-11-24"}
+{"id":"n5808138854","name":"Cliniczoo","street":"Rua Comandante Rocha e Cunha 292","postcode":"3840-415","lat":40.56034,"lon":-8.682205,"phones":["234798028"],"site":"https://cliniczoo.com/","siteFrom":"osm","hours":"Mo-Fr 10:30-12:30, 15:00-20:00; Sa 10:30-13:00, 15:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n5844883302","lat":41.208411,"lon":-8.328859,"since":"2026-11-24"}
+{"id":"n5862031321","name":"Mais Vida","lat":40.658484,"lon":-7.917898,"since":"2026-11-24"}
+{"id":"n5882263187","name":"Hospital Veterinário de Viseu","lat":40.658962,"lon":-7.92287,"since":"2026-11-24"}
+{"id":"n5910487546","name":"B-Pet","street":"Avenida 5 de Outubro 65","postcode":"5400-017","city":"Chaves","lat":41.745027,"lon":-7.463818,"phones":["276348214"],"hours":"Mo-Fr 10:00-13:00, 14:30-19:00; Sa 09:30-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n5924800204","name":"FlaviVet - Clínica Veterinária no Paraíso","lat":41.743308,"lon":-7.481869,"phones":["914100108"],"since":"2026-11-24"}
+{"id":"n5955992781","name":"AniCura Algarve Hospital Veterinário","street":"Avenida Calouste Gulbenkian 66","postcode":"8000-072","city":"Faro","lat":37.025784,"lon":-7.939448,"phones":["289806057"],"site":"https://www.anicura.pt/clinicas-veterinarias/algarve-hospital-veterinario/","siteFrom":"osm","hours":"Mo-Sa 09:00-21:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n5984367185","name":"Veterinário Doutor Carmona","lat":38.668807,"lon":-9.158358,"since":"2026-11-24"}
+{"id":"n6042787272","name":"Centro Veterinário de Gualtar","lat":41.562984,"lon":-8.392144,"phones":["253284593"],"hours":"Mo-Fr 10:00-13:00,14:00-20:00; Sa 10:00-13:00,14:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n6051454116","name":"Clínica Veterinária de Arrifana","street":"Rua Terras de Santa Maria 615","postcode":"3700-394","city":"Arrifana","lat":40.919012,"lon":-8.499554,"phones":["256877382"],"site":"https://www.clinicaveterinariaurgencias24h.pt/","siteFrom":"osm","emergency":"24/7","emergencyPhone":"918 818 832","emergencyChecked":"2026-11-24","hospital":true,"since":"2026-11-24"}
+{"id":"n6165584194","name":"Clínica Veterinária de Leça da Palmeira","lat":41.191767,"lon":-8.692825,"since":"2026-11-24"}
+{"id":"n6205870512","name":"Consultório do Gato","lat":38.781166,"lon":-9.101533,"hours":"Mo-Sa 09:00-21:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n6232809186","name":"VetPeniche","lat":39.357914,"lon":-9.374702,"hours":"Mo-Fr 09:00-13:00,14:00-19:00; Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n6420953185","name":"Clínica Veterinária do Bonfim - Os Bichos","street":"Estrada de Palmela 49","postcode":"2900-409","lat":38.533347,"lon":-8.897502,"phones":["265227003"],"hours":"Mo-Fr 10:00-13:00, 15:00-20:00; Sa 10:00-13:00, 15:00-18:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n6423573764","name":"Hospital Veterinário Central","street":"Rua de António Andrade 1141","city":"Charneca de Caparica","lat":38.615907,"lon":-9.191088,"site":"https://www.hospvetcentral.pt/","siteFrom":"osm","emergency":"24/7","emergencyChecked":"2026-11-24","hospital":true,"since":"2026-11-24"}
+{"id":"n6424040478","name":"Clínica Veterinária Laranjeiro","street":"Avenida 23 de Julho","lat":38.653711,"lon":-9.154049,"since":"2026-11-24"}
+{"id":"n6424040687","name":"Centro Veterinário Felino","street":"Rua Teófilo Braga 3","lat":38.659708,"lon":-9.158799,"since":"2026-11-24"}
+{"id":"n6426391723","name":"Pet Shop Vet Zoo","street":"Avenida 1º de Maio 34","postcode":"2825-393","city":"Costa da Caparica","lat":38.645148,"lon":-9.23766,"phones":["212906941"],"hours":"Mo-Sa 09:00-13:00,15:00-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n6428438524","street":"2","city":"Almada, Cova da Piedade, Pragal e Cacilhas","lat":38.668367,"lon":-9.158093,"since":"2026-11-24"}
+{"id":"n6428443599","name":"Doutora dos Animais","street":"Av. Dom Sebastião 18","postcode":"2825-405","city":"Costa da Caparica","lat":38.641678,"lon":-9.231937,"since":"2026-11-24"}
+{"id":"n6429215183","name":"Centro Veterinário da Aroeira","street":"Praceta José Marques Abreu 6","postcode":"2820-567","lat":38.580775,"lon":-9.179529,"hours":"Mo-Fr 10:00-13:30,15:30-17:30; Sa 10:00-13:30; Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n6430870065","name":"Caparica Vet","street":"Avenida Afonso de Albuquerque 175","lat":38.655535,"lon":-9.238852,"phones":["212914230"],"since":"2026-11-24"}
+{"id":"n6431896477","name":"Clínica Veterenária Vetalmada","street":"Avenida Cristo Rei","city":"Almada, Cova da Piedade, Pragal e Cacilhas","lat":38.678109,"lon":-9.164825,"since":"2026-11-24"}
+{"id":"n6432920227","name":"Centro Veterinário","street":"Avenida Dom Afonso Henriques 22 B","postcode":"2800-010","city":"Almada","lat":38.681047,"lon":-9.154884,"since":"2026-11-24"}
+{"id":"n6433890706","name":"Vetexóticos","street":"Estrada da Algazarra 41C","lat":38.651293,"lon":-9.165743,"since":"2026-11-24"}
+{"id":"n6434338286","name":"BlueVet","street":"Travessa Dom Sancho I 19","postcode":"2800-712","city":"Almada","lat":38.680399,"lon":-9.15241,"since":"2026-11-24"}
+{"id":"n6434766829","name":"Clínica Veterinária do Feijó","street":"Rua Ramalho Ortigão 20","lat":38.655231,"lon":-9.162865,"since":"2026-11-24"}
+{"id":"n6441703392","name":"Clínica Veterinária","street":"Avenida 25 de Abril 41B","lat":38.684189,"lon":-9.149744,"since":"2026-11-24"}
+{"id":"n6459489375","name":"VET","lat":38.738473,"lon":-27.069527,"since":"2026-11-24"}
+{"id":"n6518890236","name":"Klinik","lat":37.028783,"lon":-7.844948,"since":"2026-11-24"}
+{"id":"n6531641626","name":"Centro Veterinário de Seia Animal VIP","street":"Avenida Terras de Sena 45 A","city":"Seia","lat":40.421959,"lon":-7.713639,"site":"https://www.animalvip.pt/","siteFrom":"osm","hours":"Mo-Fr 10:00-13:00,14:30-19:30; Sa 10:00-13:00,14:30-17:00","hoursFrom":"ai","hoursUrl":"https://www.animalvip.pt/","hoursHash":"3c4101284dbf74d4","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"933 330 300","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n6542602402","name":"Veterinário do Mercado","lat":37.154887,"lon":-7.887994,"since":"2026-11-24"}
+{"id":"n6563041730","name":"Veterinário de Vilarinho","lat":41.338003,"lon":-8.682997,"since":"2026-11-24"}
+{"id":"n6589713933","name":"Clínica Veternária de Alfena","street":"R. Primeiro de Maio 718","postcode":"4445-245","city":"alfena","lat":41.235993,"lon":-8.536492,"phones":["229684382"],"site":"https://www.clinicaveterinariaalfena.pt/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n6606539694","name":"Animalvet","lat":40.36398,"lon":-7.342119,"since":"2026-11-24"}
+{"id":"n6715294722","name":"Centro Veterinário \"Arca de Noé\"","street":"Rua Senhora da Saúde","postcode":"8375-109","city":"São Bartolomeu de Messines","lat":37.255373,"lon":-8.285951,"since":"2026-11-24"}
+{"id":"n6783914841","name":"VIPPets","lat":40.222513,"lon":-8.063696,"since":"2026-11-24"}
+{"id":"n6789234183","name":"Vet Zu","lat":41.236795,"lon":-8.597186,"since":"2026-11-24"}
+{"id":"n6791469357","name":"Hospital Veterinário de Braga","street":"Rua de Abraão 63","city":"Maximinos, Sé e Cividade","lat":41.540399,"lon":-8.430219,"phones":["253693121"],"site":"https://www.hospitalveterinariobraga.pt/","siteFrom":"osm","hours":"Mo-Fr 09:00-21:00; Sa 09:00-13:00,15:00-18:00; Su 10:00-13:00","hoursFrom":"ai","hoursUrl":"https://www.hospitalveterinariobraga.pt/","hoursHash":"44675f661c21edab","hoursChecked":"2026-11-24","emergency":"on_call","emergencyChecked":"2026-11-24","hospital":true,"since":"2026-11-24"}
+{"id":"n6960398475","name":"BVet","street":"Avenida da Liberdade 148B","postcode":"8150-101","lat":37.157287,"lon":-7.889322,"hours":"Mo-Fr 09:30-13:30,15:00-19:30; Sa 09:30-13:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n7033951403","name":"Vetzu","lat":40.961401,"lon":-8.628623,"hours":"Mo-Sa 09:00-20:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n7033970236","name":"Clínica Veterinária São Cristóvão","lat":40.859991,"lon":-8.619839,"since":"2026-11-24"}
+{"id":"n7063845768","name":"LEÇAVet","lat":41.196392,"lon":-8.696862,"since":"2026-11-24"}
+{"id":"n7064760354","name":"ZU","street":"Rua de Brito Capelo","postcode":"4450","city":"Matosinhos","lat":41.175857,"lon":-8.689189,"hours":"Mo-Su 10:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n7091069286","name":"Dra. Ana Lucía Cova","lat":38.020578,"lon":-7.478088,"phones":["969524545"],"since":"2026-11-24"}
+{"id":"n7110842786","name":"Dr. Nuno Costa Neves","street":"Avenida General Humberto Delgado","lat":38.058967,"lon":-8.113359,"phones":["967073576"],"hours":"Mo,We,Fr 18:00-20:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n7128780985","name":"Vets & Pets","street":"Rua do Salgueiral n18","postcode":"4200-475","lat":41.1737,"lon":-8.589118,"phones":["225400459"],"site":"https://www.vetspets.pt/","siteFrom":"osm","hours":"Su-Fr 10:00-20:00; Sa 10:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n7264467591","lat":39.656484,"lon":-8.82218,"since":"2026-11-24"}
+{"id":"n7285991105","name":"Molly & Jack","lat":38.708237,"lon":-9.15473,"since":"2026-11-24"}
+{"id":"n7299207635","name":"Clínica Veterinária do Bouro","street":"Avenida dos Bombeiros Voluntários","postcode":"4840-100","city":"Terras de Bouro","lat":41.717469,"lon":-8.310679,"since":"2026-11-24"}
+{"id":"n7346631994","name":"Polo Veterinário","lat":40.42428,"lon":-7.714695,"phones":["960369396"],"site":"https://www.facebook.com/hvv.seia/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n7392197154","name":"Hospital Veterinário de Massamá","lat":38.757331,"lon":-9.280473,"since":"2026-11-24"}
+{"id":"n7416741242","name":"Clinigil","lat":39.078135,"lon":-8.170631,"since":"2026-11-24"}
+{"id":"n762497843","name":"Clínica Veterinária da Solum","lat":40.202288,"lon":-8.400442,"since":"2026-11-24"}
+{"id":"n7726944077","name":"VetGuia - Clínica Veterinária","street":"EN 34","postcode":"3105-063","city":"Carriço","lat":39.96506,"lon":-8.791599,"phones":["236096488"],"hours":"Mo-Fr 10:00-13:00,15:00-19:00; Sa 10:00-13:00; PH off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n7832750956","name":"Clínica Veterinária da Maia","street":"Praça Almada Negreiros 24","city":"Cidade da Maia","lat":41.227826,"lon":-8.622634,"phones":["964027975"],"hours":"Mo-Fr 09:30-19:00; Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n7917696271","name":"Centro Veterinário de Castro Daire - Animal VIP","street":"Avenida 25 de Abril 4","city":"Castro Daire","lat":40.897493,"lon":-7.928932,"hours":"Mo-Sa 10:00-13:00, Mo-Fr 15:00-19:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8057433945","name":"VetPaiva","street":"Rua Egas Moniz 121","postcode":"3650-219","city":"Vila Nova de Paiva","lat":40.85152,"lon":-7.731653,"since":"2026-11-24"}
+{"id":"n8084588121","name":"Hospital Veterinário de Coimbra","street":"Rua O Conimbricense 34","postcode":"3030-504","city":"Coimbra","lat":40.183505,"lon":-8.405206,"phones":["239099777"],"site":"https://hospvetcoimbra.com/","siteFrom":"osm","hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8144208385","name":"Clínica Veterinária Patas e Cãopanhia","street":"Estrada da Serra da Mira","lat":38.763952,"lon":-9.229606,"since":"2026-11-24"}
+{"id":"n8225426112","name":"Pet'Spot","street":"Praça Tomaz José Machado 15","city":"Bucelas","lat":38.90069,"lon":-9.117743,"phones":["219693997","918602827"],"hours":"Tu-Fr 10:00-13:00, 15:00-20:00; Sa 10:00-13:00, 13:00-17:00; Su off; Mo off; PH off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8255390957","name":"Clínica Veterinária Alta de Lisboa","street":"Rua Helena Vaz da Silva","postcode":"1750-429","city":"Lisboa","lat":38.772221,"lon":-9.15334,"phones":["517552868"],"hours":"Mo-Su 10:00-20:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8261781149","name":"Clínica Veterinária do Lidador","lat":41.17151,"lon":-8.658927,"hours":"Mo-Fr 10:00-12:30,14:30-19:30; Sa 10:00-12:30; Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8284301231","name":"Clínica Veterinária de Serralves","lat":41.161347,"lon":-8.657838,"since":"2026-11-24"}
+{"id":"n8369075046","name":"Os Bichos - Clínica Veterinária","street":"Avenida do Estádio 44","postcode":"5400-234","city":"Chaves","lat":41.749175,"lon":-7.465827,"phones":["276323472"],"site":"http://osbichos.pt","siteFrom":"osm","hours":"Mo-Fr 10:00-13:00, 14:00-20:00; Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8394190338","name":"Clinivet","street":"Rua Domitilia de Carvalho 18","lat":40.922126,"lon":-8.561337,"phones":["256378953"],"hours":"Mo-Fr 10:00-13:00,15:00-20:00; Sa 10:00-13:00,15:00-17:00; Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8397058399","name":"Saving Pets","lat":38.745161,"lon":-9.280707,"since":"2026-11-24"}
+{"id":"n8399259361","name":"Breed - Clínica Veterinária da Feira","lat":40.924901,"lon":-8.55257,"since":"2026-11-24"}
+{"id":"n8399264251","name":"Centro Veterinário da Feira","street":"Rua São Paulo da Cruz 29","city":"Santa Maria da Feira","lat":40.925394,"lon":-8.561496,"phones":["919346602"],"since":"2026-11-24"}
+{"id":"n8405761040","name":"Patas e Garras","street":"Rua Moinho das Campainhas 1","lat":40.939961,"lon":-8.536333,"since":"2026-11-24"}
+{"id":"n8406494525","name":"Hospital Veterinário Doutor Francisco Corrêa Cardoso","street":"Rua de Paços de Ferreira 134","city":"Ramalde","lat":41.165435,"lon":-8.659019,"hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8425886550","name":"Hospital Veterinário do Baixo Alentejo Animália","street":"Rua António Carrascozinha 6","city":"Beja","lat":38.013465,"lon":-7.872109,"phones":["284389777"],"site":"https://www.animalia.pt","siteFrom":"osm","hours":"Mo-Fr 09:00-20:00; Sa 09:00-18:00","hoursFrom":"ai","hoursUrl":"https://www.animalia.pt","hoursHash":"4d34a307e6186070","hoursChecked":"2026-11-24","emergency":"on_call","emergencyChecked":"2026-11-24","hospital":true,"since":"2026-11-24"}
+{"id":"n8442643168","name":"Mimos Que Curam","street":"Rua Futebol São Félix da Marinha 105","postcode":"4410-005","city":"São Félix da Marinha","lat":41.042928,"lon":-8.627052,"since":"2026-11-24"}
+{"id":"n8494655241","name":"Consultório Veterinário Municipal","lat":37.15099,"lon":-7.886676,"since":"2026-11-24"}
+{"id":"n8507336681","name":"Centro Veterinário de São Vicente","street":"Rua Nuno Amorim","postcode":"4710-503","city":"Braga","lat":41.560013,"lon":-8.414554,"phones":["919631396"],"site":"https://www.facebook.com/people/Centro-Veterin%C3%A1rio-de-S-Vicente/100027208584913/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n8540569468","name":"Veterinário da Quinta","street":"Rua da Glória 3097","lat":38.566586,"lon":-9.037797,"hours":"Mo-Fr 09:30-13:00, 15:00-19:00; Sa 09:30-17:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8554684000","name":"Clivbel","street":"Rua Infante Dom Henrique 27A","postcode":"7800-318","lat":38.015919,"lon":-7.868911,"phones":["284322658"],"since":"2026-11-24"}
+{"id":"n8589849915","name":"Vetlamaçães","lat":41.550424,"lon":-8.395293,"phones":["253254615"],"site":"https://www.facebook.com/vetlamacaes/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n8645181293","name":"Clínica Veterinária","lat":38.926242,"lon":-9.232898,"phones":["219662466"],"hours":"Mo-Fr 17:00-21:00; Sa-Su 10:00-12:00; PH off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8658272778","name":"Centro Veterinário de Felgueiras","street":"Avenida Doutor Ribeiro de Magalhães","postcode":"4610-108","city":"Felgueiras","lat":41.357921,"lon":-8.189844,"since":"2026-11-24"}
+{"id":"n8662699211","name":"Associação Zoófila Portuguesa (AZP)","street":"Avenida Luís Bívar 85C","lat":38.734226,"lon":-9.149754,"since":"2026-11-24"}
+{"id":"n8662752754","name":"AniCura Arco do Cego Hospital Veterinário","street":"Rua Dona Filipa de Vilhena 4E;4F","postcode":"1000-135","city":"Lisboa","lat":38.735734,"lon":-9.141566,"phones":["213156207"],"hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8664721311","name":"Patinhas Mimadas","street":"Estrada de Benfica 397","city":"Lisboa","lat":38.745344,"lon":-9.181365,"since":"2026-11-24"}
+{"id":"n8675909187","lat":39.241106,"lon":-9.102931,"since":"2026-11-24"}
+{"id":"n8676039664","name":"Centro Veterinário - Saúde Animal","lat":41.177909,"lon":-8.677729,"since":"2026-11-24"}
+{"id":"n8676633487","name":"Centro Veterinário do Alto","street":"Praceta de Beja 138 A","lat":38.713003,"lon":-9.415853,"phones":["211396230"],"hours":"Mo-We, Fr 10:00-19:00; Sa 10:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8685265813","name":"Consultório Veterinário da Ajuda","street":"Calçada da Ajuda 201","postcode":"1300-017","city":"Lisboa","lat":38.70512,"lon":-9.199403,"hours":"Mo-Fr 09:00-20:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8685881386","name":"Clínica Veterinária de Alcântara","street":"Rua Luís de Camões 133","postcode":"1300-357","city":"Alcântara","lat":38.704012,"lon":-9.182759,"since":"2026-11-24"}
+{"id":"n8688630379","name":"Laranjeiras Veterinary Hospital","street":"Rua São Tomás de Aquino 8","postcode":"1600-203","city":"Lisboa","lat":38.752361,"lon":-9.17303,"phones":["217270945"],"site":"https://www.vetlaranjeiras.com/","siteFrom":"osm","hours":"24/7","hoursFrom":"ai","hoursUrl":"https://www.vetlaranjeiras.com/","hoursHash":"7c0b32f19d282fe3","hoursChecked":"2026-11-24","emergency":"24/7","emergencyChecked":"2026-11-24","hospital":true,"since":"2026-11-24"}
+{"id":"n8703115277","name":"Clínica Veterinária da Venteira","street":"Rua Ernesto Melo Antunes 5","postcode":"2700-193","city":"Amadora","lat":38.761191,"lon":-9.242132,"hours":"Mo-Su 10:00-23:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8703115279","name":"Consultório Venterinário Lisboa-Sintra","street":"Rua Ernesto Melo Antunes 7","postcode":"2700-002","city":"Amadora","lat":38.761483,"lon":-9.243332,"hours":"Mo-Sa 10:00-20:00; Su 10:00-14:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8747696601","name":"Cantinho dos animais","lat":38.723882,"lon":-9.165835,"since":"2026-11-24"}
+{"id":"n8747702054","name":"Vetcampolide","street":"Rua de Campolide","postcode":"1070-036","city":"Lisboa","lat":38.728747,"lon":-9.162522,"since":"2026-11-24"}
+{"id":"n8756485509","name":"Clínica Veterinária da Póvoa de Santa Iria","street":"Rua do Alviela 1","postcode":"2625-209","city":"Póvoa de Santa Iria","lat":38.865451,"lon":-9.065509,"hours":"Mo-Sa 09:00-13:00; Mo-Fr 15:30-20:00; Sa 15:00-20:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8761443340","name":"Ani Cura Alma Veterinária - Hospital","street":"Estrada das Ligeiras 5","postcode":"2735-337","lat":38.763342,"lon":-9.308646,"phones":["966739682","214263919"],"site":"https://almaveterinaria.pt","siteFrom":"osm","hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8766243191","lat":38.726096,"lon":-9.128118,"since":"2026-11-24"}
+{"id":"n8786438723","name":"Clínica Veterinária Doutora Patrícia Guimarães","lat":41.1723,"lon":-8.655419,"since":"2026-11-24"}
+{"id":"n8792580577","name":"Au Miau","lat":41.17853,"lon":-8.678356,"since":"2026-11-24"}
+{"id":"n8796445153","name":"Clínica Veterinária Avenida Menéres","lat":41.178737,"lon":-8.683188,"since":"2026-11-24"}
+{"id":"n8840183807","name":"PETVET Clínicas","lat":41.175101,"lon":-8.689669,"since":"2026-11-24"}
+{"id":"n8860263643","name":"Veterinários Sobre Rodas","street":"Rua Carlos Lopes","lat":38.75198,"lon":-9.35249,"hours":"Mo-Fr 09:00-21:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8863395112","name":"Pet24","street":"Estrada de Alfragide","lat":38.734659,"lon":-9.220749,"hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8872552487","name":"Clínica Veterinária Dras e Bichinhos","lat":40.856559,"lon":-8.376441,"hours":"10:00-12:30,15:00-20:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8916043368","name":"Hospital Veterinário de Oeiras","street":"Rua Alfredo de Sousa 4 B","lat":38.692442,"lon":-9.304112,"hours":"Mo-Su 09:00-21:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8920538819","name":"Clínica VetLoures","lat":38.831219,"lon":-9.169314,"since":"2026-11-24"}
+{"id":"n8963044489","name":"Clínica Veterinária de Vila Real","lat":41.301367,"lon":-7.748563,"since":"2026-11-24"}
+{"id":"n8985341379","name":"Clínica Veterinária das Piscinas","street":"Rua dos Torneiros 27","postcode":"4715-051","lat":41.548731,"lon":-8.408915,"phones":["253262638"],"site":"https://www.facebook.com/people/Cl%C3%ADnica-Veterin%C3%A1ria-das-Piscinas/100063561014054/","siteFrom":"osm","hours":"Mo-Fr 10:00-12:00,14:00-20:00; Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9023048719","name":"Zoopharma - Consultório Veterinário","street":"Avenida João Paulo II Lote 4","postcode":"5000-198","lat":41.296171,"lon":-7.732372,"since":"2026-11-24"}
+{"id":"n9035423360","name":"Transmonvete","lat":41.306394,"lon":-7.74651,"since":"2026-11-24"}
+{"id":"n9056341361","name":"Vet Belas Clínica Veterinária","street":"Praceta Francisco Holanda 4 F","lat":38.777812,"lon":-9.259097,"since":"2026-11-24"}
+{"id":"n9111341391","name":"Clinica Veterinária Sabine","street":"Courela do Outeiro","lat":37.629143,"lon":-7.497784,"since":"2026-11-24"}
+{"id":"n9153419078","name":"Clínica Veterinária Vila Franca do Campo","street":"Rua das Hortas 1","postcode":"9680-130","city":"Vila Franca do Campo (São Miguel)","lat":37.720653,"lon":-25.431051,"phones":["296582307"],"site":"https://www.cvvfc.pt/","siteFrom":"osm","hours":"Mo-Fr 10:00-13:00,15:00-19:00; Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9196964153","name":"Távora","street":"Avenida das Tílias 18","postcode":"3640-240","city":"Sernancelhe","lat":40.896741,"lon":-7.496145,"phones":["254559060","961202482"],"site":"https://clinica-veterinaria-do-tavora.negocio.site/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n9200986819","name":"Lovet","lat":39.087721,"lon":-9.129325,"since":"2026-11-24"}
+{"id":"n9325770625","name":"Espiche (Lagos)","street":"Rua dos Tanques","postcode":"8600-109","lat":37.101299,"lon":-8.745826,"site":"https://www.facebook.com/clinicaespiche/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n9410066220","name":"Proençavet-Serviços Veterinários e Afins Sociedade Unipessoal Lda","street":"Rua Padre Manuel Alves Catarino 14","postcode":"6150-441","city":"Proença a Nova","lat":39.749934,"lon":-7.921247,"since":"2026-11-24"}
+{"id":"n9410076305","name":"Clínica Veterinária Vetilabe","street":"Praceta do Chafariz 4","postcode":"2200-512","city":"Abrantes","lat":39.462293,"lon":-8.200565,"since":"2026-11-24"}
+{"id":"n9410214834","name":"ADSAC-Agrupamento de Defesa Sanitária de Abrantes e Constância","street":"Rua Cidade de Parthenay 63","postcode":"2200-238","city":"Abrantes","lat":39.466487,"lon":-8.206632,"since":"2026-11-24"}
+{"id":"n9410240715","name":"Climevet-Clínica Medicoveterinária de Tomar Lda","street":"Rua de Coimbra 110","postcode":"2300-310","city":"Tomar","lat":39.61459,"lon":-8.390762,"since":"2026-11-24"}
+{"id":"n9410457912","name":"Vet Efa-Serviços Veterinários SA","street":"Rua da Barroca 5","postcode":"2330-108","city":"Entroncamento","lat":39.470434,"lon":-8.473176,"hours":"Mo-Sa 10:00-20:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9410578168","name":"Mendespet-Consultório Veterinário","street":"Avenida Doutor José Eduardo Victor das Neves 106A","postcode":"2330-108","city":"Entroncamento","lat":39.461095,"lon":-8.463267,"since":"2026-11-24"}
+{"id":"n9411046187","name":"Clínica Veterinária Torres Pet","street":"Rua da Várzea 2","postcode":"2350-433","city":"Torres Novas","lat":39.470521,"lon":-8.533763,"since":"2026-11-24"}
+{"id":"n9411083516","name":"Helena R Reis Honrado","street":"Rua Joaquim Rodrigues Bicho 141B","postcode":"2350-087","city":"Torres Novas","lat":39.489153,"lon":-8.549272,"since":"2026-11-24"}
+{"id":"n9411263956","name":"Centro De Atendimento Médico Veterinário Da Lousã Lda","street":"Rua Gil Vicente 17","postcode":"3200-243","city":"Lousã","lat":40.119278,"lon":-8.242996,"since":"2026-11-24"}
+{"id":"n9411287376","name":"VetFigueiró - Clínica Veterinária","street":"Rua Major Neutel de Abreu 116","postcode":"3260-427","city":"Figueiró dos Vinhos","lat":39.901278,"lon":-8.286529,"hours":"terça-feira 10:00-13:00 14:00-19:00  quarta-feira 10:00-13:00 14:00-19:00  quinta-feira 10:00-13:00 14:00-19:00  sexta-feira 10:00-13:00 14:00-19:00  sábado 10:00-13:00  domingo Encerrado  segunda-feira 10:00-13:00 14:00-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9411306266","name":"VetLouzan Centro Médico-Veterinário","street":"Avenida Coelho da Gama 2","postcode":"3200-200","city":"Lousã","lat":40.109594,"lon":-8.243824,"since":"2026-11-24"}
+{"id":"n9460062268","name":"Clínica Veterinária de Barcelos","lat":41.535586,"lon":-8.622803,"since":"2026-11-24"}
+{"id":"n9495663158","name":"LowCost Veterinários","street":"Rua Paulo VI 182","postcode":"2410-147","city":"Leiria","lat":39.757903,"lon":-8.786132,"phones":["244027209","912267676"],"site":"https://www.lowcostveterinarios.pt/centro/lowcost-veterinarios-pousos-leiria/","siteFrom":"osm","hours":"Mo-Fr 10:00-13:00,15:00-20:00; Sa 10:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9499403524","name":"Leirizoo","street":"Rua 25 de Abril 172","postcode":"2415-602","city":"Leiria","lat":39.765426,"lon":-8.823476,"phones":["244826278"],"site":"https://leirizoo.com/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n9566556658","name":"AniCura Restelo Hospital Veterinário","street":"Rua Gregório Lopes 1513","postcode":"1400-195","city":"Lisboa","lat":38.711777,"lon":-9.21407,"phones":["213032119"],"hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9566587273","name":"AniCura Vasco da Gama Clínica Veterinária","street":"Rua Adriano Correia de Oliveira 14","postcode":"2625-387","city":"Póvoa de Santa Iria","lat":38.866615,"lon":-9.058832,"phones":["219598623"],"hours":"Mo-Fr 10:00-13:00,14:00-20:00; Sa,Su 10:00-13:00,15:00-20:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9575901817","name":"Clínica do Barlavento","street":"Rua Júdice Fialho 39","postcode":"8500-724","lat":37.139496,"lon":-8.534261,"phones":["282103131"],"since":"2026-11-24"}
+{"id":"n9575909417","name":"Clínica Gil Eanes","street":"Largo Gil Eanes","postcode":"8500-648","lat":37.144324,"lon":-8.53845,"phones":["282483096"],"since":"2026-11-24"}
+{"id":"n9575945017","name":"Hospital Veterinário Portimão","street":"Avenida Afonso Henriques 28","postcode":"8500-502","lat":37.135432,"lon":-8.536233,"phones":["282418260"],"site":"https://www.hospitalveterinariodeportimao.com/hospital","siteFrom":"osm","hours":"24/7","hoursFrom":"ai","hoursUrl":"https://www.hospitalveterinariodeportimao.com/hospital","hoursHash":"b06d7c770b4443bc","hoursChecked":"2026-11-24","emergency":"24/7","emergencyChecked":"2026-11-24","hospital":true,"since":"2026-11-24"}
+{"id":"n9578005716","name":"Cucujães Vete","street":"Avenida João Pinto Bessa 281","lat":40.875576,"lon":-8.508788,"phones":["256668280"],"hours":"Mo-Fr 09:00-12:30,14:00-19:00; Sa 09:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9586675718","name":"Clínica Gil Eanes","lat":37.144208,"lon":-8.538399,"since":"2026-11-24"}
+{"id":"n9729286155","name":"VetVisão Oftamologia Veterinário","street":"Avenida Miguel Torga 25-A","city":"Campolide","lat":38.73038,"lon":-9.161676,"hours":"Mo-Fr 10:00-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9735807612","name":"b-pet Consultório Veterinário","lat":37.020691,"lon":-7.937925,"phones":["289094171","971947024"],"site":"https://www.b-pet.pt/","siteFrom":"osm","hours":"Mo-Fr 10:00-13:00,14:30-19:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9743897821","name":"Damião de Góis","lat":41.161478,"lon":-8.610503,"since":"2026-11-24"}
+{"id":"n9825654417","name":"Veterinário feirense","lat":40.939949,"lon":-8.562413,"since":"2026-11-24"}
+{"id":"n9944643933","name":"Petvet Clínicas","lat":41.278685,"lon":-8.720099,"since":"2026-11-24"}
+{"id":"n9944951488","name":"Mascotes & Companhia","lat":41.272882,"lon":-8.724034,"hours":"Mo-Fr 09:30-13:00, 15:00-19:30; Sa 10:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9991170205","name":"Covelo VET","lat":41.165393,"lon":-8.603081,"since":"2026-11-24"}
+{"id":"r14347675","name":"Hospital Veterinário do Seixal","street":"Av. Vasco da Gama Lt 37","postcode":"2840-746 SEIXAL","lat":38.639357,"lon":-9.097355,"site":"http://www.hospitalveterinariodoseixal.com","siteFrom":"osm","since":"2026-11-24"}
+{"id":"w1012477528","name":"Hospital Veterinário de Gaia","lat":41.059078,"lon":-8.566941,"since":"2026-11-24"}
+{"id":"w1015342316","lat":37.750014,"lon":-25.608161,"since":"2026-11-24"}
+{"id":"w1026456754","name":"Serviço Veterinário Municipal","lat":38.653007,"lon":-9.183009,"since":"2026-11-24"}
+{"id":"w1029390042","lat":38.849246,"lon":-7.585193,"since":"2026-11-24"}
+{"id":"w1051587942","name":"Clínica Veterinária do Távora","street":"Avenida das Tilias 18","postcode":"3640-240","city":"Sernancelhe","lat":40.897003,"lon":-7.490847,"since":"2026-11-24"}
+{"id":"w105851041","name":"Clínica Veterinária do Vale","street":"Rua da Estação 170","postcode":"4440-553","lat":41.187646,"lon":-8.487493,"since":"2026-11-24"}
+{"id":"w1086849369","name":"Coimbra Pet Hospital","street":"Rua Doutor Luis de Freitas Morna 48","postcode":"3045-087","city":"Coimbra","lat":40.200921,"lon":-8.482726,"phones":["239985164","962518494"],"site":"coimbrapethospital.pt","siteFrom":"osm","hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w1120773325","name":"Hospital Veterinário Muralha de Évora","lat":38.560075,"lon":-7.920636,"since":"2026-11-24"}
+{"id":"w112403198","name":"Hospital Veterinário","lat":40.601987,"lon":-8.463648,"since":"2026-11-24"}
+{"id":"w1135616100","name":"AniCura Atlântico Hospital Veterinário","street":"Rua Quintino António Gomes 12","postcode":"2640-402","city":"Mafra","lat":38.942794,"lon":-9.355326,"hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w1165423367","name":"Clinica Veterinaria do Algueirao","street":"Rua das Mercês 33","postcode":"2725-092","city":"Algueirão-Mem Martins","lat":38.798714,"lon":-9.338392,"phones":["211911620"],"since":"2026-11-24"}
+{"id":"w1178779601","name":"Hospital Veterinário da Arrábida","street":"Rua José Augusto Coelho 12","postcode":"2925-538","city":"Azeitão","lat":38.518805,"lon":-9.015166,"phones":["212181441"],"site":"https://vetarrabida.pt/","siteFrom":"osm","hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w1228009475","name":"Centro Veterinário de São Jorge","street":"Rua Loteamento José Rosa 27","postcode":"2480-060","city":"Porto de Mós","lat":39.621185,"lon":-8.858009,"phones":["244105612"],"site":"https://www.centroveterinariosj.pt/","siteFrom":"osm","hours":"Mo-Fr 10:00-13:00,14:00-19:00; Sa 10:00-13:00,14:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w1280394810","name":"Consultório Veterinário","street":"Praça do Norte 4B","postcode":"1800-134","city":"Lisboa","lat":38.776742,"lon":-9.119174,"phones":["218510409"],"hours":"Mo-Sa 11:00am-01:00pm/05:00pm-08:00pm","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w133661700","name":"Clínica Veterinária do Monte dos Burgos","lat":41.171905,"lon":-8.62667,"since":"2026-11-24"}
+{"id":"w133744612","name":"Clínica Veterinária Bracara Augusta","lat":41.547207,"lon":-8.417115,"phones":["253267685"],"site":"http://clinicaveterinariabracaraaugusta.pai.pt/","siteFrom":"osm","hours":"24/7","hoursFrom":"ai","hoursUrl":"http://clinicaveterinariabracaraaugusta.pai.pt/","hoursHash":"c015ea386d2bd63a","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"966931610","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"w1409472650","name":"Clínica","lat":41.234768,"lon":-8.631729,"since":"2026-11-24"}
+{"id":"w141479318","name":"Centro Veterinário Casalito","street":"Rua Padre António Vieira 41A","lat":38.83238,"lon":-9.174993,"since":"2026-11-24"}
+{"id":"w143111136","lat":37.425858,"lon":-8.782353,"since":"2026-11-24"}
+{"id":"w1451161545","name":"Veterinários Ericeira","lat":38.963909,"lon":-9.393265,"since":"2026-11-24"}
+{"id":"w1476645521","name":"Lethesvet - Centro Veterinário","street":"Rua de Jorges 32","postcode":"4990-740","city":"Ponte de Lima","lat":41.764493,"lon":-8.613414,"phones":["919652717"],"hours":"Mo-Fr 09:30-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w1516920914","name":"Requinte Selvagem","street":"19","city":"Antanhol","lat":40.167543,"lon":-8.458517,"since":"2026-11-24"}
+{"id":"w156777889","name":"Hospital Veterinário do Ribatejo","postcode":"2070-237","lat":39.165268,"lon":-8.782157,"since":"2026-11-24"}
+{"id":"w1578358647","name":"Clínica de São Pedro","lat":38.656955,"lon":-27.23813,"since":"2026-11-24"}
+{"id":"w165551438","name":"Medivet","street":"Estrada Nactional 123 4","postcode":"7670-201","city":"Ourique","lat":37.651044,"lon":-8.223366,"hours":"Mo-Fr 10:00-14:00, 16:00-20:00; Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w175108406","name":"Hospital Veterinário Universitário de Coimbra","lat":40.234857,"lon":-8.415227,"since":"2026-11-24"}
+{"id":"w180548562","name":"Hospital Veterinário do Oeste","lat":39.274256,"lon":-9.324463,"hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w200568383","lat":38.793799,"lon":-27.261845,"since":"2026-11-24"}
+{"id":"w228638632","name":"AlcabidecheVet","lat":38.729814,"lon":-9.411333,"since":"2026-11-24"}
+{"id":"w229098755","lat":37.830425,"lon":-25.669745,"since":"2026-11-24"}
+{"id":"w268338929","name":"Centro Veterinário","street":"Rua Fábrica do Papel 547","lat":39.738202,"lon":-8.797576,"hours":"Mo-Fr 10:00-13:00,15:00-20:00; Sa,Su 10:00-13:00,14:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w319453144","name":"Lagos Veterinary Clinic","street":"Rua Tristão da Cunha 48","city":"Lagos","lat":37.101283,"lon":-8.691412,"phones":["282782282"],"hours":"Mo-Fr 09:00-18:00; Sa,Su 10:00-12:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w322228414","lat":41.208599,"lon":-8.643435,"since":"2026-11-24"}
+{"id":"w353685903","name":"Animais da Serra","lat":38.795064,"lon":-9.468949,"since":"2026-11-24"}
+{"id":"w381972333","name":"Consultório Veterinário da Calheta","street":"Estrada simão gonçalves da câmara 84","postcode":"9370-139","city":"Calheta","lat":32.728018,"lon":-17.179166,"phones":["291827677"],"hours":"Mo-Fr10:00-12:30, 14:00-19:00; Sa 10:00-12:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w386423056","name":"Vet Planet","lat":38.749788,"lon":-9.206832,"since":"2026-11-24"}
+{"id":"w399518166","name":"Clínica Veterinária do Lourel","lat":38.81278,"lon":-9.369718,"since":"2026-11-24"}
+{"id":"w419967718","lat":38.746015,"lon":-9.203158,"since":"2026-11-24"}
+{"id":"w427041554","name":"VetSaúde SA- Serviços Veterinários","street":"Rua Henrique Gomes De Oliveira 192","postcode":"2500-303","city":"Caldas da Rainha","lat":39.42373,"lon":-9.147937,"since":"2026-11-24"}
+{"id":"w435017691","lat":41.342371,"lon":-8.735288,"since":"2026-11-24"}
+{"id":"w435116225","name":"Clínica Veterinária da Covilhã","street":"Quinta das Ferreiras","postcode":"6200","city":"Boidobra","lat":40.246598,"lon":-7.496447,"phones":["275325755"],"site":"http://www.clinicaveterinariadacovilha.com","siteFrom":"osm","hours":"Mo-Fr 10:00-20:30, 09:00-18:00; Sa 10:00-13:00, 14:30-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w446856012","lat":37.017543,"lon":-7.938743,"since":"2026-11-24"}
+{"id":"w473592136","name":"Clínica Veterenária de Corroios","street":"Rua do Rouxinol 51","postcode":"2855-205","city":"Corroios","lat":38.644942,"lon":-9.146095,"since":"2026-11-24"}
+{"id":"w538205588","name":"Hospital Veterinário de Aveiro","street":"Avenida da Universidade 215","postcode":"3810-489","city":"Aveiro","lat":40.626087,"lon":-8.651495,"site":"https://www.hospvetaveiro.com/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"w564889257","name":"VetZoolar","street":"Rua Quinta da Vinha 140","postcode":"2775-622","city":"Carcavelos","lat":38.697233,"lon":-9.330491,"hours":"10:00-21:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w572840505","name":"ANI+ Hospital Veterinário","street":"Rua dos Milheirados 21","postcode":"4425-504","city":"São Pedro Fins","lat":41.238937,"lon":-8.552001,"phones":["229690408","935450515"],"site":"https://www.maisanimais.pt/","siteFrom":"osm","hours":"Mo-Fr 09:30-20:30; Sa 09:30-17:30; Su 10:00-13:00,15:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w579969763","name":"Centro Veterinário da Beira Alta","street":"Quinta da Atalaia","postcode":"3500-456","city":"Ranhados","lat":40.639619,"lon":-7.909781,"site":"https://www.animalvip.pt/","siteFrom":"osm","hours":"Mo-Sa 10:00-20:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w624536554","name":"Hospital Veterinário Bom Jesus","lat":41.559387,"lon":-8.388736,"phones":["253691297"],"site":"https://www.hvbomjesus.pt/","siteFrom":"osm","hours":"Mo-Fr 08:00-20:00; Sa 08:00-13:00","hoursFrom":"ai","hoursUrl":"https://www.hvbomjesus.pt/","hoursHash":"7107479b525d36cb","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"+351253691297","emergencyChecked":"2026-11-24","hospital":true,"since":"2026-11-24"}
+{"id":"w754918510","lat":39.244161,"lon":-9.320927,"since":"2026-11-24"}
+{"id":"w755642164","name":"Clínica veterinaria do campo alegre","lat":41.154366,"lon":-8.646837,"since":"2026-11-24"}
+{"id":"w777007296","name":"Amipet","lat":40.645452,"lon":-7.905838,"since":"2026-11-24"}
+{"id":"w777138720","name":"Vetamigo, Clínica Veterinária","lat":40.690779,"lon":-8.474052,"since":"2026-11-24"}
+{"id":"w845460612","name":"Clínica Veterinária de Celeirós","lat":41.512848,"lon":-8.450973,"since":"2026-11-24"}
+{"id":"w845787961","name":"Centro Veterinário de Azeitão","street":"Rua José Maria da Fonseca","lat":38.519617,"lon":-9.011482,"site":"https://www.veterinarioazeitao.pt/pt","siteFrom":"osm","emergency":"on_call","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"w848540751","name":"Centro Veterinário de Aguiar da Beira - Animal VIP","lat":40.818287,"lon":-7.538213,"hours":"Mo-Sa 10:00-13:00, Mo-Fr 15:00-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w854241012","name":"Hospital Veterinário da UTAD","lat":41.289576,"lon":-7.73988,"since":"2026-11-24"}
+{"id":"w912994205","name":"Real Hospital Veterinário","street":"Rua Quinta dos Lagos 28","postcode":"4700-262","city":"Real, Dume e Semelhe","lat":41.558649,"lon":-8.44323,"phones":["253200300"],"site":"https://realhospvet.com/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"w938082000","name":"Low Cost Veterinário","street":"Avenida da Liberdade 306","lat":38.562846,"lon":-9.052317,"since":"2026-11-24"}
+{"id":"w960110204","name":"Policlínica Veterinária de Aveiro","lat":40.641203,"lon":-8.630582,"since":"2026-11-24"}
+{"id":"w961969534","lat":40.757912,"lon":-7.359561,"since":"2026-11-24"}
+{"id":"w967995015","name":"Clínica Veterinária do Lis","street":"Estrada da Estação 64","postcode":"2415-408","lat":39.755236,"lon":-8.823141,"phones":["244009610"],"site":"https://www.clinicaveterinariadolis.pt/pt/","siteFrom":"osm","hours":"Mo-Sa 09:30-19:30","hoursFrom":"osm","since":"2026-11-24"}

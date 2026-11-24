@@ -1,0 +1,156 @@
+{"id":"n10576467542","name":"Evidensia Sinsen Dyreklinikk","lat":59.932568,"lon":10.778003,"phones":["722223111"],"site":"https://dyrenesvenn.no/","siteFrom":"osm","hours":"Mo-Fr 08:30-20:30; Sa-Su 09:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n10621505154","name":"Evidensia Åssiden dyreklinikk AS","lat":59.750754,"lon":10.161578,"hours":"Mo-Fr 08:00-20:00; Sa 09:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1072570740","name":"Fagernes veterinærkontor","lat":60.985408,"lon":9.229731,"since":"2026-11-24"}
+{"id":"n10801256807","name":"AniCura","lat":69.660167,"lon":18.96681,"phones":["777635035"],"site":"https://www.anicura.no/klinikker/dyresykehuset-tromso/","siteFrom":"osm","hours":"Mo-Fr 08:00-18:00; Sa 10:00-14:00","hoursFrom":"ai","hoursUrl":"https://www.anicura.no/klinikker/dyresykehuset-tromso/","hoursHash":"42936ee2bc982ebb","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"77 63 50 35","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n10819252055","name":"Smådyrklinikken Nittedal","lat":60.049837,"lon":10.882996,"phones":["791924444"],"site":"https://www.smadyrklinikken.no/","siteFrom":"osm","hours":"Mo-Fr 08:00-18:00","hoursFrom":"ai","hoursUrl":"https://www.smadyrklinikken.no/","hoursHash":"e99dfdd3f0164860","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n11029863657","lat":69.393228,"lon":18.984816,"since":"2026-11-24"}
+{"id":"n11034062205","name":"Nøtterøy Dyreklinikk","lat":59.114998,"lon":10.392471,"phones":["733399001"],"since":"2026-11-24"}
+{"id":"n11255981651","name":"Veterinær Sandve","lat":63.41463,"lon":8.150804,"since":"2026-11-24"}
+{"id":"n11364497830","name":"Empet Moss","lat":59.421408,"lon":10.677019,"site":"https://www.empet.no/","siteFrom":"osm","hours":"Mo-Fr 09:00-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11376132689","name":"AniCura Jeløy dyresykehus","lat":59.417941,"lon":10.683873,"site":"https://www.anicura.no/klinikker/jeloy-dyresykehus/","siteFrom":"osm","hours":"Mo-Fr 08:00-21:00; Sa 10:00-18:00","hoursFrom":"ai","hoursUrl":"https://www.anicura.no/klinikker/jeloy-dyresykehus/","hoursHash":"1aa62648b3ef30c0","hoursChecked":"2026-11-24","emergency":"on_call","emergencyChecked":"2026-11-24","hospital":true,"since":"2026-11-24"}
+{"id":"n1140440020","name":"AniCura Fana Dyreklinikk","lat":60.336194,"lon":5.350584,"phones":["799204000"],"site":"https://www.anicura.no/fana-dyreklinikk/","siteFrom":"osm","hours":"Mo-Th 08:00-18:00; Fr 08:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11465791905","name":"Osterøy Veterinærklinikk","lat":60.505558,"lon":5.430158,"since":"2026-11-24"}
+{"id":"n11467255184","name":"Veterinærsenteret Midt-Troms","lat":68.872678,"lon":17.850516,"phones":["777171445"],"site":"http://www.xn--veterinrsenteret-0ob.no/","siteFrom":"osm","hours":"Mo-Fr 09:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11612346011","name":"Hesteklinikken Bergen","lat":60.487985,"lon":5.383672,"since":"2026-11-24"}
+{"id":"n11691769869","name":"Dyresykehuset – hest","lat":59.66727,"lon":10.761315,"site":"https://www.nmbu.no/forside/hest","siteFrom":"osm","hours":"24/7","hoursFrom":"ai","hoursUrl":"https://www.nmbu.no/forside/hest","hoursHash":"ffebf410db9317cf","hoursChecked":"2026-11-24","emergency":"24/7","emergencyChecked":"2026-11-24","hospital":true,"since":"2026-11-24"}
+{"id":"n11809940984","name":"Petrus","lat":59.927059,"lon":10.712773,"since":"2026-11-24"}
+{"id":"n11812214687","name":"Empet","lat":59.961708,"lon":11.046908,"hours":"Mo-Th 08:00-20:00; Fr 08:00-16:00; Sa 10:00-16:00; Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11874406312","name":"Evidensia Strømsø Dyreklinikk","lat":59.731702,"lon":10.218785,"hours":"Mo-Th 08:00-20:00; Fr 08:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11980553558","name":"Strinda Dyreklinikk","lat":63.40783,"lon":10.397404,"phones":["773944022"],"hours":"Mo-Th 09:00-18:00; Fr 09:00-16:00; PH off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11989820085","name":"Empet","lat":63.110531,"lon":7.778274,"since":"2026-11-24"}
+{"id":"n12009902087","name":"Dyreklinikken Nesodden","lat":59.856376,"lon":10.660269,"site":"https://www.dyreklinikkennesodden.no","siteFrom":"osm","hours":"Mo 09:00-19:00; Tu 09:00-20:00; We,Th 09:00-16:00; Fr 10:00-14:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12129133801","name":"Maridalsveien Smådyrklinikk","lat":59.947378,"lon":10.759781,"phones":["722230670"],"site":"https://www.maridalsveien-smadyr.no/kontakt-ossp0","siteFrom":"osm","hours":"Mo-Tu, Th-Fr 08:00-18:00; Sa 09:00-14:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12158409493","name":"Oppdal dyreklinikk AS","lat":62.593686,"lon":9.686776,"since":"2026-11-24"}
+{"id":"n12167864945","name":"Dyreklinikken Fagerstrand","lat":59.746925,"lon":10.612432,"since":"2026-11-24"}
+{"id":"n12207056220","name":"Evidensia Rogaland Dyresykehus","lat":58.744843,"lon":5.635629,"phones":["751225520"],"site":"https://evidensia.no/dyreklinikk/rogaland-dyresykehus/","siteFrom":"osm","hours":"Mo-Fr 08:00-20:00; Sa 09:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12290408441","name":"VeteriNærDeg","lat":59.908483,"lon":10.47802,"phones":["767106710"],"site":"https://www.veterinaerdeg.no/","siteFrom":"osm","hours":"Mo,We,Th 09:00-19:00; Tu,Fr 09:00-16:00; Sa,Su 12:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1229467392","name":"Vets 4 Pets","lat":59.794286,"lon":10.446931,"phones":["766797500"],"since":"2026-11-24"}
+{"id":"n12328878871","name":"Dyreklinikken Nordic Vet","lat":59.120803,"lon":11.310433,"phones":["769181869"],"site":"https://www.nordicvet.no/","siteFrom":"osm","hours":"Mo 08:00-19:30, Tu-Fr 08:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1243882575","name":"Hamar Dyreklinikk AS","lat":60.797056,"lon":11.088569,"phones":["762509100"],"site":"https://www.hamardyreklinikk.no/","siteFrom":"osm","hours":"Mo-We,Fr 08:00-16:00; Th 08:00-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12760061930","name":"Stord dyreklinikk AS","lat":59.782068,"lon":5.498421,"since":"2026-11-24"}
+{"id":"n12765653729","name":"Alfa Kragerø Smådyrpraksis","lat":58.869139,"lon":9.412528,"hours":"Jul: Mo-Fr 12:00-16:00; Jun,Aug: Mo,We,Th 13:00-15:00; Sep-May: Mo,We 13:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12827214801","name":"Veterinær Rannveig Boman","lat":59.190212,"lon":10.979088,"since":"2026-11-24"}
+{"id":"n12833429903","name":"EMPET Nydalen","lat":59.952136,"lon":10.770732,"phones":["740008199"],"site":"https://www.empet.no/dyreklinikker/nydalen","siteFrom":"osm","hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1291050999","name":"Lisaklinikken","lat":59.92158,"lon":10.761395,"since":"2026-11-24"}
+{"id":"n12971715142","name":"Hornindal Veterinærkontor","lat":61.967191,"lon":6.526317,"since":"2026-11-24"}
+{"id":"n13041534933","name":"Evidensia Eiker dyreklinikk","lat":59.758017,"lon":9.992868,"hours":"Mo-Fr 08:00-15:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13204287072","name":"Dyredoktoren, Høie & Vatne as","lat":58.866989,"lon":5.6866,"phones":["751605560"],"site":"http://dyredoktoren.no/","siteFrom":"osm","hours":"Mo-Th 09:00-18:00; Fr 09:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13256086684","name":"Frogner dyeklinikk","lat":59.917649,"lon":10.712346,"site":"https://frognerdyreklinikk.no","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n13301901087","name":"EMPET Stabekk Dyreklinikk","lat":59.90865,"lon":10.605586,"phones":["766699901"],"site":"https://www.empet.no/dyreklinikker/stabekk","siteFrom":"osm","hours":"Mo-Th 08:00-20:00; Fr 08:00-16:00; Sa 10:00-16:00","hoursFrom":"structured","hoursUrl":"https://www.empet.no/dyreklinikker/stabekk","hoursHash":"1ee71e3369683626","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n13334271815","name":"Robust Fysioterapi","lat":59.908076,"lon":10.601669,"phones":["797324242"],"site":"https://www.robustfysio.no","siteFrom":"osm","hours":"Mo 09:00-20:00; Tu 09:00-16:00; We 09:00-19:00; Th 09:00-16:00; Fr 09:00-14:00","hoursFrom":"ai","hoursUrl":"https://www.robustfysio.no","hoursHash":"8216a83d8492481a","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n13394005270","name":"Smådyrklinikken Ørsta","lat":62.194205,"lon":6.123442,"phones":["799159960"],"site":"https://dyrlegen.onlinebooq.net/","siteFrom":"osm","hours":"Mo-Su 08:00-20:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13431276901","name":"Tønsberg Dyreklinikk","lat":59.271416,"lon":10.360145,"phones":["733333333"],"site":"https://tonsberg-dyreklinikk.no/","siteFrom":"osm","hours":"Mo-Th 08:00-14:00, 17:30-19:00; Fr 08:00-14:00; Sa 08:00-12:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13479521102","name":"Salangen Dyreklinikk","lat":68.876924,"lon":17.832081,"phones":["797289995"],"site":"https://salangendyreklinikk.no/","siteFrom":"osm","hours":"Mo 09:00-15:00; Tu 09:00-19:00; Th 09:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13485248301","name":"Holmestrand Dyreklinikk","lat":59.489222,"lon":10.296417,"phones":["733055338"],"site":"https://www.holmestrand-dyreklinikk.no/","siteFrom":"osm","hours":"Mo 09:00-16:30; Tu 09:00-15:00; We-Th 09:00-16:30; Fr 09:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13655218060","name":"Stokke dyreklinikk","lat":59.221753,"lon":10.298997,"since":"2026-11-24"}
+{"id":"n1371758110","name":"Vestmar dyreklinikk","lat":58.896137,"lon":9.283019,"since":"2026-11-24"}
+{"id":"n13834143632","name":"Empet","lat":59.930291,"lon":10.794075,"since":"2026-11-24"}
+{"id":"n13915021248","name":"Grue Dyreklinikk","lat":60.458399,"lon":12.058805,"hours":"Mo 09:00-18:00; Tu-Fr 09:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1395427615","name":"Dyrlegene","lat":67.28992,"lon":14.567968,"hours":"Mo-Th 12:00-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n14058790805","name":"Anicura","lat":69.689181,"lon":18.858041,"since":"2026-11-24"}
+{"id":"n14105231326","name":"Alta Dyreklinikk","lat":69.950977,"lon":23.241186,"hours":"Mo-Th 08:00-16:00; Fr 08:00-13:30; PH off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n14123588467","name":"Vestby dyreklinikk","lat":59.60556,"lon":10.744642,"since":"2026-11-24"}
+{"id":"n14157789091","name":"Empet","lat":59.951922,"lon":11.048353,"since":"2026-11-24"}
+{"id":"n14338719158","name":"Kongsberg Dyreklinikk","lat":59.674617,"lon":9.649289,"phones":["732724500"],"hours":"Mo-We 08:00-20:00; Th-Fr 08:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1436226960","name":"Distriktsveterinær Hemnes","lat":66.076185,"lon":13.813337,"since":"2026-11-24"}
+{"id":"n1736882033","name":"Borge Veterinærkontor","lat":59.228677,"lon":10.993363,"phones":["769340095"],"since":"2026-11-24"}
+{"id":"n1739122164","name":"EMPET Porsgrunn Dyresykehus","lat":59.134369,"lon":9.632108,"phones":["748023333"],"site":"https://www.empet.no/dyreklinikker/porsgrunn","siteFrom":"osm","hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1982609769","name":"Dyrlege","lat":70.200159,"lon":28.182231,"since":"2026-11-24"}
+{"id":"n1982612009","lat":70.199963,"lon":28.182928,"since":"2026-11-24"}
+{"id":"n1982632937","name":"Veterinærvakta I Ål og Hol","lat":60.631203,"lon":8.563142,"site":"https://www.vetvakta.no/","siteFrom":"osm","hours":"Mo-Fr 08:00-16:00","hoursFrom":"ai","hoursUrl":"https://www.vetvakta.no/","hoursHash":"8743c17c0457e4f4","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"32 08 24 00","emergencyChecked":"2026-11-24","hospital":true,"since":"2026-11-24"}
+{"id":"n1986976795","lat":60.088896,"lon":10.871596,"since":"2026-11-24"}
+{"id":"n2030048228","name":"Ås Dyreklinikk","lat":59.669417,"lon":10.795948,"site":"https://www.dyreklinikk.info/","siteFrom":"osm","hours":"Mo-Fr 09:00-16:00","hoursFrom":"ai","hoursUrl":"https://www.dyreklinikk.info/","hoursHash":"15eacee1a0243a6d","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n2071305347","name":"Hinna Dyreklinikk","lat":58.909486,"lon":5.728525,"since":"2026-11-24"}
+{"id":"n2082338198","name":"Skjønhaug dyreklinikk","lat":59.641096,"lon":11.316158,"since":"2026-11-24"}
+{"id":"n2187688732","name":"Hafrsfjord Smådyrklinikk","lat":58.949971,"lon":5.645847,"phones":["751892002"],"since":"2026-11-24"}
+{"id":"n2192163503","name":"vetBerven","lat":58.121723,"lon":6.599233,"site":"https://www.vetberven.no/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n2344871557","name":"Empet Ullevål Dyreklinikk","lat":59.940103,"lon":10.729036,"hours":"Mo-Th 08:00-20:00; Fr 08:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n2367233737","name":"Inderøy Dyreklinikk","lat":63.874635,"lon":11.290327,"since":"2026-11-24"}
+{"id":"n2389100634","name":"O’ptimum Dyrehospital","lat":59.842507,"lon":10.429362,"site":"http://www.optimumdyrehospital.no/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n280534327","lat":59.476122,"lon":10.645527,"since":"2026-11-24"}
+{"id":"n2886679766","name":"Veterinor","lat":70.663527,"lon":23.688308,"hours":"Mo,Tu,Th 09:00-16:00; We 10:00-18:00; Fr 09:00-14:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3024766711","name":"Dyreklinikken","lat":61.226798,"lon":7.099561,"since":"2026-11-24"}
+{"id":"n3050980163","name":"Stjørdal Dyreklinikk","lat":63.469875,"lon":10.924756,"since":"2026-11-24"}
+{"id":"n3097742851","name":"AniCura Dyreklinikk Sørlandet","lat":58.183104,"lon":8.152066,"since":"2026-11-24"}
+{"id":"n3097749092","name":"Kristiansand Dyreklinikk","lat":58.15703,"lon":7.999705,"phones":["738149595"],"since":"2026-11-24"}
+{"id":"n3125181802","name":"Nøtterøy dyreklinikk","lat":59.252227,"lon":10.411953,"since":"2026-11-24"}
+{"id":"n3126067255","name":"Minde Dyreklinikk","lat":60.364256,"lon":5.346272,"phones":["777712777"],"site":"https://www.mindedyreklinikk.no","siteFrom":"osm","hours":"Mo-Fr 08:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3126099986","name":"Gården Dyreklinikk","lat":60.351336,"lon":5.34854,"phones":["755191580","782090060"],"site":"https://www.mastervet.no/","siteFrom":"osm","hours":"Mo,We 08:00-20:00; Tu,Th 08:00-18:00; Fr 08:00-16:00; Sa,Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3128568824","name":"Vetrinærvakta Fron AS","lat":61.596577,"lon":9.743196,"since":"2026-11-24"}
+{"id":"n3130201243","name":"Vestfold dyrehospital","lat":59.261297,"lon":10.422888,"since":"2026-11-24"}
+{"id":"n3130218242","name":"Hege's Hundesalong","lat":59.282033,"lon":10.363343,"since":"2026-11-24"}
+{"id":"n3138278516","name":"Dyrlege Jannicke Dahl","lat":60.104615,"lon":11.084473,"phones":["793080425"],"since":"2026-11-24"}
+{"id":"n324714600","name":"Evidensia Moss Dyreklinikk","lat":59.445722,"lon":10.682082,"site":"https://evidensia.no/dyreklinikk/moss/","siteFrom":"osm","hours":"Mo,Th 09:00-19:00; Tu-We,Fr 09:00-17:00; Sa 09:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3288555841","name":"Skedsmo Dyreklinikk","lat":59.981297,"lon":11.0453,"since":"2026-11-24"}
+{"id":"n3402418648","name":"Dr Dyregod Anja H. Skog","lat":58.089462,"lon":6.69931,"since":"2026-11-24"}
+{"id":"n3407836735","lat":60.884805,"lon":11.559843,"site":"http://www.dyrlegeneielverum.no/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n3417159232","name":"Arken Dyreklinikk","lat":58.775856,"lon":5.836591,"site":"https://www.arkendyreklinikk.no/","siteFrom":"osm","hours":"Mo-Th 08:00-18:00; Fr 08:00-15:00","hoursFrom":"ai","hoursUrl":"https://www.arkendyreklinikk.no/","hoursHash":"60da3bdb216a2004","hoursChecked":"2026-11-24","emergency":"on_call","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n3417159233","name":"Dyrlegen på Ålgård","lat":58.766923,"lon":5.863082,"since":"2026-11-24"}
+{"id":"n3484761652","lat":64.466354,"lon":12.22214,"since":"2026-11-24"}
+{"id":"n3622224978","name":"AllVet Komsa dyreklinikk","lat":69.972863,"lon":23.370159,"phones":["778445800"],"site":"http://www.komsadyreklinikk.no","siteFrom":"osm","hours":"Mo-Fr 08:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3685027040","name":"Veterinærkontoret i Lyngdal","lat":58.139611,"lon":7.072736,"since":"2026-11-24"}
+{"id":"n3716004506","name":"Dyrego´ Veterinær Aud Fredriksen","lat":69.767507,"lon":21.013702,"phones":["777767697"],"site":"http://www.dyrego-as.no","siteFrom":"osm","hours":"Mo 09:00-15:00;Tu 10:00-14:00;We 09:00-15:00;Th 12:00-18:00;Fr 10:00-14:00;Sa-Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3737771466","name":"EMPET Lillestrøm Dyreklinikk","lat":59.956995,"lon":11.024927,"phones":["763801580"],"site":"https://www.empet.no/klinikker/lillestrom/","siteFrom":"osm","hours":"Mo-Th 08:00-20:00; Fr 08:00-16:00; Sa 10:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3750833481","name":"Fredrikstad Dyrehospital","lat":59.223816,"lon":10.953233,"since":"2026-11-24"}
+{"id":"n3860582542","name":"Oonasin dyreklinikk","lat":60.717737,"lon":11.190662,"phones":["762572590"],"since":"2026-11-24"}
+{"id":"n386193131","name":"Dyreklinikken Bergen Vest","lat":60.364031,"lon":5.246618,"since":"2026-11-24"}
+{"id":"n418507896","name":"Dyreklinikken Hafrsfjord bru","lat":58.961197,"lon":5.610158,"since":"2026-11-24"}
+{"id":"n433516265","name":"Smådyrklinikken","lat":59.754286,"lon":10.844511,"phones":["764862600"],"hours":"Mo-Fr 10:00-18:00; Sa 09:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4365287181","name":"Evidensia Dyreklinikk","lat":60.198442,"lon":11.00539,"phones":["763993900"],"site":"http://nannestad.evidensia.no/","siteFrom":"osm","hours":"Mo-We 09:00-20:00; Fr 09:00-15:00; Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4398203535","name":"AniCura Råholt Dyreklinikk","lat":60.285734,"lon":11.171079,"phones":["763964100"],"site":"https://www.anicura.no/raholt-dyreklinikk/om-oss/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n4417817244","name":"Jessheim dyreklinikk","lat":60.141326,"lon":11.179063,"phones":["763971825"],"site":"https://jessheimdyreklinikk.no/","siteFrom":"osm","hours":"Mo-Th 08:00-20:00; Fr 08:00-16:00; Sa 09:30-14:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4437439601","name":"Evidensia Gjerdrum Dyreklinikk","lat":60.069963,"lon":11.037515,"since":"2026-11-24"}
+{"id":"n460002897","name":"Randesund Dyreklinikk","lat":58.14477,"lon":8.073018,"since":"2026-11-24"}
+{"id":"n4854449240","name":"Fornebu dyreklinikk AS","lat":59.90152,"lon":10.623479,"phones":["767114994"],"site":"https://fornebu-dyreklinikk.no","siteFrom":"osm","hours":"Mo,We,Th 09:00-19:00; Tu,Fr 09:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n5274467814","name":"Evidensia Orkdal dyresenter","lat":63.297723,"lon":9.853111,"since":"2026-11-24"}
+{"id":"n5468642221","lat":58.852261,"lon":5.714856,"since":"2026-11-24"}
+{"id":"n5516162396","name":"Horten Dyreklinikk AS","lat":59.426562,"lon":10.458639,"since":"2026-11-24"}
+{"id":"n5649475617","name":"Kolbotn Dyreklinikk","lat":59.794735,"lon":10.822032,"since":"2026-11-24"}
+{"id":"n6180753402","name":"EMPET Halden dyreklinikk","lat":59.122297,"lon":11.390542,"site":"https://www.empet.no/dyreklinikker/halden","siteFrom":"osm","hours":"Mo-Th 09:00-18:00; Fr 09:00-16:00; Sa,Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n6237368375","name":"Evidensia Bodø","lat":67.273727,"lon":14.448948,"since":"2026-11-24"}
+{"id":"n6347557909","name":"Lillehammer dyreklinikk","lat":61.124678,"lon":10.456345,"since":"2026-11-24"}
+{"id":"n6397372179","name":"Bergen katteklinikk","lat":60.390597,"lon":5.313087,"phones":["755558900"],"site":"https://www.bergenkatteklinikk.no/","siteFrom":"osm","hours":"Mo,We,Fr 08:00-16:00; Tu,Th 08:00-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n6401817161","name":"Helgeland Dyreklinikk","lat":65.862159,"lon":13.193113,"site":"https://www.dyreklinikk.no/dyreklinikk/helgeland-dyreklinikk/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n6551801572","lat":60.241522,"lon":10.385009,"since":"2026-11-24"}
+{"id":"n6585054368","name":"AniCura Dyreklinikk Rising","lat":59.22564,"lon":9.602471,"phones":["735506440"],"hours":"Mo-Th 08:00-19:00; Fr 08:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n6585132659","name":"AniCura Dyreklinikk Skien","lat":59.207498,"lon":9.567047,"phones":["735538111"],"hours":"Mo-Sa 08:00-16:00 \"May be closed on Saturday while holidays\"","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n6611569730","name":"Lakselv Dyreklinikk","lat":70.053134,"lon":24.970583,"since":"2026-11-24"}
+{"id":"n667901983","name":"Nittedal dyreklinikk","lat":60.009574,"lon":10.921604,"since":"2026-11-24"}
+{"id":"n6781124661","name":"Sentrum dyreklinikk","lat":61.118064,"lon":10.458099,"since":"2026-11-24"}
+{"id":"n684686532","name":"Aalesund Dyreklinikk AS","lat":62.467104,"lon":6.362364,"hours":"Mo-Fr 08:30-17:00; Sa 10:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n6854382301","lat":59.580403,"lon":11.148953,"since":"2026-11-24"}
+{"id":"n6865048349","name":"Borg dyreklinikk","lat":59.272694,"lon":11.134753,"phones":["769971860"],"site":"https://www.borg-dyreklinikk.no/","siteFrom":"osm","hours":"Mo-Th 09:00-18:00, Fr 09:00-14:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n7222916798","name":"Dyrlege Marita Hvål","lat":59.474437,"lon":10.030428,"phones":["798627470"],"hours":"Mo-Tu,Th-Fr 09:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n7468524609","name":"AniCura","lat":60.306605,"lon":5.321951,"phones":["755116060"],"site":"https://www.anicura.no/klinikker/dyresykehuset-bergen-sor/","siteFrom":"osm","hours":"Mo-Th 08:00-19:00; Fr 08:00-17:00; Sa 10:00-14:00; PH off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n7567139160","name":"Svelvik Dyrlegekontor","lat":59.611362,"lon":10.407647,"since":"2026-11-24"}
+{"id":"n7614295876","lat":59.911901,"lon":10.808505,"since":"2026-11-24"}
+{"id":"n7736539893","name":"Haugaland Dyreklinikk","lat":59.311091,"lon":5.287238,"phones":["752820980"],"site":"https://www.haugalanddyreklinikk.no/","siteFrom":"osm","hours":"Mo 08:30-16:00; Tu 08:30-21:00; We 08:30-16:00; Th 08:30-20:00; Fr 08:30-16:00","hoursFrom":"structured","hoursUrl":"https://www.haugalanddyreklinikk.no/","hoursHash":"0aac81e2d58481af","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"820 90 020","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n7778136485","name":"AniCura","lat":59.922258,"lon":10.761005,"site":"https://www.anicura.no/klinikker/dyreklinikk-grunerlokka/","siteFrom":"osm","hours":"Mo-Th 08:00-18:00; Fr 08:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n7798279047","lat":69.009711,"lon":23.038643,"since":"2026-11-24"}
+{"id":"n8002407785","name":"A-Vet Smådyrklinikk","lat":59.072729,"lon":10.054892,"phones":["733139840"],"site":"https://www.dyreklinikk.no/dyreklinikk/a-vet-smadyrklinikk/","siteFrom":"osm","hours":"Mo-Th 08:00-18:00; Fr 08:00-16:00; Sa 10:00-14:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8136982191","name":"Dyresykehuset – smådyr","lat":59.667497,"lon":10.762531,"site":"https://www.nmbu.no/forside/smadyr","siteFrom":"osm","hours":"Mo 09:00-15:00; Tu 09:00-19:00; We-Fr 09:00-15:00","hoursFrom":"ai","hoursUrl":"https://www.nmbu.no/forside/smadyr","hoursHash":"f055fa117c7a5a8e","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"67 23 23 23","emergencyChecked":"2026-11-24","hospital":true,"since":"2026-11-24"}
+{"id":"n845263363","name":"Nordtroms Veterinærkontor","lat":69.784656,"lon":20.951387,"since":"2026-11-24"}
+{"id":"n861277573","name":"Dyrlege Blom","lat":59.933168,"lon":10.767094,"site":"http://dyrlegeblom.no/","siteFrom":"osm","hours":"Mo 09:00-19:00; Tu 09:00-16:00; We 09:00-16:00; Th 09:00-19:00; Fr 09:00-16:00; Sa,Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n871127467","name":"Evidensia Groruddalen Dyreklinikk","lat":59.961789,"lon":10.923727,"phones":["722788484"],"site":"http://groruddalen.evidensia.no/","siteFrom":"osm","hours":"Mo-Fr 08:30-20:00; Sa 10:00-14:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8871269897","name":"ABC Dyreklinikk Muusøya","lat":59.75088,"lon":10.154898,"phones":["732838410"],"site":"https://www.abcdyreklinikk.no/","siteFrom":"osm","hours":"Mo-Fr 08:00-20:00; Sa 10:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n908235786","name":"Tertnes Dyreklinikk","lat":60.458423,"lon":5.289152,"since":"2026-11-24"}
+{"id":"n9286541213","name":"Sørum og Fet veterinærkontor","lat":59.985559,"lon":11.25082,"since":"2026-11-24"}
+{"id":"n9544997583","name":"AniCura Dyreklinikk Drammen","lat":59.765549,"lon":10.250321,"phones":["732833503"],"hours":"Mo-Th 08:00-20:00; Fr 08:00-15:30; Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n967101238","name":"Sørlandets Dyreklinikk avdeling Farsund","lat":58.094371,"lon":6.780326,"since":"2026-11-24"}
+{"id":"n9720464094","name":"Røros Dyreklinikk","lat":62.574258,"lon":11.37616,"phones":["772412740"],"site":"https://rorosdyreklinikk.no","siteFrom":"osm","hours":"Mo-Fr 09:00-16:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9894958476","name":"Petrus","lat":59.923356,"lon":10.756505,"phones":["747472765"],"site":"https://www.petrus.no/","siteFrom":"osm","hours":"Mo-Fr 08:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9905374811","name":"AniCura","lat":59.933937,"lon":10.676198,"site":"https://www.anicura.no/dyresykehus-oslo/","siteFrom":"osm","hours":"Mo-Fr 08:00-21:00; Sa 10:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9920020470","name":"Åndal Smådyrklinikk","lat":62.738753,"lon":7.164063,"since":"2026-11-24"}
+{"id":"w111589356","name":"Hedemarken dyreklinikk","lat":60.834139,"lon":11.053524,"phones":["762350001"],"site":"http://www.hedemarkendyreklinikk.no/","siteFrom":"osm","hours":"Mo,We,Th 09:00-14:00,16:00-18:00; Tu,Fr 09:00-14:00","hoursFrom":"ai","hoursUrl":"http://www.hedemarkendyreklinikk.no/","hoursHash":"60efc6148e444bad","hoursChecked":"2026-11-24","emergency":"on_call","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"w132369010","name":"Tromsdalen Dyreklinikk","lat":69.644507,"lon":18.999499,"since":"2026-11-24"}
+{"id":"w132865363","name":"Holstad Veterinærkontor","lat":59.688829,"lon":10.81396,"site":"https://www.follovet.no/","siteFrom":"osm","hours":"Mo-Th 08:00-19:00; Fr 08:00-16:00","hoursFrom":"structured","hoursUrl":"https://www.follovet.no/","hoursHash":"6e051a7d961381e7","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"w1487356132","name":"Liertoppen Dyreklinikk","lat":59.811381,"lon":10.305516,"since":"2026-11-24"}
+{"id":"w320365094","name":"Follo dyreklinikk","lat":59.718491,"lon":10.842319,"site":"http://www.follodyreklinikk.no/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"w369937083","name":"Veterinærklinikk Hanne Kure","lat":59.379903,"lon":10.754479,"since":"2026-11-24"}
+{"id":"w616268779","name":"Hammerfest Staller Dyreklinikk","lat":70.68426,"lon":23.693961,"since":"2026-11-24"}
+{"id":"w746261064","name":"Veterinærene Nedre Hallingdal","lat":60.702332,"lon":8.938591,"hours":"Mo-Fr 08:00-12:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w771062240","lat":63.115219,"lon":7.73046,"since":"2026-11-24"}
+{"id":"w796439758","lat":59.417956,"lon":10.68359,"since":"2026-11-24"}
+{"id":"w840975479","lat":63.100234,"lon":7.818871,"since":"2026-11-24"}
+{"id":"w87261008","name":"Dyrlege abrehamsens smådyrklinikk","lat":58.977491,"lon":5.704041,"since":"2026-11-24"}
+{"id":"w891726817","lat":60.19902,"lon":5.48492,"since":"2026-11-24"}

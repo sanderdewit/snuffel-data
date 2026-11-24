@@ -1,0 +1,68 @@
+{"id":"n10100993407","lat":58.164127,"lon":22.251557,"since":"2026-11-24"}
+{"id":"n10561530098","name":"Univet","street":"Kadaka tee 133","lat":59.412198,"lon":24.670094,"hours":"Mo-Fr 09:00-18:00; Sa 09:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n10816023415","name":"Südalinna loomakliinik","street":"Kentmanni 15","lat":59.429668,"lon":24.753632,"hours":"Mo-Tu,Th-Fr 09:00-18:00; Sa 10:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n10862387746","name":"NordicVet loomakliinik","street":"Koskla 16","postcode":"10615","city":"Tallinn","lat":59.425781,"lon":24.718726,"phones":["255545522","726355222"],"site":"https://nordicvet.ee/","siteFrom":"osm","hours":"Mo,We 09:00-19:00; Tu,Th-Fr 09:00-17:00; Sa-Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11033901078","name":"VetPlus","street":"Taara 43","lat":59.368874,"lon":24.658789,"since":"2026-11-24"}
+{"id":"n11387795288","name":"Loomaarst Rika Mölder","street":"Viljandi mnt 72a","lat":58.996692,"lon":24.809892,"site":"https://rikamolder.ee/","siteFrom":"osm","hours":"Mo-We 10:00-15:00; Th-Fr 10:00-17:00; Sa 10:00-14:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11514052628","name":"Jüri loomakliinik","street":"Aruküla tee 29","postcode":"75301","city":"Jüri alevik","lat":59.357932,"lon":24.912045,"phones":["726075885","725131714"],"site":"https://veterinaar.ee/","siteFrom":"osm","hours":"Mo-Fr 09:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11813416339","name":"VetPlus","lat":59.448248,"lon":24.727125,"phones":["255518848"],"hours":"Mo-Fr 10:00-18:00; Sa 10:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11833148007","name":"Loomaarstid Kask & Michelson","street":"Laulu 6","lat":59.372338,"lon":24.667321,"hours":"Mo-Fr 09:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12095064869","name":"EriVet","street":"Sõpruse pst 237","postcode":"13412","city":"Tallinn","lat":59.398987,"lon":24.686278,"phones":["726006262"],"site":"https://www.erivet.ee/","siteFrom":"osm","hours":"Mo-Fr 09:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12099274001","name":"R-Kliinik OÜ","postcode":"50411","lat":58.366423,"lon":26.697739,"hours":"Mo-Fr 10:00-19:00; Sa 10:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12109851571","name":"Elva Loomakliinik","street":"Kesk 19","postcode":"61507","city":"Elva","lat":58.222278,"lon":26.413336,"site":"https://elvaloomakliinik.com/","siteFrom":"osm","hours":"Mo-Th 10:00-17:00; Fr 10:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12215511096","name":"Muhu Loomakliinik","lat":58.605195,"lon":23.233624,"phones":["254220292"],"since":"2026-11-24"}
+{"id":"n12320303066","name":"Miki","street":"Juhan Kunderi 37","postcode":"10121","city":"Tallinn","lat":59.430862,"lon":24.776726,"phones":["726333398"],"site":"https://miki.ee/","siteFrom":"branch:n4617819124","hours":"Mo-Fr 09:00-18:00; Sa 09:00-15:00; Su 10:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12809313750","name":"Saku Loomakliinik","lat":59.296882,"lon":24.66076,"since":"2026-11-24"}
+{"id":"n12856978060","name":"Nõmme Loomakliinik","street":"Pärnu mnt 434","lat":59.376065,"lon":24.648947,"phones":["726522722"],"hours":"Mo-Fr 10:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12888470787","name":"Loomakliinik & Hotell","lat":59.432909,"lon":24.716471,"hours":"Mo-Fr 09:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12964267642","name":"Esteetvet","street":"Pärnu mnt 139a","postcode":"11317","city":"Tallinn","lat":59.407498,"lon":24.73472,"hours":"Mo-Su 10:00-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13012041808","lat":59.437209,"lon":24.842303,"since":"2026-11-24"}
+{"id":"n13092695144","name":"Cat Clinic","lat":59.412685,"lon":24.7421,"hours":"Mo-Fr 09:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13142515274","name":"Sodalis väikeloomakliinik","lat":57.830953,"lon":27.033563,"phones":["727820707","725145790"],"site":"https://www.sodalis.ee","siteFrom":"osm","hours":"Mo-Fr 09:00-17:00; Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1346566848","name":"Maxi Lemmikloomakliinik","lat":59.388718,"lon":24.682626,"phones":["726709004"],"site":"https://www.lemmikloomakliinik.ee/","siteFrom":"osm","hours":"Mo-Fr 09:00-20:00; Sa 10:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1346566851","name":"Västriku Loomakliinik","lat":59.415328,"lon":24.728776,"phones":["726553366"],"site":"https://www.vastriku.ee/","siteFrom":"osm","hours":"Mo-Fr 09:00-19:00; Sa-Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1346566861","name":"AbiVet Loomakliini","lat":59.440683,"lon":24.841427,"phones":["726882085"],"site":"https://abivet.ee/","siteFrom":"osm","hours":"Mo-Fr 10:00-21:00; Sa 10:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1346566864","name":"Loomakliinik Vetekspert","lat":59.450957,"lon":24.891817,"phones":["726352455"],"site":"https://www.vetekspert.ee/","siteFrom":"osm","hours":"Mo-Sa 10:00-20:00; Su 10:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1346566865","name":"Lasnamäe Loomakliinik","street":"Paul Pinna 19","postcode":"13615","lat":59.438573,"lon":24.832897,"since":"2026-11-24"}
+{"id":"n1346566870","name":"Tatari loomakliinik","street":"Tatari 3","lat":59.432219,"lon":24.746825,"phones":["726467084"],"site":"https://www.vastriku.ee/","siteFrom":"osm","hours":"Mo-Fr 10:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1346566875","name":"Loomade Kiirabi","lat":59.417113,"lon":24.692078,"phones":["726671755"],"site":"https://www.loomakiirabi.ee/","siteFrom":"osm","hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1346566876","name":"Haabersti loomakliinik","street":"Õismäe tee 109","lat":59.412793,"lon":24.63919,"site":"https://www.regalia.ee/","siteFrom":"osm","hours":"Mo-Fr 10:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1346566878","name":"Eliit Loomakliinik","lat":59.426883,"lon":24.792194,"phones":["726000194"],"site":"https://www.eliitloomakliinik.ee/","siteFrom":"osm","hours":"Mo-Fr 10:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1346566884","name":"Tiina Toometi Kliinik OÜ","street":"Sõle 3","city":"Tallinn","lat":59.432511,"lon":24.713046,"phones":["726413111","726413110"],"site":"https://www.toometikliinik.ee/","siteFrom":"osm","hours":"Mo-Fr 09:00-20:00; Sa 10:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1346683517","name":"Veterinaardiagnostikakeskus","lat":59.406276,"lon":24.701227,"phones":["726733101"],"site":"https://vetdiagnostika.ee/","siteFrom":"osm","hours":"Mo-Fr 09:00-21:00; Sa-Su 10:00-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n14270910720","lat":58.147969,"lon":24.94715,"since":"2026-11-24"}
+{"id":"n2377228694","lat":59.381483,"lon":28.164388,"since":"2026-11-24"}
+{"id":"n2407773790","name":"Farmavet Veterinaarapteek","street":"Soola 10","city":"Tartu","lat":58.379134,"lon":26.734468,"since":"2026-11-24"}
+{"id":"n2417973899","lat":59.337113,"lon":25.333701,"since":"2026-11-24"}
+{"id":"n2975274016","name":"FIK väikeloomakliinik","lat":58.370318,"lon":26.774626,"phones":["727333234"],"hours":"Mo-Fr 09:30-19:00, Sa 10:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n2995768550","name":"Piia Vilu Väikeloomakliinik","street":"Tallinna 21","postcode":"71013","city":"Viljandi","lat":58.367368,"lon":25.597262,"phones":["256206770"],"site":"http://www.piiakliinik.ee/","siteFrom":"osm","hours":"Mo-Fr 09:00-18:00; Sa 09:00-14:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3065745144","name":"Rakvere Loomakliinik","lat":59.3408,"lon":26.366709,"hours":"Mo-Fr 09:00-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3600948787","name":"Keila Loomakliinik","lat":59.308553,"lon":24.415329,"hours":"Mo,Tu,Th,Fr 09:00-18:00; Sa 10:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4189255667","name":"PetCity","lat":59.428639,"lon":24.62547,"phones":["726240444"],"site":"https://www.petcity.ee/hotel/pet-city","siteFrom":"osm","hours":"10:00-21:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4566955242","name":"Vetdok Kiviõli","street":"Metsa 3","postcode":"43125","city":"Kiviõli","lat":59.356989,"lon":26.974912,"phones":["723322398"],"site":"https://www.vetdok.eu","siteFrom":"osm","hours":"Mo-Fr 09:00-18:00; Sa 09:00-14:00","hoursFrom":"ai","hoursUrl":"https://www.vetdok.eu","hoursHash":"457a3c8da67741a4","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n4566986418","name":"RomVet OÜ","street":"Viru 1","city":"Kiviõli","lat":59.358836,"lon":26.970038,"since":"2026-11-24"}
+{"id":"n4617819124","name":"MIKI","street":"Juhan Kunderi 29","postcode":"10121","city":"Tallinn","lat":59.431342,"lon":24.77522,"phones":["726333398"],"site":"https://miki.ee/","siteFrom":"osm","hours":"Mo-Fr 09:00-18:00; Sa-Su 09:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4882837121","name":"Loomaarst Andrei Rusmanov","street":"Telliskivi 39","lat":59.437531,"lon":24.72337,"phones":["725091254"],"since":"2026-11-24"}
+{"id":"n4938100436","lat":59.371982,"lon":24.741462,"hours":"Mo-Su 08:00-00:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4941320221","name":"Mustakivi loomakliinik","postcode":"13811","lat":59.442032,"lon":24.872972,"phones":["255510131"],"site":"https://mustakiviloomakliinik.eu/","siteFrom":"osm","hours":"Mo-Fr 09:00-19:00; Sa-Su 10:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n5525765207","name":"Viljandi Männimäe loomakliinik","street":"Riia mnt 38","postcode":"71009","city":"Viljandi","lat":58.350694,"lon":25.581484,"since":"2026-11-24"}
+{"id":"n5676249315","name":"Paide Loomakliinik","street":"Väike-Aia 5","lat":58.887475,"lon":25.568184,"since":"2026-11-24"}
+{"id":"n5751399671","name":"Põlva väikeloomakliinik","street":"Kesk 7","postcode":"63308","city":"Põlva","lat":58.054155,"lon":27.057042,"since":"2026-11-24"}
+{"id":"n5922024975","name":"Viljandi Männimäe loomakliinik","street":"Männimäe tee 28","postcode":"71020","city":"Viljandi","lat":58.348644,"lon":25.578144,"phones":["724337653"],"site":"https://www.viljandiloomakliinik.ee","siteFrom":"osm","hours":"Mo-Fr 09:00-18:00; Sa 10:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n6603861236","street":"Posti 5","city":"Haapsalu","lat":58.944811,"lon":23.538541,"since":"2026-11-24"}
+{"id":"n7157544702","name":"PetCity Loomakliinik","lat":58.38699,"lon":24.501535,"since":"2026-11-24"}
+{"id":"n797311066","name":"Valdeku Väikeloomakliinik","street":"Valdeku 62","lat":59.381032,"lon":24.698596,"phones":["726700792"],"site":"http://www.loomakliinik.ee/","siteFrom":"osm","hours":"Mo-Fr 09:00-19:00; Sa 09:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8366983855","name":"Vetar","street":"Tallinna mnt 15","city":"Rapla","lat":59.005152,"lon":24.794307,"phones":["256567989"],"site":"https://vetar.ee/","siteFrom":"osm","hours":"Mo-Fr 09:00-18:00; Sa 09:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8733997841","name":"Eliit loomakliinik","lat":59.461864,"lon":24.905137,"site":"https://eliitloomakliinik.ee/","siteFrom":"osm","hours":"Mo-Fr 10:00-18:00","hoursFrom":"ai","hoursUrl":"https://eliitloomakliinik.ee/","hoursHash":"e6ba881b1f911163","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n873548845","name":"Kenno Loomakliinik","lat":58.40102,"lon":24.49309,"phones":["724430878"],"site":"https://www.kenno.ee/","siteFrom":"osm","hours":"Mo-Fr 09:00-19:00; Sa-Su 10:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n877325949","name":"Saue Loomakliinik","lat":59.323061,"lon":24.564803,"hours":"Mo-Fr 13:00-19:00; Sa 10:00-14:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8789351805","name":"Felivet","street":"Kastani 42","city":"Tartu","lat":58.370113,"lon":26.716079,"phones":["255629545"],"site":"https://www.felivet.ee/","siteFrom":"osm","hours":"Mo-Fr 10:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8847996851","name":"Loomakliinik","lat":57.847094,"lon":26.995619,"phones":["256667912"],"hours":"Mo-Fr 09:00-18:00; Sa 09:00-14:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8929347994","lat":59.425752,"lon":24.780861,"since":"2026-11-24"}
+{"id":"n9124629527","name":"VetArst","lat":59.397624,"lon":24.806333,"hours":"Mo-Fr 09:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9364185240","name":"Cat Clinic","lat":59.446725,"lon":24.806279,"site":"https://catclinic.ee","siteFrom":"osm","hours":"Mo-Fr 09:00-17:00","hoursFrom":"ai","hoursUrl":"https://catclinic.ee","hoursHash":"4b8e3ee5ab3508bf","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n9620472754","name":"Timmu Loomaklinik","street":"Mustamäe tee 44/1","city":"Tallinn","lat":59.417485,"lon":24.693052,"phones":["726675676"],"site":"https://timmu.ee/","siteFrom":"osm","hours":"Mo-Fr 09:00-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9914247281","name":"WeVet","lat":59.456061,"lon":24.6787,"since":"2026-11-24"}
+{"id":"w101331175","street":"Tallinna mnt 12","postcode":"75201","city":"Aruküla alevik","lat":59.370103,"lon":25.078076,"since":"2026-11-24"}
+{"id":"w213503310","name":"Sodalis väikeloomakliinik","street":"Võhandu 31","postcode":"64504","city":"Räpina","lat":58.093334,"lon":27.460883,"phones":["725165922"],"hours":"Mo-Fr 09:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w26919134","name":"Billy loomakliinik","street":"Ehitajate tee 103a","postcode":"12615","city":"Tallinn","lat":59.412298,"lon":24.66064,"phones":["726570310"],"site":"https://www.billy.ee/","siteFrom":"osm","hours":"Mo-Fr 09:00-19:00","hoursFrom":"osm","since":"2026-11-24"}

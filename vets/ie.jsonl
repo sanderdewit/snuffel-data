@@ -1,0 +1,372 @@
+{"id":"n10011840513","name":"PetsRvets","street":"O'Connell Street","city":"Waterford","lat":52.262967,"lon":-7.117424,"since":"2026-11-24"}
+{"id":"n10045299374","name":"Vets4Pets","lat":54.490909,"lon":-6.056873,"hours":"Mo-Fr 09:00-19:00; Sa 09:00-17:00; Su 13:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n10047967398","name":"Blackwater Veterinary Clinic","street":"The Market","city":"Enfield","lat":53.41497,"lon":-6.829475,"since":"2026-11-24"}
+{"id":"n10304865964","name":"Kelly Veterinary Hospital","street":"Centre Point","city":"Ratoath","lat":53.50543,"lon":-6.467811,"since":"2026-11-24"}
+{"id":"n10541858440","name":"Donnybrook Vets","street":"Donnybrook Road","city":"Dublin","lat":53.322422,"lon":-6.237059,"since":"2026-11-24"}
+{"id":"n10595926750","name":"Tullamore Vet Clinic","lat":53.275397,"lon":-7.48811,"since":"2026-11-24"}
+{"id":"n10600228589","name":"Ark Vetcare","lat":53.277317,"lon":-6.16643,"phones":["312895335"],"site":"https://www.arkvet.ie","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n10700074116","name":"Veterinary Surgery","lat":53.799068,"lon":-9.526209,"since":"2026-11-24"}
+{"id":"n10720146871","name":"Ó Scannail","street":"Main Street","city":"Lusk","lat":53.52712,"lon":-6.16628,"since":"2026-11-24"}
+{"id":"n10803230413","name":"Summerhill Veterinary Hospital","street":"Summerhill Road","city":"Wexford","lat":52.33433,"lon":-6.46872,"since":"2026-11-24"}
+{"id":"n10821559816","name":"Newcastle West Pet Vet Clinic","lat":52.452142,"lon":-9.060489,"since":"2026-11-24"}
+{"id":"n10905176717","name":"Castlecomer Vets","lat":52.793367,"lon":-7.210141,"phones":["564400550"],"since":"2026-11-24"}
+{"id":"n10920126735","name":"Celbridge Veterinary Hospital","lat":53.341838,"lon":-6.538614,"phones":["862334475"],"hours":"Mo-Tu,Th 10:00-11:00,18:30-20:15; Mo-Fr 18:30-20:15; PH closed; Sa 11:30-13:30; Su 11:00-12:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n10926526816","name":"Vet. & Pet Superstore","lat":52.833901,"lon":-6.92677,"since":"2026-11-24"}
+{"id":"n11067727357","name":"AHC Veterinary","city":"Taghmon","lat":52.32255,"lon":-6.653719,"since":"2026-11-24"}
+{"id":"n11071709124","name":"Moran Court Vets","lat":53.422629,"lon":-7.971947,"phones":["906493651"],"site":"https://www.morancourtvets.ie/","siteFrom":"osm","hours":"Mo-Fr 09:00-17:30; We 14:00-19:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11151363232","name":"Briarhill Veterinary Clinic","lat":53.292934,"lon":-8.98805,"phones":["391380000"],"site":"https://briarhillvets.ie","siteFrom":"osm","hours":"Mo-Fr 09:00-18:00; Sa 09:00-14:00; Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11207596337","name":"Highfield Veterinary Naas","street":"Newbridge Road","lat":53.216293,"lon":-6.670579,"hours":"Mo-Fr 08:00-20:00; Sa 08:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11210933937","name":"Hawkfield Veterinary Clinic","lat":53.195995,"lon":-6.821322,"hours":"Mo-Fr 09:30-18:00; Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11373218886","lat":54.403185,"lon":-5.898352,"since":"2026-11-24"}
+{"id":"n11498504300","name":"PDSA Pet Clinic","street":"Shore Road 1-7","postcode":"BT15 3PG","city":"Belfast","lat":54.622383,"lon":-5.922548,"site":"https://www.pdsa.org.uk/near-me/3131_belfast-pdsa-pet-clinic","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n11498504301","name":"City Vets","street":"Shore Road 1-7","postcode":"BT15 3PG","city":"Belfast","lat":54.622287,"lon":-5.922635,"since":"2026-11-24"}
+{"id":"n11500862535","name":"Cavan Pet Hosptial","lat":53.962432,"lon":-7.35843,"since":"2026-11-24"}
+{"id":"n11523001446","name":"Riada Veterinary Clinic","lat":55.071071,"lon":-6.513878,"since":"2026-11-24"}
+{"id":"n11630474420","name":"Summerhill","lat":52.838913,"lon":-8.983106,"since":"2026-11-24"}
+{"id":"n11787310228","name":"Montrose Veterinary","lat":53.309954,"lon":-6.216785,"since":"2026-11-24"}
+{"id":"n11805245595","name":"Highfield Veterinary","street":"New Ross Ring Road","city":"New Ross","lat":52.388722,"lon":-6.95192,"site":"https://highfield.ie/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n11840780885","name":"Seaview Veterinary Clinic","postcode":"F94 NP58","city":"Ballyshannon","lat":54.480276,"lon":-8.22216,"phones":["719852805"],"site":"https://seaviewveterinaryclinic.com/","siteFrom":"osm","hours":"Mo-Fr 09:00-18:00;Sa 09:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11854364528","name":"O'Connors Ennis Veterinary Surgery","lat":52.838888,"lon":-8.959391,"phones":["656829599"],"site":"http://ennisveterinarysurgery.com/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n11868756736","lat":54.195455,"lon":-6.395724,"since":"2026-11-24"}
+{"id":"n11878646585","name":"Veterinary Surgery","lat":52.841072,"lon":-8.981104,"phones":["862628638"],"since":"2026-11-24"}
+{"id":"n11891386164","name":"Pet-Care","lat":52.843102,"lon":-8.984036,"since":"2026-11-24"}
+{"id":"n12020218300","name":"James T Tyrrell","lat":53.034277,"lon":-7.289529,"since":"2026-11-24"}
+{"id":"n12034822732","name":"O'Dowd's Veterinary Hospital","street":"Hale Street","city":"Ardee","lat":53.853899,"lon":-6.529908,"since":"2026-11-24"}
+{"id":"n12241098301","name":"The Vet Clinic","lat":51.918691,"lon":-8.175981,"phones":["214632586"],"since":"2026-11-24"}
+{"id":"n12241548887","name":"Village Vets","street":"Navan Road","city":"Dunboyne","lat":53.419988,"lon":-6.476028,"phones":["318251125"],"hours":"Mo-Fr 09:00-19:00; Sa 09:00-13:00; Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12417493171","name":"Urban Vets","street":"Station Road Unit 10","postcode":"K78 H9H9","city":"Adamstown, Lucan","lat":53.336513,"lon":-6.470229,"phones":["312241564"],"site":"https://urbanvets.ie/adamstown-clinic/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n1243357683","name":"Reservoir Dog","lat":52.864264,"lon":-8.171643,"phones":["868737321"],"since":"2026-11-24"}
+{"id":"n12447725024","name":"All Paws","lat":53.854098,"lon":-9.300379,"since":"2026-11-24"}
+{"id":"n12447725027","name":"Castle Vets","lat":53.849862,"lon":-9.283693,"since":"2026-11-24"}
+{"id":"n1256240522","lat":53.197538,"lon":-8.570223,"since":"2026-11-24"}
+{"id":"n12633231955","name":"Highfield","lat":53.421491,"lon":-6.474546,"phones":["318255884"],"site":"https://highfield.ie","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n12635779533","name":"Riverforest Veterinary Centre","street":"Riverforest Court 5","postcode":"W23 A5N4","city":"Leixlip","lat":53.37177,"lon":-6.488291,"site":"https://riverforestvets.ie/","siteFrom":"osm","hours":"Mo-Fr 10:00-19:00, Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12635824343","name":"Village Vets","lat":53.426829,"lon":-6.475444,"since":"2026-11-24"}
+{"id":"n12655800988","lat":54.101713,"lon":-6.255073,"since":"2026-11-24"}
+{"id":"n12892372678","name":"Arra Vets","lat":52.473722,"lon":-8.164557,"since":"2026-11-24"}
+{"id":"n12947149268","name":"Mockler","lat":52.795548,"lon":-7.837029,"phones":["350432233"],"hours":"Mo-Fr 09:00-17:00; Sa 09:30-17:00; Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12947193718","name":"Templemore Veterinary Centre","lat":52.797344,"lon":-7.832441,"phones":["350432211"],"hours":"Mo-Fr 09:30-13:00,14:00-17:00; Sa-Su 09:00-14:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12947208959","name":"Ormond Veterinary & Farm Services","lat":52.797735,"lon":-7.830476,"phones":["350456696"],"hours":"Mo-Fr 09:00-13:00,14:00-17:30; Sa 09:30-13:00; Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12983257679","name":"All Paws","lat":52.662951,"lon":-8.537824,"since":"2026-11-24"}
+{"id":"n13005625802","name":"Mc Laughlins","lat":51.901196,"lon":-8.464254,"since":"2026-11-24"}
+{"id":"n13198913469","name":"Vets4Pets","lat":54.652529,"lon":-5.918512,"since":"2026-11-24"}
+{"id":"n13265244225","name":"Kinvara Bay Veterinary Clinic","lat":53.138743,"lon":-8.936168,"since":"2026-11-24"}
+{"id":"n13318460194","name":"Cedar Grove Veterinary Clinic","street":"Upper Knockbreda Road","lat":54.573115,"lon":-5.88262,"since":"2026-11-24"}
+{"id":"n13500928324","name":"Village Vets","street":"Howth Road","postcode":"D05 N7X2","city":"Dublin","lat":53.38006,"lon":-6.178248,"phones":["317265426"],"site":"https://www.villagevets.ie/clinics/raheny","siteFrom":"osm","hours":"Mo-Fr 09:00-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13547283324","name":"McBride Vets","street":"Ann Street 15","postcode":"BT54 6AA","city":"Ballycastle","lat":55.20144,"lon":-6.249557,"since":"2026-11-24"}
+{"id":"n13652845692","name":"Glenburn Veterinary Surgeons","street":"Moss Road 109","postcode":"BT27 4NY","city":"Lambeg, Lisburn","lat":54.531114,"lon":-6.036364,"hours":"Mo-Fr 09:00-18:30; Sa 14:30-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13692061606","name":"Crossmolina Veterinary Clinic","street":"Chapel Street","city":"Crossmolina","lat":54.09951,"lon":-9.318863,"since":"2026-11-24"}
+{"id":"n13751865116","name":"Village Vets","street":"Shackleton Road","postcode":"W23YP82","city":"Celbridge","lat":53.344397,"lon":-6.543596,"phones":["316856122"],"since":"2026-11-24"}
+{"id":"n13818361711","name":"Cú Chuliann Veterinary Hospital","lat":52.260572,"lon":-9.688128,"since":"2026-11-24"}
+{"id":"n13946156943","name":"Limerick Veterinary Hospital","lat":52.667431,"lon":-8.557332,"phones":["536133303"],"site":"https://limerickveterinaryhospital.ie/","siteFrom":"osm","hours":"24/7","hoursFrom":"ai","hoursUrl":"https://limerickveterinaryhospital.ie/","hoursHash":"3cc2cc414d6e2e5d","hoursChecked":"2026-11-24","emergency":"24/7","emergencyChecked":"2026-11-24","hospital":true,"since":"2026-11-24"}
+{"id":"n13980457885","name":"Northern Ireland Veterinary Specialists","lat":54.449324,"lon":-6.100018,"site":"https://nivetspecialists.co.uk/","siteFrom":"osm","hours":"Mo-Fr 09:00-17:00","hoursFrom":"ai","hoursUrl":"https://nivetspecialists.co.uk/","hoursHash":"6ac60ff5466df78d","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"02892 680680","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n13980457886","name":"MiNightVet","lat":54.44948,"lon":-6.099966,"site":"https://minightvet.com/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n14047412924","lat":53.523264,"lon":-7.334275,"since":"2026-11-24"}
+{"id":"n14055942593","name":"Druids Lodge Veterinary Clinic","lat":52.651687,"lon":-7.236204,"phones":["567721924"],"since":"2026-11-24"}
+{"id":"n14092029501","name":"Riverside Veterinary Clinic","lat":52.231381,"lon":-9.458012,"phones":["667141218"],"hours":"Mo-Fr 09:00-17:30; Sa 09:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n14102035001","name":"Castle Veterinary","street":"Church Street","lat":52.230079,"lon":-9.462883,"phones":["667141230"],"hours":"Mo-Sa 09:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n14112197438","name":"Veterinary Clinic Ratoath","lat":53.50685,"lon":-6.463527,"phones":["318256213"],"since":"2026-11-24"}
+{"id":"n14175873175","name":"Antrim Road Veterinary Practice","lat":54.617881,"lon":-5.938091,"since":"2026-11-24"}
+{"id":"n14228026093","name":"Carrick vet clinic","lat":53.948856,"lon":-8.094283,"since":"2026-11-24"}
+{"id":"n1423970485","name":"Veterinary Centre","street":"Church Street 1","postcode":"V92 HE12","lat":52.230827,"lon":-9.463533,"phones":["667141708","872677870"],"hours":"Mo-Sa 09:00-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n14263404341","name":"Kildare Veterinary Surgery","street":"South Green Road","postcode":"R51X685","city":"Kildare","lat":53.163097,"lon":-6.919747,"site":"https://apetslife.ie/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n1448499623","name":"O'Kennedy","lat":52.866326,"lon":-8.19755,"since":"2026-11-24"}
+{"id":"n1522130072","name":"City Vets","lat":52.162099,"lon":-7.150601,"hours":"Mo-Fr 17:00-18:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1622287687","name":"ani-Pets Veternary Clinic","city":"Tramore","lat":52.16849,"lon":-7.137109,"phones":["351393630"],"hours":"Mo-Fr 09:00-13:00,14:00-16:00,18:00-20:00; Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1682636786","lat":53.688008,"lon":-6.241671,"since":"2026-11-24"}
+{"id":"n1703638571","name":"St. Benedicts Veterinary Clinic","lat":54.265245,"lon":-8.468708,"since":"2026-11-24"}
+{"id":"n1704593679","name":"Carton veterinary","lat":53.381263,"lon":-6.585577,"since":"2026-11-24"}
+{"id":"n1773747926","name":"Glasslyn Veterinary Clinic","city":"Kinsale","lat":51.706245,"lon":-8.526229,"since":"2026-11-24"}
+{"id":"n1793385584","name":"Riverside Veterinary Hospital","city":"Dungarvan","lat":52.09334,"lon":-7.631314,"since":"2026-11-24"}
+{"id":"n1809488696","name":"Spa View Veterinary","lat":52.680184,"lon":-7.803502,"since":"2026-11-24"}
+{"id":"n1824333655","lat":53.063338,"lon":-8.822839,"since":"2026-11-24"}
+{"id":"n1865550696","name":"Ark","street":"Saint Mary's Road 46A","postcode":"H91 HY88","city":"Galway","lat":53.269614,"lon":-9.06528,"phones":["391584185"],"site":"https://www.arkvetsgalway.com/","siteFrom":"osm","hours":"Mo-Fr 09:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n1901937549","lat":53.657252,"lon":-6.682191,"since":"2026-11-24"}
+{"id":"n1961289287","name":"Inishfree Veterinary Hospital","lat":54.268592,"lon":-8.47119,"site":"https://www.inishfreevets.com/home.html","siteFrom":"osm","hours":"Mo-Fr 08:30-18:00; Sa 09:00-18:00","hoursFrom":"ai","hoursUrl":"https://www.inishfreevets.com/home.html","hoursHash":"1f85482c8661b2e2","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"0719143817","emergencyChecked":"2026-11-24","hospital":true,"since":"2026-11-24"}
+{"id":"n1981005687","name":"Saintfield Veterinary Clinic","street":"Belfast Road","postcode":"BT24 7AA","city":"Ballynahinch","lat":54.460714,"lon":-5.830974,"since":"2026-11-24"}
+{"id":"n1983396568","name":"Cherrywood Veterinary Clinic","street":"Bray Road 5","lat":53.246026,"lon":-6.136016,"site":"https://www.cherrywoodvetclinic.ie/","siteFrom":"osm","hours":"Mo-Fr 10:00+; Sa 11:00+","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n2153737283","name":"The Village Veterinary Clinic","lat":51.876329,"lon":-8.441771,"site":"http://www.thevillagevetdouglas.com","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n2277831701","name":"O'Brien & Noonan Vet Clinic","lat":52.138205,"lon":-8.269523,"phones":["532531870"],"since":"2026-11-24"}
+{"id":"n2296910576","name":"Irish Equine Centre","lat":53.228776,"lon":-6.617236,"since":"2026-11-24"}
+{"id":"n2395711223","name":"Cornerstone Veterinary Clinic","lat":54.584727,"lon":-5.88918,"phones":["890799977"],"since":"2026-11-24"}
+{"id":"n2667636761","lat":54.348243,"lon":-7.650985,"since":"2026-11-24"}
+{"id":"n2717902093","name":"Kilcock Vet","street":"New Lane","lat":53.400893,"lon":-6.668129,"phones":["316519906"],"site":"https://www.kilcockveterinaryhospital.ie/","siteFrom":"osm","hours":"Mo-Fr 08:30-19:00; Sa 08:30-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n2856957428","name":"Summerhill Vets","lat":52.843075,"lon":-8.985485,"since":"2026-11-24"}
+{"id":"n287457230","lat":52.762108,"lon":-8.899436,"since":"2026-11-24"}
+{"id":"n290480186","name":"Westgate Veterinary Hospital","lat":53.718868,"lon":-6.346611,"since":"2026-11-24"}
+{"id":"n291496983","name":"Animal Care Hospital Douglas","street":"East Douglas Street","city":"Douglas","lat":51.875923,"lon":-8.432907,"phones":["214893033"],"site":"https://animalcarehospital.ie","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n2983333400","name":"The Vet's","lat":53.996747,"lon":-6.403216,"since":"2026-11-24"}
+{"id":"n2984120789","name":"Vetinary Clinic","street":"Kenilworth Square North 5","city":"Dublin","lat":53.319687,"lon":-6.275583,"hours":"Mo-Fr 08:30-09:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n2988055338","name":"Athlone Veterinary Hospital","lat":53.416556,"lon":-7.901837,"since":"2026-11-24"}
+{"id":"n2990307833","lat":55.09418,"lon":-8.283399,"since":"2026-11-24"}
+{"id":"n2990938868","name":"Paws a While","lat":53.558021,"lon":-6.789822,"since":"2026-11-24"}
+{"id":"n2991309040","name":"Veterinary Clinic","lat":54.001949,"lon":-6.385844,"since":"2026-11-24"}
+{"id":"n3010440755","name":"Kilcoole Vets","street":"Whitethorn Centre 6","lat":53.11006,"lon":-6.063818,"site":"https://www.kilcoolevets.ie/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n3108899179","name":"Patrick Condron","lat":53.309138,"lon":-6.285104,"phones":["868274868"],"hours":"Mo-Sa 19:00-20:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n312575573","name":"Sandymount Pet Hospital","street":"Gilford Road","lat":53.33098,"lon":-6.215996,"hours":"Mo-Fr 08:00-19:30; Sa 09:00-12:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n3366687784","name":"Alderwood Veterinary Clinic","lat":53.628957,"lon":-6.261653,"since":"2026-11-24"}
+{"id":"n3380579266","name":"Athenry Pet Clinic","lat":53.296207,"lon":-8.753133,"since":"2026-11-24"}
+{"id":"n3381250648","name":"Paddy O'Connor Veterinary","lat":52.137802,"lon":-10.269559,"since":"2026-11-24"}
+{"id":"n3497230551","name":"Veterinary Clinic","lat":53.290869,"lon":-6.687088,"since":"2026-11-24"}
+{"id":"n3522920005","name":"Palmerstown Veterinary Hospital","street":"Old Lucan Road 20","city":"Dublin","lat":53.357369,"lon":-6.375325,"phones":["316237044"],"hours":"Mo-Fr 09:00-19:00, Sa 09:30-12:00, Su 11:00-14:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n352674357","name":"Maynootth Veterinary Clinic","lat":53.37535,"lon":-6.598316,"since":"2026-11-24"}
+{"id":"n3606140800","name":"Grange Veterinary Clinic","lat":54.38971,"lon":-8.528926,"phones":["719173596"],"since":"2026-11-24"}
+{"id":"n3722765124","name":"MyVet","street":"Firhouse Shopping Centre","lat":53.28136,"lon":-6.341868,"phones":["314140830"],"site":"https://www.myvet.ie/","siteFrom":"osm","emergency":"on_call","emergencyPhone":"01 517 5213","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n4014906534","name":"Boyneside Veterinary Clinic","lat":53.715338,"lon":-6.36389,"since":"2026-11-24"}
+{"id":"n4077512563","name":"Pet Hospital","lat":53.277132,"lon":-7.496074,"since":"2026-11-24"}
+{"id":"n408979988","name":"Royal Pet Vet","lat":53.6356,"lon":-6.648604,"since":"2026-11-24"}
+{"id":"n437559722","name":"Borris Animal Disease Unit","lat":52.939871,"lon":-7.841975,"phones":["350373124"],"since":"2026-11-24"}
+{"id":"n4433209527","name":"Premier Veterinary Centre","lat":52.559983,"lon":-8.046497,"since":"2026-11-24"}
+{"id":"n4470093587","name":"Treaty Veterinary Clinic","lat":52.671314,"lon":-8.633987,"since":"2026-11-24"}
+{"id":"n4496967118","name":"Brendan O'Connor","lat":52.141341,"lon":-10.26619,"since":"2026-11-24"}
+{"id":"n4546723132","name":"Mulcair Veterinary Clinic","lat":52.711543,"lon":-8.408764,"since":"2026-11-24"}
+{"id":"n4604654399","name":"City Vets","lat":52.250849,"lon":-7.126593,"phones":["351371155"],"site":"https://www.cityvets.ie/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n4710222499","lat":51.88214,"lon":-8.62838,"since":"2026-11-24"}
+{"id":"n4716032789","name":"Kilmartin Grain","lat":53.437579,"lon":-6.396815,"since":"2026-11-24"}
+{"id":"n4761907139","name":"Cara Veterinary Hospital","street":"233","city":"Blanchardstown","lat":53.411901,"lon":-6.362559,"hours":"Mo-We,Fr 08:30-19:00; Th 08:30-18:30; Sa 08:30-16:30; Su,PH 10:30-15:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n4762727821","lat":52.868319,"lon":-8.759342,"since":"2026-11-24"}
+{"id":"n496284090","name":"Athy Veterinary Hospital and Sales","lat":52.993968,"lon":-6.964301,"since":"2026-11-24"}
+{"id":"n4969901921","name":"Roscrea Veterinary Clinic","lat":52.951172,"lon":-7.804845,"since":"2026-11-24"}
+{"id":"n4995722992","name":"Vet","city":"New Ross","lat":52.39834,"lon":-6.93771,"since":"2026-11-24"}
+{"id":"n5043285515","name":"Flynn Veterinary Centre","lat":54.555549,"lon":-5.906961,"since":"2026-11-24"}
+{"id":"n5087398967","name":"Erne Veterinary Group","city":"Lisnaskea","lat":54.264352,"lon":-7.460853,"since":"2026-11-24"}
+{"id":"n5193868368","lat":51.589998,"lon":-9.06404,"since":"2026-11-24"}
+{"id":"n5288132555","name":"Petcare Vets","street":"Charlesland Shopping Centre","city":"Greystones","lat":53.126994,"lon":-6.063985,"site":"https://petcarevets.ie/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n5290265407","name":"Vets4Pets","lat":54.718135,"lon":-5.82049,"since":"2026-11-24"}
+{"id":"n5355658940","name":"Duntahane Veterinary Clinic","lat":52.13449,"lon":-8.28506,"since":"2026-11-24"}
+{"id":"n540882855","name":"Killaloe Veterinary Clinic","lat":52.80636,"lon":-8.446753,"since":"2026-11-24"}
+{"id":"n5464564122","name":"Shannon Vets","street":"Drumgeely Hill 154","lat":52.698286,"lon":-8.8993,"phones":["361472161"],"site":"http://www.rockhallvets.ie","siteFrom":"osm","hours":"Mo-We, Fr 09:00-18:00; Th 09:00-13:00; Sa 09:00-10:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n5650548316","name":"Damer Veterinary Clinic","lat":52.957356,"lon":-7.797137,"since":"2026-11-24"}
+{"id":"n5693755396","name":"Ennis Veterinary Clinic","lat":52.848752,"lon":-8.973113,"phones":["656797444"],"since":"2026-11-24"}
+{"id":"n5697338551","name":"Mid-West Vets","lat":52.649167,"lon":-8.580864,"phones":["361412122"],"since":"2026-11-24"}
+{"id":"n5728750757","name":"Henry Street Small Animal Hospital","lat":52.660469,"lon":-8.632004,"hours":"Mo-Fr 09:00-20:00; Sa 10:00-13:00; PH off, 24/7 closed \"emergency 24/7\"","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n5770119962","name":"Riverview Veterinary Group","street":"Church Road","postcode":"P43 XN47","lat":51.815659,"lon":-8.377316,"phones":["214375628"],"site":"https://www.riverviewvets.ie/","siteFrom":"osm","emergency":"on_call","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n5776633333","name":"Deise Vets","street":"Killossera","city":"Dungarvan","lat":52.071354,"lon":-7.643517,"site":"http://deisevets.ie","siteFrom":"osm","hours":"Mo-Fr 08:30-18:00; Sa 09:00-13:00","hoursFrom":"ai","hoursUrl":"http://deisevets.ie","hoursHash":"9bae78e1be4ce896","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n5809400587","name":"The Local Vet","lat":51.880299,"lon":-9.584704,"since":"2026-11-24"}
+{"id":"n5819307378","lat":52.593913,"lon":-8.472358,"since":"2026-11-24"}
+{"id":"n5851403152","lat":54.349381,"lon":-6.275823,"since":"2026-11-24"}
+{"id":"n5930309232","name":"Vetcare.ie","lat":53.281309,"lon":-6.468298,"since":"2026-11-24"}
+{"id":"n6416702479","name":"Newry Veterinary Centre","street":"Patrick Street 39A","postcode":"BT35 8EB","city":"Newry","lat":54.174895,"lon":-6.344669,"phones":["830262266"],"since":"2026-11-24"}
+{"id":"n6434343691","name":"Dundrum Veterinary Clinic","lat":53.291486,"lon":-6.246266,"hours":"Mo-Fr 09:00-19:00; Sa 09:00-13:00; Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n6455703118","name":"City Vet","lat":52.654843,"lon":-8.628985,"since":"2026-11-24"}
+{"id":"n6468106182","lat":52.473259,"lon":-8.432675,"since":"2026-11-24"}
+{"id":"n6483748761","name":"Riverview Veterinary Group - Kinsale","street":"Barrack Lane","city":"Kinsale","lat":51.708037,"lon":-8.51842,"phones":["214774505"],"site":"https://www.riverviewvets.ie/vet-clinic-west-cork/About/Our-Locations/Kinsale","siteFrom":"osm","hours":"Mo-Fr 09:30-18:30; Sa \"by Appointment\"","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n6484120938","name":"Riverview Veterinary Group - Bandon","street":"Distillery Road","postcode":"P72 EA31","city":"Bandon","lat":51.747074,"lon":-8.722015,"phones":["238841503"],"site":"https://www.riverviewvets.ie","siteFrom":"osm","hours":"Mo-Fr 08:30-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n6544488645","name":"McCarthy's Veterinary Clinic","street":"Western Road","city":"Clonakilty","lat":51.622874,"lon":-8.894802,"since":"2026-11-24"}
+{"id":"n6553104547","name":"McLaughlin’s Agriculture Veterinary","street":"Bridge Street 7","city":"Bandon","lat":51.745594,"lon":-8.735714,"phones":["238841842"],"since":"2026-11-24"}
+{"id":"n6568090622","name":"The Cat Hospital","lat":51.925939,"lon":-8.401674,"since":"2026-11-24"}
+{"id":"n6578526418","name":"Dublin Bay Vets","street":"Main Street 5","postcode":"D13 AH56","city":"Clongriffin","lat":53.402329,"lon":-6.151709,"phones":["315392330"],"site":"https://dublinbayvets.ie/","siteFrom":"osm","hours":"Mo-Fr 09:00-19:00; Sa 10:30-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n6596538041","name":"Skinvet Irland","street":"New Cork Road 27","postcode":"P25 K162","city":"Midleton","lat":51.915228,"lon":-8.179193,"phones":["214634443"],"site":"https://www.skinvet.ie","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n659991684","name":"Lissenhall Veterinary Hospital","street":"Lissenhall Road","postcode":"K67EH72","city":"Swords","lat":53.473053,"lon":-6.208761,"phones":["318900375"],"site":"https://www.lissenhallvet.ie/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n662578530","name":"Comeragh Veterinary","lat":52.205848,"lon":-7.42572,"since":"2026-11-24"}
+{"id":"n6687770365","name":"Cashman & O'Driscoll Veterinary Hospital","lat":51.928335,"lon":-8.395972,"phones":["214821243"],"site":"https://www.cashmanodriscollvet.ie","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n6693306798","name":"Primrose Hill Veterinary Hospital","street":"Church Place 1","postcode":"A96 W9P0","city":"Sallynoggin","lat":53.27464,"lon":-6.137805,"phones":["312803303"],"site":"https://primrosehillvets.ie/","siteFrom":"osm","hours":"Mo-Fr 08:00-19:00; Sa 08:00-12:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n6697010094","name":"BurrenVets Veterinary Clinic","street":"Circular Road","postcode":"V95H6XD","city":"Ennistymon","lat":52.939043,"lon":-9.289262,"phones":["657071155"],"site":"https://burrenvets.ie","siteFrom":"osm","hours":"Mo-Fr 09:00-17:00, Sa 09:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n6697014582","name":"BurrenVets Veterinary Clinic","street":"Spanish Point Road, Leagard North","postcode":"V95 V9Y8","city":"Milltown Malbay","lat":52.853,"lon":-9.404791,"phones":["657084019"],"site":"https://burrenvets.ie","siteFrom":"osm","hours":"Mo-Fr 09:00-17:00, Sa 09:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n6786069267","name":"Faxbridge Veterinary Hospital","lat":51.622755,"lon":-8.883167,"phones":["238833252"],"site":"https://www.faxbridgevets.ie","siteFrom":"osm","hours":"Mo-Fr 09:00-18:00; Sa 09:00-13:00","hoursFrom":"ai","hoursUrl":"https://www.faxbridgevets.ie","hoursHash":"51788e638124b1c9","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"023 88 33252","emergencyChecked":"2026-11-24","hospital":true,"since":"2026-11-24"}
+{"id":"n6873174033","name":"Hollygate Vets","street":"Church Road 21","postcode":"BT8 8DT","city":"Carryduff","lat":54.51546,"lon":-5.885752,"phones":["890817109"],"hours":"Mo-Fr 09:00-19:00; Sa 09:00-12:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n6886138085","name":"Kelly Veterinary Clinic","lat":53.297874,"lon":-8.749164,"phones":["879145862"],"hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n6943721964","name":"Sunbeam Vet","lat":51.924785,"lon":-8.489143,"since":"2026-11-24"}
+{"id":"n7086940879","name":"Millhouse Veterinary","lat":52.356696,"lon":-8.684311,"since":"2026-11-24"}
+{"id":"n7091738035","name":"Claudy Veterinary Clinic","street":"Main Street 75","postcode":"BT47 4HR","city":"Claudy","lat":54.911824,"lon":-7.154,"phones":["871338307"],"site":"https://findit.londonderrysentinel.co.uk/company/438555071709185","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n7096679635","lat":51.651948,"lon":-9.909672,"since":"2026-11-24"}
+{"id":"n7114324255","name":"Riverview Veterinary Hospital","street":"Westpoint Trade Centre 2","postcode":"P31 DT80","city":"Ballincollig","lat":51.885663,"lon":-8.58171,"phones":["214874879"],"site":"https://www.riverviewvets.ie","siteFrom":"osm","hours":"Mo-Fr 08:30-19:00; Sa 10:00-16:00","hoursFrom":"ai","hoursUrl":"https://www.riverviewvets.ie","hoursHash":"cf08de7368bcd02e","hoursChecked":"2026-11-24","emergency":"on_call","emergencyChecked":"2026-11-24","hospital":true,"since":"2026-11-24"}
+{"id":"n7117808274","name":"Sandyford Veterinary Hospital","street":"2B","lat":53.264931,"lon":-6.229402,"hours":"Mo-Fr 09:00-19:00; Sa 09:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n7133297099","name":"Value Vets","street":"Old Mill Business Park Unit 1&2","postcode":"T23 V38R","city":"Cork","lat":51.908389,"lon":-8.473197,"phones":["214555222"],"hours":"Mo-Fr 09:00-18:00; Sa 10:00-12:00,13:00-14:00; PH off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n725841315","name":"Old Bawn Veterinary Clinic","street":"Old Bawn Shopping Centre","lat":53.275594,"lon":-6.35295,"since":"2026-11-24"}
+{"id":"n7276674732","name":"Clonakilty Companion Animal Hospital","street":"Casement Street","postcode":"P85 E448","city":"Clonakilty","lat":51.621481,"lon":-8.887748,"phones":["238833221"],"site":"https://riverviewvets.ie","siteFrom":"osm","emergency":"24/7","emergencyChecked":"2026-11-24","hospital":true,"since":"2026-11-24"}
+{"id":"n7294941654","name":"Shenick Veterinary Centre","lat":53.607685,"lon":-6.196875,"phones":["312150469"],"hours":"Mo-Fr 08:30-19:30; Sa 09:30-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n7576139065","name":"Glenburn Vet","street":"Antrim Road 384","postcode":"BT36 5EJ","lat":54.673159,"lon":-5.962647,"site":"https://www.glenburnvets.co.uk/","siteFrom":"osm","hours":"Mo-Fr 08:30-18:00","hoursFrom":"structured","hoursUrl":"https://www.glenburnvets.co.uk/","hoursHash":"6bfe3fb9e2a687b9","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"028 9065 1729","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n7576195305","name":"Glenburn Vet","street":"Nutts Corner Road","postcode":"BT29 4BW","city":"Crumlin","lat":54.624911,"lon":-6.20969,"since":"2026-11-24"}
+{"id":"n760369704","name":"Moss Veterinary Hospital","lat":53.238801,"lon":-6.655845,"site":"http://www.mossvet.ie/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n764466848","name":"Murphy-Sheerin","lat":52.937466,"lon":-6.714641,"since":"2026-11-24"}
+{"id":"n7657304505","name":"Moate Pet Clinic","lat":53.406574,"lon":-7.738227,"since":"2026-11-24"}
+{"id":"n7733507950","name":"Glen Veterinary","street":"Bansha Road","postcode":"E34 W973","city":"Tipperary","lat":52.469229,"lon":-8.153355,"hours":"Mo-Fr 08:30-18:30; Sa 09:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n7781884993","name":"Clonmel Veterinary Clinic","lat":52.354319,"lon":-7.69473,"phones":["526182766"],"hours":"Mo-Fr 09:00-18:00; Sa 10:00-15:00; Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n7802171204","name":"Roundwood Veterinary Practice","lat":53.064621,"lon":-6.198883,"since":"2026-11-24"}
+{"id":"n7813299368","name":"Ormonde Veterinary","lat":52.544744,"lon":-7.390582,"hours":"Mo-Fr 10:00-17:00; Sa 10:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n7836141069","name":"Paws Paws","street":"Penrose Quay","city":"Cork","lat":51.900384,"lon":-8.463548,"phones":["212067700"],"site":"https://www.pawpaws.ie","siteFrom":"osm","hours":"Mo-Th 09:30-18:00; Sa 10:00-14:00; PH,Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n7906987031","name":"Pet Vet","lat":53.1871,"lon":-8.90761,"since":"2026-11-24"}
+{"id":"n7917910513","lat":53.26623,"lon":-8.916194,"since":"2026-11-24"}
+{"id":"n7935748447","name":"Grey Abbey Veterinary Hospital","lat":53.152198,"lon":-6.914215,"since":"2026-11-24"}
+{"id":"n7952867959","name":"Suirside Veterinary Clinic","lat":52.347495,"lon":-7.419295,"since":"2026-11-24"}
+{"id":"n7964893309","name":"Clashmore Veterinary","lat":52.454056,"lon":-9.662926,"since":"2026-11-24"}
+{"id":"n8011246572","name":"Portarlington Veterinary Centre","street":"Upper Main Street","city":"Portarlington","lat":53.157516,"lon":-7.185634,"site":"https://www.portarlingtonveterinarycentre.com/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n8287590366","name":"Sunbeam Veterinary Hospital","street":"South Ring Business Park","city":"Cork","lat":51.87416,"lon":-8.473218,"phones":["214311600"],"site":"https://sunbeamvets.com","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n8631990577","lat":52.470864,"lon":-8.432515,"since":"2026-11-24"}
+{"id":"n8655074660","name":"The Vet Surgery","lat":51.717184,"lon":-9.109918,"since":"2026-11-24"}
+{"id":"n8676430411","name":"Leixlip Veterinary Hospital","lat":53.364857,"lon":-6.488668,"site":"http://leixlipvet.com/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"n8908408468","name":"Park Lane Vets","street":"Corrig Road 15","postcode":"A96 W8H1","city":"Dún Laoghaire","lat":53.287278,"lon":-6.135164,"phones":["312360692"],"site":"https://parklanevets.ie/","siteFrom":"osm","hours":"Mo-Fr 08:00-13:00,14:00-19:00; Sa 09:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n8917067817","name":"Abbeville Veterinary Clinic","lat":51.932963,"lon":-8.56023,"since":"2026-11-24"}
+{"id":"n8955094002","name":"Youghal Veterinary Clinic","lat":51.940664,"lon":-7.843669,"since":"2026-11-24"}
+{"id":"n9072224292","name":"Kelly's Veterinary Clinic","street":"Farrell Street","city":"Kells","lat":53.725843,"lon":-6.878902,"since":"2026-11-24"}
+{"id":"n9072276241","name":"Advanced Pet Care","street":"Bective Street","city":"Kells","lat":53.723569,"lon":-6.880482,"phones":["469240434"],"site":"https://www.smithfoleyvet.com/","siteFrom":"osm","hours":"Mo-Fr 08:30-18:00; Sa 09:00-17:00","hoursFrom":"ai","hoursUrl":"https://www.smithfoleyvet.com/","hoursHash":"e4a469937c8f8805","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"(046) 924 0434","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"n9163282387","name":"Ballyragget Veterinary Clinic","lat":52.788021,"lon":-7.336764,"since":"2026-11-24"}
+{"id":"n922095354","name":"Gallagher and Dunne","lat":52.9543,"lon":-7.799286,"phones":["350523200"],"hours":"Mo-Fr 09:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9262893226","lat":53.408757,"lon":-6.315235,"since":"2026-11-24"}
+{"id":"n9357108300","name":"Harvey's Veterinary","street":"Fahy's Road","city":"Kilrush","lat":52.641,"lon":-9.486926,"since":"2026-11-24"}
+{"id":"n9661871038","name":"Seaview Veterinary Clinic","lat":54.656311,"lon":-8.107956,"since":"2026-11-24"}
+{"id":"n981443543","name":"MyVet","lat":53.359507,"lon":-6.43136,"since":"2026-11-24"}
+{"id":"n9826296762","name":"Ormonde Veterinary Hospital","street":"Dublin Road","lat":52.650074,"lon":-7.231506,"phones":["567761721"],"since":"2026-11-24"}
+{"id":"n9842331935","name":"Village Vets","street":"Southern Cross Road","lat":53.184475,"lon":-6.115623,"since":"2026-11-24"}
+{"id":"n9927412442","name":"Village Vets","city":"Castleknock","lat":53.373292,"lon":-6.361729,"since":"2026-11-24"}
+{"id":"n9975264494","name":"Blarney Veterinary Clinic","street":"Sunberry","postcode":"T23 FK28","lat":51.933874,"lon":-8.569118,"phones":["214381823","214381816"],"site":"https://blarneyvets.ie/","siteFrom":"osm","hours":"Mo-Fr 09:00-18:30; Sa 10:30-14:30; Su,PH off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9988065143","name":"Thomastown Veterinarian Clinic","city":"Thomastown","lat":52.534466,"lon":-7.138105,"hours":"Mo-Fr 08:30-20:00; Sa 09:00-17:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9988075738","name":"Ormonde Veterinary","lat":52.535446,"lon":-7.137639,"hours":"Mo-Fr 10:00-17:00; Sa 10:00-12:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n9997834059","street":"Canada Street","city":"Waterford","lat":52.25774,"lon":-7.103609,"since":"2026-11-24"}
+{"id":"w1000498184","lat":53.186351,"lon":-6.898848,"since":"2026-11-24"}
+{"id":"w1000498187","lat":53.185998,"lon":-6.89893,"since":"2026-11-24"}
+{"id":"w1000498188","lat":53.18587,"lon":-6.899452,"since":"2026-11-24"}
+{"id":"w1000498189","lat":53.18576,"lon":-6.899834,"since":"2026-11-24"}
+{"id":"w1000498190","lat":53.185583,"lon":-6.900355,"since":"2026-11-24"}
+{"id":"w1008909712","name":"Ark Veterinary Clinic","street":"Western Distributor Road","city":"Galway","lat":53.271135,"lon":-9.09947,"phones":["391510131"],"site":"https://www.arkvetsgalway.com/","siteFrom":"osm","hours":"Mo-Fr 09:00-18:00; Sa 09:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w1010018615","name":"Acorn House Vet Clinic","lat":53.403352,"lon":-6.849513,"since":"2026-11-24"}
+{"id":"w1024505587","name":"Clanrye Veterinary Clinic","lat":54.184579,"lon":-6.331988,"since":"2026-11-24"}
+{"id":"w1025877278","lat":52.947994,"lon":-7.796928,"since":"2026-11-24"}
+{"id":"w1029668102","name":"Banagher Veterinary Clinic","lat":53.185889,"lon":-7.992537,"hours":"Mo-Fr 09:00-13:00,14:00-18:00; Sa 09:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w1036269103","lat":54.656358,"lon":-8.107824,"since":"2026-11-24"}
+{"id":"w1050851715","lat":53.067232,"lon":-8.818457,"since":"2026-11-24"}
+{"id":"w1052203790","name":"Amy Lara Clinic","street":"Malahide Road","lat":53.382539,"lon":-6.20587,"since":"2026-11-24"}
+{"id":"w1072998203","name":"Willow Veterinary Clinic","street":"Mahon Road 7","postcode":"BT62 3EE","city":"Portadown","lat":54.411566,"lon":-6.455117,"phones":["838336336"],"site":"http://www.willowvets.co.uk/","siteFrom":"osm","hours":"Mo-Fr 08:30-19:00; Sa 09:00-17:00","hoursFrom":"ai","hoursUrl":"http://www.willowvets.co.uk/","hoursHash":"54a2324a71022814","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"w107425278","name":"Village Vets","street":"Dundrum Road","city":"Dundrum","lat":53.29418,"lon":-6.246299,"phones":["312987510"],"hours":"Mo-Fr 08:30-20:00; Sa 09:00-18:00; Su 10:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w1081405466","name":"Virginia Veterinary Practice","lat":53.833829,"lon":-7.076876,"since":"2026-11-24"}
+{"id":"w1091941123","name":"Donard Veterinary Clinic","street":"Railway Street 8","city":"Newcastle","lat":54.214448,"lon":-5.887499,"phones":["843729414"],"site":"http://www.donardvetinaryclinic.co.uk","siteFrom":"osm","since":"2026-11-24"}
+{"id":"w1094483946","lat":53.83395,"lon":-7.07726,"since":"2026-11-24"}
+{"id":"w1106125800","name":"Moran Court Vets","street":"Society Street","city":"Ballinasloe","lat":53.330642,"lon":-8.224662,"since":"2026-11-24"}
+{"id":"w1109743882","name":"Vets & Pets","lat":53.917642,"lon":-6.973031,"since":"2026-11-24"}
+{"id":"w111762445","name":"Crescent Veterinary Clinic","lat":52.634961,"lon":-8.643698,"phones":["361301841"],"site":"http://www.cvcvets.com/","siteFrom":"osm","hours":"Mo-Fr 09:00-19:00; Sa 10:00-12:30; Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w1122598057","name":"Mid Kerry Veterinary Centre","street":"Church Street","city":"Milltown","lat":52.144598,"lon":-9.716635,"phones":["669767000"],"site":"https://midkerryvets.ie","siteFrom":"osm","emergency":"on_call","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"w1123858818","lat":53.522705,"lon":-6.412391,"since":"2026-11-24"}
+{"id":"w1124406207","name":"Barry Judge","lat":53.821085,"lon":-6.747139,"since":"2026-11-24"}
+{"id":"w1156822377","name":"Village Vets","street":"Old Kilmainham","postcode":"D08 TY09","lat":53.341384,"lon":-6.301427,"phones":["316791975"],"site":"https://www.villagevets.ie/clinics/kilmainham-vets","siteFrom":"osm","since":"2026-11-24"}
+{"id":"w1176039356","name":"Farmhill Veterinary Clinic","street":"Larne Road","lat":54.723117,"lon":-5.786557,"since":"2026-11-24"}
+{"id":"w117620139","name":"Summerhill Veterinary Clinic","street":"Summerhill 26","city":"Nenagh","lat":52.866052,"lon":-8.195375,"since":"2026-11-24"}
+{"id":"w1185364096","name":"Clanrye Veterinary Clinic","street":"Newry Road 44","lat":54.06705,"lon":-6.015116,"since":"2026-11-24"}
+{"id":"w1198777466","name":"Gleno Veterinary Centre Ltd","street":"Ballyhone Rd 12","postcode":"BT40 3LW","city":"Larne","lat":54.804291,"lon":-5.82016,"since":"2026-11-24"}
+{"id":"w1202630507","name":"Pride Rock Vet","lat":54.350858,"lon":-6.26699,"since":"2026-11-24"}
+{"id":"w1210608576","name":"The Town Vets","street":"William Street 44","postcode":"BT66 6JA","city":"Lurgan","lat":54.465177,"lon":-6.336521,"site":"https://www.medivetgroup.com/vet-practices/lurgan-william-st","siteFrom":"osm","hours":"Mo-Fr 08:00-17:00; Sa 08:00-13:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w1214001709","name":"The Veterinary Clinic","lat":53.768042,"lon":-7.162474,"since":"2026-11-24"}
+{"id":"w1224493383","name":"Collins Vets","street":"Ballyronan Road 38","postcode":"BT45 6EN","city":"Magherafelt","lat":54.749561,"lon":-6.600497,"since":"2026-11-24"}
+{"id":"w1225903273","name":"Killester Vets","lat":53.375701,"lon":-6.209129,"phones":["319125335"],"site":"https://killestervets.ie/","siteFrom":"osm","hours":"Mo-Fr 09:30-18:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w1231233622","name":"Downe Veterinary Clinic","street":"Bryansford Road 12","postcode":"BT33 0HJ","city":"Newcastle","lat":54.206914,"lon":-5.893673,"phones":["844614225"],"since":"2026-11-24"}
+{"id":"w1231235445","lat":54.342395,"lon":-6.269199,"since":"2026-11-24"}
+{"id":"w1235939032","lat":54.70738,"lon":-6.197242,"since":"2026-11-24"}
+{"id":"w1241154703","name":"Stormont Vetinary Clinic","lat":54.594266,"lon":-5.828044,"since":"2026-11-24"}
+{"id":"w1241185066","name":"All Creatures","lat":55.044783,"lon":-6.931814,"since":"2026-11-24"}
+{"id":"w1257855476","name":"Rockmount AI Centre","lat":53.32526,"lon":-8.963882,"since":"2026-11-24"}
+{"id":"w1269097941","name":"Clerkins Veterinary Surgeons","street":"Bridge Street","city":"Cootehill","lat":54.075614,"lon":-7.085806,"since":"2026-11-24"}
+{"id":"w1270640430","name":"Lakeside Veterinary Hospital","street":"Gorteenapheebera","postcode":"H62 WT47","city":"Loughrea","lat":53.202591,"lon":-8.545905,"phones":["391841392"],"site":"https://www.lakesidevetsloughrea.ie/","siteFrom":"osm","hours":"Mo-Sa 09:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w1310486841","name":"O Scanaill","lat":53.449222,"lon":-6.225411,"since":"2026-11-24"}
+{"id":"w1315205496","name":"Aceso Vet","street":"Twadell Avenue","city":"Belfast","lat":54.613422,"lon":-5.96516,"since":"2026-11-24"}
+{"id":"w1355232019","name":"Glenn Veterinary Clinic","street":"Ballyholme Road 9","city":"Bangor","lat":54.663638,"lon":-5.660559,"since":"2026-11-24"}
+{"id":"w135618155","name":"Village Vets Dunshaughlin","street":"Main Street","city":"Dunshaughlin","lat":53.513485,"lon":-6.539896,"phones":["318259636"],"site":"http://www.activevetcare.ie/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"w1362309539","name":"Rathgael Veterinary Clinic","street":"Brook Lane 24","postcode":"BT19 1ST","city":"Bangor","lat":54.639018,"lon":-5.682358,"site":"https://www.rathgaelvets.com/","siteFrom":"osm","hours":"Mo-Fr 09:00-19:00; Sa 09:00-12:00","hoursFrom":"structured","hoursUrl":"https://www.rathgaelvets.com/","hoursHash":"54a2b12db31c52dd","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"02890471361","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"w1375887254","name":"Erkina Veterinary Clinic","lat":52.847521,"lon":-7.58819,"since":"2026-11-24"}
+{"id":"w1389553057","name":"Greenmount Veterinary Clinic","street":"Maynooth Road","city":"Richhill","lat":54.370855,"lon":-6.552265,"since":"2026-11-24"}
+{"id":"w1420844563","name":"Antrim Road Veterinary Practice","lat":54.61788,"lon":-5.93809,"since":"2026-11-24"}
+{"id":"w144022429","name":"Wicklow Veterinary Clinic","city":"Wicklow","lat":52.986746,"lon":-6.061551,"site":"https://www.wicklowvets.ie/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"w1444720264","name":"Islandview Vet Clinic","street":"Glynn Road 1b","city":"Larne","lat":54.849246,"lon":-5.823155,"since":"2026-11-24"}
+{"id":"w1456584140","name":"Cromlyn House Veterinary Hospital","lat":54.449395,"lon":-6.100003,"site":"https://www.cvsvets.com/northern-ireland/cromlyn-house-veterinary-hospital","siteFrom":"osm","hours":"24/7","hoursFrom":"structured","hoursUrl":"https://www.cvsvets.com/northern-ireland/cromlyn-house-veterinary-hospital","hoursHash":"a8b3f7a38f9713f9","hoursChecked":"2026-11-24","emergency":"24/7","emergencyPhone":"028 9268 3711","emergencyChecked":"2026-11-24","hospital":true,"since":"2026-11-24"}
+{"id":"w1480100843","name":"Vets4Pets","city":"Newtownards","lat":54.591296,"lon":-5.690748,"since":"2026-11-24"}
+{"id":"w1481164997","lat":51.875861,"lon":-8.432918,"since":"2026-11-24"}
+{"id":"w1515283357","name":"Hurley's Veterinary Hospital","street":"Brewery Road","postcode":"V92 N9FT","city":"Tralee","lat":52.274666,"lon":-9.703199,"hours":"24/7","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w152278335","name":"Vet Care","lat":53.032831,"lon":-7.294365,"phones":["578664841"],"since":"2026-11-24"}
+{"id":"w157390863","name":"Stillorgan Veterinary Hospital","street":"Glenalbyn Road","lat":53.287758,"lon":-6.195624,"since":"2026-11-24"}
+{"id":"w177287762","name":"Castle Vets","street":"American Street","city":"Belmullet","lat":54.225042,"lon":-9.988257,"since":"2026-11-24"}
+{"id":"w177926242","name":"Gortlandroe Veterinary Clinic","lat":52.867132,"lon":-8.209952,"phones":["536731016"],"since":"2026-11-24"}
+{"id":"w177926255","lat":52.866993,"lon":-8.210171,"since":"2026-11-24"}
+{"id":"w179465672","name":"West Vets","postcode":"F28 V672","city":"Westport","lat":53.794004,"lon":-9.532821,"since":"2026-11-24"}
+{"id":"w184010933","name":"Beaufield Veterinary Centre","street":"Dublin Road","city":"Celbridge","lat":53.33806,"lon":-6.536623,"since":"2026-11-24"}
+{"id":"w188364572","name":"Animal Hospital","lat":53.857052,"lon":-9.281618,"since":"2026-11-24"}
+{"id":"w195449866","lat":53.201394,"lon":-8.565868,"since":"2026-11-24"}
+{"id":"w219713931","name":"A Country Practice","street":"Sarsfield Street 16","city":"Nenagh","lat":52.863633,"lon":-8.201554,"site":"https://www.acountrypracticeveterinaryclinic.ie/","siteFrom":"osm","hours":"Mo-Fr 09:00-19:00; Sa 10:00-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w230515935","name":"Village Vets Rathfarnham","lat":53.261927,"lon":-6.309938,"since":"2026-11-24"}
+{"id":"w234839703","name":"Birr Vetinary Clinic","city":"Birr","lat":53.088096,"lon":-7.907756,"since":"2026-11-24"}
+{"id":"w239673122","name":"Barrowside Vetinary Hospital","lat":52.395419,"lon":-6.95648,"since":"2026-11-24"}
+{"id":"w243812867","name":"Ark Veterinary Hospital","street":"Tralee Road","city":"Killarney","lat":52.069589,"lon":-9.516506,"phones":["646636644"],"site":"https://arkveterinaryhospital.ie/","siteFrom":"osm","hours":"Mo-Fr 08:00-13:00,15:00-17:30; Sa 08:00-13:00,15:00-17:00","hoursFrom":"ai","hoursUrl":"https://arkveterinaryhospital.ie/","hoursHash":"f9d48ad86a1e2379","hoursChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"w253179207","name":"Ashwood Veterinary Clinic","lat":53.93903,"lon":-7.869702,"phones":["719631043"],"since":"2026-11-24"}
+{"id":"w254064355","name":"Village Veterinary","street":"Kells Road","postcode":"R95 NP23","city":"Kilkenny","lat":52.642081,"lon":-7.254324,"phones":["567762674"],"site":"http://www.villagevet.ie/","siteFrom":"osm","hours":"Mo-Sa 08:00-20:00, Sa 09:00-16:00, Su 09:00-12:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w255318167","name":"Archersfield Veterinary Clinic","lat":52.647069,"lon":-7.24372,"phones":["567721216","871655891"],"since":"2026-11-24"}
+{"id":"w256538969","name":"McKenna, McDonald & Finlay Veterinary Hospital","lat":54.260251,"lon":-6.955415,"phones":["534781134"],"hours":"Mo-Fr 09:00-18:30; Sa 09:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w257340799","name":"Nutgove Veterinary Hospital","street":"Nutgrove Avenue 173","lat":53.292082,"lon":-6.26907,"phones":["312951202"],"site":"http://nutgrovevet.ie/","siteFrom":"osm","hours":"Mo-Fr 09:30-12:30,14:30-16:00,17:15-19:00; Sa 09:30-12:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w294574798","name":"Cloghan Vet Clinic","lat":53.225778,"lon":-7.888356,"since":"2026-11-24"}
+{"id":"w308670450","lat":53.170078,"lon":-7.727895,"since":"2026-11-24"}
+{"id":"w313931495","lat":53.372793,"lon":-6.201474,"since":"2026-11-24"}
+{"id":"w314233864","name":"Fairview Veterinary Hospital","lat":53.362899,"lon":-6.237525,"since":"2026-11-24"}
+{"id":"w316153036","name":"Spratt's Veterinary Clinic","lat":52.263955,"lon":-8.272125,"since":"2026-11-24"}
+{"id":"w331297852","lat":51.861714,"lon":-8.296972,"since":"2026-11-24"}
+{"id":"w339860285","name":"Blackrock Veterinary Clinic","street":"Stillorgan Park 25","city":"Blackrock","lat":53.289365,"lon":-6.180876,"phones":["312889641"],"site":"https://www.blackrockvet.ie/","siteFrom":"osm","hours":"Mo-Fr 08:00-19:00; Sa 09:30-12:30; Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w342627093","name":"Paws","street":"Swords Road","lat":53.399024,"lon":-6.24356,"phones":["318527813"],"site":"https://www.anicare.ie/","siteFrom":"osm","hours":"Mo-Fr 09:00-19:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w359995729","name":"Tullamore Pet Hospital","lat":53.293075,"lon":-7.496157,"since":"2026-11-24"}
+{"id":"w361877628","name":"All Care Veterinary Centre","street":"Park Road","city":"Killarney","lat":52.060597,"lon":-9.48988,"phones":["646637333"],"site":"https://www.allcarevets.ie/","siteFrom":"osm","hours":"Mo-Sa 09:00-17:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w370881402","name":"Clare Vet Group","lat":54.752992,"lon":-5.992363,"since":"2026-11-24"}
+{"id":"w390335289","name":"Glenburn Veterinary Surgeons","street":"Antrim Road 384","postcode":"BT36 5EJ","city":"Glengormley","lat":54.673174,"lon":-5.962637,"since":"2026-11-24"}
+{"id":"w396477120","name":"Glenburn Vets","street":"Nutts Corner Road 7","postcode":"BT29 4BW","city":"Crumlin","lat":54.624914,"lon":-6.209638,"site":"https://www.glenburnvets.co.uk/","siteFrom":"osm","hours":"Mo-Fr 08:30-18:00","hoursFrom":"structured","hoursUrl":"https://www.glenburnvets.co.uk/","hoursHash":"6bfe3fb9e2a687b9","hoursChecked":"2026-11-24","emergency":"on_call","emergencyPhone":"028 9065 1729","emergencyChecked":"2026-11-24","since":"2026-11-24"}
+{"id":"w398185380","name":"Newtownstewart Veterinary","lat":54.719286,"lon":-7.37576,"since":"2026-11-24"}
+{"id":"w400468689","name":"Clare Street Vets","lat":52.665995,"lon":-8.616196,"since":"2026-11-24"}
+{"id":"w400976322","name":"Finns, O' Connor and O' Riordan Veterinary","lat":52.075581,"lon":-8.283604,"since":"2026-11-24"}
+{"id":"w409987352","name":"Lisburn Veterinary Clinic","street":"Sloan Street 49","lat":54.509328,"lon":-6.035237,"since":"2026-11-24"}
+{"id":"w435929611","name":"Ancu Veterinary Clinic","lat":53.961508,"lon":-6.377287,"phones":["429321915"],"since":"2026-11-24"}
+{"id":"w438772400","name":"Cavehill Veterinary Practice","street":"Cavehill Road 136","postcode":"BT15 5BU","city":"Belfast","lat":54.630887,"lon":-5.94659,"since":"2026-11-24"}
+{"id":"w449891804","name":"Breaffy Veterinary Clinic","lat":53.85285,"lon":-9.263067,"since":"2026-11-24"}
+{"id":"w454685990","name":"Grove Veterinary Centre","street":"Garvey Wood","lat":54.884298,"lon":-6.271,"phones":["825656023"],"site":"https://www.grovevets.co.uk/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"w46011518","name":"Dublin Society for the Prevention of Cruelty to Animals (D.S.P.C.A.)","street":"Mount Venus Road","lat":53.260844,"lon":-6.308822,"site":"https://www.dspca.ie/","siteFrom":"osm","hours":"Mo-Su 11:00-16:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w474817988","name":"O'Scanaill Veterinary Surgeons","lat":53.44938,"lon":-6.225436,"phones":["318900380"],"since":"2026-11-24"}
+{"id":"w477089281","name":"Jubilee Veterinary Centre","street":"Jubilee Road","city":"Newtownards","lat":54.585814,"lon":-5.699394,"site":"https://www.jubileevetcentre.co.uk/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"w479900435","name":"Voy Vet Clinic","street":"Ballybracken Road 44","lat":54.761982,"lon":-6.078656,"since":"2026-11-24"}
+{"id":"w506935184","lat":52.649162,"lon":-8.58084,"since":"2026-11-24"}
+{"id":"w516396088","name":"Garvagh Veterinary Clinic","street":"Kilrea Road 5","city":"Garvagh","lat":54.982451,"lon":-6.683712,"since":"2026-11-24"}
+{"id":"w518854838","name":"Coleraine Veterinary Services","street":"Ballyrashane Road 12","lat":55.135172,"lon":-6.640241,"site":"https://www.colerainevets.co.uk","siteFrom":"osm","hours":"Mo-Fr 09:00-17:30; Sa 09:00-11:30","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w538751032","name":"Blue Coast Veterinary","street":"11A","lat":51.971099,"lon":-7.862477,"phones":["532482500"],"site":"http://youghal.ie/organisation/blue-coast-veterinary-surgery/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"w542480403","name":"Midlands Verterinary","lat":53.271476,"lon":-7.473376,"since":"2026-11-24"}
+{"id":"w552386001","name":"Lagan Valley Vets","street":"Main Street 49","city":"Craigavon","lat":54.480115,"lon":-6.227139,"since":"2026-11-24"}
+{"id":"w553361242","name":"Abbey Veterinary Centre","lat":54.675438,"lon":-5.914521,"since":"2026-11-24"}
+{"id":"w562075310","name":"Greystones Veterinary Hospital","lat":53.147746,"lon":-6.063723,"since":"2026-11-24"}
+{"id":"w57823817","name":"Ark Vetcare","street":"Patrick Street 33","postcode":"A96 N722","lat":53.290646,"lon":-6.138262,"phones":["312802041"],"site":"https://www.arkvet.ie/","siteFrom":"osm","hours":"Mo-Fr 07:30-20:20; Sa 07:30-14:00; Su off","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w584860606","name":"Blacklion Pet Hospital","street":"Applewood Drive","postcode":"A63 FT21","lat":53.146905,"lon":-6.078498,"site":"https://www.vets.ie/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"w585452008","name":"Well Pet Hospital","lat":54.243682,"lon":-8.475033,"since":"2026-11-24"}
+{"id":"w620899562","lat":54.594129,"lon":-5.696135,"since":"2026-11-24"}
+{"id":"w641375813","name":"Castle Veterinary Group","street":"Dublin Road 8","postcode":"BT31 9AQ","city":"Castlewellan","lat":54.25513,"lon":-5.948715,"phones":["843778302"],"since":"2026-11-24"}
+{"id":"w646984162","name":"Rockhall Vets","lat":52.67112,"lon":-8.660996,"since":"2026-11-24"}
+{"id":"w657051312","name":"Paws","city":"Dublin","lat":53.376356,"lon":-6.217909,"since":"2026-11-24"}
+{"id":"w660054531","name":"Village Vets","street":"Cabra Road 87","city":"Dublin","lat":53.361246,"lon":-6.282876,"since":"2026-11-24"}
+{"id":"w661632322","name":"Clontarf Vetinary Hospital","street":"MP2","lat":53.367393,"lon":-6.227337,"since":"2026-11-24"}
+{"id":"w662615825","name":"Earlswood Veterinary Hospital","street":"Belmont Road 193","city":"Belfast","lat":54.599139,"lon":-5.868825,"hours":"Mo-Fr 08:30-19:00; Sa 09:00-12:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w672428806","name":"Village Vets","lat":53.30223,"lon":-6.378263,"since":"2026-11-24"}
+{"id":"w672989699","lat":54.966433,"lon":-6.290683,"since":"2026-11-24"}
+{"id":"w678100284","name":"Glasslyn Large & Small Veterinary Centre","street":"Station Road","city":"Bandon","lat":51.745266,"lon":-8.729001,"since":"2026-11-24"}
+{"id":"w680780576","name":"Coolcower Veterinary Clinic","street":"Cork Road","city":"Macroom","lat":51.894791,"lon":-8.937997,"phones":["532641091"],"site":"http://www.coolcowervet.ie","siteFrom":"osm","since":"2026-11-24"}
+{"id":"w683527283","name":"Bairbre O'Malley Veterinary Hospital","lat":53.200706,"lon":-6.112575,"since":"2026-11-24"}
+{"id":"w687360151","name":"ARK Veterinary Clinic","lat":52.798939,"lon":-6.741662,"since":"2026-11-24"}
+{"id":"w692232913","name":"Castlelands Veterinary Clinic","lat":51.54484,"lon":-9.268208,"since":"2026-11-24"}
+{"id":"w712358457","name":"Animal Hospital","street":"Main Road 37","postcode":"D24 Y201","city":"Tallaght","lat":53.28932,"lon":-6.347469,"phones":["314515930"],"site":"https://animalhospital.ie","siteFrom":"osm","hours":"Mo-Fr 09:00-19:30, Sa 09:30-16:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w734184230","name":"All Care Veterinary Centre","street":"Walkinstown Road 153","postcode":"D12 E5AN","city":"Dublin","lat":53.317839,"lon":-6.332185,"since":"2026-11-24"}
+{"id":"w741349841","name":"Clare Veterinary Group","street":"Victoria Road","postcode":"BT38 7JE","city":"Carrickfergus","lat":54.722376,"lon":-5.790798,"since":"2026-11-24"}
+{"id":"w767401177","name":"Dr. Sabine Conboy","street":"Collooney","city":"Ballygawley","lat":54.189321,"lon":-8.447269,"since":"2026-11-24"}
+{"id":"w779831963","lat":52.250829,"lon":-7.126663,"since":"2026-11-24"}
+{"id":"w784952320","lat":52.735794,"lon":-7.009365,"since":"2026-11-24"}
+{"id":"w786386530","name":"Milburn Veterinary Practice","street":"Milburn Road 135","postcode":"BT52 1QY","city":"Coleraine","lat":55.140293,"lon":-6.666211,"since":"2026-11-24"}
+{"id":"w790868553","lat":51.887618,"lon":-8.596777,"since":"2026-11-24"}
+{"id":"w792185198","name":"Erne Veterinary Group","lat":54.348173,"lon":-7.61543,"since":"2026-11-24"}
+{"id":"w792202345","name":"Cara Veterinary Clinic","lat":54.353757,"lon":-7.606395,"since":"2026-11-24"}
+{"id":"w825833945","lat":54.179535,"lon":-6.337604,"since":"2026-11-24"}
+{"id":"w828413099","lat":52.469401,"lon":-8.153559,"since":"2026-11-24"}
+{"id":"w83258796","name":"USPCA Animal Hospital","street":"Carnbane East Industrial Estate","postcode":"BT35 6QH","city":"Newry","lat":54.196162,"lon":-6.345976,"phones":["830251000"],"site":"https://www.uspca.co.uk/","siteFrom":"osm","hours":"Mo-Sa 09:00-19:00; Su 13:00-18:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w842133316","name":"Athboy Veterinary Hospital","lat":53.617866,"lon":-6.933283,"since":"2026-11-24"}
+{"id":"w844801840","name":"Lismore Vets","street":"East Main Street","lat":52.138139,"lon":-7.929517,"since":"2026-11-24"}
+{"id":"w869791014","name":"The Veterinary Clinic","lat":54.099948,"lon":-6.254851,"since":"2026-11-24"}
+{"id":"w880517080","lat":53.605633,"lon":-6.183777,"since":"2026-11-24"}
+{"id":"w88593577","name":"Arena Veterinary Hospital","street":"Rocklands","city":"Wexford","lat":52.325298,"lon":-6.451026,"site":"https://arenavets.ie/","siteFrom":"osm","since":"2026-11-24"}
+{"id":"w88773102","name":"O'Shea Bramley & Breen Veterinary Hospital","street":"Distillery Road","city":"Wexford","lat":52.330983,"lon":-6.463785,"phones":["539145755"],"site":"https://www.wexfordvethospital.ie/","siteFrom":"osm","hours":"Mo-Fr 08:30-19:30; Sa 09:00-16:30; Su 11:00-12:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w894896576","name":"Treaty Veterinary Clinic","street":"Sexton Street North","lat":52.67129,"lon":-8.633961,"since":"2026-11-24"}
+{"id":"w900891586","lat":52.568483,"lon":-8.801935,"since":"2026-11-24"}
+{"id":"w901695398","name":"Teahan's","lat":52.254189,"lon":-10.020114,"since":"2026-11-24"}
+{"id":"w920085156","name":"Castle Vetinary Group","lat":54.332081,"lon":-5.715996,"since":"2026-11-24"}
+{"id":"w920236138","name":"Downe Veterinary Clinic","street":"Church Street 35","postcode":"BT30 6EH","city":"Downpatrick","lat":54.330695,"lon":-5.713707,"phones":["844614225"],"since":"2026-11-24"}
+{"id":"w948868101","lat":55.065769,"lon":-7.274478,"since":"2026-11-24"}
+{"id":"w95172146","name":"Goold's Vet Clinic","lat":51.885329,"lon":-8.405554,"since":"2026-11-24"}
+{"id":"w968293507","name":"Botanic Veterinary Hospital","street":"Botanic Road 183","city":"Dublin","lat":53.372357,"lon":-6.268569,"phones":["318375543"],"site":"https://www.anicare.ie/our-locations/botanic-veterinary-hospital/","siteFrom":"osm","hours":"Mo-Fr 09:00-19:30; Sa 09:30-12:00,14:00-16:30; PH,Su 10:00-12:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w968734912","name":"Cedarmount Vetinary","lat":54.660284,"lon":-5.681297,"since":"2026-11-24"}
+{"id":"w973344616","name":"Cara Veterinary Clinic","street":"North Circular Road 1a","postcode":"D07 HE48","lat":53.352267,"lon":-6.298243,"phones":["318388338"],"site":"https://www.caravetgroup.com/","siteFrom":"osm","hours":"Mo 11:30-12:30, 15:30-19:00, Tu-Th 11:30-12:30, 16:00-19:00, Fr 11:30-12:30, 16:30-19:00, Sa 09:00-12:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w97434964","name":"Graiguenamanagh Veterinary","street":"Main Street Upper","city":"Graiguenamanagh","lat":52.542495,"lon":-6.956209,"since":"2026-11-24"}
+{"id":"w97870986","lat":53.445944,"lon":-7.932239,"since":"2026-11-24"}

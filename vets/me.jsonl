@@ -1,0 +1,22 @@
+{"id":"n10127836612","name":"Montvet","street":"Vojvode Ilije Plamenca 22","postcode":"81000","city":"Podgorica","lat":42.432654,"lon":19.243682,"phones":["220662578","269361461"],"site":"https://montvet.com","siteFrom":"osm","hours":"Mo-Fr 08:00-20:30; Sa 08:00-19:00; Su 09:00-15:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n10230694769","name":"Medicus vet","street":"Bulevar knjaza Danila Petrovića","lat":42.435103,"lon":19.229183,"phones":["069206840"],"since":"2026-11-24"}
+{"id":"n10672617405","name":"Vet Medica D.O.O","lat":42.289367,"lon":18.83274,"phones":["269443598"],"hours":"Mo-Sa 08:00-20:00; Su 09:00-12:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n10758571112","name":"Popović","lat":42.100107,"lon":19.099119,"hours":"Mo-Fr 08:00-20:00, Sa 09:00-14:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11513504865","name":"RoyalVet","street":"Đoka Miraševića 98","postcode":"81000","city":"Podgorica","lat":42.451512,"lon":19.239152,"hours":"Mo-Sa 09:00-20:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n11704226870","lat":42.844436,"lon":20.165472,"since":"2026-11-24"}
+{"id":"n11705136304","name":"Animavet","street":"Marka Radovića 18","lat":42.435549,"lon":19.238198,"phones":["220290296"],"since":"2026-11-24"}
+{"id":"n11895236358","name":"PetVet","lat":42.393621,"lon":18.922308,"since":"2026-11-24"}
+{"id":"n11945130432","name":"Petricevic Vetirinarska Ambulanta","lat":42.435486,"lon":18.769582,"hours":"Mo-Su 09:00-21:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n12642824359","lat":43.358206,"lon":19.35538,"since":"2026-11-24"}
+{"id":"n13103731301","name":"Clinic Vet Medic","street":"Radnička 1","postcode":"58348","lat":42.455922,"lon":18.55786,"hours":"Mo-Sa 08:00-20:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"n13119969991","name":"Veterinar Saša Drljević","lat":42.825794,"lon":19.521762,"since":"2026-11-24"}
+{"id":"n2077566007","name":"VetPort","street":"Škaljari 83","lat":42.415519,"lon":18.767116,"since":"2026-11-24"}
+{"id":"n2200507267","lat":42.392513,"lon":18.914161,"since":"2026-11-24"}
+{"id":"n2356511955","name":"Orjen","lat":42.459616,"lon":18.514531,"since":"2026-11-24"}
+{"id":"n3091261560","lat":43.040009,"lon":19.757258,"since":"2026-11-24"}
+{"id":"n3522215508","name":"Grandov","lat":43.034595,"lon":19.745203,"since":"2026-11-24"}
+{"id":"n4591389450","name":"Specijalistička Veterinarska Laboratorija","street":"Bulevar Mihaila Lalića","postcode":"81000","city":"Podgorica","lat":42.443647,"lon":19.244338,"since":"2026-11-24"}
+{"id":"n4840999721","street":"Deveta 55","postcode":"81210","lat":43.363459,"lon":19.332588,"since":"2026-11-24"}
+{"id":"n5252062794","lat":42.724571,"lon":19.791795,"since":"2026-11-24"}
+{"id":"n9919178417","name":"Veterinarska Ambulanta Canis","street":"Požarevačka ulica 1B","lat":42.099848,"lon":19.102479,"phones":["267323033"],"site":"http://canis.me","siteFrom":"osm","hours":"Mo-Sa 09:00-14:00,17:00-19:00, Su 11:00-12:00","hoursFrom":"osm","since":"2026-11-24"}
+{"id":"w187905419","name":"Veterinarska ambulanta Herceg Novi","street":"Zemunska 129","city":"Herceg Novi","lat":42.455094,"lon":18.548814,"since":"2026-11-24"}
