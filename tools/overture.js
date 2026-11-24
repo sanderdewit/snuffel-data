@@ -10,10 +10,12 @@
  * shelters, pet shops), after these checks:
  *
  *   - For dogs: places for cats only, or for horses, rabbits, birds, fish or
- *     wildlife only (by name), are left out. Per category, by name:
- *       boarding  from Overture's categories other than pet_boarding (pet sitting,
- *                 dog walking, general pet services) only with a boarding word
- *                 ("hondenopvang", "dierenpension", "hotel"); no rescues or shelters
+ *     wildlife only (by name), are left out. Per category, by name (Dutch and
+ *     Polish words here, the other languages in tools/overture-words.js):
+ *       boarding  only with a boarding word ("hondenopvang", "dierenpension",
+ *                 "boarding kennels"), also from Overture's pet_boarding; a word
+ *                 for lodging alone ("Hotel", "Pensión") needs a word for dogs or
+ *                 pets too ("Hotel Canino", "Pet Hotel"); no rescues or shelters
  *       training  no dog walkers, groomers or breeders (unless a training word says so)
  *       shelter   only with a word for a shelter ("dierenasiel", "dierentehuis",
  *                 "schronisko"), and only with a website that confirms it: no
@@ -55,6 +57,7 @@ const path = require("path");
 const { foldName, GROOMING, otherAnimalsOnly, classify } = require("../lib/classify.js");
 const { safeFetch, readCapped } = require("./safe-fetch.js");
 const { robotsBody } = require("./robots-match.js");
+const WORDS = require("./overture-words.js");
 
 const ROOT = path.join(__dirname, "..");
 const DIR = process.env.SNUFFEL_OVERTURE || path.join(ROOT, "overture");
@@ -82,6 +85,24 @@ function metres(a, b) {
   const r = Math.PI / 180, x = (b.lon - a.lon) * r * Math.cos(((a.lat + b.lat) / 2) * r), y = (b.lat - a.lat) * r;
   return Math.sqrt(x * x + y * y) * 6371000;
 }
+// The other languages' words (tools/overture-words.js), one pattern per list: a word
+// anywhere in the (folded) name, "^word" at the start of a word, "=word" as a whole word.
+const NOT_LETTER = "[^\\p{L}\\p{N}]";
+const escRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+function wordsRe(lists, mark) {
+  const parts = new Set();
+  for (const list of Object.values(lists)) for (const raw of list) {
+    const m = ((mark || "") + raw).match(/^([\^=]?)[\^=]?(.*)$/), w = escRe(foldName(m[2]));
+    if (w) parts.add(m[1] === "^" ? `(?<!\\p{L}|\\p{N})${w}` : m[1] === "=" ? `(?<!\\p{L}|\\p{N})${w}(?!\\p{L}|\\p{N})` : w);
+  }
+  return new RegExp([...parts].join("|"), "u");
+}
+const W = {};
+for (const k of ["dogName", "petWord", "cat", "boarding", "rescue", "training", "notTraining", "shelter", "shop", "strongShop", "online", "petShop"]) W[k] = wordsRe(WORDS[k]);
+W.otherAnimals = wordsRe(WORDS.otherAnimals, "^");
+W.shopOther = wordsRe(WORDS.shopOther, "^");
+// Words of a folded name in any script ("Салон за кучиња": two words, not none).
+const uWords = (n) => n.split(new RegExp(NOT_LETTER + "+", "u")).filter(Boolean);
 // Words that say what a place is, not which one it is: no evidence that two names match.
 const GENERIC = new Set(("trimsalon hondentrimsalon trimster hondenkapsalon hondensalon salon grooming groomer dog dogs pet pets " +
   "pension hondenpension dierenpension opvang hondenopvang dagopvang hondendagopvang hotel hondenhotel dierenhotel daycare resort " +
@@ -90,9 +111,10 @@ const GENERIC = new Set(("trimsalon hondentrimsalon trimster hondenkapsalon hond
   "asiel dierenasiel dierentehuis dierenopvang dierenopvangcentrum opvangcentrum dierencentrum stichting " +
   "dierspeciaalzaak dierenshop diervoeders tuin shop store petshop " +
   "sklep zoologiczny zoo szkolenie szkola psow psa dla zwierzat schronisko bezdomnych centrum hotel " +
-  "hond honden hondjes dier dieren dierenspeciaalzaak dierenwinkel de het een van en voor bij the and").split(" "));
+  "hond honden hondjes dier dieren dierenspeciaalzaak dierenwinkel de het een van en voor bij the and").split(" ")
+  .concat(Object.values(WORDS.generic).join(" ").split(/\s+/).map(foldName)));
 function nameWords(s) {
-  return new Set(foldName(s).split(/[^a-z0-9]+/).filter((w) => w.length >= 3 && !GENERIC.has(w)));
+  return new Set(uWords(foldName(s)).filter((w) => w.length >= 3 && !GENERIC.has(w)));
 }
 const shareWord = (a, b) => { const x = nameWords(a); for (const w of nameWords(b)) if (x.has(w)) return true; return false; };
 
@@ -103,37 +125,47 @@ function tidyCity(s) {
 }
 /** "VAN SPEYKSTRAAT 67" -> "Van Speykstraat 67", "Zieuwentseweg, 4A" -> "Zieuwentseweg 4A". */
 function tidyStreet(s) {
-  if (!s) return undefined;
+  if (!s || !s.trim()) return undefined;   // Hungary has streets of only spaces
   return tidyCity(s.trim()).replace(/,\s*(?=\d)/, " ");
 }
 // A salon only for cats ("Kattensalon", "The Catbarber"): not for a dog app. One that
 // also names dogs ("Trimsalon voor hond & kat") stays.
 const CAT_RE = /(^|[^a-z])(katten|kat(salon|trim|kapper|verzorg)|kat|poes|poezen|cats?|catbarber|catgroom\w*|katze|gatto|gato|kot|koty|kotow|koci|kocia|kocie|kotki|kotek)([^a-z]|$)/;
 const DOG_NAME_RE = /hond|hund|dog|chien|cane|perro|pies|psi|psow|psy|psa|kundel|szczen|koira|kutya/;
+const dogName = (n) => DOG_NAME_RE.test(n) || W.dogName.test(n);
 function catOnly(name) {
   const n = foldName(name);
-  return CAT_RE.test(n.replace(/(katten|kat)(salon|trim|kapper|verzorg|huis|kenner|bus|pension|hotel|opvang|oppas|boerderij)/g, "$1 $2")) && !DOG_NAME_RE.test(n);
+  return (CAT_RE.test(n.replace(/(katten|kat)(salon|trim|kapper|verzorg|huis|kenner|bus|pension|hotel|opvang|oppas|boerderij)/g, "$1 $2")) || W.cat.test(n)) && !dogName(n);
 }
-// Boarding from Overture's broader categories (pet sitting, dog walking, pet services):
-// only with a word for day care or boarding in the name, and no rescue or shelter
-// ("Stichting Dierenopvang", "Egelopvang": not a place to board a dog). "Kennel" is
-// left out: in Dutch and Polish names it is mostly a breeder.
+// Boarding only with a word for day care or boarding in the name, and no rescue or shelter
+// ("Stichting Dierenopvang", "Egelopvang": not a place to board a dog). Also from
+// Overture's pet_boarding: outside the Netherlands it holds holiday homes, hotels that
+// take dogs, breeders, trainers and even a law firm. "Kennel" is left out: in Dutch and
+// Polish names it is mostly a breeder ("Kennels", in British names, is boarding).
 const BOARDING_NAME_RE = /opvang|pension|boarding|pensjonat|hotel|swietlica|logeer|daycare|day care|dagverblijf|creche|resort|przedszkole|garderie|guarderia|pensione/;
+// Words for lodging that also name places for people: hotels, guest houses, holiday homes.
+const LODGING_RE = /hotel|pension|pensjonat|resort|lodge|suites|pansion|penzion|panzio|pensiun|pensao|residencia|alojamento|хотел|готел|гостиниц|пансион|пансіон|ξενοδοχ|πανσιον|viesnic|viesbut/g;
 const RESCUE_RE = /stichting|foundation|fundacja|stowarzyszenie|ochrony zwierzat|asiel|schronisko|rescue|tierheim|tierschutz|refuge|adoptie|herplaatsing/;
 function boardingName(c) {
   const n = foldName(c.name);
-  if (RESCUE_RE.test(n)) return "rescue or shelter";
-  if (c.kind && c.kind !== "pet_boarding" && !BOARDING_NAME_RE.test(n)) return "no boarding word in the name";
+  if (RESCUE_RE.test(n) || W.rescue.test(n)) return "rescue or shelter";
+  // A word for lodging alone ("Pensión Sotelo", "Hotel Sonne") needs a word for dogs or pets too.
+  const rest = n.replace(LODGING_RE, " ");
+  if (BOARDING_NAME_RE.test(rest) || W.boarding.test(rest)) return null;
+  if (rest !== n && (dogName(n) || W.petWord.test(n))) return null;
+  return "no boarding word in the name";
   return null;
 }
 // More animals than lib/classify.js knows, for Overture's shelters and shops (wildlife,
 // bird and reptile rescues, "Vissenasiel", poultry farms), as the start of a word.
 const OTHER_EXTRA = ["vogelas", "wildop", "wildlife", "eekhoorn", "reptiel", "reptil", "papegaai", "parrot", "vissen",
   "zwerfkat", "ptasi", "ptakow", "dzikich", "drobi"];
+// The other languages add their words for cats and other animals (also in Cyrillic and Greek).
 function otherOnly(name) {
   if (otherAnimalsOnly(name)) return true;
   const n = foldName(name);
-  return !DOG_NAME_RE.test(n) && n.split(/[^a-z0-9]+/).some((w) => OTHER_EXTRA.some((p) => w.startsWith(p)));
+  if (dogName(n)) return false;
+  return uWords(n).some((w) => OTHER_EXTRA.some((p) => w.startsWith(p))) || W.cat.test(n) || W.otherAnimals.test(n);
 }
 // Trainers: Overture's dog_trainer also holds walkers, groomers, masseurs and breeders.
 const TRAINING_RE = /school|szkol|train|trening|trener|tresur|cursus|kurs|coach|gedrag|behav|behaw|kynolog|kyno|agility|vereniging|club|klub|sport|acad|akadem|puppy|nosework|speur|gehoorza|posluszen|opvoed|therap|psycholog|instru/;
@@ -147,7 +179,7 @@ const SHOP_NAME_RE = /dier(en)? ?speciaalzaak|dier(en)?winkel|hondenwinkel|diere
 // "Sklep zoologiczny multivet24.pl" may well be a shop with its web address in the name: the
 // website decides; a web address alone, or "webshop" / "internetowy", is a webshop.
 const ONLINE_RE = /webshop|web shop|online|(^|[^a-z])e-?shop|internetow/;
-const DOMAIN_RE = /\.(nl|com|eu|pl|be|de|shop|store|online)( |$)|^www /;
+const DOMAIN_RE = /\.(nl|com|net|org|info|eu|pl|be|de|at|ch|li|lu|fr|mc|es|ad|it|pt|uk|ie|mt|dk|se|no|fi|is|ee|lv|lt|cz|sk|hu|ro|md|bg|mk|rs|me|ba|hr|si|gr|cy|ua|al|shop|store|online|pet|dog)( |$)|^www /;
 const SHOP_OTHER = ["aqua", "akwar", "vijver", "hengel", "wedkar", "terrar", "reptiel", "reptil", "ruiter", "paardensport",
   "equestrian", "saddlery", "zadel", "jezdzieck", "duiven", "golebi", "volier", "papegaai", "ptak", "ptasz", "rybk", "skalar"];
 const PET_SHOP_RE = /(^|[^a-z])dier|zoologiczn|sklep zoo/;
@@ -157,15 +189,16 @@ function siteHost(site) {
 }
 function shopName(c, chain) {
   const n = foldName(c.name), words = n.split(/[^a-z0-9]+/).filter(Boolean);
-  if ((ONLINE_RE.test(n) && !/stacjonarn/.test(n)) || (DOMAIN_RE.test(n) && !STRONG_SHOP_RE.test(n))) return "webshop";
-  const other = words.some((w) => w === "koi" || w === "vis" || SHOP_OTHER.some((p) => w.startsWith(p)));
+  if (((ONLINE_RE.test(n) || W.online.test(n)) && !/stacjonarn/.test(n)) || (DOMAIN_RE.test(n) && !STRONG_SHOP_RE.test(n) && !W.strongShop.test(n))) return "webshop";
+  const other = words.some((w) => w === "koi" || w === "vis" || SHOP_OTHER.some((p) => w.startsWith(p))) || W.shopOther.test(n);
   // "Dieren & Hengelsport Nelis", "Sklep zoologiczno-wędkarski": a pet shop that also sells fishing gear.
-  if (other) return PET_SHOP_RE.test(n) || DOG_NAME_RE.test(n) ? null : "shop for other animals";
-  if (SHOP_NAME_RE.test(n) || (chain && chain.via === "name")) return null;
+  if (other) return PET_SHOP_RE.test(n) || W.petShop.test(n) || dogName(n) ? null : "shop for other animals";
+  if (SHOP_NAME_RE.test(n) || W.shop.test(n) || (chain && chain.via === "name")) return null;
   // A chain's website under another name ("Royal Canin" at petsplace.nl): Overture took a
   // brand the shop sells for its name.
   if (chain) return "a chain's website, another name";
-  if (SHOP_NAME_RE.test(siteHost(c.site).replace(/[-.]/g, " "))) return null;
+  const host = siteHost(c.site).replace(/[-.]/g, " ");
+  if (SHOP_NAME_RE.test(host) || W.shop.test(host)) return null;
   return "no shop word in the name or web address";
 }
 /** Why candidate `c` is left out by its name, or null. `chain`: its chain (chainOf). */
@@ -173,10 +206,10 @@ function nameCheck(c, chain) {
   if (c.cat === "grooming") return catOnly(c.name) ? "cats only" : null;
   const n = foldName(c.name);
   // A pet shop may have a cat in its name ("Sklep Zoologiczny Pan i Kot", "Dierenspeciaalzaak De Kat").
-  if (otherOnly(c.name) && !(c.cat === "shop" && PET_SHOP_RE.test(n))) return "other animals only";
+  if (otherOnly(c.name) && !(c.cat === "shop" && (PET_SHOP_RE.test(n) || W.petShop.test(n)))) return "other animals only";
   if (c.cat === "boarding") return boardingName(c);
-  if (c.cat === "training") return NOT_TRAINING_RE.test(n) && !TRAINING_RE.test(n) ? "not a trainer (by name)" : null;
-  if (c.cat === "shelter") return SHELTER_NAME_RE.test(n) ? null : "no shelter word in the name";
+  if (c.cat === "training") return (NOT_TRAINING_RE.test(n) || W.notTraining.test(n)) && !TRAINING_RE.test(n) && !W.training.test(n) ? "not a trainer (by name)" : null;
+  if (c.cat === "shelter") return SHELTER_NAME_RE.test(n) || W.shelter.test(n) ? null : "no shelter word in the name";
   if (c.cat === "shop") return shopName(c, chain);
   return null;
 }
@@ -234,15 +267,16 @@ function write(cc, entries, dir) {
 // "pes", Italian "suo", Albanian "pse", Dutch "cao"/"koers"); per-country word lists
 // can replace this when categories or countries need them.
 const DOG_PREFIX = ["hond", "hund", "dog", "chien", "perro", "gossos", "koira", "koerte", "koera", "kutya", "caine", "catel",
-  "pies", "psow", "psov", "cani", "куче", "кучиња", "кучет", "σκυλ", "собак", "trim", "groom", "toilett", "vacht"];
-const DOG_WHOLE = ["koer", "cane", "caes", "suni", "sunu", "psy", "psa", "qen", "пес", "пси"];
+  "pies", "psow", "psov", "cani", "куче", "кучиња", "кучет", "σκυλ", "собак", "trim", "groom", "toilett", "vacht",
+  ...WORDS.dogPage.prefix];
+const DOG_WHOLE = ["koer", "cane", "caes", "suni", "sunu", "psy", "psa", "qen", "пес", "пси", ...WORDS.dogPage.whole];
 const esc = (w) => foldName(w).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 const GROOM_RE = new RegExp([
   "(" + [...new Set(Object.values(GROOMING).flat())].map(esc).join("|") + ")",
   "(?:^|[^\\p{L}])(" + DOG_PREFIX.map(esc).join("|") + ")",
   "(?:^|[^\\p{L}])(" + DOG_WHOLE.map(esc).join("|") + ")(?![\\p{L}])"
 ].join("|"), "u");
-const PARKED_RE = /domain(name)? (is )?for sale|buy this domain|this domain (name )?(is|has been) (registered|parked|for sale)|domein(naam)? (is )?te koop|parked (free )?(by|domain)|sedoparking|domain parking/i;
+const PARKED_RE = /domain(name)? (is )?for sale|buy this domain|this domain (name )?(is|has been) (registered|parked|for sale)|domein(naam)? (is )?te koop|parked (free )?(by|domain)|sedoparking|domain parking|diese domain (kaufen|steht zum verkauf|ist zu verkaufen)|domain (steht )?zum verkauf|ce (nom de )?domaine est a vendre|nom de domaine a vendre|este dominio (esta )?en venta|dominio in vendita|domena (je )?na prodej|domena na sprzedaz/i;
 // Boarding: the page talks about dogs (no grooming words: a cattery's page has "vacht").
 const DOG_RE = new RegExp([
   "(?:^|[^\\p{L}])(" + DOG_PREFIX.filter((w) => !["trim", "groom", "toilett", "vacht"].includes(w)).map(esc).join("|") + ")",
@@ -332,16 +366,29 @@ async function merge({ candidates, osm, prev, today, check }) {
   const brands = chainBrands(osm), chains = new Map();
 
   // Overture's own duplicates: the same name within 150 m, keep the most confident
-  const kept = [];
+  // (on the same grid: the United Kingdom has 50,000 candidates)
+  const kept = [], keptGrid = new Map();
+  const dupe = (c, folded) => {
+    for (let dy = -1; dy <= 1; dy++) for (let dx = -1; dx <= 1; dx++) {
+      for (const k of keptGrid.get((Math.floor(c.lat * 100) + dy) + "_" + (Math.floor(c.lon * 60) + dx)) || []) {
+        if (k.folded === folded && metres(k.c, c) < SAME_PLACE_M) return true;
+      }
+    }
+    return false;
+  };
   for (const c of [...candidates].sort((a, b) => (b.conf || 0) - (a.conf || 0))) {
     if (!CATS.includes(c.cat)) continue;
     const chain = chainOf(c, brands);
     const why = nameCheck(c, chain);
     if (why) { drop(why); continue; }
     if (inOsm(c)) { log.inOsm++; continue; }
-    if (kept.some((k) => foldName(k.name) === foldName(c.name) && metres(k, c) < SAME_PLACE_M)) { log.duplicate++; continue; }
+    const folded = foldName(c.name);
+    if (dupe(c, folded)) { log.duplicate++; continue; }
     if (chain) chains.set(c.id, chain);
     kept.push(c);
+    const k = key(c.lat, c.lon);
+    if (!keptGrid.has(k)) keptGrid.set(k, []);
+    keptGrid.get(k).push({ c, folded });
   }
   const own = (c) => c.site && !platform(c.site);
   const sites = check ? await checkAll(kept.filter(own).map((c) => ({ id: c.id, site: c.site, cat: c.cat })), check) : new Map();

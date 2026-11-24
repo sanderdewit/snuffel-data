@@ -211,6 +211,62 @@ test("the register round-trips sorted, and check finds problems", () => {
   fs.rmSync(dir, { recursive: true, force: true });
 });
 
+// ---- the other languages (tools/overture-words.js) -------------------------------------
+const kinds = { grooming: "pet_groomer", boarding: "pet_boarding", training: "dog_trainer", shelter: "animal_shelter", shop: "pet_store" };
+/** The names of `cat` that are published (all with a confirming website). */
+async function published(cat, names, opts) {
+  const r = await run(names.map((name, i) => cand("x" + i, { cat, kind: kinds[cat], name, conf: 0.9, site: "ok.nl" })), null, Object.assign({ check: async () => "ok" }, opts));
+  return r.entries.map((e) => e.name).sort();
+}
+test("other languages: salons for cats only are left out, salons that also name dogs stay", async () => {
+  assert.deepStrictEqual(await published("grooming", ["Katzensalon Mimi", "Salon für Hund & Katze", "Toilettage pour chats", "Toilettage Chiens et Chats",
+    "Kattsalong Misse", "Kissojen trimmaamo", "Salon pre mačky", "Грумінг для котів", "Dog Grooming Bella"]),
+  ["Dog Grooming Bella", "Salon für Hund & Katze", "Toilettage Chiens et Chats"]);
+});
+test("boarding everywhere needs a boarding word; a word for lodging alone needs a word for dogs or pets too", async () => {
+  assert.deepStrictEqual(await published("boarding", ["Hundepension Nero", "Hotel Canino Aiartza", "Pensión Sotelo", "Hotel Sonne",
+    "Culzean Bay Holiday Homes", "Kancelaria Adwokacka Kowalski", "Warboys Boarding Kennels", "Psí hotel Tlapka", "Хотел за кучета Трифоновланд",
+    "Hunddagis Solatassen", "Koirahoitola Karvahaalarin", "Kutyapanzió Doghill", "Pet Hotel Gondomar", "Pensione Per Cani Amico Mio"]),
+  ["Hotel Canino Aiartza", "Hundepension Nero", "Hunddagis Solatassen", "Koirahoitola Karvahaalarin", "Kutyapanzió Doghill", "Pensione Per Cani Amico Mio",
+    "Pet Hotel Gondomar", "Psí hotel Tlapka", "Warboys Boarding Kennels", "Хотел за кучета Трифоновланд"].sort());
+  // cat hotels and rescues filed as boarding
+  assert.deepStrictEqual(await published("boarding", ["Hotel Stubentiger", "GruvStallets KattHotell", "Canile Municipale di Roma Pensione", "Tierhilfe Pension Pfote"]), []);
+});
+test("other languages: trainers, but no walkers, groomers or breeders", async () => {
+  assert.deepStrictEqual(await published("training", ["Hundeschule Pfotenglück", "Gassi-Service Bello", "Éducateur canin Rémi", "Paseador de perros Juan",
+    "Hundesalon & Hundeschule", "Allevamento Del Pastore Tedesco", "Centro Cinofilo Four Dogs", "Kutyaiskola Bohemia", "Psí škola Dameal", "Дресирування собак Рекс"]),
+  ["Centro Cinofilo Four Dogs", "Hundesalon & Hundeschule", "Hundeschule Pfotenglück", "Kutyaiskola Bohemia", "Psí škola Dameal", "Éducateur canin Rémi",
+    "Дресирування собак Рекс"].sort());
+});
+test("other languages: shelters by a word for a shelter; societies, foundations and charity shops are left out", async () => {
+  assert.deepStrictEqual(await published("shelter", ["Tierheim Essen", "Refugio Canino La Reserva", "Útulek Dubí", "Притулок Сіріус", "SPA de Montbéliard",
+    "Canile di Presina", "RSPCA", "Hamburger Tierschutzverein", "Fondazione Cani Felici", "Birmingham Dogs Home", "Löytöeläintalo Helsinki"]),
+  ["Birmingham Dogs Home", "Canile di Presina", "Löytöeläintalo Helsinki", "Refugio Canino La Reserva", "SPA de Montbéliard", "Tierheim Essen", "Útulek Dubí",
+    "Притулок Сіріус"].sort());
+});
+test("other languages: pet shops by a shop word; webshops and shops for fishing, riding or feed for farm animals left out", async () => {
+  assert.deepStrictEqual(await published("shop", ["Zoohandlung Streng", "Animalerie Vincennes", "Zverimex Brno", "Зоомагазин Мики", "Angelsport Müller",
+    "Zoo- und Angelzentrum Kunze", "Tierbedarf Online", "hundefutter.de", "Crystal Feeds", "Wagtail Pet Supplies", "Fishing Tackle Direct",
+    "Musti ja Mirri", "Sklep Wędkarski", "Arken Zoo Katrineholm"]),
+  ["Animalerie Vincennes", "Arken Zoo Katrineholm", "Musti ja Mirri", "Wagtail Pet Supplies", "Zoo- und Angelzentrum Kunze", "Zoohandlung Streng", "Zverimex Brno",
+    "Зоомагазин Мики"].sort());
+});
+test("names in Cyrillic and Greek have words: OSM wins with a shared word, and generic words are no evidence", async () => {
+  const osm = [{ id: "n1", lat: 52.1, lon: 5.1101, tags: { name: "Мики", shop: "pet" } }, { id: "n2", lat: 52.1, lon: 5.1301, tags: { name: "Зоомагазин Барон", shop: "pet" } }];
+  const s = (id, name, lon) => cand(id, { cat: "shop", kind: "pet_store", name, conf: 0.9, lon });
+  const r = await run([s("a1", "Зоомагазин Мики", 5.1112), s("a2", "Зоомагазин Лапусик", 5.1312)], null, { osm });
+  assert.deepStrictEqual(ids(r), ["o-a2"]);
+});
+test("the website check reads dogs in more languages", () => {
+  assert.strictEqual(pageVerdict("<p>Hrană pentru câini și pisici</p>", "shop"), "ok");
+  assert.strictEqual(pageVerdict("<p>Suns ir cilvēka draugs</p>", "boarding"), "ok");
+  assert.strictEqual(pageVerdict("<p>Diese Domain steht zum Verkauf</p>", "grooming"), "parked");
+  assert.strictEqual(pageVerdict("<p>Il suo ristorante</p>", "boarding"), "off-topic");   // Italian "suo" is not Lithuanian "šuo"
+});
+test("a street of only spaces is no street", () => {
+  assert.strictEqual(tidyStreet("   "), undefined);
+});
+
 (async () => {
   console.log("overture places");
   for (const [name, fn] of tests) {

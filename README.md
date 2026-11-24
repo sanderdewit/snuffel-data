@@ -161,7 +161,11 @@ registers and public business pages) has most of them, with closed and stale one
 among them. [`overture/<cc>.jsonl`](overture/) lists the ones we publish, one JSON
 line per place (fields: the header of [`tools/overture.js`](tools/overture.js)).
 Countries: the `OVERTURE_COUNTRIES` variable (default `nl`); categories: grooming
-salons, boarding and day care, dog trainers, shelters and pet shops.
+salons, boarding and day care, dog trainers, shelters and pet shops. The checks below
+read names in the languages of all Snuffel's countries: Dutch and Polish words in
+[`tools/overture.js`](tools/overture.js), the other languages in
+[`tools/overture-words.js`](tools/overture-words.js) (every list is used for every
+country: a Swiss salon may have a German, French, Italian or English name).
 
 Each data run, `python3 tools/overture.py <cc>` reads the newest Overture release
 straight from its public files (DuckDB) and `node tools/overture.js update <cc>`
@@ -169,10 +173,13 @@ decides, against that run's OpenStreetMap places:
 
 - **For dogs:** places for cats only, or for horses, rabbits, birds, fish or
   wildlife only (by name), are left out. Then per category, by name:
-  - *Boarding* comes from Overture's `pet_boarding`, and from its pet sitting, dog
-    walking and pet service categories only with a boarding word in the name
-    (hondenopvang, dierenpension, hotel, daycare); rescues and shelters (stichting,
-    foundation, asiel) are left out.
+  - *Boarding* comes from Overture's `pet_boarding`, pet sitting, dog walking and
+    pet service categories, only with a boarding word in the name (hondenopvang,
+    dierenpension, Hundepension, boarding kennels, daycare): Overture's `pet_boarding`
+    also holds holiday homes, hotels that take dogs, breeders and trainers. A word for
+    lodging alone (Hotel, Pension, Pensión) needs a word for dogs or pets too (Hotel
+    Canino, Pet Hotel, not Pensión Sotelo). Rescues and shelters (stichting,
+    foundation, asiel, Tierhilfe) are left out.
   - *Trainers*: no dog walkers, groomers, masseurs or breeders (uitlaatservice,
     trimsalon, kennel, hodowla) unless the name also says school, training or the like.
   - *Shelters* only with a word for a shelter in the name (dierenasiel, dierentehuis,
@@ -223,6 +230,62 @@ places), the Netherlands gets about 1,120 dog trainers (OSM: 54), 245 pet shops
 (OSM: 760; most of Overture's other shops were webshops or already ours) and 18
 shelters (OSM: 112); Poland about 230 trainers (OSM: 26), 550 pet shops (OSM:
 1,827) and 58 shelters (OSM: 190).
+
+The other 43 countries, measured before switching them on (November 2026: Overture
+2026-11-18.0 against the published data of 23 November; the website check run on 60
+random sites per country, of which 37% (Ukraine) to 87% (Estonia) confirmed the place,
+69% on average; in brackets the OSM places we already had):
+
+| Country | Overture candidates | published (estimate) | grooming | boarding | trainers | shelters | pet shops |
+|---|---|---|---|---|---|---|---|
+| United Kingdom | 52,602 | 9,273 | 5,894 (1,189) | 1,003 (553) | 1,492 (27) | 49 (286) | 834 (2,393) |
+| Germany | 28,139 | 7,408 | 1,823 (837) | 292 (341) | 4,637 (817) | 109 (708) | 547 (2,894) |
+| Italy | 19,486 | 5,134 | 2,376 (402) | 98 (127) | 1,242 (84) | 98 (656) | 1,320 (2,061) |
+| France | 19,653 | 4,199 | 1,836 (1,056) | 155 (123) | 1,706 (123) | 116 (415) | 387 (1,406) |
+| Spain | 10,435 | 2,210 | 1,213 (332) | 127 (161) | 378 (16) | 37 (271) | 454 (1,063) |
+| Belgium | 6,444 | 1,866 | 1,229 (172) | 55 (31) | 453 (328) | 22 (86) | 107 (389) |
+| Sweden | 4,815 | 1,201 | 287 (42) | 192 (47) | 611 (22) | 3 (27) | 108 (310) |
+| Austria | 3,138 | 1,163 | 371 (106) | 23 (20) | 706 (79) | 6 (64) | 58 (361) |
+| Switzerland | 3,852 | 1,099 | 389 (93) | 32 (39) | 603 (21) | 14 (81) | 61 (272) |
+| Hungary | 3,147 | 814 | 422 (174) | 48 (23) | 182 (44) | 20 (57) | 141 (539) |
+| Denmark | 2,637 | 808 | 300 (23) | 72 (16) | 392 (23) | 2 (27) | 42 (173) |
+| Finland | 2,226 | 535 | 172 (33) | 71 (35) | 189 (19) | 4 (38) | 99 (210) |
+| Norway | 2,133 | 489 | 120 (9) | 71 (14) | 231 (5) | 0 (27) | 66 (122) |
+| Czechia | 2,247 | 441 | 148 (55) | 24 (12) | 69 (369) | 37 (75) | 164 (627) |
+| Greece | 2,137 | 440 | 198 (95) | 9 (4) | 70 (4) | 5 (43) | 157 (473) |
+| Romania | 1,641 | 336 | 185 (40) | 20 (3) | 17 (1) | 14 (35) | 101 (312) |
+| Portugal | 2,031 | 323 | 128 (49) | 22 (35) | 33 (3) | 14 (135) | 126 (393) |
+| Ireland | 1,473 | 322 | 225 (87) | 33 (37) | 27 (4) | 0 (29) | 37 (166) |
+| Bulgaria | 1,002 | 199 | 76 (77) | 6 (2) | 3 (0) | 0 (22) | 113 (364) |
+| Croatia | 733 | 157 | 100 (41) | 8 (1) | 18 (1) | 4 (18) | 27 (119) |
+| Ukraine | 1,529 | 132 | 38 (61) | 4 (17) | 8 (9) | 4 (33) | 77 (1,819) |
+| Slovakia | 832 | 125 | 62 (64) | 4 (16) | 19 (51) | 7 (38) | 34 (312) |
+| Serbia | 846 | 123 | 60 (45) | 13 (7) | 7 (4) | 1 (6) | 42 (253) |
+| Slovenia | 459 | 116 | 58 (15) | 6 (3) | 28 (11) | 3 (11) | 21 (50) |
+| Lithuania | 670 | 92 | 64 (16) | 5 (1) | 18 (0) | 0 (12) | 6 (126) |
+| Estonia | 337 | 65 | 27 (18) | 4 (2) | 17 (2) | 4 (6) | 14 (94) |
+| Cyprus | 360 | 61 | 23 (8) | 3 (2) | 5 (0) | 4 (10) | 26 (100) |
+| North Macedonia | 192 | 40 | 15 (0) | 2 (3) | 1 (0) | 0 (3) | 23 (17) |
+| Malta | 226 | 38 | 15 (4) | 3 (0) | 3 (0) | 0 (6) | 17 (42) |
+| Latvia | 275 | 37 | 16 (15) | 2 (1) | 6 (3) | 2 (9) | 11 (175) |
+| Luxembourg | 137 | 28 | 17 (6) | 0 (3) | 8 (12) | 1 (8) | 3 (20) |
+| Bosnia and Herzegovina | 150 | 22 | 10 (3) | 3 (2) | 0 (0) | 0 (5) | 9 (29) |
+| Iceland | 82 | 18 | 9 (1) | 1 (0) | 6 (0) | 0 (1) | 3 (13) |
+| Moldova | 117 | 17 | 2 (3) | 1 (1) | 0 (0) | 1 (100) | 13 (98) |
+| Montenegro | 61 | 5 | 2 (2) | 0 (0) | 0 (0) | 0 (5) | 4 (36) |
+| Albania | 38 | 4 | 2 (0) | 1 (0) | 1 (0) | 0 (0) | 0 (23) |
+| Isle of Man | 56 | 4 | 1 (3) | 3 (3) | 0 (1) | 0 (2) | 1 (6) |
+| Guernsey and Jersey | 19 | 3 | 1 (0) | 1 (0) | 1 (0) | 0 (9) | 1 (6) |
+| Liechtenstein | 10 | 2 | 2 (1) | 0 (0) | 0 (0) | 0 (0) | 0 (0) |
+| Monaco | 3 | 2 | 2 (0) | 0 (0) | 0 (0) | 0 (0) | 0 (0) |
+| Andorra | 21 | 1 | 0 (0) | 0 (0) | 0 (1) | 0 (2) | 1 (2) |
+| Kosovo | 26 | 1 | 0 (0) | 0 (0) | 0 (0) | 0 (2) | 1 (12) |
+| Faroe Islands | 5 | 0 | 0 (0) | 0 (0) | 0 (0) | 0 (0) | 0 (1) |
+| **43 countries** | 176,422 | 39,353 | 17,918 (5,177) | 2,417 (1,685) | 13,187 (2,084) | 581 (3,368) | 5,256 (17,881) |
+
+Overture has many places at the right address that OpenStreetMap lacks (dog trainers
+and groomers above all); its shelters and pet shops are mostly ours already, or
+foundations, charity shops (the RSPCA's), webshops and farm feed merchants.
 
 Vets and animal hospitals are not taken: people use them in emergencies, and
 Overture's extra vets include ambulant vets registered at home, farm and horse
