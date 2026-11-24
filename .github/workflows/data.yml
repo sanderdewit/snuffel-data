@@ -11,8 +11,11 @@
 #               manifest; uploaded cells first, manifest last; then the
 #               changed vets/*.jsonl and overture/*.jsonl are committed straight to main
 #
-# If any country fails, nothing is published (the live data stays as it was):
-# use "Re-run failed jobs" and publish continues with the finished ones.
+# A country whose extract cannot be downloaded (Geofabrik, then openstreetmap.fr)
+# keeps the previous run's OpenStreetMap data. If a country still fails, nothing
+# is published (the live data stays as it was): the data-retry workflow re-runs
+# the failed jobs on new runners, at most twice, and publish continues with the
+# finished ones. After that, "Re-run failed jobs" by hand.
 # A run for only some countries publishes a manifest with only those countries.
 #
 # Publishing signs in to Azure with GitHub OIDC (no stored storage key): the
@@ -62,7 +65,7 @@ jobs:
             const want = (process.env.WANT || "all").trim().toLowerCase().split(/\s+/);
             const list = want.includes("all") ? all : all.filter(c => want.includes(c.cc));
             if (!list.length) { console.error("no matching countries"); process.exit(1); }
-            console.log("matrix=" + JSON.stringify(list.map(c => ({ cc: c.cc, name: c.name, geofabrik: c.geofabrik }))));
+            console.log("matrix=" + JSON.stringify(list.map(c => ({ cc: c.cc, name: c.name, geofabrik: c.geofabrik, osmfr: (c.osmfr || []).join(" ") }))));
           ' >> "$GITHUB_OUTPUT"
 
   country:
@@ -70,6 +73,9 @@ jobs:
     name: ${{ matrix.cc }} ${{ matrix.name }}
     runs-on: ubuntu-latest
     timeout-minutes: 330
+    permissions:
+      contents: read
+      actions: read             # an earlier run's country artifact, when no extract can be downloaded
     strategy:
       fail-fast: false
       max-parallel: 20
@@ -86,25 +92,58 @@ jobs:
       - name: Install osmium
         run: sudo apt-get update -qq && sudo apt-get install -y -qq osmium-tool
 
+      # The extract from Geofabrik, else openstreetmap.fr (tools/osm-extract.sh).
+      # When neither can be reached, the next step takes the previous run's data.
       - name: Extract places
+        id: extract
         run: |
           set -euo pipefail
-          mkdir -p work
-          # Geofabrik refuses connections from some runners for a long time (22 Nov 2026:
-          # six countries after 5 tries 30 s apart; 23 Nov: five after 10 tries 60 s apart,
-          # two of them again on a re-run), and a download can stall (Poland: 90 minutes,
-          # then the runner was lost). So: a stalled download (under 100 kB/s for 3 minutes)
-          # is retried, up to about 30 minutes, and then the same extract from
-          # openstreetmap.fr where it has one (Denmark, Poland, ...; not every country).
-          get() { curl -fsSL --connect-timeout 30 --speed-limit 100000 --speed-time 180 "$@" -o work/x.osm.pbf; }
-          get --retry 20 --retry-delay 90 --retry-all-errors "https://download.geofabrik.de/${{ matrix.geofabrik }}-latest.osm.pbf" \
-            || { echo "::warning::Geofabrik failed for $CC - trying openstreetmap.fr"; get --retry 5 --retry-delay 60 "https://download.openstreetmap.fr/extracts/${{ matrix.geofabrik }}-latest.osm.pbf"; }
+          mkdir -p work tools/.cache
+          rc=0; bash tools/osm-extract.sh "${{ matrix.geofabrik }}" "${{ matrix.osmfr }}" work/x.osm.pbf || rc=$?
+          if [ "$rc" = 3 ]; then echo "fresh=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          [ "$rc" = 0 ] || exit "$rc"
           ls -lh work/x.osm.pbf
+          # how recent the OpenStreetMap data is (the extract's replication timestamp)
+          date=$(osmium fileinfo -g header.option.osmosis_replication_timestamp work/x.osm.pbf 2>/dev/null || true)
+          echo "${date:-$(date -u +%FT%TZ)}" > "tools/.cache/osm-date-$CC.txt"
           osmium tags-filter work/x.osm.pbf $(node tools/build-places.js filter) -o work/x.filtered.pbf --overwrite
           rm work/x.osm.pbf
           osmium export work/x.filtered.pbf -f geojsonseq -a type,id -o work/x.geojsonseq --overwrite
           node tools/build-places.js add "$CC" work/x.geojsonseq | tee -a $GITHUB_STEP_SUMMARY
           rm -rf work
+          echo "fresh=true" >> "$GITHUB_OUTPUT"
+
+      # No extract could be downloaded: this country keeps the OpenStreetMap data of
+      # the latest run on main that had it (its country artifact, kept 90 days), so
+      # one unreachable download no longer holds up the publish of every country.
+      # The rest of the job runs as usual on that data. Data older than 100 days,
+      # or no earlier run: the job fails, as before.
+      - name: OpenStreetMap data from the previous run
+        if: steps.extract.outputs.fresh == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          pick=$(gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=country-$CC&per_page=50" --jq \
+            "[.artifacts[] | select((.expired | not) and .workflow_run.head_branch == \"main\" and .workflow_run.id != $GITHUB_RUN_ID)][0] // empty | \"\(.workflow_run.id) \(.created_at)\"")
+          [ -n "$pick" ] || { echo "::error::no OpenStreetMap extract for $CC, and no earlier run's data to fall back on"; exit 1; }
+          read -r run created <<< "$pick"
+          gh run download "$run" -R "$GITHUB_REPOSITORY" -n "country-$CC" -D "$RUNNER_TEMP/previous"
+          mkdir -p dist/stage tools/.cache
+          # copies, not moves: a fresh file date (scan-websites.js trusts its vet cache for 7 days)
+          cp "$RUNNER_TEMP/previous/dist/stage/$CC.json" dist/stage/
+          cp "$RUNNER_TEMP/previous/tools/.cache/osm-vets-$CC.json" tools/.cache/
+          if [ -f "$RUNNER_TEMP/previous/tools/.cache/osm-date-$CC.txt" ]; then
+            cp "$RUNNER_TEMP/previous/tools/.cache/osm-date-$CC.txt" tools/.cache/
+          else
+            echo "$created" > "tools/.cache/osm-date-$CC.txt"   # artifacts from before 25 Nov 2026 have no date file
+          fi
+          date=$(cat "tools/.cache/osm-date-$CC.txt")
+          age=$(( ($(date -u +%s) - $(date -u -d "$date" +%s)) / 86400 ))
+          msg="$CC: no OpenStreetMap extract could be downloaded; using the data of ${date%%T*} ($age days old) from $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$run"
+          if [ "$age" -gt 100 ]; then echo "::error::$msg - too old"; exit 1; fi
+          echo "::warning::$msg"
+          echo "$msg" >> "$GITHUB_STEP_SUMMARY"
 
       # Places OpenStreetMap lacks, from Overture Maps (overture/<cc>.jsonl,
       # tools/overture.js: groomers, boarding, trainers, shelters, pet shops) for the countries in the
@@ -168,6 +207,7 @@ jobs:
           path: |
             dist/stage/${{ matrix.cc }}.json
             tools/.cache/osm-vets-${{ matrix.cc }}.json
+            tools/.cache/osm-date-${{ matrix.cc }}.txt
             tools/.cache/vets-${{ matrix.cc }}.txt
             tools/.cache/overture-${{ matrix.cc }}.txt
             tools/scan-${{ matrix.cc }}.json
@@ -175,7 +215,7 @@ jobs:
             vets/${{ matrix.cc }}.jsonl
             overture/${{ matrix.cc }}.jsonl
           if-no-files-found: warn
-          retention-days: 14
+          retention-days: 90          # next month's run falls back on it when no extract can be downloaded
           include-hidden-files: true
 
   official:

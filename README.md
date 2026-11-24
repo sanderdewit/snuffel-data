@@ -11,6 +11,7 @@ Everything runs on GitHub Actions and writes static files to Azure Storage:
 | Workflow | When | Output |
 |---|---|---|
 | [`data`](.github/workflows/data.yml) | monthly (3rd), or manually | `places/manifest.json` + 0.25° cells, `chains.json`; commits the [vet register](#vet-register) |
+| [`data-retry`](.github/workflows/data-retry.yml) | after a failed `data` run | re-runs its failed country jobs, [at most twice](#when-a-download-fails) |
 | [`tiles`](.github/workflows/tiles.yml) | quarterly, or manually | `tiles/snuffel.pmtiles` (Protomaps basemap) |
 | [`breeds`](.github/workflows/breeds.yml) | monthly (5th), or manually | a pull request when the breed list changed |
 | [`test`](.github/workflows/test.yml) | every push / PR | unit tests |
@@ -25,6 +26,26 @@ wybieg dla psów, psí louka). Classification rules: [`lib/classify.js`](lib/cla
 Boarding only counts when it takes dogs: `animal_boarding=*` when mapped, otherwise
 the name (catteries, livery stables and rabbit hotels are left out). Grooming salons
 and boarding places OpenStreetMap lacks come from Overture Maps (below).
+
+### When a download fails
+
+Geofabrik refuses connections from some GitHub runners, and a refused runner stays
+refused for the whole job (November 2026: 6 of 45 countries in one run, every try in
+30 minutes). A data run therefore heals itself in three steps:
+
+1. [`tools/osm-extract.sh`](tools/osm-extract.sh): a few tries at Geofabrik, then the
+   same area from openstreetmap.fr, for the 22 countries in
+   [`tools/countries.json`](tools/countries.json) with an `osmfr` path (other names
+   there: `czech_republic`, `united_kingdom`; Guernsey and Jersey, and Italy with
+   San Marino and Vatican City, are merged from several files). Ukraine's file there
+   is empty, so Ukraine has none.
+2. Neither reachable: the country keeps the OpenStreetMap data of the latest run on
+   main (its `country-<cc>` artifact, kept 90 days, with the data's date in
+   `osm-date-<cc>.txt`), and the rest of its job runs as usual. The run shows a
+   warning with the date. Data older than 100 days, or no earlier run: the job fails.
+3. A country job that still fails is re-run on a new runner by
+   [`data-retry`](.github/workflows/data-retry.yml), at most twice; the finished
+   countries are not run again. A failed publish is never re-run automatically.
 
 ## Independent or chain-owned?
 
