@@ -189,6 +189,19 @@ test("overture: the manifest names its licence too, only when something came fro
   assert.doesNotMatch(m3.licence, /Overture/);
 });
 
+test("countries.json: a Geofabrik path for every country, openstreetmap.fr paths only as a list", () => {
+  const list = require("../tools/countries.json").countries;
+  assert.strictEqual(new Set(list.map((c) => c.cc)).size, list.length, "a country twice");
+  for (const c of list) {
+    assert.match(c.cc, /^[a-z]{2}$/, c.cc);
+    assert.match(c.geofabrik, /^europe\/[a-z-]+$/, c.cc);
+    if ("osmfr" in c) {
+      assert.ok(Array.isArray(c.osmfr) && c.osmfr.length, c.cc + ": osmfr must be a non-empty list");
+      for (const p of c.osmfr) assert.match(p, /^europe\/[a-z_]+(\/[a-z_]+)?$/, c.cc);
+    }
+  }
+});
+
 fs.rmSync(tmp, { recursive: true, force: true });
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);

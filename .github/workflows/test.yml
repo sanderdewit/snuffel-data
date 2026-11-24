@@ -17,7 +17,9 @@ jobs:
         with:
           node-version: 22
       - name: Syntax
-        run: for f in lib/*.js tools/*.js tests/*.js; do node --check "$f"; done
+        run: |
+          for f in lib/*.js tools/*.js tests/*.js; do node --check "$f"; done
+          for f in tools/*.sh; do bash -n "$f"; done
       - name: Tests
         run: |
           node tests/classify.test.js
