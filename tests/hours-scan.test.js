@@ -2,7 +2,7 @@
 // Opening hours from clinic websites: grammar check, structured data, robots.txt.
 "use strict";
 const assert = require("assert");
-const { settle, validHours, structuredHours, fromSpecification, relevantText, pageText, allowedPath, hoursLinks } = require("../tools/scan-hours.js");
+const { settle, validHours, oneRulePerDay, structuredHours, fromSpecification, relevantText, pageText, allowedPath, hoursLinks, aboutHours, roundTheClock } = require("../tools/scan-hours.js");
 
 let passed = 0, failed = 0;
 function test(name, fn) {
@@ -114,6 +114,35 @@ test("'24/7 emergency' on a practice with office hours is an on-call line", () =
   assert.strictEqual(settle({ emergency: "24/7", hospital: true, opening_hours: null }).emergency, "24/7");
   assert.strictEqual(settle({ emergency: "24/7", hospital: true, opening_hours: "24/7" }).emergency, "24/7");
   assert.strictEqual(settle({ emergency: "24/7", hospital: false, opening_hours: null }).emergency, "on_call");
+});
+
+test("every day in one rule only (a later rule replaces an earlier one)", () => {
+  for (const s of ["Mo-Fr 08:00-18:00; Sa 09:00-12:00", "24/7", "Mo-Th 08:00-14:00,17:30-19:00; Fr 08:00-14:00", "Sa-Mo 10:00-12:00; Tu 09:00-10:00"]) assert.ok(oneRulePerDay(s), s);
+  for (const s of ["Mo-Fr 08:00-14:00; Mo-Th 17:30-19:00", "Mo-Fr 08:30-17:00; Tu,Th 17:30-19:00", "Sa-Mo 10:00-12:00; Su 09:00-10:00", "08:00-18:00; Sa 09:00-12:00"]) assert.ok(!oneRulePerDay(s), s);
+});
+
+// ---- every language (tools/hours-words.js) ----
+test("lines about hours in other languages", () => {
+  for (const s of ["Sprechzeiten", "Praxisöffnungszeiten:", "Pon.–Pt. 8:00–18:00", "Δευτέρα - Παρασκευή", "Графік роботи", "Lun-Ven 9h-12h et 14h30 à 19h",
+    "Orari di apertura", "Horario de atención", "Åbningstider", "Aukioloajat", "Nyitvatartás", "Radno vrijeme", "Ordinační hodiny", "Notdienst",
+    "Dyżur weterynaryjny", "Ügyelet", "Работно време", "Режим работы", "Mo–Fr 9 – 18 Uhr"]) assert.ok(aboutHours(s), s);
+  for (const s of ["Wir lieben Tiere", "Notre équipe", "Il nostro staff", "Impressum", "© 2026", "Tel. 030 123 45 67", "Telefon: 089 12 34 56 78"]) assert.ok(!aboutHours(s), s);
+});
+test("page text around hours on a German page", () => {
+  const t = relevantText(pageText("<h1>Tierarztpraxis Dr. Müller</h1><p>Unser Team</p><p>Lorem ipsum</p><p>x</p><p>y</p><p>z</p><h2>Sprechzeiten</h2><p>Mo, Di, Do 9–12 und 15–18 Uhr</p><p>Fr 9–12 Uhr</p>"));
+  assert.ok(/Sprechzeiten[\s\S]*Fr 9–12 Uhr/.test(t), t);
+  assert.ok(!/Tierarztpraxis/.test(t), t);
+});
+test("links in other languages: hours first, then contact, then the rest", () => {
+  const html = '<a href="/team">Team</a><a href="/praxis/rundgang">Praxis</a><a href="/kontakt">Kontakt</a><a href="/oeffnungszeiten">Öffnungszeiten</a>';
+  assert.deepStrictEqual(hoursLinks(html, "https://www.tierarzt.de/"), ["https://www.tierarzt.de/oeffnungszeiten", "https://www.tierarzt.de/kontakt", "https://www.tierarzt.de/praxis/rundgang"]);
+  assert.deepStrictEqual(hoursLinks('<a href="/chi-siamo">Chi siamo</a><a href="/orari">Orari</a>', "https://vet.it/"), ["https://vet.it/orari"]);
+  assert.deepStrictEqual(hoursLinks('<a href="/godziny-otwarcia/">Godziny</a>', "https://vet.pl/"), ["https://vet.pl/godziny-otwarcia/"]);
+  assert.deepStrictEqual(hoursLinks('<a href="/%D0%BA%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D0%B8">Контакти</a>', "https://vet.bg/"), ["https://vet.bg/%D0%BA%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D0%B8"]);
+});
+test("round-the-clock evidence in other languages", () => {
+  for (const s of ["Wir sind rund um die Uhr für Sie da", "urgences 24h/24", "Lecznica całodobowa", "цілодобово", "Pronto soccorso H24", "Ambulanta 0-24", "døgnåbent", "24 Std. Notdienst"]) assert.ok(roundTheClock(s), s);
+  for (const s of ["Montag 8-18 Uhr", "24 Tiere", "Postcode 2400"]) assert.ok(!roundTheClock(s), s);
 });
 
 console.log(`\n${passed} passed, ${failed} failed`);

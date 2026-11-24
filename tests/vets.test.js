@@ -44,6 +44,13 @@ test("names share a distinctive word; generic words don't count", () => {
   assert.ok(V.sameName("Dierenarts", "dierenarts"));                 // only generic words: the whole name
   assert.ok(!V.sameName(undefined, undefined));
   assert.ok(!V.sameName("Dierenkliniek Noord", "Clinique Vétérinaire du Sud"));
+  // other languages and scripts
+  assert.ok(V.sameName("Przychodnia Weterynaryjna Azor", "Gabinet Weterynaryjny Azor"));
+  assert.ok(!V.sameName("Przychodnia Weterynaryjna", "Lecznica Weterynaryjna"));
+  assert.ok(V.sameName("Ветеринарна клиника Зоовет", "Зоовет"));
+  assert.ok(!V.sameName("Ветеринарна клиника", "Ветеринарна клиника Здраве"));
+  assert.ok(V.sameName("Tierarztpraxis Dr. Huber", "Kleintierklinik Huber"));
+  assert.ok(!V.sameName("Κτηνιατρείο Παπαδόπουλος", "Κτηνιατρείο Νικολάου"));
 });
 
 test("refresh: new vets get OSM's facts and the run date", () => {
@@ -184,6 +191,13 @@ test("hours: the same answer confirms (new date), another answer replaces", () =
   const t2 = V.takeHours(r, { places: { n2761145310: { ...OCTOBER, opening_hours: "Mo-Fr 08:00-18:00", source: "structured", hash: "def", checked: "2027-01-03" } } }, "2027-01-03");
   assert.strictEqual(t2.updated, 1);
   assert.deepStrictEqual([r.get("n2761145310").hours, r.get("n2761145310").hoursFrom, r.get("n2761145310").hoursHash], ["Mo-Fr 08:00-18:00", "structured", "def"]);
+});
+test("hours: an earlier answer with a day in two rules is not kept", () => {
+  const r = refresh(new Map(), [VLEUTEN]).reg;
+  V.takeHours(r, { places: { n2761145310: { ...OCTOBER, opening_hours: "Mo-Fr 08:30-17:00; Tu,Th 17:30-19:00" } } }, "2026-10-11");
+  const t = V.takeHours(r, { places: {} }, TODAY);
+  assert.ok(!r.get("n2761145310").hours && !r.get("n2761145310").hoursFrom);
+  assert.strictEqual(t.ambiguous, 1);
 });
 test("hours: website facts without a confirmation for 180 days expire", () => {
   const r = refresh(new Map(), [VLEUTEN]).reg;

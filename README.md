@@ -89,8 +89,10 @@ three pages of that site (robots.txt honoured) and takes:
 
 1. **structured data** (schema.org `openingHoursSpecification` / `openingHours`)
    when the site has it;
-2. otherwise the text around "openingstijden", "spreekuur", weekday names… goes to
-   a small Azure OpenAI model that answers in OSM `opening_hours` syntax or null;
+2. otherwise the text around "openingstijden", "Sprechzeiten", "orari", "godziny
+   otwarcia", weekday names or times (every language Snuffel covers, plus Russian
+   for Ukraine: [`tools/hours-words.js`](tools/hours-words.js)) goes to a small Azure
+   OpenAI model that answers in OSM `opening_hours` syntax or null;
 3. **emergency information**: 24/7 emergency care at the clinic itself, or an
    out-of-hours line to the on-call vet.
 
@@ -103,6 +105,25 @@ hours always win, and the site and app label these as "according to their own
 website". Nothing is written to OpenStreetMap automatically; each place links to
 the OSM editor so people can correct the source. Countries: the
 `HOURS_COUNTRIES` variable (default `nl be`).
+
+Every day must be in one rule: in OSM syntax a later rule replaces an earlier one
+for its days, so an answer like `Mo-Fr 08:00-14:00; Mo-Th 17:30-19:00` (closed on
+Monday morning) is dropped, also when it was kept from an earlier month.
+
+Measured in November 2026 on the 43 countries outside the Netherlands and Belgium
+(OpenStreetMap of 23 November, the same model as the data run):
+
+- **to read:** 3,050 vets without hours in OSM but with a website (Germany 896,
+  the United Kingdom 660, France 276, Spain 187, Poland 137, …);
+- **text for the AI:** on 792 of those sites, the words of the Netherlands and a
+  few other languages found text about hours on 214; all languages find it on 526
+  (Denmark 0 → 27 of 40, Spain 0 → 21, Italy 0 → 27, Sweden 1 → 32);
+- **found:** on 477 sites, hours for 231 (48%) and emergency information for 157;
+  1,390 tokens per AI call;
+- **against OSM:** for 285 vets that do have hours in OSM, the website gave hours for
+  176: the same week for 86, at least 90% of the week the same for 57, different for
+  33 (often OSM's hours are older, or an animal hospital's site says 24/7 where OSM
+  has the consulting hours).
 
 ## Vet register
 
